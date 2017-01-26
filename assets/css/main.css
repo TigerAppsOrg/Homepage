@@ -240,3 +240,55 @@ bt {
 	font-size: 40px;
 	color: #1abc9c;
 }
+
+
+/* mods by maxim */
+
+.gray_back {
+
+  padding-bottom: 50px;
+  background: #f5f5f5;
+  padding-top: 100px;
+  min-height: 450px;
+  width: 100%;
+}
+
+.gray_back h3 {
+  font-weight: 300;
+}
+
+
+.btn-conf {
+  border-radius: 50px;
+  margin-right: 15px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px 13px 28px;
+  }
+
+
+.btn-ours {
+  background: #00bcd4;
+  color: black;
+}
+
+.btn-ours:hover {
+  background: #ff9800;
+  color: white;
+}
+
+ul.labs_list {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+  ul.labs_list li {
+    line-height: 1.75em;
+  }
+
+  ul.labs_list span {
+    color: #aaa;
+    font-family: Monaco, "Courier New", monospace;
+    font-size: 80%;
+  }
