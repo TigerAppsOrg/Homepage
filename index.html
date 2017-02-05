@@ -20,10 +20,6 @@
     <script src="assets/js/hover.zoom.js"></script>
     <script src="assets/js/hover.zoom.conf.js"></script>
 
-    <style>
-
-
-    </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,8 +45,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#directories">Directories</a></li>
-            <li><a href="#courses">Course Planning</a></li>
+            <li><a href="#course">Course Planning</a></li>
+            <li><a href="#direct">Directories</a></li>
             <li><a href="#campus">Campus Life</a></li>
             <li><a href="#build">Build Your Own App</a></li>
           </ul>
@@ -59,7 +55,7 @@
     </div>
 
 	<!-- +++++ Welcome Section +++++ -->
-	<div id="ww">
+<!-- 	<div id="ww">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 centered">
@@ -70,87 +66,110 @@
 				</div>
 			</div>
 	    </div>
-	</div>
+	</div> -->
 
-  
-  <div class="container pt">
-    <div class="row mt" id="directories">
-      <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Directories</h3>
-        <hr>
-        <p>Find students on campus.</p>
-      </div>
-    </div>
-    <div class="row mt centered"> 
-      <div class="col-lg-4">
-        <a class="zoom green" href="http://tigerbook.org"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt="" /></a>
-        <p>TigerBook</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="http://google.com"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt="" /></a>
-        <p>Student Facebook Search</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="http://google.com"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt="" /></a>
-        <p>Vision</p>
-      </div>
-    </div><!-- /row -->
+  <div id="ww">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h1>By Students, For Students.</h1>
+          <p>We build apps and support developers on campus. Student-built, student-maintained apps built over the years, designed to improve your campus experience.</p>
+          
+        </div><!-- /col-lg-8 -->
+      </div><!-- /row -->
+      </div> <!-- /container -->
+  </div><!-- /ww -->
 
 
-    <div class="row mt" id="courses">
-      <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Course Planning</h3>
-        <hr>
-        <p>Plan your schedule and get notifications when spots open up.</p>
+    <div class="container content topspace" id="app_listings">
+        
+      <h1 id="course" class="center">Course Planning</h1>
+      <div class="row center space">Plan your schedule and get notifications when spots open up.</div>
+      
+      <div class="row center space">
+      <div class="col-sm-4">
+      <a href="http://recal.io"><img class="img-responsive" src="images/recal.png" /></a>
+      <h3><a href="http://recal.io/">ReCal</a></h3>    
+          <p>Select your courses. Print an enrollment worksheet or sync with Google Calendar. By Naphat Sanguansin '16, Dyland Xue '16, and Maxim Zaslavsky '17.</p></div>
+      <div class="col-sm-4">
+      <a href="http://pounce.tigerapps.org/"><img class="img-responsive" src="images/pounce.png" /></a>
+      <h3><a href="http://pounce.tigerapps.org/">Pounce</a></h3>
+          <p>Recieve text or email notifications when free spots open up in classes. By Jeremy Cohen '16 and Zach Koerbel '16.</p>
+        </div>
+        
+        <div class="col-sm-4">
+        <a href="http://wintersession.tigerapps.org/"><img class="img-responsive" src="images/wintersession.png" /></a>
+      <h3><a href="http://wintersession.tigerapps.org/">Wintersession</a></h3>
+          <p>Signup for Wintersession classes.</p>
+        </div>
       </div>
-    </div>
+      
+      <hr>
+      
+      <h2 id="direct" class="center">Directories</h2>
+      
+      <div class="row center space">Find students on campus.</div>
+      
+      <div class="row center space">
+      
+      <!-- <div class="col-sm-2">
+        </div> -->
+      
+      <div class="col-sm-4">
+      <a href="https://tigerbook.herokuapp.com/"><img class="img-responsive" src="images/tigerbook.png" /></a>
+      <h3><a href="https://tigerbook.herokuapp.com/">Tigerbook</a></h3>
+          <p>A unified directory of Princeton undergraduates. By Hansen Qian '16, Ivo Crnkovic-Rubsamen '15, Rohan Sharma '14, and Adam Libresco '19.</p></div>
+      <div class="col-sm-4">
+      <a href="http://bparks.mycpanel.princeton.edu/search/"><img class="img-responsive" src="images/cfbs.png" /></a>
+      <h3><a href="http://bparks.mycpanel.princeton.edu/search/">College Facebook Search</a></h3>
+          <p>Use tags like #name or #major to search the student directory. By Ben Parks '17.</p>
+        </div>
+
+    <div class="col-sm-4">
+      <a href="#"><img class="img-responsive" src="images/cfbs.png" /></a>
+      <h3><a href="#">TigerBook for Gmail</a></h3>
+          <p>Directory info right in your compose window. Built for Google Chrome and Gmail. By Di Qi '18 and Samuel Russell '18.</p>
+        </div>
+        
+<!--         <div class="col-sm-2">
+        </div> -->
+      
+      </div>
+      
+      <hr>
+      <h2 id="campus" class="center">Campus Life</h2>
+      
+      <div class="row center space">Find clubs, trade goods, and come prepared for Room Draw.</div>
+      
+      <div class="row center space">
+      
+      <div class="col-sm-2">
+        </div>
+      
+      <div class="col-sm-4">
+      <a href="http://rooms.tigerapps.org"><img class="img-responsive" src="images/rooms.png" /></a>
+      <h3><a href="http://rooms.tigerapps.org">Student Room Guide</a></h3>
+          <p>Search rooms and floor plans. By Ben Parks '17.</p></div>
+      <div class="col-sm-4">
+      <a href="http://ttrade.tigerapps.org/"><img class="img-responsive" src="images/tt.png" /></a>
+      <h3><a href="http://ttrade.tigerapps.org/">TigerTrade</a></h3>
+          <p>Trade goods. By Clay Bavor '05 and Rodrigo Menezes '13.</p>
+        </div>
+        
+        <div class="col-sm-2">
+        </div>
+      
+      </div>
+      
+      </div> <!--content of main page-->
 
 
-    <div class="row mt centered"> 
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-        <p>ReCal</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-        <p>Pounce</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-        <p>Wintersession</p>
-      </div>
-    </div><!-- /row -->
-
-    <div class="row mt" id="campus">
-      <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Campus Life</h3>
-        <hr>
-        <p>Find clubs, trade goods, and come prepared for Room Draw.</p>
-      </div>
-    </div>
-
-
-    <div class="row mt centered"> 
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-        <p>Clubs</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-        <p>Student Room Guide</p>
-      </div>
-      <div class="col-lg-4">
-        <a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-        <p>TigerTrade</p>
-      </div>
-    </div><!-- /row -->
-  </div><!-- /container -->
 
     <div class="gray_back">
-      <div class="container">
+      <div class="container" id="build">
         <div class="row"> <!-- centered -->
           <div class="col-md-8 col-md-offset-2">
-            <h1>Build an app</h1>
+            <h1>Build a TigerApp</h1>
             <h3 style="margin-bottom: 50px;">USG Labs is here to support you.</h3>
             <a href="http://labs.tigerapps.org" class="btn btn-conf btn-ours">Get Started</a>
           </div>
@@ -159,7 +178,7 @@
     </div>
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="row mt" id="labs" style="margin-bottom: 0px;">
         <div class="col-lg-6 col-lg-offset-3 centered">
           <h3>USG Labs Projects</h3>
@@ -173,7 +192,7 @@
     </ul>
   </div>
 
-</div>
+</div> -->
 
 
 
