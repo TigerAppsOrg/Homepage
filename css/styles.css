@@ -7234,6 +7234,10 @@ textarea.form-control-lg {
   font-size: 1.25rem !important;
 }
 
+.fs-5-half {
+  font-size: 1.125rem !important;
+}
+
 .fs-6 {
   font-size: 1rem !important;
 }
@@ -11015,6 +11019,10 @@ html {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+.portfolio .no-pointer {
+  cursor: auto;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
