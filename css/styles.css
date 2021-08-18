@@ -3973,7 +3973,7 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -10993,6 +10993,12 @@ html {
 .form-floating label {
   font-size: 1.5rem;
   color: #6c757d;
+}
+
+.navbar-logo {
+  height: 1.91em;
+  padding-bottom: 8px;
+  margin-right: 5px;
 }
 
 .masthead {
