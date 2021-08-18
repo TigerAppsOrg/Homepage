@@ -3973,7 +3973,7 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -10995,6 +10995,12 @@ html {
   color: #6c757d;
 }
 
+.navbar-logo {
+  height: 1.91em;
+  padding-bottom: 8px;
+  margin-right: 5px;
+}
+
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
@@ -11007,17 +11013,13 @@ html {
   font-size: 1.25rem;
 }
 .masthead .masthead-avatar {
-  width: 8rem;
+  width: 25rem;
 }
 
 @media (min-width: 992px) {
   .masthead {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
-  }
-  .masthead .masthead-heading {
-    font-size: 4rem;
-    line-height: 3.5rem;
   }
   .masthead .masthead-subheading {
     font-size: 1.5rem;
