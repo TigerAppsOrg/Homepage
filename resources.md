@@ -31,7 +31,7 @@ To request a service account, [file a ticket](https://www.google.com/url?q=https
 - For Sponsor, enter the name of a Princeton faculty member. Note that creating and persisting a service account requires contacting a faculty sponsor (e.g. Prof. Robert Dondero) and asking them to sponsor your service account.
 - For Duration of Account, select Permanent if you intend for the app to exist in the long term.
 - For Business Reason, write your account’s purpose.
-- For Type of Account, select “General Use”. A new input caled Additional Information will appear: here, you can request to have an Exchange mailbox for your service netID. Having an email address with your service account netID may be useful to your team (e.g. sending official emails from your app, collecting feedback from users).
+- For Type of Account, select “General Use”. A new input called Additional Information will appear: here, you can request to have an Exchange mailbox for your service netID. Having an email address with your service account netID may be useful to your team (e.g. sending official emails from your app, collecting feedback from users).
 - For more help on completing the form, read OIT’s [article](https://princeton.service-now.com/service?id=kb_article&sys_id=043a1f1f1b60b01041bd6286624bcb34).
 
 ## Available Data Sources
@@ -276,7 +276,7 @@ menuId: breakfast, lunch, dinner</td>
 
 #### Adding a new API
 
-If none of the OIT APIs provide the data you need, then you may consider working with OIT to create a new API for a Princeton dataset. If interested, send an email to the current Director for Software Infrastructure Services and specify the dataset and its fields you are accessing, the input parameters for each endpoint, and permission from the data owner for OIT to gain access to their database. From there, you will work with OIT to create an API for the API store.
+If none of the OIT APIs provides the data you need, then you may consider working with OIT to create a new API for a Princeton dataset. If interested, send an email to the current Director for Software Infrastructure Services and specify the dataset and its fields you are accessing, the input parameters for each endpoint, and permission from the data owner for OIT to gain access to their database. From there, you will work with OIT to create an API for the API store.
 
 To learn more about OIT, visit [https://oit.princeton.edu/get-started](https://oit.princeton.edu/get-started).
 
