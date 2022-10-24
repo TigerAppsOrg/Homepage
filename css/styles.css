@@ -11362,6 +11362,9 @@ html {
 .masthead .masthead-avatar {
   width: 20rem;
 }
+.pb-logos {
+  height: 125px;
+}
 
 @media (min-width: 992px) {
   .masthead {
