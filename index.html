@@ -1,1195 +1,976 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="assets/link-preview.png" />
-        <meta property="og:image:secure" content="assets/link-preview.png" />
-        <meta property="og:image:secure_url" content="assets/link-preview.png" />
-        <meta property="og:description" content="TigerApps – Apps for Princeton Students" />
-        <title>TigerApps – Apps for Princeton Students</title>
 
-        <!-- Icons-->
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
-        <link rel="manifest" href="/assets/icons/site.webmanifest">
-        <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
-        <meta name="theme-color" content="#2f3d4e">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/link-preview.png" />
+    <meta property="og:image:secure" content="assets/link-preview.png" />
+    <meta property="og:image:secure_url" content="assets/link-preview.png" />
+    <meta property="og:description" content="TigerApps – Apps for Princeton Students" />
+    <title>TigerApps – Apps for Princeton Students</title>
 
-        <!-- Font Awesome icons (free version)-->
-        <script
-            src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-            crossorigin="anonymous"
-        ></script>
-        <!-- Google fonts-->
-        <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
+    <!-- Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+    <meta name="theme-color" content="#2f3d4e">
 
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand animate__animated animate__pulse" href="#page-top">
-                    TigerApps
-                </a>
-                <button
-                    class="
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__pulse" href="#page-top">
+                TigerApps
+            </a>
+            <button class="
                         navbar-toggler
                         text-uppercase
                         font-weight-bold
                         bg-primary
                         text-white
                         rounded
-                    "
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#course"
-                                >Courses</a
-                            >
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#campus"
-                                >Campus</a
-                            >
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#buy-sell"
-                                >Buy & Sell</a
-                            >
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#direct"
-                                >Directories</a
-                            >
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#develop">Develop</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Us</a>
-                        </li>
-                    </ul>
-                </div>
+                    " type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#course">Courses</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#campus">Campus</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#buy-sell">Buy & Sell</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#direct">Directories</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#develop">Develop</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Us</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Masthead-->
-        <header class="masthead bg-secondary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img
-                    class="masthead-avatar mb-5 animate__animated animate__fadeInDown"
-                    src="assets/logo.png"
-                    alt="TigerApps logo"
-                />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0 animate__animated animate__pulse">
-                    For Students, <br />
-                    By Students.
-                </h1>
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p
-                    class="
+    <!-- Masthead-->
+    <header class="masthead bg-secondary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5 animate__animated animate__fadeInDown" src="assets/logo.png"
+                alt="TigerApps logo" />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0 animate__animated animate__pulse">
+                For Students, <br />
+                By Students.
+            </h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="
                         masthead-subheading
                         font-weight-light
                         mb-0
                         animate__animated animate__fadeInUp
-                    "
-                >
-                    We build apps and support developers on campus. Student-built,
-                    student-maintained apps built over the years, designed to improve your campus
-                    experience.
-                </p>
-                <p
-                    class="
+                    ">
+                We build apps and support developers on campus. Student-built,
+                student-maintained apps built over the years, designed to improve your campus
+                experience.
+            </p>
+            <p class="
                         masthead-subheading
                         font-weight-light
                         mt-4
-                        mb-0
+                        mb-5
                         animate__animated animate__fadeInUp
-                    "
-                >
-                    TigerApps is fully funded by ODUS and Projects Board, an Undergraduate Student Government
-                    initiative.
-                </p>
-                <!-- Projects Board and ODUS logos-->
-                <div class="row justify-content-center mt-5">
-                    <div class="col">
-                        <img
-                            class="pb-logos mb-5 mx-3 animate__animated animate__fadeInUp"
-                            src="assets/ODUS-white.png"
-                            alt="ODUS logo"
-                        />
-                    </div>
-                    <div class="col">
-                        <img
-                            class="pb-logos mb-5 mx-3 animate__animated animate__fadeInUp"
-                            src="assets/PBoard-white.png"
-                            alt="Projects Board logo"
-                        />
-                    </div>
+                    ">
+                TigerApps is fully funded by Princeton's Undergraduate Student Government.
+            </p>
+        </div>
+    </header>
+
+    <!-- Course Planning-->
+    <section class="page-section portfolio animate__animated animate__fadeIn" id="course">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
+                Course Planning
+            </h2>
+            <p class="lead text-center text-secondary mb-0">
+                Plan your schedule and get notifications when spots open up.
+            </p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- ReCal-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://recal.io/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
+                                        portfolio-item-caption
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center
+                                        h-100
+                                        w-100
+                                    ">
+                                <div class="
+                                            portfolio-item-caption-content
+                                            text-center text-white
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/recal.png" alt="ReCal screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://recal.io/" target="_blank" class="no-underline">ReCal</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Plan the perfect course schedule and automatically sync with your
+                            Google Calendar. By Naphat Sanguansin '16, Dyland Xue '16, and Maxim
+                            Zaslavsky '17.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/recal"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- Princeton Courses-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://princetoncourses.com" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
+                                        portfolio-item-caption
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center
+                                        h-100
+                                        w-100
+                                    ">
+                                <div class="
+                                            portfolio-item-caption-content
+                                            text-center text-white
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/princetoncourses.png"
+                                alt="Princeton Courses screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://princetoncourses.com/" target="_blank" class="no-underline">Princeton
+                                Courses</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Search through courses quickly to find the list of courses you wish
+                            to take. By Sebastian Hallum Clarke '19, Caterina Golner '19, Bensu
+                            Sicim '19, Mel Shu '19, and Kara Bressler '19.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/PrincetonCourses"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- TigerSnatch-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://tigersnatch.com" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
+                                        portfolio-item-caption
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center
+                                        h-100
+                                        w-100
+                                    ">
+                                <div class="
+                                            portfolio-item-caption-content
+                                            text-center text-white
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/snatch.png" alt="TigerSnatch screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://tigersnatch.com" target="_blank" class="no-underline">TigerSnatch</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Receive email and text message notifications when spots open in full classes. Trade
+                            spots with other students. By Shannon Heh ’23, Nick Padmanabhan
+                            ’23, and Byron Zhang ’23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/tigersnatch"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- TigerMap-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://tigermap.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div
+                                class="
+                                    portfolio-item-caption
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                    h-100
+                                    w-100
+                                "
+                            >
+                                <div
+                                    class="
+                                        portfolio-item-caption-content
+                                        text-center text-white
+                                    "
+                                >
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img
+                                class="img-fluid"
+                                src="assets/tigermap.png"
+                                alt="TigerMap screenshot"
+                            />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://tigermap.tigerapps.org/" target="_blank" class="no-underline"
+                                >[NEW!] TigerMap</a
+                            >
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            A course exploration app that allows students to discover what classes to take next. 
+                            Create and share course tracks with others. By Leo Stepanewk '25, Aaliyah Sayed '25, and Bill Ao '24.
+                            <a class="btn" style="padding: 0;" href="https://github.com/TigerAppsOrg/tigermap" target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- TigerPath-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://www.tigerpath.io/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
+                                        portfolio-item-caption
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center
+                                        h-100
+                                        w-100
+                                    ">
+                                <div class="
+                                            portfolio-item-caption-content
+                                            text-center text-white
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/tigerpath.png" alt="TigerPath screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://www.tigerpath.io/" target="_blank" class="no-underline">TigerPath</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Plan out your four-year course schedule and track major/degree
+                            requirements. By Richard Chu '18, Barak Nehoran '18, Daniel Leung
+                            '20, and Adeniji Ogunlana '19.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerPath"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Course Planning-->
-        <section class="page-section portfolio animate__animated animate__fadeIn" id="course">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
-                    Course Planning
-                </h2>
-                <p class="lead text-center text-secondary mb-0">
-                    Plan your schedule and get notifications when spots open up.
-                </p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
+    <!-- Campus Life-->
+    <section class="page-section portfolio animate__animated animate__fadeIn" id="campus">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
+                Campus Life
+            </h2>
+            <p class="lead text-center text-secondary mb-0">
+                Prepare for Room Draw, stay active, and meet new friends over food.
+            </p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- MealMatch -->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://mealmatch.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
+                                        portfolio-item-caption
+                                        d-flex
+                                        align-items-center
+                                        justify-content-center
+                                        h-100
+                                        w-100
+                                    ">
+                                <div class="
+                                            portfolio-item-caption-content
+                                            text-center text-white
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/mealmatch.png" alt="MealMatch screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://mealmatch.tigerapps.org/" target="_blank" class="no-underline">MealMatch
+                            </a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Find new people to meet and eat with in dining halls who want to eat at the same time and
+                            place as you. Receive real-time text notifications upon finding a match along with your
+                            match's profile and contact information. By Adam Kelch '24, Ameya Vaidya '24, Jeremy
+                            Dapaah'24, and Rajiv Swamy '24.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/MealMatch"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
-                <div class="row justify-content-center">
-                    <!-- ReCal-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://recal.io/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+                <!-- TigerDraw-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://draw.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/recal.png"
-                                    alt="ReCal screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a href="https://recal.io/" target="_blank" class="no-underline"
-                                    >ReCal</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Plan the perfect course schedule and automatically sync with your
-                                Google Calendar. By Naphat Sanguansin '16, Dyland Xue '16, and Maxim
-                                Zaslavsky '17.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/recal" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- Princeton Courses-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://princetoncourses.com" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+                            <img class="img-fluid" src="assets/tigerdraw.png" alt="TigerDraw screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://draw.tigerapps.org/" target="_blank" class="no-underline">TigerDraw
+                            </a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            The one-stop-shop platform for room draw planning. See when past
+                            rooms were drawn, filter them, and create a list of potential rooms
+                            without needing to parse through PDFs. By Christine Cho '22, Grace
+                            Cuenca '22, Frank Ge '22, and Hannah Huh '22.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerDraw"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- TigerFit  -->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://fit.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/princetoncourses.png"
-                                    alt="Princeton Courses screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://princetoncourses.com/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >Princeton Courses</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Search through courses quickly to find the list of courses you wish
-                                to take. By Sebastian Hallum Clarke '19, Caterina Golner '19, Bensu
-                                Sicim '19, Mel Shu '19, and Kara Bressler '19.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/PrincetonCourses" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- TigerSnatch-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://tigersnatch.com" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/snatch.png"
-                                    alt="TigerSnatch screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://tigersnatch.com"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerSnatch</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Receive email and text message notifications when spots open in full classes. Trade
-                                spots with other students. By Shannon Heh ’23, Nick Padmanabhan
-                                ’23, and Byron Zhang ’23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/tigersnatch" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- TigerPath-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://www.tigerpath.io/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerpath.png"
-                                    alt="TigerPath screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://www.tigerpath.io/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerPath</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Plan out your four-year course schedule and track major/degree
-                                requirements. By Richard Chu '18, Barak Nehoran '18, Daniel Leung
-                                '20, and Adeniji Ogunlana '19.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerPath" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
+                            <img class="img-fluid" src="assets/tigerfit.png" alt="TigerFit screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://fit.tigerapps.org/" target="_blank" class="no-underline">TigerFit</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Track workouts, visualize progress, and get recommendations for weights/repetitions based on
+                            your workout history. By Ian Murray ‘23, Adam Gamba ‘23, Kevin Castro ‘23, Darren Zheng ‘23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerFit"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Campus Life-->
-        <section class="page-section portfolio animate__animated animate__fadeIn" id="campus">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
-                    Campus Life
-                </h2>
-                <p class="lead text-center text-secondary mb-0">
-                    Prepare for Room Draw, stay active, and meet new friends over food.
-                </p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                    <!-- MealMatch -->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://mealmatch.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+            <div class="row justify-content-center">
+                <!-- food 4 u  -->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://food4u.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/mealmatch.png"
-                                    alt="MealMatch screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://mealmatch.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >[NEW!] MealMatch
-                                </a>
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Find new people to meet and eat with in dining halls who want to eat at the same time and place as you. Receive real-time text notifications upon finding a match along with your match's profile and contact information. By Adam Kelch '24, Ameya Vaidya '24, Jeremy Dapaah'24, and Rajiv Swamy '24.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/MealMatch" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- TigerDraw-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://draw.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerdraw.png"
-                                    alt="TigerDraw screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://draw.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerDraw
-                                </a>
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                The one-stop-shop platform for room draw planning. See when past
-                                rooms were drawn, filter them, and create a list of potential rooms
-                                without needing to parse through PDFs. By Christine Cho '22, Grace
-                                Cuenca '22, Frank Ge '22, and Hannah Huh '22.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerDraw" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- TigerFit  -->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://fit.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerfit.png"
-                                    alt="TigerFit screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://fit.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerFit</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Track workouts, visualize progress, and get recommendations for weights/repetitions based on your workout history. By Ian Murray ‘23, Adam Gamba ‘23, Kevin Castro ‘23, Darren Zheng ‘23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerFit" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <!-- food 4 u  -->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://food4u.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/food4u.png"
-                                    alt="food 4 u screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://food4u.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >food 4 u</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Locate and share free food easily with a visual campus map marking free food events, email notifications, and more. By Daphne Barretto ‘23, Aaron Buck ‘23, and Ben Chan ‘23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/food4u" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
+                            <img class="img-fluid" src="assets/food4u.png" alt="food 4 u screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://food4u.tigerapps.org/" target="_blank" class="no-underline">food 4 u</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Locate and share free food easily with a visual campus map marking free food events, email
+                            notifications, and more. By Daphne Barretto ‘23, Aaron Buck ‘23, and Ben Chan ‘23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/food4u"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Buy & Sell -->
-        <section class="page-section portfolio animate__animated animate__fadeIn" id="buy-sell">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
-                    Buy & Sell
-                </h2>
-                <p class="lead text-center text-secondary mb-0">
-                    Trade clothes, textbooks, and goods with other students.
-                </p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                    <!-- TigerRetail-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://retail.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+    <!-- Buy & Sell -->
+    <section class="page-section portfolio animate__animated animate__fadeIn" id="buy-sell">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
+                Buy & Sell
+            </h2>
+            <p class="lead text-center text-secondary mb-0">
+                Trade clothes, textbooks, and goods with other students.
+            </p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- TigerRetail-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://retail.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerretail.png"
-                                    alt="TigerRetail screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="http://retail.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerRetail</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more. By Albert Lin ’23, Katie McLaughlin ’23, Sara Schwartz ’23, Phoebe Lin ’23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerReTail" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
+                            <img class="img-fluid" src="assets/tigerretail.png" alt="TigerRetail screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="http://retail.tigerapps.org/" target="_blank" class="no-underline">TigerRetail</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Buy, sell, and request goods; direct message users in-site, connect with transportation
+                            buddies, find campus event tickets, and more. By Albert Lin ’23, Katie McLaughlin ’23, Sara
+                            Schwartz ’23, Phoebe Lin ’23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerReTail"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Directories -->
-        <section class="page-section portfolio animate__animated animate__fadeIn" id="direct">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
-                    Directories
-                </h2>
-                <p class="lead text-center text-secondary mb-0">Find students, study groups, research opportunities, and campus amenities.</p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center">
-                    <!-- TigerStudy-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://tiger-study.herokuapp.com/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+    <!-- Directories -->
+    <section class="page-section portfolio animate__animated animate__fadeIn" id="direct">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
+                Directories
+            </h2>
+            <p class="lead text-center text-secondary mb-0">Find students, study groups, research opportunities, and
+                campus amenities.</p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- TigerStudy-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://tiger-study.herokuapp.com/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerstudy.png"
-                                    alt="TigerStudy screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://tiger-study.herokuapp.com/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerStudy</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Get matched to study groups for any of your courses. By Caroline di Vittorio '22 and Kasey McFadden '22.
-                                <!-- <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerStudy" target="_blank">
+                            <img class="img-fluid" src="assets/tigerstudy.png" alt="TigerStudy screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://tiger-study.herokuapp.com/" target="_blank"
+                                class="no-underline">TigerStudy</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Get matched to study groups for any of your courses. By Caroline di Vittorio '22 and Kasey
+                            McFadden '22.
+                            <!-- <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerStudy" target="_blank">
                                     <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
                                 </a> -->
-                                <br />
-                                Note: Any inquiries about study group matching should be directed to the McGraw Center.
-                            </p>
-                        </a>
-                    </div>
-                    <!-- Tigerbook-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="http://tigerbook.herokuapp.com/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigerbook.png"
-                                    alt="TigerBook screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://tigerbook.herokuapp.com/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >Student Facebook</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                A directory of Princeton undergraduate students.
-                                <br />
-                                Note: The original student-built Tigerbook has been retired in favor of the Registrar's official Princeton directory.
-                            </p>
-                        </a>
-                    </div>
-                    <!-- TigerResearch -->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://research.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
-                                        portfolio-item-caption
-                                        d-flex
-                                        align-items-center
-                                        justify-content-center
-                                        h-100
-                                        w-100
-                                    "
-                                >
-                                    <div
-                                        class="
-                                            portfolio-item-caption-content
-                                            text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
-                                </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/research.png"
-                                    alt="TigerResearch screenshot"
-                                />
-                            </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://research.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerResearch</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                 Search for available Princeton professors within your field of interest, 
-                                 for independent work, thesis, or other research. 
-                                 By Eric Ahn '24, Vivek Kolli '24, and Alex Zhang '24.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerResearch" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
+                            <br />
+                            Note: Any inquiries about study group matching should be directed to the McGraw Center.
+                        </p>
+                    </a>
                 </div>
-                <div class="row justify-content-center">
-                    <!-- TigerTools-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://tools.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+                <!-- Tigerbook-->
+                <div class="col-lg-4 mb-5">
+                    <a href="http://tigerbook.herokuapp.com/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/tigertools.png"
-                                    alt="TigerTools screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://tools.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >TigerTools</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Find amenities using a map of campus and provide feedback on them.
-                                By Indu Panigrahi '23, Raymond Liu '23, and Adam Rebei '23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerTools" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
-                    <!-- SpaceTiger-->
-                    <div class="col-lg-4 mb-5">
-                        <a href="https://spacetiger.tigerapps.org/" target="_blank">
-                            <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
-                                <div
-                                    class="
+                            <img class="img-fluid" src="assets/tigerbook.png" alt="TigerBook screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://tigerbook.herokuapp.com/" target="_blank"
+                                class="no-underline">Tigerbook</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            A directory of Princeton undergraduate students.
+                            <br />
+                            Note: Tigerbook is not currently maintained by the TigerApps Team.
+                        </p>
+                    </a>
+                </div>
+                <!-- TigerResearch -->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://research.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div class="
                                         portfolio-item-caption
                                         d-flex
                                         align-items-center
                                         justify-content-center
                                         h-100
                                         w-100
-                                    "
-                                >
-                                    <div
-                                        class="
+                                    ">
+                                <div class="
                                             portfolio-item-caption-content
                                             text-center text-white
-                                        "
-                                    >
-                                        <i class="fas fa-external-link-alt fa-2x"></i>
-                                    </div>
+                                        ">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
-                                <img
-                                    class="img-fluid"
-                                    src="assets/spacetiger.png"
-                                    alt="SpaceTiger screenshot"
-                                />
                             </div>
-                            <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
-                                <a
-                                    href="https://spacetiger.tigerapps.org/"
-                                    target="_blank"
-                                    class="no-underline"
-                                    >SpaceTiger</a
-                                >
-                            </p>
-                            <p class="fs-6 text-center fst-italic text-secondary mb-0">
-                                Search for and review spots on campus, whether it be for studying, partying, rehearsing, or just hanging out.
-                                By Tyler Benson ‘24, Eva Vesely ‘24, Giao Vu Dinh ‘24, Chenhan Zhang ‘24, Thanya Begum ‘23.
-                                <a class="btn" style="padding: 0;" href="https://github.com/TigerAppsOrg/SpaceTiger" target="_blank">
-                                    <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
-                                </a>
-                            </p>
-                        </a>
-                    </div>
+                            <img class="img-fluid" src="assets/research.png" alt="TigerResearch screenshot" />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a href="https://research.tigerapps.org/" target="_blank"
+                                class="no-underline">TigerResearch</a>
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Search for available Princeton professors within your field of interest,
+                            for independent work, thesis, or other research.
+                            By Eric Ahn '24, Vivek Kolli '24, and Alex Zhang '24.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerResearch"
+                                target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Develop -->
-        <section
-            class="page-section portfolio animate__animated animate__fadeIn bg-primary pb-5"
-            id="develop"
-        >
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-white mb-3">
-                    Develop
-                </h2>
-                <p class="lead text-center text-white mb-0">
-                    Interested in creating the next TigerApp?
-                </p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row justify-content-center text-white mb-4 fs-6">
-                    <div class="text-center apply-text">
-                        TigerApps is a student-run organization that maintains and supports
-                        student-developed web applications. We cover all technological costs
-                        associated with the apps and advertise them on our homepage.
-                    </div>
-                    <div class="text-center mt-3 apply-text">
-                        There are 3 criteria for your app to become part of TigerApps.
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 mb-5">
-                        <div class="text-center">
-                            <img
-                                class="img-fluid-criteria"
-                                src="assets/apply-crit1.svg"
-                                alt="Apply Criteria 1"
-                            />
-                        </div>
-                        <p class="fs-6 text-center text-white mb-0 mt-0">
-                            Relates to student life on campus
-                        </p>
-                    </div>
-                    <div class="col-lg-3 mb-5">
-                        <div class="text-center">
-                            <img
-                                class="img-fluid-criteria"
-                                src="assets/apply-crit2.svg"
-                                alt="Apply Criteria 2"
-                            />
-                        </div>
-                        <p class="fs-6 text-center text-white mb-0 mt-0">
-                            Fully functional & no known bugs
-                        </p>
-                    </div>
-                    <div class="col-lg-3 mb-5">
-                        <div class="text-center">
-                            <img
-                                class="img-fluid-criteria"
-                                src="assets/apply-crit3.svg"
-                                alt="Apply Criteria 3"
-                            />
-                        </div>
-                        <p class="fs-6 text-center text-white mb-0 mt-0">
-                            Built using modern frameworks
-                        </p>
-                    </div>
-                </div>
-                <div class="row justify-content-center mb-4">
-                    <p class="text-center text-white mb-3">
-                        Unsure where to start? Check out some Princeton data sources to start building your app.
-                    </p>
-                    <a
-                        class="btn btn-xl btn-outline-secondary-opp submit-app-btn fs-5 fw-bold"
-                        target="_blank"
-                        href="resources.html"
-                        >View Data Sources</a
-                    >
-                </div>
-                <div class="row justify-content-center mb-5">
-                    <p class="text-center text-white mb-3">
-                        Once your app is ready to launch, apply to become a TigerApp.
-                    </p>
-                    <a
-                        class="btn btn-xl btn-outline-secondary-opp submit-app-btn fs-5 fw-bold"
-                        target="_blank"
-                        href="https://tinyurl.com/TigerAppsSubmission"
-                        >Submit an App</a
-                    >
-                </div>
-            </div>
-        </section>
-        <!-- About Us -->
-        <section class="page-section portfolio animate__animated animate__fadeIn" id="about">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
-                    About Us
-                </h2>
-                <p class="lead text-center text-secondary mb-0">Meet the TigerApps team!</p>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p class="fs-4 lead text-center text-secondary mb-3 fw-bold">Current Members</p>
-                <div class="row justify-content-center">
-                    <!-- Shannon -->
-                    <div class="col-lg-2 mb-3">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/shannon.png"
-                                alt="Shannon's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Shannon Heh '23
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
-                    </div>
-                    <!-- Nicholas -->
-                    <div class="col-lg-2 mb-3">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/nicholas.jpeg"
-                                alt="Nicholas's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Nick Padmanabhan '23
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
-                    </div>
-                     <!-- Ben Chan -->
-                     <div class="col-lg-2 mb-5">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/ben_chan.jpeg"
-                                alt="Ben Chan's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Ben Chan '23
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
-                    </div>
-                    <!-- Adam Gamba -->
-                    <div class="col-lg-2 mb-5">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/adam_gamba.jpg"
-                                alt="Adam Gamba's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Adam Gamba '23
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <!-- Adam Kelch -->
-                    <div class="col-lg-2 mb-3">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/adam_kelch.jpg"
-                                alt="Adam Kelch's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Adam Kelch '24
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
-                    </div>
-                    <!-- Taylor Yamashita -->
-                    <div class="col-lg-2 mb-3">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/taylor.jpg"
-                                alt="Taylor's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Taylor Yamashita '24
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
-                    </div>
-                     <!-- Daniel Park -->
-                     <div class="col-lg-2 mb-5">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/daniel.JPG"
-                                alt="Daniel's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Daniel Park '24
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
-                    </div>
-                    <!-- Youngseo Lee -->
-                    <div class="col-lg-2 mb-5">
-                        <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
-                            <img
-                                class="img-fluid"
-                                src="assets/members/youngseo.jpg"
-                                alt="Youngseo's picture"
-                            />
-                        </div>
-                        <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
-                            Youngseo Lee '25
-                        </p>
-                        <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
-                    </div>
-                </div>
-                <p class="fs-4 lead text-center text-secondary mb-3 fw-bold">Past Members</p>
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-3 text-center">
-                       <p>Charles An '22</p>
-                       <p>Ayo Oguntola '23</p>
-                       <p>Emre Cakir '21</p>
-                       <p>Reilly Bova '20</p>
-                    </div>
-                    <div class="col-lg-3 text-center">
-                       <p>Rushy Panchal '19</p>
-                       <p>Ben Parks '17</p>
-                       <p>Maxim Zaslavsky '17</p>
-                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Contact Us-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Contact Us</h4>
-                        <p class="lead mb-0">
-                            <a href="mailto:it.admin@tigerapps.org"
-                                >it.admin@tigerapps.org</a
+            <div class="row justify-content-center">
+                <!-- TigerTools-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://tools.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div
+                                class="
+                                    portfolio-item-caption
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                    h-100
+                                    w-100
+                                "
                             >
-                        </p>
-                    </div>
-                    <!-- Footer Other Campus Resources-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Other Campus Resources</h4>
-                        <a
-                            class="lead mb-0"
-                            href="https://ssprint-prod1.princeton.edu:9192/app"
-                            target="_blank"
-                            >Print Queue</a
-                        >
-                        |
-                        <a
-                            class="lead mb-0"
-                            href="https://registrar.princeton.edu/tigerhub/"
-                            target="_blank"
-                            >TigerHub</a
-                        >
-                        |
-                        <a class="lead mb-0" href="https://tigercard.princeton.edu/" target="_blank"
-                            >TigerCard</a
-                        >
-                    </div>
-                    <!-- Footer Submit An App-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">Submit An App</h4>
-                        <p class="lead mb-0">
+                                <div
+                                    class="
+                                        portfolio-item-caption-content
+                                        text-center text-white
+                                    "
+                                >
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img
+                                class="img-fluid"
+                                src="assets/tigertools.png"
+                                alt="TigerTools screenshot"
+                            />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
                             <a
-                                class="lead mb-0"
-                                href="https://forms.gle/tsFWuWbGtsLp2Xrr9"
+                                href="https://tools.tigerapps.org/"
                                 target="_blank"
-                                >Apply Now</a
+                                class="no-underline"
+                                >TigerTools</a
                             >
                         </p>
-                    </div>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Find amenities using a map of campus and provide feedback on them.
+                            By Indu Panigrahi '23, Raymond Liu '23, and Adam Rebei '23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/PrincetonUSG/TigerTools" target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
+                </div>
+                <!-- SpaceTiger-->
+                <div class="col-lg-4 mb-5">
+                    <a href="https://spacetiger.tigerapps.org/" target="_blank">
+                        <div class="portfolio-item mx-auto shadow mb-4 bg-body rounded">
+                            <div
+                                class="
+                                    portfolio-item-caption
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                    h-100
+                                    w-100
+                                "
+                            >
+                                <div
+                                    class="
+                                        portfolio-item-caption-content
+                                        text-center text-white
+                                    "
+                                >
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </div>
+                            </div>
+                            <img
+                                class="img-fluid"
+                                src="assets/spacetiger.png"
+                                alt="SpaceTiger screenshot"
+                            />
+                        </div>
+                        <p class="fs-5 fw-bold text-center text-secondary mb-0 mt-2">
+                            <a
+                                href="https://spacetiger.tigerapps.org/"
+                                target="_blank"
+                                class="no-underline"
+                                >SpaceTiger</a
+                            >
+                        </p>
+                        <p class="fs-6 text-center fst-italic text-secondary mb-0">
+                            Search for and review spots on campus, whether it be for studying, partying, rehearsing, or just hanging out.
+                            By Tyler Benson ‘24, Eva Vesely ‘24, Giao Vu Dinh ‘24, Chenhan Zhang ‘24, Thanya Begum ‘23.
+                            <a class="btn" style="padding: 0;" href="https://github.com/TigerAppsOrg/SpaceTiger" target="_blank">
+                                <i data-toggle="tooltip" title="See Source Code" class="fab fa-github github-icon"></i>
+                            </a>
+                        </p>
+                    </a>
                 </div>
             </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; USG TigerApps 2021</small></div>
-            <small class="attribution-text"
-                >Icons made by
-                <a
-                    target="_blank"
-                    href="https://www.flaticon.com/authors/smashicons"
-                    title="Smashicons"
-                    >Smashicons</a
-                >,
-                <a target="_blank" href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp"
-                    >Eucalyp</a
-                >, and
-                <a target="_blank" href="https://www.freepik.com" title="Freepik">Freepik</a> from
-                <a target="_blank" href="https://www.flaticon.com/" title="Flaticon"
-                    >www.flaticon.com</a
-                ></small
-            >
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+    </section>
+
+    <!-- Develop -->
+    <section class="page-section portfolio animate__animated animate__fadeIn bg-primary pb-5" id="develop">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-white mb-3">
+                Develop
+            </h2>
+            <p class="lead text-center text-white mb-0">
+                Interested in creating the next TigerApp?
+            </p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row justify-content-center text-white mb-4 fs-6">
+                <div class="text-center apply-text">
+                    TigerApps is a student-run organization that maintains and supports
+                    student-developed web applications. We cover all technological costs
+                    associated with the apps and advertise them on our homepage.
+                </div>
+                <div class="text-center mt-3 apply-text">
+                    There are 3 criteria for your app to become part of TigerApps.
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid-criteria" src="assets/apply-crit1.svg" alt="Apply Criteria 1" />
+                    </div>
+                    <p class="fs-6 text-center text-white mb-0 mt-0">
+                        Relates to student life on campus
+                    </p>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid-criteria" src="assets/apply-crit2.svg" alt="Apply Criteria 2" />
+                    </div>
+                    <p class="fs-6 text-center text-white mb-0 mt-0">
+                        Fully functional & no known bugs
+                    </p>
+                </div>
+                <div class="col-lg-3 mb-5">
+                    <div class="text-center">
+                        <img class="img-fluid-criteria" src="assets/apply-crit3.svg" alt="Apply Criteria 3" />
+                    </div>
+                    <p class="fs-6 text-center text-white mb-0 mt-0">
+                        Built using modern frameworks
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <p class="text-center text-white mb-3">
+                    Unsure where to start? Check out some Princeton data sources to start building your app.
+                </p>
+                <a class="btn btn-xl btn-outline-secondary-opp submit-app-btn fs-5 fw-bold" target="_blank"
+                    href="resources.html">View Data Sources</a>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <p class="text-center text-white mb-3">
+                    Once your app is ready to launch, apply to become a TigerApp.
+                </p>
+                <a class="btn btn-xl btn-outline-secondary-opp submit-app-btn fs-5 fw-bold" target="_blank"
+                    href="https://tinyurl.com/TigerAppsSubmission">Submit an App</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Us -->
+    <section class="page-section portfolio animate__animated animate__fadeIn" id="about">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">
+                About Us
+            </h2>
+            <p class="lead text-center text-secondary mb-0">Meet the TigerApps team!</p>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="fs-4 lead text-center text-secondary mb-3 fw-bold">Current Members</p>
+            <div class="row justify-content-center">
+                <!-- Shannon -->
+                <div class="col-lg-2 mb-3">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/shannon.png" alt="Shannon's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Shannon Heh '23
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
+                </div>
+                <!-- Nicholas -->
+                <div class="col-lg-2 mb-3">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/nicholas.jpeg" alt="Nicholas's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Nick Padmanabhan '23
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
+                </div>
+                <!-- Ben Chan -->
+                <div class="col-lg-2 mb-5">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/ben_chan.jpeg" alt="Ben Chan's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Ben Chan '23
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
+                </div>
+                <!-- Adam Gamba -->
+                <div class="col-lg-2 mb-5">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/adam_gamba.jpg" alt="Adam Gamba's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Adam Gamba '23
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Senior Developer</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Adam Kelch -->
+                <div class="col-lg-2 mb-3">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/adam_kelch.jpg" alt="Adam Kelch's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Adam Kelch '24
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
+                </div>
+                <!-- Taylor Yamashita -->
+                <div class="col-lg-2 mb-3">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/taylor.jpg" alt="Taylor's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Taylor Yamashita '24
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
+                </div>
+                <!-- Daniel Park -->
+                <div class="col-lg-2 mb-5">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/daniel.JPG" alt="Daniel's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Daniel Park '24
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
+                </div>
+                <!-- Youngseo Lee -->
+                <div class="col-lg-2 mb-5">
+                    <div class="portfolio-item no-pointer mx-auto shadow mb-3 bg-body rounded">
+                        <img class="img-fluid" src="assets/members/youngseo.jpg" alt="Youngseo's picture" />
+                    </div>
+                    <p class="fs-5-half fw-bold text-center text-primary mb-0 mt-2">
+                        Youngseo Lee '25
+                    </p>
+                    <p class="fs-6 text-center fst-italic text-secondary mb-0">Developer</p>
+                </div>
+            </div>
+            <p class="fs-4 lead text-center text-secondary mb-3 fw-bold">Past Members</p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-3 text-center">
+                    <p>Charles An '22</p>
+                    <p>Ayo Oguntola '23</p>
+                    <p>Emre Cakir '21</p>
+                    <p>Reilly Bova '20</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <p>Rushy Panchal '19</p>
+                    <p>Ben Parks '17</p>
+                    <p>Maxim Zaslavsky '17</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Contact Us-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Contact Us</h4>
+                    <p class="lead mb-0">
+                        <a href="mailto:it.admin@tigerapps.org">it.admin@tigerapps.org</a>
+                    </p>
+                </div>
+                <!-- Footer Other Campus Resources-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Other Campus Resources</h4>
+                    <a class="lead mb-0" href="https://ssprint-prod1.princeton.edu:9192/app" target="_blank">Print
+                        Queue</a>
+                    |
+                    <a class="lead mb-0" href="https://registrar.princeton.edu/tigerhub/" target="_blank">TigerHub</a>
+                    |
+                    <a class="lead mb-0" href="https://tigercard.princeton.edu/" target="_blank">TigerCard</a>
+                </div>
+                <!-- Footer Submit An App-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Submit An App</h4>
+                    <p class="lead mb-0">
+                        <a class="lead mb-0" href="https://forms.gle/tsFWuWbGtsLp2Xrr9" target="_blank">Apply Now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; USG TigerApps 2021</small></div>
+        <small class="attribution-text">Icons made by
+            <a target="_blank" href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
+            <a target="_blank" href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a>, and
+            <a target="_blank" href="https://www.freepik.com" title="Freepik">Freepik</a> from
+            <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>
