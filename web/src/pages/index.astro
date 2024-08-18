@@ -335,14 +335,18 @@ const COMPANIES = [
                         Unsure where to start? Check out some Princeton data
                         sources to start building your app.
                     </p>
-                    <a class="link-button" href="/resources"> View Data Sources </a>
+                    <a class="link-button" href="/resources">
+                        View Data Sources
+                    </a>
                 </div>
                 <div>
                     <p>
                         Once your app is ready to launch, apply to become a
                         TigerApp.
                     </p>
-                    <a class="link-button" href="https://tinyurl.com/TigerAppsSubmission">
+                    <a
+                        class="link-button"
+                        href="https://tinyurl.com/TigerAppsSubmission">
                         Submit an App</a
                     >
                 </div>
@@ -350,7 +354,38 @@ const COMPANIES = [
         </div>
     </section>
     <section id="about" class="py-16">
-        <div class="cont"></div>
+        <div class="cont text-center">
+            <div>
+                <h3>ABOUT US</h3>
+                <p>Meet the TigerApps team!</p>
+            </div>
+            <div
+                class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
+            </div>
+
+            <article>
+                <h4>Current Members</h4>
+                <div>
+                    {MEMBERS.map(member => <MemberCard {...member} />)}
+                </div>
+            </article>
+            <article>
+                <h4>Past Members</h4>
+                <ul>
+                    {PAST_MEMBERS.map(member => <li>{member}</li>)}
+                </ul>
+            </article>
+            <article>
+                <h4>Our members have gone on to work for...</h4>
+                <div>
+                    {
+                        COMPANIES.map(company => (
+                            <Image src={company.src} alt={company.alt} />
+                        ))
+                    }
+                </div>
+            </article>
+        </div>
     </section>
     <Footer />
 </Layout>
