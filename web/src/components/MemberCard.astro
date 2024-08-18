@@ -7,11 +7,12 @@ interface Props {
     name: string;
     title: string;
     position: string;
+    website: string;
     github: string;
     headshot: ImageMetadata;
 }
 
-const { name, title, position, github, headshot } = Astro.props;
+const { name, title, position, website, github, headshot } = Astro.props;
 ---
 
 <div class="w-36 text-center">
