@@ -26,7 +26,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: Food4UImage
+        screenshot: Food4UImage,
+        alt: "Food 4 U app screenshot"
     },
     {
         title: "MealMatch",
@@ -34,7 +35,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: MealMatchImage
+        screenshot: MealMatchImage,
+        alt: "Meal Match app screenshot"
     },
     {
         title: "ReBook",
@@ -42,7 +44,8 @@ const ARCHIVE_CARDS = [
         note: "Replacement: TigerRetail",
         webLink: "",
         repoLink: "",
-        screenshot: RebookImage
+        screenshot: RebookImage,
+        alt: "Re-Book app screenshot"
     },
     {
         title: "Recal",
@@ -50,7 +53,8 @@ const ARCHIVE_CARDS = [
         note: "Replacement: TigerJunction",
         webLink: "",
         repoLink: "",
-        screenshot: RecalImage
+        screenshot: RecalImage,
+        alt: "ReCal app screenshot"
     },
     {
         title: "TigerResearch",
@@ -58,7 +62,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: ResearchImage
+        screenshot: ResearchImage,
+        alt: "Tiger Research app screenshot"
     },
     {
         title: "TigerRooms",
@@ -66,7 +71,8 @@ const ARCHIVE_CARDS = [
         note: "Replacement: TigerDraw",
         webLink: "",
         repoLink: "",
-        screenshot: RoomsImage
+        screenshot: RoomsImage,
+        alt: "Tiger Rooms app screenshot"
     },
     {
         title: "SpaceTiger",
@@ -74,7 +80,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: SpaceTigerImage
+        screenshot: SpaceTigerImage,
+        alt: "Space Tiger app screenshot"
     },
     {
         title: "TigerFit",
@@ -82,7 +89,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: TigerFitImage
+        screenshot: TigerFitImage,
+        alt: "Tiger Fit app screenshot"
     },
     {
         title: "TigerJobs",
@@ -90,7 +98,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: TigerJobsImage
+        screenshot: TigerJobsImage,
+        alt: "Tiger Jobs app screenshot"
     },
     {
         title: "TigerMap",
@@ -98,7 +107,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: TigerMapImage
+        screenshot: TigerMapImage,
+        alt: "Tiger Map app screenshot"
     },
     {
         title: "TigerMenus",
@@ -106,7 +116,8 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: TigerMenusImage
+        screenshot: TigerMenusImage,
+        alt: "Tiger Menus app screenshot"
     },
     {
         title: "TigerThrift",
@@ -114,7 +125,8 @@ const ARCHIVE_CARDS = [
         note: "Replacement: TigerRetail",
         webLink: "",
         repoLink: "",
-        screenshot: TigerThriftImage
+        screenshot: TigerThriftImage,
+        alt: "Tiger Thrift app screenshot"
     },
     {
         title: "TigerTickets",
@@ -122,7 +134,8 @@ const ARCHIVE_CARDS = [
         note: "Replacement: TigerRetail",
         webLink: "",
         repoLink: "",
-        screenshot: TigerTicketsImage
+        screenshot: TigerTicketsImage,
+        alt: "Tiger Tickets app screenshot"
     },
     {
         title: "TigerTools",
@@ -130,18 +143,23 @@ const ARCHIVE_CARDS = [
         note: "",
         webLink: "",
         repoLink: "",
-        screenshot: TigerToolsImage
+        screenshot: TigerToolsImage,
+        alt: "Tiger Tools app screenshot"
     }
 ];
 ---
 
 <Layout>
-    <div class="cont">
+    <div class="cont text-center">
         <div>
             <h1>Archive</h1>
             <p>Apps that we are no longer maintaining.</p>
         </div>
-        <main></main>
+        <div class="border-b-4 w-32 border-secondary rounded-full my-8 mx-auto">
+        </div>
+        <main>
+            {ARCHIVE_CARDS.map(card => <AppCard {...card} />)}
+        </main>
     </div>
     <Footer />
 </Layout>
