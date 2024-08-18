@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface Props {
     title: string;
@@ -8,7 +9,29 @@ interface Props {
     webLink: string;
     repoLink: string;
     screenshot: ImageMetadata;
+    alt: string;
 }
 
-const { title, description, note, webLink, repoLink, screenshot } = Astro.props;
+const { title, description, note, webLink, repoLink, screenshot, alt } =
+    Astro.props;
 ---
+
+<article>
+    <a href={webLink} target="_blank">
+        <Image src={screenshot} {alt} 
+        class="rounded-md" />
+    </a>
+    <div>
+        <a href={webLink} target="_blank">
+            <h4 class="text-lg font-semibold text-secondary">
+                {title}
+            </h4>
+        </a>
+        <div class="italic">
+            <p>
+                {description}
+            </p>
+            {note && <p>{note}</p>}
+        </div>
+    </div>
+</article>

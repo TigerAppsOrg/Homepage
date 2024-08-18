@@ -9,6 +9,7 @@ interface CardProps {
     webLink: string;
     repoLink: string;
     screenshot: ImageMetadata;
+    alt: string;
 }
 
 interface Props {
@@ -20,17 +21,17 @@ interface Props {
 const { title, description, cards } = Astro.props;
 ---
 
-<article>
-    <h3>
+<articl class="text-center">
+    <h3 class="text-3xl font-bold text-secondary mb-2">
         {title}
     </h3>
-    <p>
+    <p class="text-lg">
         {description}
     </p>
-    <div class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
+    <div class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
     </div>
 
     <div>
         {cards.map(card => <AppCard {...card} />)}
     </div>
-</article>
+</articl>
