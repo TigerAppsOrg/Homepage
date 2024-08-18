@@ -4,7 +4,7 @@ import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 import LandingHeader from "../components/page/LandingHeader.astro";
 import Footer from "../components/page/Footer.astro";
-import AppCard from "../components/AppCard.astro";
+import AppSection from "../components/AppSection.astro";
 import MemberCard from "../components/MemberCard.astro";
 
 // Icons
@@ -43,6 +43,84 @@ import PineconeLogo from "../assets/companies/pinecone.jpg";
 import AmazonLogo from "../assets/companies/amazon.jpg";
 import AirbnbLogo from "../assets/companies/airbnb.png";
 import MicrosoftLogo from "../assets/companies/microsoft.jpg";
+
+const COURSE_PLANNING_CARDS = [
+    {
+        title: "TigerJunction",
+        description:
+            "Plan your schedules with powerful advanced search features, customizable themes, and built-in ratings. By Joshua Lau '26.",
+        note: "",
+        webLink: "https://junction.tigerapps.org",
+        repoLink: "https://github.com/TigerAppsOrg/tiger-junction",
+        screenshot: TigerJunctionImage
+    },
+    {
+        title: "PrincetonCourses",
+        description:
+            "Search through courses quickly to find the list of courses you wish to take. By Sebastian Hallum Clarke '19, Caterina Golner '19, Bensu Sicim '19, Mel Shu '19, and Kara Bressler '19.",
+        note: "",
+        webLink: "https://princetoncourses.com/",
+        repoLink: "https://github.com/PrincetonUSG/PrincetonCourses",
+        screenshot: PrincetonCoursesImage
+    },
+    {
+        title: "TigerSnatch",
+        description:
+            "Receive email and text message notifications when spots open in full classes. Trade spots with other students. By Shannon Heh '23, Nick Padmanabhan '23, and Byron Zhang '23.",
+        note: "",
+        webLink: "https://tigersnatch.com/?ref=tigerapps",
+        repoLink: "https://github.com/PrincetonUSG/tigersnatch",
+        screenshot: TigerSnatchImage
+    },
+    {
+        title: "TigerPath",
+        description:
+            "Plan out your four-year course schedule and track major/degree requirements. By Richard Chu '18, Barak Nehoran '18, Daniel Leung '20, and Adeniji Ogunlana '19.",
+        note: "",
+        webLink: "https://www.tigerpath.io/",
+        repoLink: "https://github.com/PrincetonUSG/TigerPath",
+        screenshot: TigerPathImage
+    }
+];
+
+const CAMPUS_LIFE_CARDS = [
+    {
+        title: "Gigl",
+        description:
+            "Unleash your skills and earn money by connecting with fellow students seeking your talents! Apply to gigs, set up your freelancer profile and wait for offers OR post a gig yourself if you are looking to hire someone. By Taylan Aydin '25, Andre Biehl '25, Yagiz Devre '26, and Ibrahim Ahmed '25.",
+        note: "",
+        webLink: "https://gigl.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/gigl",
+        screenshot: GiglImage
+    },
+    {
+        title: "TigerDraw",
+        description:
+            "The one-stop-shop platform for room draw planning. See when past rooms were drawn, filter them, and create a list of potential rooms without needing to parse through PDFs. By Christine Cho '22, Grace Cuenca '22, Frank Ge '22, and Hannah Huh '22.",
+        note: "",
+        webLink: "https://draw.tigerapps.org/",
+        repoLink: "https://github.com/PrincetonUSG/TigerDraw",
+        screenshot: TigerDrawImage
+    },
+    {
+        title: "TigerStudy",
+        description:
+            "Get matched to study groups for any of your courses. By Caroline di Vittorio '22 and Kasey McFadden '22.",
+        note: "Note: Any inquiries about study group matching should be directed to the McGraw Center.",
+        webLink: "https://tiger-study.herokuapp.com/",
+        repoLink: "https://github.com/PrincetonUSG/TigerStudy",
+        screenshot: TigerStudyImage
+    },
+    {
+        title: "TigerRetail",
+        description:
+            "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more. By Albert Lin '23, Katie McLaughlin '23, Sara Schwartz '23, Phoebe Lin '23.",
+        note: "",
+        webLink: "http://retail.tigerapps.org/",
+        repoLink: "https://github.com/PrincetonUSG/TigerReTail",
+        screenshot: TigerRetailImage
+    }
+];
 ---
 
 <Layout>
@@ -50,14 +128,17 @@ import MicrosoftLogo from "../assets/companies/microsoft.jpg";
     <section id="hero" class="bg-secondary text-on-secondary pt-32 pb-16">
         <div class="cont text-center">
             <div class="flex flex-col items-center w-80 mx-auto gap-8">
-                <Image src={TigerAppsLogo} alt="TigerApps logo" loading="eager" />
+                <Image
+                    src={TigerAppsLogo}
+                    alt="TigerApps logo"
+                    loading="eager"
+                />
                 <h2 class="uppercase font-bold text-3xl">
                     For Students, <br /> By Students
                 </h2>
             </div>
             <div
-                class="border-b-4 w-32 border-on-secondary rounded-full
-            my-8 mx-auto">
+                class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
             </div>
             <div class="text-lg space-y-4">
                 <p>
@@ -73,7 +154,18 @@ import MicrosoftLogo from "../assets/companies/microsoft.jpg";
         </div>
     </section>
     <section id="apps" class="py-16">
-        <div class="cont"></div>
+        <div class="cont">
+            <AppSection
+                title="Course Planning"
+                description="Plan your schedule and get notifications when spots open up."
+                cards={COURSE_PLANNING_CARDS}
+            />
+            <AppSection
+                title="Campus Life"
+                description="Prepare for Room Draw, stay active, and meet new friends over food."
+                cards={CAMPUS_LIFE_CARDS}
+            />
+        </div>
     </section>
     <section id="develop" class="py-16">
         <div class="cont"></div>

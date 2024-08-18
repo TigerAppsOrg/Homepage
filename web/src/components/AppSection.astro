@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from "astro";
+import AppCard from "../components/AppCard.astro";
+
+interface CardProps {
+    title: string;
+    description: string;
+    note: string;
+    webLink: string;
+    repoLink: string;
+    screenshot: ImageMetadata;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    cards: CardProps[];
+}
+
+const { title, description, cards } = Astro.props;
+---
+
+<article>
+    <h3>
+        {title}
+    </h3>
+    <p>
+        {description}
+    </p>
+    <div class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
+    </div>
+
+    <div>
+        {
+            cards.forEach(() => {
+                <div>Hello There</div>;
+            })
+        }
+    </div>
+</article>
