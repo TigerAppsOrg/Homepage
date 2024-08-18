@@ -15,20 +15,28 @@ const { name, title, position, github, headshot } = Astro.props;
 ---
 
 <div class="w-36 text-center">
-    <Image class="rounded-md shadow-sm mb-2" src={headshot} alt={`${name}'s picture`} />
+    <Image
+        class="rounded-md shadow-sm mb-2"
+        src={headshot}
+        alt={`${name}'s picture`}
+    />
     <div class="flex items-center gap-2">
         <p class="font-semibold text-secondary">
             {name}
         </p>
-        <a href={`https://github.com/${github}`} target="_blank" rel="noopener noreferrer">
+        <a
+            href={`https://github.com/${github}`}
+            target="_blank"
+            rel="noopener noreferrer">
             <Image height="24" width="24" src={GithubIcon} alt="GitHub Icon" />
-    </div>
-    <div class="italic text-sm">
-        <p>
-            {title}
-        </p>
-        <p>
-            {position}
-        </p>
+        </a>
+        <div class="italic text-sm">
+            <p>
+                {title}
+            </p>
+            <p>
+                {position}
+            </p>
+        </div>
     </div>
 </div>

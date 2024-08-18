@@ -1,10 +1,16 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TigerApps - Apps for Princeton Students</title>
-  </head>
-  <body>
-    <slot /> 
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TigerApps - Apps for Princeton Students</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
+
+<style is:global lang="postcss">
+  .cont {
+    @apply max-w-7xl mx-auto px-4 w-full;
+  }
+</style>
