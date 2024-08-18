@@ -25,10 +25,7 @@ const { name, title, position, website, github, headshot } = Astro.props;
         <p class="font-semibold text-secondary">
             {name}
         </p>
-        <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer">
+        <a href={github} target="_blank" rel="noopener noreferrer">
             <Image height="24" width="24" src={GithubIcon} alt="GitHub Icon" />
         </a>
         <div class="italic text-sm">
