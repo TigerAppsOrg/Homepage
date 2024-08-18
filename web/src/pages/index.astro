@@ -1,14 +1,47 @@
 ---
-import MemberCard from "../components/MemberCard.astro";
+import Image from "astro/components/Image.astro";
 
 import Layout from "../layouts/Layout.astro";
 import LandingHeader from "../components/headers/LandingHeader.astro";
+import AppCard from "../components/AppCard.astro";
+import MemberCard from "../components/MemberCard.astro";
 
-import logo from "../assets/icons/logo.png";
+// Icons
+import TigerAppsLogo from "../assets/icons/logo.png";
+import GithubIcon from "../assets/icons/github-mark.svg";
+
+// App Images
+import TigerJunctionImage from "../assets/apps/tigerjunction.png";
+import PrincetonCoursesImage from "../assets/apps/princetoncourses.png";
+import TigerSnatchImage from "../assets/apps/tigersnatch.png";
+import TigerPathImage from "../assets/apps/tigerpath.png";
+import GiglImage from "../assets/apps/gigl.png";
+import TigerDrawImage from "../assets/apps/tigerdraw.png";
+import TigerStudyImage from "../assets/apps/tigerstudy.png";
+import TigerRetailImage from "../assets/apps/tigerretail.png";
+
+// Apply Images
+import Apply1 from "../assets/icons/apply-crit1.svg";
+import Apply2 from "../assets/icons/apply-crit2.svg";
+import Apply3 from "../assets/icons/apply-crit3.svg";
 
 // Member Images
 import JoshuaHeadshot from "../assets/members/joshua.png";
-import Image from "astro/components/Image.astro";
+import LeoHeadshot from "../assets/members/leo.png";
+import AaliyahHeadshot from "../assets/members/aaliyah.png";
+import HangHeadshot from "../assets/members/hang.png";
+import ShivamHeadshot from "../assets/members/shivam.png";
+import MarkHeadshot from "../assets/members/mark.png";
+
+// Company Images
+import DatabricksLogo from "../assets/companies/databricks.png";
+import NetflixLogo from "../assets/companies/netflix.png";
+import MetaLogo from "../assets/companies/meta.png";
+import StripeLogo from "../assets/companies/stripe.png";
+import PineconeLogo from "../assets/companies/pinecone.jpg";
+import AmazonLogo from "../assets/companies/amazon.jpg";
+import AirbnbLogo from "../assets/companies/airbnb.png";
+import MicrosoftLogo from "../assets/companies/microsoft.jpg";
 ---
 
 <Layout>
@@ -16,7 +49,7 @@ import Image from "astro/components/Image.astro";
     <section id="hero" class="bg-secondary text-on-secondary pt-32 pb-16">
         <div class="cont text-center">
             <div class="flex flex-col items-center w-80 mx-auto gap-8">
-                <Image src={logo} alt="TigerApps logo" loading="eager" />
+                <Image src={TigerAppsLogo} alt="TigerApps logo" loading="eager" />
                 <h2 class="uppercase font-bold text-3xl">
                     For Students, <br /> By Students
                 </h2>
