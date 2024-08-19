@@ -18,7 +18,7 @@ const { name, title, position, website, github, headshot } = Astro.props;
 
 <div class="text-center mx-auto">
     <Image
-        class="rounded-md shadow-sm mb-2"
+        class="rounded-lg shadow-lg mb-2"
         src={headshot}
         alt={`${name}'s picture`}
     />
@@ -26,16 +26,25 @@ const { name, title, position, website, github, headshot } = Astro.props;
         <h5 class="text-secondary">
             {name}
         </h5>
-        {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer">
-                <Image height="24" width="24" src={GithubIcon} alt="GitHub Icon" />
-            </a>
-        )}
-        {website && (
-            <a href={website} target="_blank" rel="noopener noreferrer">
-                <WebIcon />
-            </a>
-        )}
+        {
+            github && (
+                <a href={github} target="_blank" rel="noopener noreferrer">
+                    <Image
+                        height="24"
+                        width="24"
+                        src={GithubIcon}
+                        alt="GitHub Icon"
+                    />
+                </a>
+            )
+        }
+        {
+            website && (
+                <a href={website} target="_blank" rel="noopener noreferrer">
+                    <WebIcon />
+                </a>
+            )
+        }
     </div>
     <div class="italic">
         <p>

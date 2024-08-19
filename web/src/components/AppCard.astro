@@ -16,13 +16,13 @@ const { title, description, note, webLink, repoLink, screenshot, alt } =
     Astro.props;
 ---
 
-<article>
+<article class="space-y-2">
     <a href={webLink} target="_blank">
-        <Image src={screenshot} {alt} class="rounded-md" />
+        <Image src={screenshot} {alt} class="rounded-lg shadow-lg" />
     </a>
     <div>
         <a href={webLink} target="_blank">
-            <h4 class="text-lg font-semibold text-secondary">
+            <h4>
                 {title}
             </h4>
         </a>

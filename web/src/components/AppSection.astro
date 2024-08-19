@@ -21,7 +21,7 @@ interface Props {
 const { title, description, cards } = Astro.props;
 ---
 
-<articl class="text-center">
+<article class="text-center constrained">
     <h3 class="text-3xl font-bold text-secondary mb-2">
         {title}
     </h3>
@@ -31,7 +31,7 @@ const { title, description, cards } = Astro.props;
     <div class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
     </div>
 
-    <div>
+    <div class="grid grid-cols-2 gap-4">
         {cards.map(card => <AppCard {...card} />)}
     </div>
-</articl>
+</article>
