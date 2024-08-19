@@ -33,16 +33,6 @@ import AaliyahHeadshot from "../assets/members/aaliyah.png";
 import HangHeadshot from "../assets/members/hang.jpg";
 import MarkHeadshot from "../assets/members/mark.jpg";
 
-// Company Images
-import DatabricksLogo from "../assets/companies/databricks.png";
-import NetflixLogo from "../assets/companies/netflix.png";
-import MetaLogo from "../assets/companies/meta.png";
-import StripeLogo from "../assets/companies/stripe.png";
-import PineconeLogo from "../assets/companies/pinecone.jpg";
-import AmazonLogo from "../assets/companies/amazon.jpg";
-import AirbnbLogo from "../assets/companies/airbnb.png";
-import MicrosoftLogo from "../assets/companies/microsoft.jpg";
-
 const COURSE_PLANNING_CARDS = [
     {
         title: "TigerJunction",
@@ -190,41 +180,6 @@ const PAST_MEMBERS = [
     "Ben Parks '17",
     "Maxim Zaslavsky '17"
 ];
-
-const COMPANIES = [
-    {
-        src: DatabricksLogo,
-        alt: "Databricks logo"
-    },
-    {
-        src: NetflixLogo,
-        alt: "Netflix logo"
-    },
-    {
-        src: MetaLogo,
-        alt: "Meta logo"
-    },
-    {
-        src: StripeLogo,
-        alt: "Stripe logo"
-    },
-    {
-        src: PineconeLogo,
-        alt: "Pinecone logo"
-    },
-    {
-        src: AmazonLogo,
-        alt: "Amazon logo"
-    },
-    {
-        src: AirbnbLogo,
-        alt: "Airbnb logo"
-    },
-    {
-        src: MicrosoftLogo,
-        alt: "Microsoft logo"
-    }
-];
 ---
 
 <Layout>
@@ -366,16 +321,6 @@ const COMPANIES = [
                 <ul>
                     {PAST_MEMBERS.map(member => <li>{member}</li>)}
                 </ul>
-            </article>
-            <article>
-                <h4>Our members have gone on to work for...</h4>
-                <div>
-                    {
-                        COMPANIES.map(company => (
-                            <Image src={company.src} alt={company.alt} />
-                        ))
-                    }
-                </div>
             </article>
         </div>
     </section>
