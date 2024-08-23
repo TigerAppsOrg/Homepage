@@ -1,24 +1,24 @@
-<header
-    class="bg-secondary text-on-secondary h-20 fixed
-    top-0 w-full flex items-center justify-center">
-    <div class="cont flex items-center justify-between font-semibold">
+---
+import HeaderShell from "../HeaderShell.astro";
+---
+
+<HeaderShell>
+    <button
+        onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
+        <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+    </button>
+    <nav class="flex items-center text-xl gap-12">
         <button
-            onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
-            <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+            onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })">
+            Apps
         </button>
-        <nav class="flex items-center text-xl gap-12">
-            <button
-                onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })">
-                Apps
-            </button>
-            <button
-                onclick="document.getElementById('develop').scrollIntoView({ behavior: 'smooth' })">
-                Develop
-            </button>
-            <button
-                onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
-                About
-            </button>
-        </nav>
-    </div>
-</header>
+        <button
+            onclick="document.getElementById('develop').scrollIntoView({ behavior: 'smooth' })">
+            Develop
+        </button>
+        <button
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+            About
+        </button>
+    </nav>
+</HeaderShell>

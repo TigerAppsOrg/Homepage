@@ -18,6 +18,7 @@ import TigerMenusImage from "../assets/archive/tigermenus.webp";
 import TigerThriftImage from "../assets/archive/tigerthrift.webp";
 import TigerTicketsImage from "../assets/archive/tigertickets.webp";
 import TigerToolsImage from "../assets/archive/tigertools.webp";
+import HeaderShell from "../components/HeaderShell.astro";
 
 const ARCHIVE_CARDS = [
     {
@@ -154,8 +155,19 @@ const ARCHIVE_CARDS = [
 </head>
 
 <Layout>
+    <HeaderShell>
+        <button
+            onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
+            <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+        </button>
+        <nav class="flex items-center text-xl gap-12">
+            <a href="/"> Home</a>
+            <a href="/archive"> Archive </a>
+            <a href="/resources"> Resources</a>
+        </nav>
+    </HeaderShell>
     <div class="cont text-center">
-        <div class="space-y-2">
+        <div class="space-y-2 pt-32">
             <h3>Archive</h3>
             <p class="text-xl">Apps that we are no longer maintaining.</p>
         </div>

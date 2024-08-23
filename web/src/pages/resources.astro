@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/page/Footer.astro";
+import HeaderShell from "../components/HeaderShell.astro";
 ---
 
 <head>
@@ -8,8 +9,19 @@ import Footer from "../components/page/Footer.astro";
 </head>
 
 <Layout>
+    <HeaderShell>
+        <button
+            onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
+            <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+        </button>
+        <nav class="flex items-center text-xl gap-12">
+            <a href="/"> Home</a>
+            <a href="/archive"> Archive </a>
+            <a href="/resources"> Resources</a>
+        </nav>
+    </HeaderShell>
     <div id="resources-page">
-        <h1>
+        <h1 class="pt-32">
             <a target="_blank" href="https://tigerapps.org" target="_blank">
                 TigerApps
             </a>
