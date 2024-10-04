@@ -5,7 +5,6 @@ import Layout from "../layouts/Layout.astro";
 import LandingHeader from "../components/page/LandingHeader.astro";
 import Footer from "../components/page/Footer.astro";
 import AppSection from "../components/AppSection.astro";
-import MemberCard from "../components/MemberCard.astro";
 
 // Icons
 import TigerAppsLogo from "../assets/icons/logo.png";
@@ -25,11 +24,7 @@ import TigerRetailImage from "../assets/apps/tigerretail.webp";
 import Apply1 from "../assets/icons/apply-crit1.svg";
 import Apply2 from "../assets/icons/apply-crit2.svg";
 import Apply3 from "../assets/icons/apply-crit3.svg";
-
-// Member Images
-import JoshuaHeadshot from "../assets/members/joshua.webp";
-import LeoHeadshot from "../assets/members/leo.webp";
-import HangHeadshot from "../assets/members/hang.webp";
+import Members from "../components/Members.astro";
 
 const COURSE_PLANNING_CARDS = [
     {
@@ -115,52 +110,6 @@ const CAMPUS_LIFE_CARDS = [
         screenshot: TigerRetailImage,
         alt: "Tiger Retail app screenshot"
     }
-];
-
-const MEMBERS = [
-    {
-        name: "Joshua Lau '26",
-        title: "Senior Developer",
-        position: "Co-President",
-        website: "https://motoaki.dev",
-        github: "https://github.com/joshuamotoaki",
-        headshot: JoshuaHeadshot
-    },
-    {
-        name: "Leo Stepanewk '25",
-        title: "Senior Developer",
-        position: "Co-President",
-        website: "",
-        github: "https://github.com/leo-step",
-        headshot: LeoHeadshot
-    },
-    {
-        name: "Hang Pham '26",
-        title: "Senior Developer",
-        position: "Treasurer",
-        website: "",
-        github: "https://github.com/thanhhang1306",
-        headshot: HangHeadshot
-    },
-];
-
-const PAST_MEMBERS = [
-    "Shivam Kak '26",
-    "Youngseo Lee '25",
-    "Adam Kelch '24",
-    "Daniel Park '24",
-    "Taylor Yamashita '24",
-    "Benjamin Chan '23",
-    "Adam Gamba '23",
-    "Shannon Heh '23",
-    "Nicholas Padmanabhan '23",
-    "Charles An '22",
-    "Ayo Oguntola '23",
-    "Emre Cakir '21",
-    "Reilly Bova '20",
-    "Rushy Panchal '19",
-    "Ben Parks '17",
-    "Maxim Zaslavsky '17"
 ];
 ---
 
@@ -288,32 +237,7 @@ const PAST_MEMBERS = [
             </div>
         </div>
     </section>
-    <section id="about" class="py-16">
-        <div class="cont text-center">
-            <div class="space-y-2">
-                <h3>ABOUT US</h3>
-                <p class="text-lg">Meet the TigerApps team!</p>
-            </div>
-            <div
-                class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
-            </div>
-
-            <article>
-                <h4 class="mb-4">Current Members</h4>
-                <div
-                    class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-3 constrained">
-                    {MEMBERS.map(member => <MemberCard {...member} />)}
-                </div>
-            </article>
-            <article>
-                <h4 class="mb-4">Past Members</h4>
-                <ul
-                    class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 constrained">
-                    {PAST_MEMBERS.map(member => <li>{member}</li>)}
-                </ul>
-            </article>
-        </div>
-    </section>
+    <Members />
     <Footer />
 </Layout>
 
