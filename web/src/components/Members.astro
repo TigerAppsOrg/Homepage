@@ -35,14 +35,15 @@ import YubiHeadshot from "../assets/members/yubi.webp";
 type Member = {
     name: string;
     title: string;
-    position: string | null;
+    position: string;
     team: string;
-    website: string | null;
-    github: string | null;
+    website: string;
+    github: string;
     headshot: ImageMetadata;
 };
 
 const currentMembers: Member[] = [
+    // Board and Senior Developers    
     {
         name: "Joshua Lau '26",
         title: "Senior Developer",
@@ -69,7 +70,209 @@ const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/thanhhang1306",
         headshot: HangHeadshot
-    }
+    },
+    {
+        name: "Anna Wang '26",
+        title: "Marketing",
+        position: "",
+        team: "General",
+        website: "",
+        github: "",
+        headshot: AnnaHeadshot
+    },
+
+    // Designers
+    {
+        name: "Angelina Ji '27",
+        title: "Designer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "",
+        headshot: AngelinaHeadshot
+    },
+    {
+        name: "Arnav Sadeesh '28",
+        title: "Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "",
+        headshot: ArnavHeadshot
+    },
+    {
+        name: "Ayushmaan Kher '27",
+        title: "Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "",
+        headshot: AyushmaanHeadshot
+    },
+    {
+        name: "Erica Lee '26",
+        title: "Designer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "",
+        headshot: EricaHeadshot
+    },
+    {
+        name: "Sindhuja Kanamarlapudi '28",
+        title: "Designer",
+        position: "",
+        team: "General",
+        website: "",
+        github: "",
+        headshot: SindhujaHeadshot
+    },
+
+    // Junior Developers
+    {
+        name: "Julia Ying '26",
+        title: "Junior Developer and Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/juliaying26",
+        headshot: JuliaHeadshot
+    },
+    {
+        name: "Ammaar Alam '27",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "https://ammaar.xyz",
+        github: "https://github.com/Ammaar-Alam",
+        headshot: AmmaarHeadshot
+    },
+    {
+        name: "Ben Aepli '28",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "https://benaepli.com",
+        github: "https://github.com/benaepli",
+        headshot: BenHeadshot
+    },
+    {
+        name: "Emily Zhou '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/z-emily",
+        headshot: EmilyHeadshot
+    },
+    {
+        name: "Glen Nfor '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "https://glennfor.tech",
+        github: "https://github.com/glennfor",
+        headshot: GlenHeadshot
+    },
+    {
+        name: "Grace Tan '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/debuggernotfound",
+        headshot: GraceHeadshot
+    },
+    {
+        name: "Keith Matanachai '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/matan53153",
+        headshot: KeithHeadshot
+    },
+    {
+        name: "Kevin Liu '28",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "https://kevinliu.biz",
+        github: "https://github.com/Kevin-Liu-01",
+        headshot: KevinHeadshot
+    },
+    {
+        name: "Luke Sanborn '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/lukesanborn",
+        headshot: LukeHeadshot
+    },
+    {
+        name: "Marvin Chen '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "https://github.com/marvin-chen",
+        headshot: MarvinHeadshot
+    },
+    {
+        name: "Myles Anderson '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/myles332",
+        headshot: MylesHeadshot
+    },
+    {
+        name: "Oyu Enkhbold '26",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/oyu-e",
+        headshot: OyuHeadshot
+    },
+    {
+        name: "Ryan Salik '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "https://ryansalik.com",
+        github: "https://github.com/rsalik",
+        headshot: RyanHeadshot
+    },
+    {
+        name: "Shreyas Garimella '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/sgarimel",
+        headshot: ShreyasHeadshot
+    },
+    {
+        name: "Winsice Ng '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "https://github.com/winsice-ng",
+        headshot: WinsiceHeadshot
+    },
+    {
+        name: "Yubi Mamiya '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/yubimamiya",
+        headshot: YubiHeadshot
+    },
 ];
 
 const pastMembers: string[] = [
