@@ -1,14 +1,42 @@
 ---
-// Member Images
+import MemberCard from "./MemberCard.astro";
+
+// Board and Senior Developers
 import JoshuaHeadshot from "../assets/members/joshua.webp";
 import LeoHeadshot from "../assets/members/leo.webp";
 import HangHeadshot from "../assets/members/hang.webp";
-import MemberCard from "./MemberCard.astro";
+import AnnaHeadshot from "../assets/members/anna.webp";
+
+// Designers
+import AngelinaHeadshot from "../assets/members/angelina.webp";
+import ArnavHeadshot from "../assets/members/arnav.webp";
+import AyushmaanHeadshot from "../assets/members/ayushmaan.webp";
+import EricaHeadshot from "../assets/members/erica.webp";
+import SindhujaHeadshot from "../assets/members/sindhuja.webp";
+
+// Junior Developers
+import JuliaHeadshot from "../assets/members/julia.webp";
+import AmmaarHeadshot from "../assets/members/ammaar.webp";
+import BenHeadshot from "../assets/members/ben.webp";
+import EmilyHeadshot from "../assets/members/emily.webp";
+import GlenHeadshot from "../assets/members/glen.webp";
+import GraceHeadshot from "../assets/members/grace.webp";
+import KeithHeadshot from "../assets/members/keith.webp";
+import KevinHeadshot from "../assets/members/kevin.webp";
+import LukeHeadshot from "../assets/members/luke.webp";
+import MarvinHeadshot from "../assets/members/marvin.webp";
+import MylesHeadshot from "../assets/members/myles.webp";
+import RyanHeadshot from "../assets/members/ryan.webp";
+import OyuHeadshot from "../assets/members/oyu.webp";
+import ShreyasHeadshot from "../assets/members/shreyas.webp";
+import WinsiceHeadshot from "../assets/members/winsice.webp";
+import YubiHeadshot from "../assets/members/yubi.webp";
 
 type Member = {
     name: string;
     title: string;
     position: string | null;
+    team: string;
     website: string | null;
     github: string | null;
     headshot: ImageMetadata;
@@ -19,6 +47,7 @@ const currentMembers: Member[] = [
         name: "Joshua Lau '26",
         title: "Senior Developer",
         position: "Co-President",
+        team: "TigerJunction and TigerRetail",
         website: "https://motoaki.dev",
         github: "https://github.com/joshuamotoaki",
         headshot: JoshuaHeadshot
@@ -27,6 +56,7 @@ const currentMembers: Member[] = [
         name: "Leo Stepanewk '25",
         title: "Senior Developer",
         position: "Co-President",
+        team: "Today",
         website: "",
         github: "https://github.com/leo-step",
         headshot: LeoHeadshot
@@ -35,6 +65,7 @@ const currentMembers: Member[] = [
         name: "Hang Pham '26",
         title: "Senior Developer",
         position: "Treasurer",
+        team: "General",
         website: "",
         github: "https://github.com/thanhhang1306",
         headshot: HangHeadshot
