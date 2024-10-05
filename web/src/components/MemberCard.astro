@@ -17,8 +17,9 @@ const { name, title, position, website, github, headshot } = Astro.props;
 ---
 
 <div class="text-center mx-auto">
-    <Image class="rounded-lg shadow-lg mb-1 aspect-square object-cover" src={headshot} alt={`${name}`} />
-    <div>
+    <Image class="rounded-lg shadow-lg mb-1 aspect-square object-cover" 
+    src={headshot} alt={`${name}`} />
+    <div class="mt-2">
         <h5>
             {name}
         </h5>
