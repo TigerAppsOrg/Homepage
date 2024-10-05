@@ -1,0 +1,45 @@
+---
+import "@fontsource-variable/rubik";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TigerApps - Apps for Princeton Students</title>
+        <link rel="icon" href="/favicon.png" />
+    </head>
+    <body id="top">
+        <slot />
+    </body>
+</html>
+
+<style is:global lang="postcss">
+    body {
+        font-family: 'Rubik Variable', sans-serif;
+    }
+
+    h2 {
+        @apply text-secondary text-5xl font-bold uppercase;
+    }
+
+    h3 {
+        @apply text-secondary text-5xl font-bold uppercase;
+    }
+
+    h4 {
+        @apply text-secondary font-bold text-2xl;
+    }
+
+    h5 {
+        @apply text-secondary font-semibold text-lg;
+    }
+
+    .cont {
+        @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-12 w-full;
+    }
+
+    .constrained {
+        @apply w-5/6 mx-auto max-w-5xl;
+    }
+</style>

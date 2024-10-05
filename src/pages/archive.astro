@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/page/Footer.astro";
+import AppCard from "../components/AppCard.astro";
+
+// App (Archive) Images
+import Food4UImage from "../assets/archive/food4u.webp";
+import MealMatchImage from "../assets/archive/mealmatch.webp";
+import RebookImage from "../assets/archive/rebook.webp";
+import RecalImage from "../assets/archive/recal.webp";
+import ResearchImage from "../assets/archive/research.webp";
+import RoomsImage from "../assets/archive/rooms.webp";
+import SpaceTigerImage from "../assets/archive/spacetiger.webp";
+import TigerFitImage from "../assets/archive/tigerfit.webp";
+import TigerJobsImage from "../assets/archive/tigerjobs.webp";
+import TigerMapImage from "../assets/archive/tigermap.webp";
+import TigerMenusImage from "../assets/archive/tigermenus.webp";
+import TigerThriftImage from "../assets/archive/tigerthrift.webp";
+import TigerTicketsImage from "../assets/archive/tigertickets.webp";
+import TigerToolsImage from "../assets/archive/tigertools.webp";
+import HeaderShell from "../components/HeaderShell.astro";
+
+const ARCHIVE_CARDS = [
+    {
+        title: "Food4U",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: Food4UImage,
+        alt: "Food 4 U app screenshot"
+    },
+    {
+        title: "MealMatch",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: MealMatchImage,
+        alt: "Meal Match app screenshot"
+    },
+    {
+        title: "ReBook",
+        description: "",
+        note: "Replacement: TigerRetail",
+        webLink: "",
+        repoLink: "",
+        screenshot: RebookImage,
+        alt: "Re-Book app screenshot"
+    },
+    {
+        title: "Recal",
+        description: "",
+        note: "Replacement: TigerJunction",
+        webLink: "",
+        repoLink: "",
+        screenshot: RecalImage,
+        alt: "ReCal app screenshot"
+    },
+    {
+        title: "TigerResearch",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: ResearchImage,
+        alt: "Tiger Research app screenshot"
+    },
+    {
+        title: "TigerRooms",
+        description: "",
+        note: "Replacement: TigerDraw",
+        webLink: "",
+        repoLink: "",
+        screenshot: RoomsImage,
+        alt: "Tiger Rooms app screenshot"
+    },
+    {
+        title: "SpaceTiger",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: SpaceTigerImage,
+        alt: "Space Tiger app screenshot"
+    },
+    {
+        title: "TigerFit",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerFitImage,
+        alt: "Tiger Fit app screenshot"
+    },
+    {
+        title: "TigerJobs",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerJobsImage,
+        alt: "Tiger Jobs app screenshot"
+    },
+    {
+        title: "TigerMap",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerMapImage,
+        alt: "Tiger Map app screenshot"
+    },
+    {
+        title: "TigerMenus",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerMenusImage,
+        alt: "Tiger Menus app screenshot"
+    },
+    {
+        title: "TigerThrift",
+        description: "",
+        note: "Replacement: TigerRetail",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerThriftImage,
+        alt: "Tiger Thrift app screenshot"
+    },
+    {
+        title: "TigerTickets",
+        description: "",
+        note: "Replacement: TigerRetail",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerTicketsImage,
+        alt: "Tiger Tickets app screenshot"
+    },
+    {
+        title: "TigerTools",
+        description: "",
+        note: "",
+        webLink: "",
+        repoLink: "",
+        screenshot: TigerToolsImage,
+        alt: "Tiger Tools app screenshot"
+    }
+];
+---
+
+<head>
+    <title>TigerApps - Archive</title>
+</head>
+
+<Layout>
+    <HeaderShell>
+        <button
+            onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
+            <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+        </button>
+        <nav class="flex items-center text-xl gap-12">
+            <a href="/"> Home</a>
+            <a href="/archive"> Archive </a>
+            <a href="/resources"> Resources</a>
+        </nav>
+    </HeaderShell>
+    <div class="cont text-center">
+        <div class="space-y-2 pt-32">
+            <h3>Archive</h3>
+            <p class="text-xl">Apps that we are no longer maintaining.</p>
+        </div>
+        <div class="border-b-4 w-32 border-secondary rounded-full my-8 mx-auto">
+        </div>
+        <main>
+            {ARCHIVE_CARDS.map(card => <AppCard {...card} />)}
+        </main>
+    </div>
+    <Footer />
+</Layout>
