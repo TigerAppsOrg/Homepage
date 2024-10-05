@@ -1,0 +1,36 @@
+---
+import type { ImageMetadata } from "astro";
+import AppCard from "./AppCard.astro";
+
+interface CardProps {
+    title: string;
+    description: string;
+    note: string;
+    webLink: string;
+    repoLink: string;
+    screenshot: ImageMetadata;
+    alt: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    cards: CardProps[];
+}
+
+const { title, description, cards } = Astro.props;
+---
+
+<article class="text-center constrained">
+    <h3 class="mb-2">
+        {title}
+    </h3>
+    <p class="text-xl">
+        {description}
+    </p>
+    <div class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+        {cards.map(card => <AppCard {...card} />)}
+    </div>
+</article>

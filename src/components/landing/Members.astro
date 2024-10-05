@@ -1,0 +1,368 @@
+---
+import Image from "astro/components/Image.astro";
+import MemberCard from "./ui/MemberCard.astro";
+
+// Companies
+import DatabricksLogo from "../../assets/companies/databricks.webp";
+import NetflixLogo from "../../assets/companies/netflix.webp";
+import MetaLogo from "../../assets/companies/meta.webp";
+import StripeLogo from "../../assets/companies/stripe.webp";
+import PineconeLogo from "../../assets/companies/pinecone.webp";
+import AWSLogo from "../../assets/companies/aws.webp";
+import AirbnbLogo from "../../assets/companies/airbnb.webp";
+import MicrosoftLogo from "../../assets/companies/microsoft.webp";
+
+// Board and Senior Developers
+import JoshuaHeadshot from "../../assets/members/joshua.webp";
+import LeoHeadshot from "../../assets/members/leo.webp";
+import HangHeadshot from "../../assets/members/hang.webp";
+import AnnaHeadshot from "../../assets/members/anna.webp";
+
+// Designers
+import AngelinaHeadshot from "../../assets/members/angelina.webp";
+import ArnavHeadshot from "../../assets/members/arnav.webp";
+import AyushmaanHeadshot from "../../assets/members/ayushmaan.webp";
+import EricaHeadshot from "../../assets/members/erica.webp";
+import SindhujaHeadshot from "../../assets/members/sindhuja.webp";
+
+// Junior Developers
+import JuliaHeadshot from "../../assets/members/julia.webp";
+import AmmaarHeadshot from "../../assets/members/ammaar.webp";
+import BenHeadshot from "../../assets/members/ben.webp";
+import EmilyHeadshot from "../../assets/members/emily.webp";
+import GlenHeadshot from "../../assets/members/glen.webp";
+import GraceHeadshot from "../../assets/members/grace.webp";
+import KeithHeadshot from "../../assets/members/keith.webp";
+import KevinHeadshot from "../../assets/members/kevin.webp";
+import LukeHeadshot from "../../assets/members/luke.webp";
+import MarvinHeadshot from "../../assets/members/marvin.webp";
+import MylesHeadshot from "../../assets/members/myles.webp";
+import RyanHeadshot from "../../assets/members/ryan.webp";
+import OyuHeadshot from "../../assets/members/oyu.webp";
+import ShreyasHeadshot from "../../assets/members/shreyas.webp";
+import WinsiceHeadshot from "../../assets/members/winsice.webp";
+import YubiHeadshot from "../../assets/members/yubi.webp";
+
+type Member = {
+    name: string;
+    title: string;
+    position: string;
+    team: string;
+    website: string;
+    github: string;
+    headshot: ImageMetadata;
+};
+
+const currentMembers: Member[] = [
+    // Board and Senior Developers
+    {
+        name: "Joshua Lau '26",
+        title: "Senior Developer",
+        position: "Co-President",
+        team: "TigerJunction and TigerRetail",
+        website: "https://motoaki.dev",
+        github: "https://github.com/joshuamotoaki",
+        headshot: JoshuaHeadshot
+    },
+    {
+        name: "Leo Stepanewk '25",
+        title: "Senior Developer",
+        position: "Co-President",
+        team: "Today",
+        website: "",
+        github: "https://github.com/leo-step",
+        headshot: LeoHeadshot
+    },
+    {
+        name: "Hang Pham '26",
+        title: "Senior Developer",
+        position: "Treasurer",
+        team: "General",
+        website: "",
+        github: "https://github.com/thanhhang1306",
+        headshot: HangHeadshot
+    },
+    {
+        name: "Anna Wang '26",
+        title: "Marketing Director",
+        position: "",
+        team: "General",
+        website: "",
+        github: "",
+        headshot: AnnaHeadshot
+    },
+
+    // Designers
+    {
+        name: "Erica Lee '26",
+        title: "Designer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "",
+        headshot: EricaHeadshot
+    },
+    {
+        name: "Angelina Ji '27",
+        title: "Designer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "",
+        headshot: AngelinaHeadshot
+    },
+    {
+        name: "Ayushmaan Kher '27",
+        title: "Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "",
+        headshot: AyushmaanHeadshot
+    },
+    {
+        name: "Arnav Sadeesh '28",
+        title: "Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "",
+        headshot: ArnavHeadshot
+    },
+    {
+        name: "Sindhuja Kanamarlapudi '28",
+        title: "Designer",
+        position: "",
+        team: "General",
+        website: "",
+        github: "",
+        headshot: SindhujaHeadshot
+    },
+
+    // Junior Developers
+    {
+        name: "Julia Ying '26",
+        title: "Junior Developer and Designer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/juliaying26",
+        headshot: JuliaHeadshot
+    },
+    {
+        name: "Keith Matanachai '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/matan53153",
+        headshot: KeithHeadshot
+    },
+    {
+        name: "Marvin Chen '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "https://github.com/marvin-chen",
+        headshot: MarvinHeadshot
+    },
+    {
+        name: "Myles Anderson '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/myles332",
+        headshot: MylesHeadshot
+    },
+    {
+        name: "Oyu Enkhbold '26",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/oyu-e",
+        headshot: OyuHeadshot
+    },
+    {
+        name: "Winsice Ng '26",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "",
+        github: "https://github.com/winsice-ng",
+        headshot: WinsiceHeadshot
+    },
+    {
+        name: "Ammaar Alam '27",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "https://ammaar.xyz",
+        github: "https://github.com/Ammaar-Alam",
+        headshot: AmmaarHeadshot
+    },
+    {
+        name: "Emily Zhou '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/z-emily",
+        headshot: EmilyHeadshot
+    },
+    {
+        name: "Glen Nfor '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "https://glennfor.tech",
+        github: "https://github.com/glennfor",
+        headshot: GlenHeadshot
+    },
+    {
+        name: "Ryan Salik '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "https://ryansalik.com",
+        github: "https://github.com/rsalik",
+        headshot: RyanHeadshot
+    },
+    {
+        name: "Yubi Mamiya '27",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "",
+        github: "https://github.com/yubimamiya",
+        headshot: YubiHeadshot
+    },
+    {
+        name: "Ben Aepli '28",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "https://benaepli.com",
+        github: "https://github.com/benaepli",
+        headshot: BenHeadshot
+    },
+    {
+        name: "Grace Tan '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/debuggernotfound",
+        headshot: GraceHeadshot
+    },
+    {
+        name: "Kevin Liu '28",
+        title: "Junior Developer",
+        position: "",
+        team: "TigerJunction",
+        website: "https://kevinliu.biz",
+        github: "https://github.com/Kevin-Liu-01",
+        headshot: KevinHeadshot
+    },
+    {
+        name: "Luke Sanborn '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/lukesanborn",
+        headshot: LukeHeadshot
+    },
+    {
+        name: "Shreyas Garimella '28",
+        title: "Junior Developer",
+        position: "",
+        team: "Today",
+        website: "",
+        github: "https://github.com/sgarimel",
+        headshot: ShreyasHeadshot
+    }
+];
+
+const pastMembers: string[] = [
+    "Shivam Kak '26",
+    "Mark Rubin '26",
+    "Aaliyah Sayed '25",
+    "Youngseo Lee '25",
+    "Adam Kelch '24",
+    "Daniel Park '24",
+    "Taylor Yamashita '24",
+    "Benjamin Chan '23",
+    "Adam Gamba '23",
+    "Shannon Heh '23",
+    "Nicholas Padmanabhan '23",
+    "Charles An '22",
+    "Ayo Oguntola '23",
+    "Emre Cakir '21",
+    "Reilly Bova '20",
+    "Rushy Panchal '19",
+    "Ben Parks '17",
+    "Maxim Zaslavsky '17"
+];
+
+const companies: [ImageMetadata, string][] = [
+    [DatabricksLogo, "Databricks"],
+    [NetflixLogo, "Netflix"],
+    [MetaLogo, "Meta"],
+    [StripeLogo, "Stripe"],
+    [PineconeLogo, "Pinecone"],
+    [AWSLogo, "Amazon Web Services"],
+    [AirbnbLogo, "Airbnb"],
+    [MicrosoftLogo, "Microsoft"]
+];
+---
+
+<section id="about" class="py-16">
+    <div class="cont text-center space-y-8">
+        <div class="space-y-2">
+            <h3>ABOUT US</h3>
+            <p class="text-lg">Meet the TigerApps team!</p>
+        </div>
+
+        <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
+        </div>
+
+        <article>
+            <h4 class="mb-4">Current Members</h4>
+            <div
+                class="grid justify-center gap-4 md:gap-y-8 md:gap-6
+                grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+                constrained">
+                {currentMembers.map(member => <MemberCard {...member} />)}
+            </div>
+        </article>
+
+        <article>
+            <h4 class="mb-4">Past Members</h4>
+            <ul
+                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
+                {pastMembers.map(member => <li>{member}</li>)}
+            </ul>
+        </article>
+
+        <article>
+            <h4 class="mb-4">Our members have gone on to work for...</h4>
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 constrained">
+                {
+                    companies.map(company => (
+                        <li>
+                            <Image
+                                loading="lazy"
+                                class="rounded-lg shadow-lg aspect-square object-cover"
+                                src={company[0]}
+                                alt={company[1]}
+                            />
+                        </li>
+                    ))
+                }
+            </ul>
+        </article>
+    </div>
+</section>
