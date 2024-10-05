@@ -1,5 +1,16 @@
 ---
+import Image from "astro/components/Image.astro";
 import MemberCard from "./MemberCard.astro";
+
+// Companies
+import DatabricksLogo from "../assets/companies/databricks.webp";
+import NetflixLogo from "../assets/companies/netflix.webp";
+import MetaLogo from "../assets/companies/meta.webp";
+import StripeLogo from "../assets/companies/stripe.webp";
+import PineconeLogo from "../assets/companies/pinecone.webp";
+import AWSLogo from "../assets/companies/aws.webp";
+import AirbnbLogo from "../assets/companies/airbnb.webp";
+import MicrosoftLogo from "../assets/companies/microsoft.webp";
 
 // Board and Senior Developers
 import JoshuaHeadshot from "../assets/members/joshua.webp";
@@ -43,7 +54,7 @@ type Member = {
 };
 
 const currentMembers: Member[] = [
-    // Board and Senior Developers    
+    // Board and Senior Developers
     {
         name: "Joshua Lau '26",
         title: "Senior Developer",
@@ -272,7 +283,7 @@ const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/sgarimel",
         headshot: ShreyasHeadshot
-    },
+    }
 ];
 
 const pastMembers: string[] = [
@@ -295,6 +306,17 @@ const pastMembers: string[] = [
     "Ben Parks '17",
     "Maxim Zaslavsky '17"
 ];
+
+const companies: [ImageMetadata, string][] = [
+    [DatabricksLogo, "Databricks"],
+    [NetflixLogo, "Netflix"],
+    [MetaLogo, "Meta"],
+    [StripeLogo, "Stripe"],
+    [PineconeLogo, "Pinecone"],
+    [AWSLogo, "Amazon Web Services"],
+    [AirbnbLogo, "Airbnb"],
+    [MicrosoftLogo, "Microsoft"]
+];
 ---
 
 <section id="about" class="py-16">
@@ -311,17 +333,32 @@ const pastMembers: string[] = [
             <h4 class="mb-4">Current Members</h4>
             <div
                 class="grid justify-center gap-4 md:gap-y-8 md:gap-6
-                grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 
-                constrained"
-                >
+                grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+                constrained">
                 {currentMembers.map(member => <MemberCard {...member} />)}
             </div>
         </article>
 
         <article>
             <h4 class="mb-4">Past Members</h4>
-            <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 constrained">
+            <ul
+                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
                 {pastMembers.map(member => <li>{member}</li>)}
+            </ul>
+        </article>
+
+        <article>
+            <h4 class="mb-4">Our members have gone on to work for...</h4>
+            <ul
+                class="grid grid-cols-2 md:grid-cols-4 gap-8 constrained">
+                {companies.map(company => <li>
+                    <Image
+                        loading="lazy"
+                        class="rounded-lg shadow-lg aspect-square object-cover"
+                        src={company[0]}
+                        alt={company[1]}
+                    />
+                </li>)}
             </ul>
         </article>
     </div>
