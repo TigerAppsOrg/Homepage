@@ -1,13 +1,50 @@
 ---
 import "@fontsource-variable/rubik";
+import { AstroSeo } from "@astrolib/seo";
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>TigerApps - Apps for Princeton Students</title>
-        <link rel="icon" href="/favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <AstroSeo
+            title="TigerApps - Apps for Princeton Students"
+            description="TigerApps is a student-run organization that builds and maintains student-developed web applications used by over 90% of students at Princeton University."
+            canonical="https://tigerapps.org"
+            openGraph={{
+                url: "https://tigerapps.org",
+                title: "TigerApps - Apps for Princeton Students",
+                site_name: "TigerApps Homepage",
+                description:
+                    "TigerApps is a student-run organization that builds and maintains student-developed web applications used by over 90% of students at Princeton University.",
+                images: [
+                    {
+                        url: "https://tigerapps.org/og-image.png",
+                        width: 1200,
+                        height: 630,
+                        alt: "TigerApps - Apps for Princeton Students"
+                    }
+                ]
+            }}
+        />
     </head>
     <body id="top">
         <slot />
