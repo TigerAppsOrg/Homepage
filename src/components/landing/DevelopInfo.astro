@@ -5,15 +5,15 @@ import Apply2 from "../../assets/icons/apply-crit2.svg";
 import Apply3 from "../../assets/icons/apply-crit3.svg";
 ---
 
-<section id="develop" class="py-16 bg-primary text-on-primary text-lg">
+<section id="develop" class="py-16 bg-primary text-on-primary">
     <div class="cont text-center">
         <div class="space-y-2">
             <h3>DEVELOP</h3>
-            <p class="text-xl">Interested in creating the next TigerApp?</p>
+            <p class="text-lg">Interested in creating the next TigerApp?</p>
         </div>
         <div class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
         </div>
-        <div class="space-y-2">
+        <div class="space-y-2 text-base">
             <p>
                 TigerApps is a student-run organization that maintains and
                 supports student-developed web applications. We cover all
@@ -24,11 +24,13 @@ import Apply3 from "../../assets/icons/apply-crit3.svg";
                 There are 3 criteria for your app to become part of TigerApps.
             </p>
         </div>
-        <div class="md:flex md:items-start md:justify-center gap-4">
+
+        <div class="md:flex md:items-start md:justify-center gap-4 my-8">
             <div class="apply-step">
                 <Image
                     src={Apply1}
                     alt="1st Decorational icon for applying to TigerApps"
+                    class="apply-img"
                 />
                 <p>
                     Relates to student life on campus or supports a non-profit
@@ -39,6 +41,7 @@ import Apply3 from "../../assets/icons/apply-crit3.svg";
                 <Image
                     src={Apply2}
                     alt="2nd Decorational icon for applying to TigerApps"
+                    class="apply-img"
                 />
                 <p>Fully functional, no known bugs, and open source</p>
             </div>
@@ -46,12 +49,13 @@ import Apply3 from "../../assets/icons/apply-crit3.svg";
                 <Image
                     src={Apply3}
                     alt="3rd Decorational icon for applying to TigerApps"
+                    class="apply-img"
                 />
                 <p>Built using modern frameworks and programming languages</p>
             </div>
         </div>
 
-        <div>
+        <div class="space-y-4">
             <div>
                 <p>
                     Unsure where to start? Check out some Princeton data sources
@@ -73,3 +77,18 @@ import Apply3 from "../../assets/icons/apply-crit3.svg";
         </div>
     </div>
 </section>
+
+<style lang="postcss">
+    .link-button {
+        @apply bg-secondary text-on-secondary rounded-lg mt-1 inline-block
+        duration-150 ease-in-out py-2 px-12;
+    }
+
+    .link-button:hover {
+        @apply bg-secondary-hover;
+    }
+
+    .apply-img {
+        @apply w-36 h-36 md:w-48 md:h-48 mx-auto;
+    }
+</style>
