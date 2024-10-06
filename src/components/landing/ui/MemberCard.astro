@@ -23,13 +23,13 @@ const { name, title, position, website, github, headshot } = Astro.props;
         alt={`${name}`}
     />
     <div class="mt-2">
-        <h5>
+        <h5 class="text-sm sm:text-lg">
             {name}
         </h5>
-        <p class="italic">
+        <p class="italic text-sm sm:text-base">
             {title}
         </p>
-        <p class="italic">
+        <p class="italic text-sm sm:text-base">
             {position}
         </p>
         <div class="flex items-center justify-center gap-4">
