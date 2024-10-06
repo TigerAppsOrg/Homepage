@@ -14,14 +14,14 @@ import HeaderShell from "../components/HeaderShell.astro";
             onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
             <h1 class="text-2xl font-semibold">TIGERAPPS</h1>
         </button>
-        <nav class="flex items-center text-lg gap-12">
+        <nav class="hidden sm:flex items-center text-lg gap-12">
             <a href="/"> Home</a>
             <a href="/archive"> Archive </a>
             <a href="/resources"> Resources</a>
         </nav>
     </HeaderShell>
 
-    <div id="resources-page" class="space-y-4 w-11/12 max-w-5xl mx-auto my-8">
+    <main id="resources-page" class="space-y-4 w-11/12 max-w-5xl mx-auto my-8">
         <h2 class="pt-16">TigerApps Resources Page</h2>
         <p>
             <strong>Purpose: </strong>List Princeton-specific data sources
@@ -565,51 +565,54 @@ import HeaderShell from "../components/HeaderShell.astro";
             for compiling usage information on many Princeton data sources and allowing
             this doc to reference his code examples.
         </p>
-    </div>
+    </main>
     <Footer />
 </Layout>
 
 <style lang="postcss">
-    a {
-        @apply text-secondary hover:text-secondary-hover underline;
-    }
 
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
+    main {
 
-    th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    ul {
-        list-style-type: disc;
-        padding-left: 1.5rem;
-
+        a {
+            @apply text-secondary hover:text-secondary-hover underline;
+        }
+    
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+    
         ul {
-            list-style-type: circle;
+            list-style-type: disc;
+            padding-left: 1.5rem;
+    
+            ul {
+                list-style-type: circle;
+            }
         }
-    }
-
-    ol {
-        list-style-type: decimal;
-        padding-left: 1.5rem;
-
+    
         ol {
-            list-style-type: lower-alpha;
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+    
+            ol {
+                list-style-type: lower-alpha;
+            }
         }
-    }
-
-
-    li {
-        margin-bottom: 0.5rem;
+    
+        li {
+            margin-bottom: 0.5rem;
+        }
     }
 </style>
