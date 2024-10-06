@@ -20,27 +20,23 @@ import HeaderShell from "../components/HeaderShell.astro";
             <a href="/resources"> Resources</a>
         </nav>
     </HeaderShell>
-    <div id="resources-page">
-        <h1 class="pt-32">
-            <a target="_blank" href="https://tigerapps.org" target="_blank">
-                TigerApps
-            </a>
-            Resources Page
-        </h1>
+
+    <div id="resources-page" class="space-y-4 w-11/12 max-w-5xl mx-auto my-8">
+        <h2 class="pt-16">TigerApps Resources Page</h2>
         <p>
             <strong>Purpose: </strong>List Princeton-specific data sources
             (along with helpful instructions on how to use these sources) for
             developers who want to create the next TigerApp.
         </p>
         <h2 id="possible-pre-requisites">Possible Pre-Requisites</h2>
-        <h3 id="whitelist-for-cas-authentication-use">
+        <h4 id="whitelist-for-cas-authentication-use">
             Whitelist for CAS Authentication Use
-        </h3>
+        </h4>
         <p>
             If you intend to deploy your app and require CAS authentication on
-            your app, you must make a request to OIT to whitelist your app’s
+            your app, you must make a request to OIT to whitelist your app's
             host. Each time a user navigates to your app, your browser sends a
-            request to fed.princeton.edu; your app’s host must be on the CAS
+            request to fed.princeton.edu; your app's host must be on the CAS
             whitelist for CAS authentication to proceed. Note that <code
                 >localhost</code
             > is already on the CAS whitelist.
@@ -56,13 +52,13 @@ import HeaderShell from "../components/HeaderShell.astro";
         <ul>
             <li>Under Requested By, enter your name.</li>
             <li>
-                Under Service Name, enter your app’s host, e.g.
+                Under Service Name, enter your app's host, e.g.
                 <a target="_blank" href="https://myapp.herokuapp.com"
                     >https://myapp.herokuapp.com</a
                 >
             </li>
             <li>
-                Under More Information, type a sentence or two about your app’s
+                Under More Information, type a sentence or two about your app's
                 name and purpose.
             </li>
             <li>
@@ -98,10 +94,10 @@ import HeaderShell from "../components/HeaderShell.astro";
                 >
             </li>
         </ul>
-        <h3 id="requesting-a-service-account">Requesting A Service Account</h3>
+        <h4 id="requesting-a-service-account">Requesting A Service Account</h4>
         <p>
             Creating a service account netID allows your team to use the same
-            netID to access OIT’s API Store and other CAS-authenticated apps,
+            netID to access OIT's API Store and other CAS-authenticated apps,
             even after you graduate. The netID is meant to be used only with
             your app, and not any Princeton student/faculty.
         </p>
@@ -125,9 +121,9 @@ import HeaderShell from "../components/HeaderShell.astro";
                 For Duration of Account, select Permanent if you intend for the
                 app to exist in the long term.
             </li>
-            <li>For Business Reason, write your account’s purpose.</li>
+            <li>For Business Reason, write your account's purpose.</li>
             <li>
-                For Type of Account, select “General Use”. A new input called
+                For Type of Account, select "General Use". A new input called
                 Additional Information will appear: here, you can request to
                 have an Exchange mailbox for your service netID. Having an email
                 address with your service account netID may be useful to your
@@ -135,7 +131,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                 feedback from users).
             </li>
             <li>
-                For more help on completing the form, read OIT’s
+                For more help on completing the form, read OIT's
                 <a
                     target="_blank"
                     href="https://princeton.service-now.com/service?id=kb_article&sys_id=043a1f1f1b60b01041bd6286624bcb34"
@@ -144,10 +140,10 @@ import HeaderShell from "../components/HeaderShell.astro";
             </li>
         </ul>
         <h2 id="available-data-sources">Available Data Sources</h2>
-        <h3 id="oit-api-store">OIT API Store</h3>
+        <h4 id="oit-api-store">OIT API Store</h4>
         <p>
             Once a service account has been created, you can use the APIs on
-            OIT’s API Store:
+            OIT's API Store:
             <a target="_blank" href="https://api-store.princeton.edu/store/"
                 >https://api-store.princeton.edu/store/</a
             >. To access the site, you must be connected to the
@@ -171,7 +167,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                 <ol>
                     <li>
                         Subscribe to an API by selecting an API, selecting your
-                        app’s name, then click Subscribe.
+                        app's name, then click Subscribe.
                     </li>
                 </ol>
             </li>
@@ -245,7 +241,7 @@ import HeaderShell from "../components/HeaderShell.astro";
             ReqLib.java and req_lib.py updates the access token automatically).
         </p>
         <p>
-            Along with an up-to-date access token, you’ll need the Consumer Key
+            Along with an up-to-date access token, you'll need the Consumer Key
             and the Consumer Secret. To get these keys, login to the OIT API
             Store &gt; Applications &gt; Production Keys. Click Generate Keys to
             generate your permanent Consumer Key and Consumer Secret. Store
@@ -269,7 +265,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                     <td>name: name of group</td>
                     <td>
                         Returns all users that belong to a group on campus, e.g.
-                        name = “Undergraduate Class of 2023” returns list of
+                        name = "Undergraduate Class of 2023" returns list of
                         netids of students in class of 2023.
                     </td>
                 </tr>
@@ -320,7 +316,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                     <td>N/A</td>
                     <td>
                         Returns full names of all departments within Princeton,
-                        e.g. “Art Museum”, “Computer Science”, &quot;Pace Ctr
+                        e.g. "Art Museum", "Computer Science", &quot;Pace Ctr
                         for Civic Engagement&quot;.
                     </td>
                 </tr>
@@ -362,7 +358,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                         Returns info on courses in the given term that either
                         match the given subject or search query. Info includes
                         course name, professor name, and list of course sections
-                        and each section’s name, time, enrollment.
+                        and each section's name, time, enrollment.
                     </td>
                 </tr>
                 <tr>
@@ -408,7 +404,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                 <tr>
                     <td>/dining/events</td>
                     <td>placeId: id given to each place on campus</td>
-                    <td>Returns given dining venue’s open hours.</td>
+                    <td>Returns given dining venue's open hours.</td>
                 </tr>
                 <tr>
                     <td>/events/events</td>
@@ -434,7 +430,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                 >https://oit.princeton.edu/get-started</a
             >.
         </p>
-        <h3 id="tigerbook-api">TigerBook API</h3>
+        <h4 id="tigerbook-api">TigerBook API</h4>
         <p>
             This API, developed based on the TigerBook app, gives you access to
             information about undergraduate students you cannot find in the OIT
@@ -481,10 +477,10 @@ import HeaderShell from "../components/HeaderShell.astro";
                 </tr>
             </tbody>
         </table>
-        <h3 id="princeton-art-museum-api">Princeton Art Museum API</h3>
+        <h4 id="princeton-art-museum-api">Princeton Art Museum API</h4>
         <p>
             This public API gives you access to information about objects in,
-            packages in, and makers of the Princeton Art Museum’s collection.
+            packages in, and makers of the Princeton Art Museum's collection.
             The API is well-documented here:
             <a
                 target="_blank"
@@ -542,7 +538,7 @@ import HeaderShell from "../components/HeaderShell.astro";
                 </tr>
             </tbody>
         </table>
-        <h3 id="other-non-api-data-sources">Other non-API data sources</h3>
+        <h4 id="other-non-api-data-sources">Other non-API data sources</h4>
         <ul>
             <li>
                 Web scraping, e.g. scraping Course Offerings site for course
@@ -553,12 +549,12 @@ import HeaderShell from "../components/HeaderShell.astro";
                 student login.
             </li>
         </ul>
-        <h3>
+        <h4>
             See source code for current TigerApps at
             <a target="_blank" href="https://www.tigerapps.org/#apply"
                 >https://www.tigerapps.org/</a
             >
-        </h3>
+        </h4>
         <p>
             Huge thanks to
             <a
@@ -572,3 +568,48 @@ import HeaderShell from "../components/HeaderShell.astro";
     </div>
     <Footer />
 </Layout>
+
+<style lang="postcss">
+    a {
+        @apply text-secondary hover:text-secondary-hover underline;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+
+        ul {
+            list-style-type: circle;
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+
+        ol {
+            list-style-type: lower-alpha;
+        }
+    }
+
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+</style>
