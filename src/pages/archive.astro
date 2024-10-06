@@ -23,10 +23,10 @@ import HeaderShell from "../components/HeaderShell.astro";
 const ARCHIVE_CARDS = [
     {
         title: "Food4U",
-        description: "",
+        description: "By Daphne Barretto '23, Aaron Buck '23, and Ben Chan '23.",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/food4u",
         screenshot: Food4UImage,
         alt: "Food 4 U app screenshot"
     },
@@ -35,7 +35,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/MealMatch",
         screenshot: MealMatchImage,
         alt: "Meal Match app screenshot"
     },
@@ -44,7 +44,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "Replacement: TigerRetail",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/rebook",
         screenshot: RebookImage,
         alt: "Re-Book app screenshot"
     },
@@ -53,7 +53,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "Replacement: TigerJunction",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/ReCal",
         screenshot: RecalImage,
         alt: "ReCal app screenshot"
     },
@@ -62,7 +62,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerResearch",
         screenshot: ResearchImage,
         alt: "Tiger Research app screenshot"
     },
@@ -71,7 +71,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "Replacement: TigerDraw",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/rooms-app",
         screenshot: RoomsImage,
         alt: "Tiger Rooms app screenshot"
     },
@@ -80,7 +80,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/SpaceTiger",
         screenshot: SpaceTigerImage,
         alt: "Space Tiger app screenshot"
     },
@@ -89,16 +89,16 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerFit",
         screenshot: TigerFitImage,
         alt: "Tiger Fit app screenshot"
     },
     {
         title: "TigerJobs",
-        description: "",
+        description: "By Arnav Kumar '24 and Ambri Ma '24.",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerJobs",
         screenshot: TigerJobsImage,
         alt: "Tiger Jobs app screenshot"
     },
@@ -107,7 +107,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerMap",
         screenshot: TigerMapImage,
         alt: "Tiger Map app screenshot"
     },
@@ -115,8 +115,8 @@ const ARCHIVE_CARDS = [
         title: "TigerMenus",
         description: "",
         note: "",
-        webLink: "",
-        repoLink: "",
+        webLink: "https://tigermenus.herokuapp.com/",
+        repoLink: "https://github.com/TigerAppsOrg/tiger-menus",
         screenshot: TigerMenusImage,
         alt: "Tiger Menus app screenshot"
     },
@@ -125,7 +125,7 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "Replacement: TigerRetail",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerThrift",
         screenshot: TigerThriftImage,
         alt: "Tiger Thrift app screenshot"
     },
@@ -134,16 +134,16 @@ const ARCHIVE_CARDS = [
         description: "",
         note: "Replacement: TigerRetail",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerTickets",
         screenshot: TigerTicketsImage,
         alt: "Tiger Tickets app screenshot"
     },
     {
         title: "TigerTools",
-        description: "",
+        description: "By Indu Panigrahi '23, Raymond Liu '23, and Adam Rebei '23.",
         note: "",
         webLink: "",
-        repoLink: "",
+        repoLink: "https://github.com/TigerAppsOrg/TigerTools",
         screenshot: TigerToolsImage,
         alt: "Tiger Tools app screenshot"
     }
@@ -158,9 +158,9 @@ const ARCHIVE_CARDS = [
     <HeaderShell>
         <button
             onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
-            <h1 class="text-3xl font-bold">TIGERAPPS</h1>
+            <h1 class="text-2xl font-semibold">TIGERAPPS</h1>
         </button>
-        <nav class="flex items-center text-xl gap-12">
+        <nav class="flex items-center text-lg gap-12">
             <a href="/"> Home</a>
             <a href="/archive"> Archive </a>
             <a href="/resources"> Resources</a>
@@ -173,7 +173,7 @@ const ARCHIVE_CARDS = [
         </div>
         <div class="border-b-4 w-32 border-secondary rounded-full my-8 mx-auto">
         </div>
-        <main>
+        <main class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
             {ARCHIVE_CARDS.map(card => <AppCard {...card} />)}
         </main>
     </div>
