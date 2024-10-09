@@ -182,7 +182,7 @@ const ARCHIVE_CARDS = [
         </div>
         <div class="border-b-4 w-32 border-secondary rounded-full my-8 mx-auto">
         </div>
-        <main class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 my-8">
+        <main id="app-grid">
             {ARCHIVE_CARDS.map(card => <AppCard {...card} />)}
         </main>
     </div>

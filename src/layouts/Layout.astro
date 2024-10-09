@@ -83,4 +83,41 @@ import { AstroSeo } from "@astrolib/seo";
     .constrained {
         @apply w-5/6 mx-auto max-w-5xl;
     }
+
+    #app-grid {
+        display: grid;
+        gap: 2rem;
+
+        article {
+            grid-column: span 2;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+
+            article:last-child:nth-child(2n - 1) {
+                grid-column-end: -2;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(6, 1fr);
+
+            article:last-child:nth-child(2n - 1) {
+                grid-column-end: auto
+            }
+
+            article:last-child:nth-child(3n - 1) {
+                grid-column-end: -2;
+            }
+
+            article:nth-last-child(2):nth-child(3n + 1) {
+                grid-column-end: 4;
+            }
+
+            article:last-child:nth-child(3n - 2) {
+                grid-column-end: 5;
+            }
+        }
+    }
 </style>
