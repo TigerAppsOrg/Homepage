@@ -1,0 +1,30 @@
+---
+import Image from "astro/components/Image.astro";
+import TigerAppsLogo from "../../assets/icons/logo.png";
+---
+
+<section id="hero" class="bg-secondary text-on-secondary pt-32 pb-16">
+    <div class="cont text-center">
+        <div
+            class="flex flex-col items-center w-64 sm:w-72 md:w-96 mx-auto gap-8">
+            <Image src={TigerAppsLogo} alt="TigerApps logo" loading="eager" />
+            <h2 class="text-on-secondary">
+                For Students, <br /> By Students
+            </h2>
+        </div>
+        <div
+            class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
+        </div>
+        <div class="text-lg space-y-4">
+            <p>
+                We build apps and support developers on campus. Student-built,
+                student-maintained apps built over the years, designed to
+                improve your campus experience.
+            </p>
+            <p>
+                TigerApps is fully funded by Princeton's Undergraduate Student
+                Government.
+            </p>
+        </div>
+    </div>
+</section>

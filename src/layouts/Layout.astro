@@ -1,0 +1,120 @@
+---
+import "@fontsource-variable/rubik";
+import { AstroSeo } from "@astrolib/seo";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <AstroSeo
+            title="TigerApps - Apps for Princeton Students"
+            description="TigerApps is a student-run organization that builds and maintains student-developed web applications used by over 90% of students at Princeton University."
+            canonical="https://tigerapps.org"
+            openGraph={{
+                url: "https://tigerapps.org",
+                title: "TigerApps - Apps for Princeton Students",
+                site_name: "TigerApps Homepage",
+                description:
+                    "TigerApps is a student-run organization that builds and maintains student-developed web applications used by over 90% of students at Princeton University.",
+                images: [
+                    {
+                        url: "https://tigerapps.org/og-image.png",
+                        width: 1200,
+                        height: 630,
+                        alt: "TigerApps - Apps for Princeton Students"
+                    }
+                ]
+            }}
+        />
+    </head>
+    <body id="top">
+        <slot />
+    </body>
+</html>
+
+<style is:global lang="postcss">
+    body {
+        font-family: 'Rubik Variable', sans-serif;
+    }
+
+    section {
+        scroll-margin: 4rem;
+    }
+
+    h2,
+    h3 {
+        @apply text-secondary text-4xl font-semibold uppercase;
+    }
+
+    h4 {
+        @apply text-secondary font-semibold text-xl;
+    }
+
+    h5 {
+        @apply text-secondary font-semibold text-lg;
+    }
+
+    .cont {
+        @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-12 w-full;
+    }
+
+    .constrained {
+        @apply w-5/6 mx-auto max-w-5xl;
+    }
+
+    #app-grid {
+        display: grid;
+        gap: 2rem;
+
+        article {
+            grid-column: span 2;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+
+            article:last-child:nth-child(2n - 1) {
+                grid-column-end: -2;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(6, 1fr);
+
+            article:last-child:nth-child(2n - 1) {
+                grid-column-end: auto
+            }
+
+            article:last-child:nth-child(3n - 1) {
+                grid-column-end: -2;
+            }
+
+            article:nth-last-child(2):nth-child(3n + 1) {
+                grid-column-end: 4;
+            }
+
+            article:last-child:nth-child(3n - 2) {
+                grid-column-end: 5;
+            }
+        }
+    }
+</style>

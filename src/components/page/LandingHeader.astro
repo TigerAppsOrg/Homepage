@@ -1,0 +1,24 @@
+---
+import HeaderShell from "../HeaderShell.astro";
+---
+
+<HeaderShell>
+    <button
+        onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
+        <h1 class="text-2xl font-semibold">TIGERAPPS</h1>
+    </button>
+    <nav class="hidden sm:flex items-center text-lg gap-12">
+        <button
+            onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })">
+            Apps
+        </button>
+        <button
+            onclick="document.getElementById('develop').scrollIntoView({ behavior: 'smooth' })">
+            Develop
+        </button>
+        <button
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+            About
+        </button>
+    </nav>
+</HeaderShell>

@@ -1,0 +1,169 @@
+---
+import AppSection from "./ui/AppSection.astro";
+
+// App Images
+import TayImage from "../../assets/apps/tay.webp";
+
+import TigerJunctionImage from "../../assets/apps/tigerjunction.webp";
+import PrincetonCoursesImage from "../../assets/apps/princetoncourses.webp";
+import TigerSnatchImage from "../../assets/apps/tigersnatch.webp";
+import TigerPathImage from "../../assets/apps/tigerpath.webp";
+import GiglImage from "../../assets/apps/gigl.webp";
+import TigerStudyImage from "../../assets/apps/tigerstudy.webp";
+import TigerRetailImage from "../../assets/apps/tigerretail.webp";
+
+import TigerDrawImage from "../../assets/apps/tigerdraw.webp";
+import PrincetonRoomsImage from "../../assets/apps/princetonrooms.webp";
+
+type App = {
+    title: string;
+    description: string;
+    note: string;
+    webLink: string;
+    repoLink: string;
+    screenshot: ImageMetadata;
+    alt: string;
+};
+
+const aiAssistApps: App[] = [
+    {
+        title: "Tay (Today)",
+        description:
+            "Knows all academic, eating club, and event information in real time. Integrated with Princeton Courses. By Leo Stepanewk '25.",
+        note: "",
+        webLink: "https://tay.tigerapps.org/",
+        repoLink: "",
+        screenshot: TayImage,
+        alt: "Tay chatbot screenshot"
+    }
+];
+
+const coursePlanningApps: App[] = [
+    {
+        title: "TigerJunction",
+        description:
+            "Plan your schedules with powerful advanced search features, customizable themes, and built-in ratings. By Joshua Lau '26.",
+        note: "",
+        webLink: "https://junction.tigerapps.org",
+        repoLink: "https://github.com/TigerAppsOrg/tiger-junction",
+        screenshot: TigerJunctionImage,
+        alt: "Tiger Junction app screenshot"
+    },
+    {
+        title: "PrincetonCourses",
+        description:
+            "Search through courses quickly to find the list of courses you wish to take. By Sebastian Hallum Clarke '19, Caterina Golner '19, Bensu Sicim '19, Mel Shu '19, and Kara Bressler '19.",
+        note: "",
+        webLink: "https://princetoncourses.com/",
+        repoLink: "https://github.com/PrincetonUSG/PrincetonCourses",
+        screenshot: PrincetonCoursesImage,
+        alt: "Princeton Courses app screenshot"
+    },
+    {
+        title: "TigerSnatch",
+        description:
+            "Receive email and text message notifications when spots open in full classes. Trade spots with other students. By Shannon Heh '23, Nick Padmanabhan '23, and Byron Zhang '23.",
+        note: "",
+        webLink: "https://tigersnatch.com/?ref=tigerapps",
+        repoLink: "https://github.com/PrincetonUSG/tigersnatch",
+        screenshot: TigerSnatchImage,
+        alt: "Tiger Snatch app screenshot"
+    },
+    {
+        title: "TigerPath",
+        description:
+            "Plan out your four-year course schedule and track major/degree requirements. By Richard Chu '18, Barak Nehoran '18, Daniel Leung '20, and Adeniji Ogunlana '19.",
+        note: "",
+        webLink: "https://www.tigerpath.io/",
+        repoLink: "https://github.com/PrincetonUSG/TigerPath",
+        screenshot: TigerPathImage,
+        alt: "Tiger Path app screenshot"
+    }
+];
+
+const campusLifeApps: App[] = [
+    {
+        title: "Gigl",
+        description:
+            "Unleash your skills and earn money by connecting with fellow students seeking your talents! Apply to gigs, set up your freelancer profile and wait for offers OR post a gig yourself if you are looking to hire someone. By Taylan Aydin '25, Andre Biehl '25, Yagiz Devre '26, and Ibrahim Ahmed '25.",
+        note: "",
+        webLink: "https://gigl.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/gigl",
+        screenshot: GiglImage,
+        alt: "Gigl app screenshot"
+    },
+    {
+        title: "TigerStudy",
+        description:
+            "Get matched to study groups for any of your courses. By Caroline di Vittorio '22 and Kasey McFadden '22.",
+        note: "Note: Any inquiries about study group matching should be directed to the McGraw Center.",
+        webLink: "https://tiger-study.herokuapp.com/",
+        repoLink: "https://github.com/PrincetonUSG/TigerStudy",
+        screenshot: TigerStudyImage,
+        alt: "Tiger Study app screenshot"
+    },
+    {
+        title: "TigerRetail",
+        description:
+            "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more. By Albert Lin '23, Katie McLaughlin '23, Sara Schwartz '23, Phoebe Lin '23.",
+        note: "",
+        webLink: "http://retail.tigerapps.org/",
+        repoLink: "https://github.com/PrincetonUSG/TigerReTail",
+        screenshot: TigerRetailImage,
+        alt: "Tiger Retail app screenshot"
+    }
+];
+
+const roomDrawApps: App[] = [
+    {
+        title: "TigerDraw",
+        description:
+            "The one-stop-shop platform for room draw planning. See when past rooms were drawn, filter them, and create a list of potential rooms without needing to parse through PDFs. By Christine Cho '22, Grace Cuenca '22, Frank Ge '22, and Hannah Huh '22.",
+        note: "",
+        webLink: "https://draw.tigerapps.org/",
+        repoLink: "https://github.com/PrincetonUSG/TigerDraw",
+        screenshot: TigerDrawImage,
+        alt: "Tiger Draw app screenshot"
+    },
+    {
+        title: "PrincetonRooms",
+        description:
+            "Analyze the currently avaliable rooms PDF with seamless filtering and data visualization. By Boaz Yoo '25.",
+        note: "",
+        webLink: "https://rooms.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/princeton-rooms",
+        screenshot: PrincetonRoomsImage,
+        alt: "Princeton Rooms app screenshot"
+    }
+];
+---
+
+<section id="apps" class="py-16">
+    <div class="cont space-y-12">
+        <AppSection
+            title="AI Assistant"
+            description="Ask me anything about Princeton and campus life."
+            cards={aiAssistApps}
+        />
+        <AppSection
+            title="Course Planning"
+            description="Plan your schedule and get notifications when spots open up."
+            cards={coursePlanningApps}
+        />
+        <AppSection
+            title="Campus Life"
+            description="Prepare for Room Draw, stay active, and meet new friends over food."
+            cards={campusLifeApps}
+        />
+        <AppSection
+            title="Room Draw"
+            description="Plan your room draw strategy and find the perfect room."
+            cards={roomDrawApps}
+        />
+
+        <p class="text-lg text-center">
+            You can check out some of our older apps in the
+            <a class="text-secondary underline" href="/archive"> Archive</a>.
+        </p>
+    </div>
+</section>

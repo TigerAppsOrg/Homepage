@@ -10,17 +10,17 @@ If you intend to deploy your app and require CAS authentication on your app, you
 
 To whitelist your app, fill out [this form](https://princeton.service-now.com/com.glideapp.servicecatalog_cat_item_view.do?v=1&sysparm_id=edd831664f2c3340f56c0ad14210c7df&sysparm_link_parent=ee785ce84f5f120022a859dd0210c778&sysparm_catalog=e0d08b13c3330100c8b837659bba8fb4&sysparm_catalog_view=catalog_default&sysparm_view=catalog_default).
 
-- Under Requested By, enter your name.
-- Under Service Name, enter your app’s host, e.g. [https://myapp.herokuapp.com](https://myapp.herokuapp.com)
-- Under More Information, type a sentence or two about your app’s name and purpose.
-- Answer the Slack Workspace question. Enter/select "unknown" for all remaining fields.
+-   Under Requested By, enter your name.
+-   Under Service Name, enter your app’s host, e.g. [https://myapp.herokuapp.com](https://myapp.herokuapp.com)
+-   Under More Information, type a sentence or two about your app’s name and purpose.
+-   Answer the Slack Workspace question. Enter/select "unknown" for all remaining fields.
 
 To use CAS Authentication in your app, you may follow this example from the TigerSnatch code.
 
-- Python CAS implementation: [https://git.io/JRNLp](https://git.io/JRNLp)
-  - You must cite authors _Alex Halderman, Scott Karlin, Brian Kernighan, Bob Dondero_ in the header of your file.
-- Triggering login and getting netID in Python: [https://git.io/JRNtn](https://git.io/JRNtn)
-  
+-   Python CAS implementation: [https://git.io/JRNLp](https://git.io/JRNLp)
+    -   You must cite authors _Alex Halderman, Scott Karlin, Brian Kernighan, Bob Dondero_ in the header of your file.
+-   Triggering login and getting netID in Python: [https://git.io/JRNtn](https://git.io/JRNtn)
+    
 
 ### Requesting A Service Account
 
@@ -28,11 +28,11 @@ Creating a service account netID allows your team to use the same netID to acces
 
 To request a service account, [file a ticket](https://www.google.com/url?q=https://princeton.service-now.com/service?sys_id%3Df44539ab4ff81640f56c0ad14210c77c%26id%3Dsc_cat_item%26table%3Dsc_cat_item&sa=D&source=editors&ust=1630343345951000&usg=AOvVaw0kEm_5PUXad0MXIaU7daRJ) through OIT.
 
-- For Sponsor, enter the name of a Princeton faculty member. Note that creating and persisting a service account requires contacting a faculty sponsor (e.g. Prof. Robert Dondero) and asking them to sponsor your service account.
-- For Duration of Account, select Permanent if you intend for the app to exist in the long term.
-- For Business Reason, write your account’s purpose.
-- For Type of Account, select “General Use”. A new input called Additional Information will appear: here, you can request to have an Exchange mailbox for your service netID. Having an email address with your service account netID may be useful to your team (e.g. sending official emails from your app, collecting feedback from users).
-- For more help on completing the form, read OIT’s [article](https://princeton.service-now.com/service?id=kb_article&sys_id=043a1f1f1b60b01041bd6286624bcb34).
+-   For Sponsor, enter the name of a Princeton faculty member. Note that creating and persisting a service account requires contacting a faculty sponsor (e.g. Prof. Robert Dondero) and asking them to sponsor your service account.
+-   For Duration of Account, select Permanent if you intend for the app to exist in the long term.
+-   For Business Reason, write your account’s purpose.
+-   For Type of Account, select “General Use”. A new input called Additional Information will appear: here, you can request to have an Exchange mailbox for your service netID. Having an email address with your service account netID may be useful to your team (e.g. sending official emails from your app, collecting feedback from users).
+-   For more help on completing the form, read OIT’s [article](https://princeton.service-now.com/service?id=kb_article&sys_id=043a1f1f1b60b01041bd6286624bcb34).
 
 ## Available Data Sources
 
@@ -54,12 +54,12 @@ By default, the ActiveDirectory and PrincetonInfo APIs are available to you. To 
 
 Vinay Ramesh's [GitHub repository](https://github.com/vr2amesh/COS333-API-Code-Examples/tree/master) contains (very) useful examples of calling these APIs in Python and Java. Here's a few tips for using this code:
 
-- Each folder in the root directory is named after an API. Click into your desired folder.
-- Click either "java" or "python" depending on the language you want.
-- For Java implementations, you must copy/paste the following files into your codebase: Configs.java and ReqLib.java. For Python, copy/paste these files: configs.py and req_lib.py. Feel free to make changes to these files, but be careful!
-  - Configs.java or configs.py contains essential API information coded as instance variables/attributes, including endpoints and keys.
-  - ReqLib.java or req_lib.py contains code to make an API request. One particularly useful method takes an endpoint and arguments, makes an API request, and returns a JSON response. For example, in MobileApp Java: [https://git.io/JEsqo](https://git.io/JEsqo) and in MobileApp Python: [https://git.io/JEsqK](https://git.io/JEsqK)
-- The remaining .java or .py files contain an example of using each of the API endpoints along with descriptive comments.
+-   Each folder in the root directory is named after an API. Click into your desired folder.
+-   Click either "java" or "python" depending on the language you want.
+-   For Java implementations, you must copy/paste the following files into your codebase: Configs.java and ReqLib.java. For Python, copy/paste these files: configs.py and req_lib.py. Feel free to make changes to these files, but be careful!
+    -   Configs.java or configs.py contains essential API information coded as instance variables/attributes, including endpoints and keys.
+    -   ReqLib.java or req_lib.py contains code to make an API request. One particularly useful method takes an endpoint and arguments, makes an API request, and returns a JSON response. For example, in MobileApp Java: [https://git.io/JEsqo](https://git.io/JEsqo) and in MobileApp Python: [https://git.io/JEsqK](https://git.io/JEsqK)
+-   The remaining .java or .py files contain an example of using each of the API endpoints along with descriptive comments.
 
 Note that the API store uses the OAuth3 security protocol to protect its endpoints. On each request to the API, you must pass an access token into the request header. Check out the ReqLib.java/req_lib.py files for an example. An access token lasts for one hour. To update the access token for your app, follow the code in Configs.java/configs.py (the useful method mentioned above in ReqLib.java and req_lib.py updates the access token automatically).
 
@@ -386,8 +386,8 @@ This public API gives you access to information about objects in, packages in, a
 
 ### Other non-API data sources
 
-- Web scraping, e.g. scraping Course Offerings site for course grading policies.
-- Download floor plans from the housing website, with Princeton student login.
+-   Web scraping, e.g. scraping Course Offerings site for course grading policies.
+-   Download floor plans from the housing website, with Princeton student login.
 
 ### See source code for current TigerApps at [https://www.tigerapps.org/](https://www.tigerapps.org/#apply)
 
