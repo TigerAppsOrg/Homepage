@@ -47,7 +47,11 @@ const { name, title, position, website, github, headshot } = Astro.props;
             }
             {
                 website && (
-                    <a href={website} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={website}
+                        aria-label={`${name}'s personal website`}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <WebIcon />
                     </a>
                 )
