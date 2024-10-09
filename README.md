@@ -14,6 +14,6 @@ If you're interested in building a Tiger App or joining the TigerApps team, chec
 
 If you've never worked with Astro before, it's essentially like HTML with a bit of JSX sprinkled in. Compared to pure HTML, it makes it easy to have modularity, accessibility, and SEO.
 
-When updating data (apps, members, companies, etc.), be sure to decouple the data from the HTML/Astro markup. For example, MEMBERS (in [index.astro](./src/pages/index.astro)) holds the data for current members that will be rendered by the Astro markup. Global CSS styles should be used sparingly; TailwindCSS is preferred. However, you can place global CSS in [Layout.astro](./src/layouts/Layout.astro).
+When updating data (apps, members, companies, etc.), be sure to decouple the data from the HTML/Astro markup. For example, the currentMembers variable (in [Members.astro](./src/components/landing/Members.astro)) holds the data for current members that will be rendered by the Astro markup. Global CSS styles should be used when preserving style across multiple elements, but Tailwind is preferred. You can place global CSS in [Layout.astro](./src/layouts/Layout.astro).
 
 Run `npm run format` to format code according to the [Prettier settings](./.prettierrc).
