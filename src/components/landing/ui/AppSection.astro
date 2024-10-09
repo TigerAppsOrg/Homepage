@@ -56,6 +56,10 @@ const { title, description, cards } = Astro.props;
         @media (min-width: 1280px) {
             grid-template-columns: repeat(6, 1fr);
 
+            article:last-child:nth-child(2n - 1) {
+                grid-column-end: auto
+            }
+
             article:last-child:nth-child(3n - 1) {
                 grid-column-end: -2;
             }
