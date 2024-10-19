@@ -67,17 +67,18 @@ import HeaderShell from "../components/HeaderShell.astro";
             </li>
         </ul>
         <p>
-            To use CAS Authentication in your app, you may follow this example
-            from the TigerSnatch code. The documentation found <a
+            To implement CAS, view the documentation found <a
                 href="https://princeton.service-now.com/service?id=kb_article&sys_id=KB0012958"
                 target="_blank">here</a
-            > is also very helpful.
+            > and/or use the following examples:
         </p>
         <ul>
             <li>
                 Python CAS implementation:
-                <a target="_blank" href="https://git.io/JRNLp"
-                    >https://git.io/JRNLp</a
+                <a
+                    target="_blank"
+                    href="https://git.io/JRNLp"
+                    aria-label="Python CAS implementation">link</a
                 >
                 <ul>
                     <li>
@@ -88,13 +89,38 @@ import HeaderShell from "../components/HeaderShell.astro";
                         >
                         in the header of your file.
                     </li>
+                    <li>
+                        Triggering login and getting netID in Python:
+                        <a
+                            target="_blank"
+                            href="https://git.io/JRNtn"
+                            aria-label="Python login and netID retrieval"
+                            >link</a
+                        >
+                    </li>
                 </ul>
             </li>
             <li>
-                Triggering login and getting netID in Python:
-                <a target="_blank" href="https://git.io/JRNtn"
-                    >https://git.io/JRNtn</a
+                SvelteKit CAS implementation:
+                <a
+                    target="_blank"
+                    href="https://github.com/TigerAppsOrg/tiger-study-2/blob/main/src/lib/db/cas.ts"
+                    aria-label="SvelteKit CAS implementation">link</a
                 >
+                <ul>
+                    <li>
+                        This implementation is specific to the TigerStudy app,
+                        so you'd need to make a few modifications.
+                    </li>
+                    <li>
+                        It also uses the v3 CAS protocol to get user info beyond
+                        just the netID.
+                    </li>
+                    <li>
+                        Contact Joshua Lau '26 (joshuamotoaki@gmail.com) for
+                        assistance.
+                    </li>
+                </ul>
             </li>
         </ul>
         <h4 id="requesting-a-service-account">Requesting A Service Account</h4>
