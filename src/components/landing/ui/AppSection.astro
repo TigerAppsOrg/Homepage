@@ -31,7 +31,7 @@ const { title, description, cards } = Astro.props;
     <div
         class="border-b-4 w-32 border-secondary mt-4 mb-8 rounded-full mx-auto">
     </div>
-    <div id="app-grid">
+    <div class="app-grid">
         {cards.map(card => <AppCard {...card} />)}
     </div>
 </article>
