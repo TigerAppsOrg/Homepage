@@ -2,6 +2,7 @@
 import AppSection from "./ui/AppSection.astro";
 
 // App Images
+import TodayImage from "../../assets/apps/today.webp";
 import TayImage from "../../assets/apps/tay.webp";
 
 import TigerJunctionImage from "../../assets/apps/tigerjunction.webp";
@@ -28,12 +29,21 @@ type App = {
 
 const aiAssistApps: App[] = [
     {
-        title: "Tay (Today)",
+        title: "Today",
+        description: "Today is a new tab page that compiles the most crucial information you need to get through your day. It also contains study mode, a rotating background, and daily greeting. All data is live and refreshes hourly. By Leo Stepanewk '25, Oyu Enkhbold '26, Shreyas Garimella '28, and Grace Tan '28.",
+        note: "",
+        webLink: "https://chromewebstore.google.com/detail/today-princeton/iejdjhiphonjpgaobmpniifeipiomgee?hl=en",
+        repoLink: "https://github.com/leo-step/Today",
+        screenshot: TodayImage,
+        alt: "Today extension screenshot"
+    },
+    {
+        title: "Tay",
         description:
-            "Knows all academic, eating club, and event information in real time. Integrated with Princeton Courses. By Leo Stepanewk '25.",
+            "Knows all academic, eating club, and event information in real time. Integrated with Princeton Courses. By Leo Stepanewk '25 and Ammaar Alam '27.",
         note: "",
         webLink: "https://tay.tigerapps.org/",
-        repoLink: "",
+        repoLink: "https://github.com/leo-step/Today",
         screenshot: TayImage,
         alt: "Tay chatbot screenshot"
     }
