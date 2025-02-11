@@ -5,6 +5,9 @@ import AppSection from "./ui/AppSection.astro";
 import TodayImage from "../../assets/apps/today.webp";
 import TayImage from "../../assets/apps/tay.webp";
 
+import SpotImage from "../../assets/apps/spot.webp";
+import ClickerImage from "../../assets/apps/clicker.webp";
+
 import TigerJunctionImage from "../../assets/apps/tigerjunction.webp";
 import PrincetonCoursesImage from "../../assets/apps/princetoncourses.webp";
 import TigerSnatchImage from "../../assets/apps/tigersnatch.webp";
@@ -81,6 +84,27 @@ const coursePlanningApps: App[] = [
         alt: "Tiger Path app screenshot"
     }
 ];
+
+const games: App[] = [
+    {
+        title: "TigerSpot",
+        description: "Get ready for some fun with the ultimate Princeton campus geography game!  In 'Daily' mode, you have one chance each day to guess where a mystery campus photo was taken on the map—score big points the closer you get! Challenge your friends in 'Versus' mode, where you'll go head-to-head in five thrilling rounds of guessing. By Claudia Lee '26, Jessica Yan '26, Frank Liu '26, Ethan Do '26, and Winsice Ng '26.",
+        note: "",
+        webLink: "https://tigerspot.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/TigerSpot",
+        screenshot: SpotImage,
+        alt: "Tiger Spot app screenshot"
+    },
+    {
+        title: "PawPointClicker",
+        description: "Cookie Clicker for Princeton! Earn 'paw points' by clicking the prox! PawPointClick >>> iClicker. By Kevin Liu '28.",
+        note: "",
+        webLink: "https://clicker.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/PawPointClicker/",
+        screenshot: ClickerImage,
+        alt: "Tiger Clicker app screenshot"
+    }
+]
 
 const campusLifeApps: App[] = [
     {
@@ -161,6 +185,11 @@ const roomDrawApps: App[] = [
             title="Course Planning"
             description="Plan your schedule and get notifications when spots open up."
             cards={coursePlanningApps}
+        />
+        <AppSection
+            title="Games"
+            description="Have fun with these games made by Princeton students."
+            cards={games}
         />
         <AppSection
             title="Campus Life"
