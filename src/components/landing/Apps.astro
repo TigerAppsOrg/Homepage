@@ -12,6 +12,8 @@ import TigerJunctionImage from "../../assets/apps/tigerjunction.webp";
 import PrincetonCoursesImage from "../../assets/apps/princetoncourses.webp";
 import TigerSnatchImage from "../../assets/apps/tigersnatch.webp";
 import TigerPathImage from "../../assets/apps/tigerpath.webp";
+
+import TigerLiftImage from "../../assets/apps/lift.webp";
 import NutriTigerImage from "../../assets/apps/nutritiger.webp";
 import TigerStudyImage from "../../assets/apps/tigerstudy.webp";
 import TigerRetailImage from "../../assets/apps/tigerretail.webp";
@@ -108,6 +110,16 @@ const games: App[] = [
 
 const campusLifeApps: App[] = [
     {
+        title: "TigerLift",
+        description:
+        "Tired of shelling out money on Lyft? Don't want to spam the ListServs to find other students going to the same place? Say goodbye to NJ Transit delays and expensive Ubers. TigerLift helps Princeton students connect with each other so they can split costs on rideshares! By Julia Ying '26, Grace Kim '26, Ritika Bhatnagar '26, and Aasha Jain '26",
+        note: "",
+        webLink: "https://tigerlift.tigerapps.org/",
+        repoLink: "https://github.com/TigerAppsOrg/TigerLift",
+        screenshot: TigerLiftImage,
+        alt: "Tiger Lift app screenshot"
+    },
+    {
         title: "Today",
         description:
             "Today is a new tab page that compiles the most crucial information you need to get through your day. It also contains study mode, a rotating background, and daily greeting. All data is live and refreshes hourly. By Leo Stepanewk '25, Oyu Enkhbold '26, Shreyas Garimella '28, and Grace Tan '28.",
@@ -193,7 +205,7 @@ const roomDrawApps: App[] = [
         />
         <AppSection
             title="Campus Life"
-            description="Prepare for Room Draw, stay active, and meet new friends over food."
+            description="Find rides, meals, study groups, and more!."
             cards={campusLifeApps}
         />
         <AppSection
