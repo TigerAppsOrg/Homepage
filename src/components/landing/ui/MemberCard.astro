@@ -11,9 +11,10 @@ interface Props {
     website: string;
     github: string;
     headshot: ImageMetadata;
+    team: string;
 }
 
-const { name, title, position, website, github, headshot } = Astro.props;
+const { name, title, position, website, github, headshot, team } = Astro.props;
 ---
 
 <div class="text-center mx-auto">
@@ -26,13 +27,21 @@ const { name, title, position, website, github, headshot } = Astro.props;
         <h5 class="text-sm sm:text-lg">
             {name}
         </h5>
-        <p class="italic text-sm sm:text-base">
-            {title}
-        </p>
-        <p class="italic text-sm sm:text-base">
+        <p class="text-sm sm:text-base -mb-1 font-semibold">
             {position}
         </p>
-        <div class="flex items-center justify-center gap-4">
+        <p class="text-sm sm:text-base mb-1">
+            {title}
+        </p>
+        {
+            team.length > 0 && (
+                <p class="text-sm sm:text-base">
+                    Team{team.split(",").length > 1 ? "s" : ""}:
+                    <span class="italic">{team}</span>
+                </p>
+            )
+        }
+        <div class="flex items-center justify-center gap-4 mt-1">
             {
                 github && (
                     <a href={github} target="_blank" rel="noopener noreferrer">
