@@ -19,7 +19,7 @@ const { name, title, position, website, github, headshot, team } = Astro.props;
 
 <div class="text-center mx-auto">
     <Image
-        class="rounded-lg shadow-lg mb-1 aspect-square object-cover border"
+        class="rounded-full shadow-xl mb-1 aspect-square object-cover border border-gray-200"
         src={headshot}
         alt={`${name}`}
     />
@@ -33,14 +33,14 @@ const { name, title, position, website, github, headshot, team } = Astro.props;
         <p class="text-sm sm:text-base mb-1">
             {title}
         </p>
-        {
+        <!-- {
             team.length > 0 && (
                 <p class="text-sm sm:text-base">
                     Team{team.split(",").length > 1 ? "s" : ""}:
                     <span class="italic">{team}</span>
                 </p>
             )
-        }
+        } -->
         <div class="flex items-center justify-center gap-4 mt-1">
             {
                 github && (
