@@ -12,21 +12,24 @@ import AWSLogo from "../../assets/companies/aws.webp";
 import AirbnbLogo from "../../assets/companies/airbnb.webp";
 import MicrosoftLogo from "../../assets/companies/microsoft.webp";
 
-// Board and Senior Developers
+// Board and 
 import JoshuaHeadshot from "../../assets/members/joshua.webp";
-import LeoHeadshot from "../../assets/members/leo.webp";
-import HangHeadshot from "../../assets/members/hang.webp";
-import AnnaHeadshot from "../../assets/members/anna.webp";
+import BenHeadshot from "../../assets/members/ben.webp";
+import ShreyasHeadshot from "../../assets/members/shreyas.webp";
 import AndyHeadshot from "../../assets/members/andy.webp";
 
-// Designers
+// Senior Devs
+import HangHeadshot from "../../assets/members/hang.webp";
+import AaliyahHeadshot from "../../assets/members/aaliyah.webp";
+
+// Product Team
+import AnnaHeadshot from "../../assets/members/anna.webp";
 import AngelinaHeadshot from "../../assets/members/angelina.webp";
 import EricaHeadshot from "../../assets/members/erica.webp";
 
 // Junior Developers
 import JuliaHeadshot from "../../assets/members/julia.webp";
 import AmmaarHeadshot from "../../assets/members/ammaar.webp";
-import BenHeadshot from "../../assets/members/ben.webp";
 import EmilyHeadshot from "../../assets/members/emily.webp";
 import GlenHeadshot from "../../assets/members/glen.webp";
 import GraceHeadshot from "../../assets/members/grace.webp";
@@ -40,9 +43,7 @@ import CallumHeadshot from "../../assets/members/callum.webp";
 import KevinYangHeadshot from "../../assets/members/kevinYang.webp";
 import AnuptaHeadshot from "../../assets/members/anupta.webp";
 import NicholasHeadshot from "../../assets/members/nicholas.webp";
-import ShreyasHeadshot from "../../assets/members/shreyas.webp";
 import WinsiceHeadshot from "../../assets/members/winsice.webp";
-import YubiHeadshot from "../../assets/members/yubi.webp";
 
 type Member = {
     name: string;
@@ -55,10 +56,10 @@ type Member = {
 };
 
 const currentMembers: Member[] = [
-    // Board and Senior Developers
+    // Board 
     {
         name: "Joshua Lau '26",
-        title: "Senior Developer",
+        title: "Chief Developer",
         position: "Co-President",
         team: "TigerJunction, Renkai, TigerRetail, TigerStudy",
         website: "https://motoaki.dev",
@@ -66,34 +67,81 @@ const currentMembers: Member[] = [
         headshot: JoshuaHeadshot
     },
     {
-        name: "Leo Stepanewk '25",
+        name: "Ben Aepli '28",
         title: "Senior Developer",
         position: "Co-President",
-        team: "Today, Tay, TigerDraw",
-        website: "",
-        github: "https://github.com/leo-step",
-        headshot: LeoHeadshot
+        team: "TigerRetail, Renkai",
+        website: "https://benaepli.com",
+        github: "https://github.com/benaepli",
+        headshot: BenHeadshot
     },
-    {
-        name: "Hang Pham '26",
-        title: "Senior Developer",
-        position: "Treasurer",
-        team: "",
-        website: "",
-        github: "https://github.com/thanhhang1306",
-        headshot: HangHeadshot
-    },
-
-    // Product
     {
         name: "Andy Zhang '26",
         title: "Product Manager",
-        position: "",
+        position: "Head of Product",
         team: "",
         website: "",
         github: "https://github.com/andy-h-zhang",
         headshot: AndyHeadshot
     },
+    {
+        name: "Shreyas Garimella '28",
+        title: "Senior Developer",
+        position: "Treasurer",
+        team: "Today",
+        website: "",
+        github: "https://github.com/sgarimel",
+        headshot: ShreyasHeadshot
+    },
+
+    // Senior Devs
+    {
+        name: "Hang Pham '26",
+        title: "Senior Developer",
+        position: "",
+        team: "",
+        website: "",
+        github: "https://github.com/thanhhang1306",
+        headshot: HangHeadshot
+    },
+    {
+        name: "Aaliyah Sayed '26",
+        title: "Senior Developer",
+        position: "",
+        team: "",
+        website: "",
+        github: "https://github.com/riiptide",
+        headshot: AaliyahHeadshot
+    },
+    {
+        name: "Ammaar Alam '27",
+        title: "Senior Developer",
+        position: "",
+        team: "Tay, TigerDraw, TigerJunction",
+        website: "https://ammaaralam.com",
+        github: "https://github.com/Ammaar-Alam",
+        headshot: AmmaarHeadshot
+    },
+    {
+        name: "Glen Nfor '27",
+        title: "Senior Developer",
+        position: "",
+        team: "TigerRetail",
+        website: "https://glennfor.tech",
+        github: "https://github.com/glennfor",
+        headshot: GlenHeadshot
+    },
+    {
+        name: "Grace Tan '28",
+        title: "Senior Developer",
+        position: "",
+        team: "Today, Renkai",
+        website: "",
+        github: "https://github.com/debuggernotfound",
+        headshot: GraceHeadshot
+    },
+
+    // Product
     {
         name: "Winsice Ng '26",
         title: "Product Manager and Junior Developer",
@@ -116,7 +164,7 @@ const currentMembers: Member[] = [
     // Designers
     {
         name: "Angelina Ji '27",
-        title: "Designer and Marketer",
+        title: "Junior Developer, Designer, and Marketer",
         position: "",
         team: "TigerRetail, Today",
         website: "",
@@ -216,15 +264,6 @@ const currentMembers: Member[] = [
         headshot: NicholasHeadshot
     },
     {
-        name: "Ammaar Alam '27",
-        title: "Junior Developer",
-        position: "",
-        team: "Tay, TigerDraw, TigerJunction",
-        website: "https://ammaaralam.com",
-        github: "https://github.com/Ammaar-Alam",
-        headshot: AmmaarHeadshot
-    },
-    {
         name: "Emily Zhou '27",
         title: "Junior Developer",
         position: "",
@@ -232,15 +271,6 @@ const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/z-emily",
         headshot: EmilyHeadshot
-    },
-    {
-        name: "Glen Nfor '27",
-        title: "Junior Developer",
-        position: "",
-        team: "TigerRetail",
-        website: "https://glennfor.tech",
-        github: "https://github.com/glennfor",
-        headshot: GlenHeadshot
     },
     {
         name: "Ryan Salik '27",
@@ -252,24 +282,6 @@ const currentMembers: Member[] = [
         headshot: RyanHeadshot
     },
     {
-        name: "Ben Aepli '28",
-        title: "Junior Developer",
-        position: "",
-        team: "TigerRetail, Renkai",
-        website: "https://benaepli.com",
-        github: "https://github.com/benaepli",
-        headshot: BenHeadshot
-    },
-    {
-        name: "Grace Tan '28",
-        title: "Junior Developer",
-        position: "",
-        team: "Today, Renkai",
-        website: "",
-        github: "https://github.com/debuggernotfound",
-        headshot: GraceHeadshot
-    },
-    {
         name: "Kevin Liu '28",
         title: "Junior Developer",
         position: "",
@@ -278,20 +290,12 @@ const currentMembers: Member[] = [
         github: "https://github.com/Kevin-Liu-01",
         headshot: KevinHeadshot
     },
-    {
-        name: "Shreyas Garimella '28",
-        title: "Junior Developer",
-        position: "",
-        team: "Today",
-        website: "",
-        github: "https://github.com/sgarimel",
-        headshot: ShreyasHeadshot
-    }
 ];
 
 const pastMembers: string[] = [
     "Shivam Kak '26",
     "Mark Rubin '26",
+    "Leo Stepanewk '25",
     "Aaliyah Sayed '25",
     "Youngseo Lee '25",
     "Adam Kelch '24",
