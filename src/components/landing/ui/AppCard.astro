@@ -53,6 +53,16 @@ const {
                 {description}
             </p>
             <PersonList startMsg="By" personList={contributors} />
+            {
+                additionalContributors &&
+                    additionalContributors.length > 0 &&
+                    additionalContributors.map(section => (
+                        <PersonList
+                            startMsg={section.startMsg}
+                            personList={section.contributors}
+                        />
+                    ))
+            }
             {note && <p>{note}</p>}
             <p>
                 {

@@ -175,13 +175,30 @@ export const campusLifeApps: AppSectionProps = {
         },
         {
             title: "TigerStudy",
-            description:
-                "Get matched to study groups for any of your courses. By Caroline di Vittorio '22, Kasey McFadden '22, and Joshua Lau '26.",
+            description: "Get matched to study groups for any of your courses.",
             note: "Note: Any inquiries about study group matching should be directed to the McGraw Center.",
             webLink: "https://study.tigerapps.org/",
             repoLink: "https://github.com/tigerappsorg/tiger-study-2",
             screenshot: TigerStudyImage,
-            alt: "Tiger Study app screenshot"
+            alt: "Tiger Study app screenshot",
+            contributors: [
+                {
+                    name: "Caroline di Vittorio '22",
+                    url: ""
+                },
+                {
+                    name: "Kasey McFadden '22",
+                    url: ""
+                }
+            ],
+            additionalContributors: [
+                {
+                    startMsg: "Updates by",
+                    contributors: [
+                        { name: "Joshua Lau '26", url: "https://motoaki.dev/" }
+                    ]
+                }
+            ]
         },
         {
             title: "TigerRetail",
@@ -218,22 +235,47 @@ export const roomDrawApps: AppSectionProps = {
         {
             title: "TigerDraw",
             description:
-                "The one-stop-shop platform for room draw planning. See when past rooms were drawn, filter them, and create a list of potential rooms without needing to parse through PDFs. By Christine Cho '22, Grace Cuenca '22, Frank Ge '22, and Hannah Huh '22. Updates by Leo Stepanewk '25, Andy Zhang '26, Ammaar Alam '27. Data provided by the TigerDen team: Conor McKenna '26, Kael Mlinek '26, and Lucas Tudoras '26.",
+                "The one-stop-shop platform for room draw planning. See when past rooms were drawn, filter them, and create a list of potential rooms without needing to parse through PDFs.",
             note: "",
             webLink: "https://draw.tigerapps.org/",
             repoLink: "https://github.com/PrincetonUSG/TigerDraw",
             screenshot: TigerDrawImage,
-            alt: "Tiger Draw app screenshot"
+            alt: "Tiger Draw app screenshot",
+            contributors: [
+                { name: "Christine Cho '22", url: "" },
+                { name: "Grace Cuenca '22", url: "" },
+                { name: "Frank Ge '22", url: "" },
+                { name: "Hannah Huh '22", url: "" }
+            ],
+            additionalContributors: [
+                {
+                    startMsg: "Updates by",
+                    contributors: [
+                        { name: "Leo Stepanewk '25", url: "" },
+                        { name: "Andy Zhang '26", url: "" },
+                        { name: "Ammaar Alam '27", url: "" }
+                    ]
+                },
+                {
+                    startMsg: "Data provided by the TigerDen team:",
+                    contributors: [
+                        { name: "Conor McKenna '26", url: "" },
+                        { name: "Kael Mlinek '26", url: "" },
+                        { name: "Lucas Tudoras '26", url: "" }
+                    ]
+                }
+            ]
         },
         {
             title: "PrincetonRooms",
             description:
-                "Analyze the currently avaliable rooms PDF with seamless filtering and data visualization. By Boaz Yoo '25.",
+                "Analyze the currently avaliable rooms PDF with seamless filtering and data visualization.",
             note: "",
             webLink: "https://rooms.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/princeton-rooms",
             screenshot: PrincetonRoomsImage,
-            alt: "Princeton Rooms app screenshot"
+            alt: "Princeton Rooms app screenshot",
+            contributors: [{ name: "Boaz Yoo '25", url: "" }]
         }
     ]
 };
