@@ -16,3 +16,9 @@ export interface AppProps {
     contributors?: Contributor[];
     additionalContributors?: ContributorSection[];
 }
+
+export interface AppSectionProps {
+    title: string;
+    description: string;
+    apps: AppProps[];
+}
