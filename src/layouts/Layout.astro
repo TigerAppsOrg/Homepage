@@ -82,44 +82,18 @@ import { AstroSeo } from "@astrolib/seo";
     }
 
     .app-grid {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         gap: 2rem;
-        grid-template-columns: 1fr; 
+        justify-content: center;
         
-        article {
-            width: 100%;
+        > article {
+            flex: 0 0 calc(50% - 1rem);
         }
         
-        @media screen and (min-width: 768px) {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            max-width: 100%;
-            
-            article {
-                grid-column: span 2;
-            }
-            
-            article:last-child:nth-child(2n - 1) {
-                grid-column-end: -2;
-            }
-        }
-        
-        @media screen and (min-width: 1280px) {
-            grid-template-columns: repeat(6, 1fr);
-            
-            article:last-child:nth-child(2n - 1) {
-                grid-column-end: auto;
-            }
-            
-            article:last-child:nth-child(3n - 1) {
-                grid-column-end: -2;
-            }
-            
-            article:nth-last-child(2):nth-child(3n + 1) {
-                grid-column-end: 4;
-            }
-            
-            article:last-child:nth-child(3n - 2) {
-                grid-column-end: 5;
+        @media screen and (min-width: 1200px) {
+            > article {
+                flex: 0 0 calc(33.333% - 1.333rem);
             }
         }
     }
