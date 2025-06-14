@@ -161,7 +161,7 @@ export const currentMembers: Member[] = [
         position: "",
         teams: ["Engineering", "Design"],
         website: "",
-        github: "",
+        github: "https://github.com/angelina-ji",
         headshot: AngelinaHeadshot
     },
 
