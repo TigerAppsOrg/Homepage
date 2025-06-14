@@ -48,12 +48,18 @@ export const aiAssistApps: AppSectionProps = {
         {
             title: "Tay",
             description:
-                "Knows all academic, eating club, and event information in real time. Integrated with Princeton Courses. By Leo Stepanewk '25, Aaliyah Sayed '26, Ammaar Alam '27, and Shreyas Garimella '28.",
+                "Knows all academic, eating club, and event information in real time. Integrated with Princeton Courses.",
             note: "",
             webLink: "https://tay.tigerapps.org/",
             repoLink: "https://github.com/leo-step/Today",
             screenshot: TayImage,
-            alt: "Tay chatbot screenshot"
+            alt: "Tay chatbot screenshot",
+            contributors: [
+                { name: "Leo Stepanewk '25", url: "" },
+                { name: "Aaliyah Sayed '26", url: "" },
+                { name: "Ammaar Alam '27", url: "" },
+                { name: "Shreyas Garimella '28", url: "" }
+            ]
         }
     ]
 };
@@ -81,32 +87,50 @@ export const coursePlanningApps: AppSectionProps = {
         {
             title: "PrincetonCourses",
             description:
-                "Search through courses quickly to find the list of courses you wish to take. By Sebastian Hallum Clarke '19, Caterina Golner '19, Bensu Sicim '19, Mel Shu '19, and Kara Bressler '19.",
+                "Search through courses quickly to find the list of courses you wish to take.",
             note: "",
             webLink: "https://princetoncourses.com/",
             repoLink: "https://github.com/PrincetonUSG/PrincetonCourses",
             screenshot: PrincetonCoursesImage,
-            alt: "Princeton Courses app screenshot"
+            alt: "Princeton Courses app screenshot",
+            contributors: [
+                { name: "Sebastian Hallum Clarke '19", url: "" },
+                { name: "Caterina Golner '19", url: "" },
+                { name: "Bensu Sicim '19", url: "" },
+                { name: "Mel Shu '19", url: "" },
+                { name: "Kara Bressler '19", url: "" }
+            ]
         },
         {
             title: "TigerSnatch",
             description:
-                "Receive email and text message notifications when spots open in full classes. Trade spots with other students. By Shannon Heh '23, Nick Padmanabhan '23, and Byron Zhang '23.",
+                "Receive email and text message notifications when spots open in full classes. Trade spots with other students.",
             note: "",
             webLink: "https://tigersnatch.com/?ref=tigerapps",
             repoLink: "https://github.com/PrincetonUSG/tigersnatch",
             screenshot: TigerSnatchImage,
-            alt: "Tiger Snatch app screenshot"
+            alt: "Tiger Snatch app screenshot",
+            contributors: [
+                { name: "Shannon Heh '23", url: "" },
+                { name: "Nick Padmanabhan '23", url: "" },
+                { name: "Byron Zhang '23", url: "" }
+            ]
         },
         {
             title: "TigerPath",
             description:
-                "Plan out your four-year course schedule and track major/degree requirements. By Richard Chu '18, Barak Nehoran '18, Daniel Leung '20, and Adeniji Ogunlana '19.",
+                "Plan out your four-year course schedule and track major/degree requirements.",
             note: "",
             webLink: "https://www.tigerpath.io/",
             repoLink: "https://github.com/PrincetonUSG/TigerPath",
             screenshot: TigerPathImage,
-            alt: "Tiger Path app screenshot"
+            alt: "Tiger Path app screenshot",
+            contributors: [
+                { name: "Richard Chu '18", url: "" },
+                { name: "Barak Nehoran '18", url: "" },
+                { name: "Daniel Leung '20", url: "" },
+                { name: "Adeniji Ogunlana '19", url: "" }
+            ]
         }
     ]
 };
@@ -118,22 +142,30 @@ export const games: AppSectionProps = {
         {
             title: "TigerSpot",
             description:
-                "Get ready for some fun with the ultimate Princeton campus geography game!  In 'Daily' mode, you have one chance each day to guess where a mystery campus photo was taken on the map—score big points the closer you get! Challenge your friends in 'Versus' mode, where you'll go head-to-head in five thrilling rounds of guessing. By Claudia Lee '26, Jessica Yan '26, Frank Liu '26, Ethan Do '26, and Winsice Ng '26.",
+                "Get ready for some fun with the ultimate Princeton campus geography game! In 'Daily' mode, you have one chance each day to guess where a mystery campus photo was taken on the map—score big points the closer you get! Challenge your friends in 'Versus' mode, where you'll go head-to-head in five thrilling rounds of guessing.",
             note: "",
             webLink: "https://spot.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/TigerSpot",
             screenshot: SpotImage,
-            alt: "Tiger Spot app screenshot"
+            alt: "Tiger Spot app screenshot",
+            contributors: [
+                { name: "Claudia Lee '26", url: "" },
+                { name: "Jessica Yan '26", url: "" },
+                { name: "Frank Liu '26", url: "" },
+                { name: "Ethan Do '26", url: "" },
+                { name: "Winsice Ng '26", url: "" }
+            ]
         },
         {
             title: "PawPointClicker",
             description:
-                "Cookie Clicker for Princeton! Earn 'paw points' by clicking the prox! PawPointClicker >>> iClicker. By Kevin Liu '28.",
+                "Cookie Clicker for Princeton! Earn 'paw points' by clicking the prox! PawPointClicker >>> iClicker.",
             note: "",
             webLink: "https://clicker.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/PawPointClicker/",
             screenshot: ClickerImage,
-            alt: "Tiger Clicker app screenshot"
+            alt: "Tiger Clicker app screenshot",
+            contributors: [{ name: "Kevin Liu '28", url: "" }]
         }
     ]
 };
@@ -145,34 +177,56 @@ export const campusLifeApps: AppSectionProps = {
         {
             title: "TigerLift",
             description:
-                "Tired of shelling out money on Lyft? Don't want to spam the ListServs to find other students going to the same place? Say goodbye to NJ Transit delays and expensive Ubers. TigerLift helps Princeton students connect with each other so they can split costs on rideshares! By Julia Ying '26, Grace Kim '26, Ritika Bhatnagar '26, and Aasha Jain '26",
+                "Tired of shelling out money on Lyft? Don't want to spam the ListServs to find other students going to the same place? Say goodbye to NJ Transit delays and expensive Ubers. TigerLift helps Princeton students connect with each other so they can split costs on rideshares!",
             note: "",
             webLink: "https://lift.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/TigerLift",
             screenshot: TigerLiftImage,
-            alt: "Tiger Lift app screenshot"
+            alt: "Tiger Lift app screenshot",
+            contributors: [
+                { name: "Julia Ying '26", url: "" },
+                { name: "Grace Kim '26", url: "" },
+                { name: "Ritika Bhatnagar '26", url: "" },
+                { name: "Aasha Jain '26", url: "" }
+            ]
         },
+
         {
             title: "Today",
             description:
-                "Today is a new tab page that compiles the most crucial information you need to get through your day. It also contains study mode, a rotating background, and daily greeting. All data is live and refreshes hourly. By Leo Stepanewk '25, Aaliyah Sayed '26, Oyu Enkhbold '26, Shreyas Garimella '28, and Grace Tan '28.",
+                "Today is a new tab page that compiles the most crucial information you need to get through your day. It also contains study mode, a rotating background, and daily greeting. All data is live and refreshes hourly.",
             note: "",
             webLink:
                 "https://chromewebstore.google.com/detail/today-princeton/iejdjhiphonjpgaobmpniifeipiomgee?hl=en",
             repoLink: "https://github.com/leo-step/Today",
             screenshot: TodayImage,
-            alt: "Today extension screenshot"
+            alt: "Today extension screenshot",
+            contributors: [
+                { name: "Leo Stepanewk '25", url: "" },
+                { name: "Aaliyah Sayed '26", url: "" },
+                { name: "Oyu Enkhbold '26", url: "" },
+                { name: "Shreyas Garimella '28", url: "" },
+                { name: "Grace Tan '28", url: "" }
+            ]
         },
         {
             title: "NutriTiger",
             description:
-                "Discover what your dining hall offers and track your nutrition effortlessly with NutriTiger. By Rishabh Jain '26, Oyu Enkhbold '26, Eric Kurkowski '26, Jewel Merriman '26, and Stephanie Oh '26.",
+                "Discover what your dining hall offers and track your nutrition effortlessly with NutriTiger.",
             note: "",
             webLink: "https://nutritiger.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/nutritiger",
             screenshot: NutriTigerImage,
-            alt: "Nutri Tiger app screenshot"
+            alt: "Nutri Tiger app screenshot",
+            contributors: [
+                { name: "Rishabh Jain '26", url: "" },
+                { name: "Oyu Enkhbold '26", url: "" },
+                { name: "Eric Kurkowski '26", url: "" },
+                { name: "Jewel Merriman '26", url: "" },
+                { name: "Stephanie Oh '26", url: "" }
+            ]
         },
+
         {
             title: "TigerStudy",
             description: "Get matched to study groups for any of your courses.",
@@ -182,14 +236,8 @@ export const campusLifeApps: AppSectionProps = {
             screenshot: TigerStudyImage,
             alt: "Tiger Study app screenshot",
             contributors: [
-                {
-                    name: "Caroline di Vittorio '22",
-                    url: ""
-                },
-                {
-                    name: "Kasey McFadden '22",
-                    url: ""
-                }
+                { name: "Caroline di Vittorio '22", url: "" },
+                { name: "Kasey McFadden '22", url: "" }
             ],
             additionalContributors: [
                 {
@@ -203,12 +251,18 @@ export const campusLifeApps: AppSectionProps = {
         {
             title: "TigerRetail",
             description:
-                "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more. By Albert Lin '23, Katie McLaughlin '23, Sara Schwartz '23, Phoebe Lin '23.",
+                "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more.",
             note: "This app is temporarily disabled. We are working on a new version. There is no expected release date at this time.",
             webLink: "http://retail.tigerapps.org/",
             repoLink: "https://github.com/PrincetonUSG/TigerReTail",
             screenshot: TigerRetailImage,
-            alt: "Tiger Retail app screenshot"
+            alt: "Tiger Retail app screenshot",
+            contributors: [
+                { name: "Albert Lin '23", url: "" },
+                { name: "Katie McLaughlin '23", url: "" },
+                { name: "Sara Schwartz '23", url: "" },
+                { name: "Phoebe Lin '23", url: "" }
+            ]
         },
         {
             title: "TigerMenus",
@@ -287,142 +341,209 @@ export const archiveApps: AppSectionProps = {
         {
             title: "Food4U",
             description:
-                "Locate and share free food easily with a visual campus map marking free food events, email notifications, and more. By Daphne Barretto '23, Aaron Buck '23, and Ben Chan '23.",
+                "Locate and share free food easily with a visual campus map marking free food events, email notifications, and more.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/food4u",
             repoLink: "https://github.com/TigerAppsOrg/food4u",
             screenshot: Food4UImage,
-            alt: "Food 4 U app screenshot"
+            alt: "Food 4 U app screenshot",
+            contributors: [
+                { name: "Daphne Barretto '23", url: "" },
+                { name: "Aaron Buck '23", url: "" },
+                { name: "Ben Chan '23", url: "" }
+            ]
         },
         {
             title: "Gigl",
             description:
-                "Unleash your skills and earn money by connecting with fellow students seeking your talents! Apply to gigs, set up your freelancer profile and wait for offers OR post a gig yourself if you are looking to hire someone. By Taylan Aydin '25, Andre Biehl '25, Yagiz Devre '26, and Ibrahim Ahmed '25.",
+                "Unleash your skills and earn money by connecting with fellow students seeking your talents! Apply to gigs, set up your freelancer profile and wait for offers OR post a gig yourself if you are looking to hire someone.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/gigl",
             repoLink: "https://github.com/TigerAppsOrg/gigl",
             screenshot: GiglImage,
-            alt: "Gigl app screenshot"
+            alt: "Gigl app screenshot",
+            contributors: [
+                { name: "Taylan Aydin '25", url: "" },
+                { name: "Andre Biehl '25", url: "" },
+                { name: "Yagiz Devre '26", url: "" },
+                { name: "Ibrahim Ahmed '25", url: "" }
+            ]
         },
         {
             title: "MealMatch",
             description:
-                "Find new people to meet and eat with in dining halls who want to eat at the same time and place as you. Receive real-time text notifications upon finding a match along with your match's profile and contact information. By Adam Kelch '24, Ameya Vaidya '24, Jeremy Dapaah'24, and Rajiv Swamy '24.",
+                "Find new people to meet and eat with in dining halls who want to eat at the same time and place as you. Receive real-time text notifications upon finding a match along with your match's profile and contact information.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/MealMatch",
             repoLink: "https://github.com/TigerAppsOrg/MealMatch",
             screenshot: MealMatchImage,
-            alt: "Meal Match app screenshot"
+            alt: "Meal Match app screenshot",
+            contributors: [
+                { name: "Adam Kelch '24", url: "" },
+                { name: "Ameya Vaidya '24", url: "" },
+                { name: "Jeremy Dapaah '24", url: "" },
+                { name: "Rajiv Swamy '24", url: "" }
+            ]
         },
         {
             title: "ReBook",
-            description:
-                "Textbook marketplace for Princeton students. By Sophie Li '23, Jayson Wu '23, and Connie Xu '23.",
+            description: "Textbook marketplace for Princeton students.",
             note: "Replacement: TigerRetail",
             webLink: "https://github.com/TigerAppsOrg/rebook",
             repoLink: "https://github.com/TigerAppsOrg/rebook",
             screenshot: RebookImage,
-            alt: "Re-Book app screenshot"
+            alt: "Re-Book app screenshot",
+            contributors: [
+                { name: "Sophie Li '23", url: "" },
+                { name: "Jayson Wu '23", url: "" },
+                { name: "Connie Xu '23", url: "" }
+            ]
         },
         {
             title: "Recal",
             description:
-                "Plan the perfect course schedule and automatically sync with your Google Calendar. By Naphat Sanguansin '16, Dyland Xue '16, and Maxim Zaslavsky '17.",
+                "Plan the perfect course schedule and automatically sync with your Google Calendar.",
             note: "Replacement: TigerJunction",
             webLink: "https://github.com/TigerAppsOrg/ReCal",
             repoLink: "https://github.com/TigerAppsOrg/ReCal",
             screenshot: RecalImage,
-            alt: "ReCal app screenshot"
+            alt: "ReCal app screenshot",
+            contributors: [
+                { name: "Naphat Sanguansin '16", url: "" },
+                { name: "Dylan Xue '16", url: "" },
+                { name: "Maxim Zaslavsky '17", url: "" }
+            ]
         },
         {
             title: "TigerResearch",
             description:
-                "Search for available Princeton professors within your field of interest, for independent work, thesis, or other research. By Eric Ahn '24, Vivek Kolli '24, and Alex Zhang '24.",
+                "Search for available Princeton professors within your field of interest, for independent work, thesis, or other research.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerResearch",
             repoLink: "https://github.com/TigerAppsOrg/TigerResearch",
             screenshot: ResearchImage,
-            alt: "Tiger Research app screenshot"
+            alt: "Tiger Research app screenshot",
+            contributors: [
+                { name: "Eric Ahn '24", url: "" },
+                { name: "Vivek Kolli '24", url: "" },
+                { name: "Alex Zhang '24", url: "" }
+            ]
         },
         {
             title: "TigerRooms",
-            description:
-                "Search rooms, reviews, and floor plans. By Ben Parks '17.",
+            description: "Search rooms, reviews, and floor plans.",
             note: "Replacement: TigerDraw",
             webLink: "https://github.com/TigerAppsOrg/rooms-app",
             repoLink: "https://github.com/TigerAppsOrg/rooms-app",
             screenshot: RoomsImage,
-            alt: "Tiger Rooms app screenshot"
+            alt: "Tiger Rooms app screenshot",
+            contributors: [{ name: "Ben Parks '17", url: "" }]
         },
         {
             title: "SpaceTiger",
             description:
-                "Search for and review spots on campus, whether it be for studying, partying, rehearsing, or just hanging out. By Tyler Benson '24, Eva Vesely '24, Giao Vu Dinh '24, Chenhan Zhang '24, Thanya Begum '23.",
+                "Search for and review spots on campus, whether it be for studying, partying, rehearsing, or just hanging out.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/SpaceTiger",
             repoLink: "https://github.com/TigerAppsOrg/SpaceTiger",
             screenshot: SpaceTigerImage,
-            alt: "Space Tiger app screenshot"
+            alt: "Space Tiger app screenshot",
+            contributors: [
+                { name: "Tyler Benson '24", url: "" },
+                { name: "Eva Vesely '24", url: "" },
+                { name: "Giao Vu Dinh '24", url: "" },
+                { name: "Chenhan Zhang '24", url: "" },
+                { name: "Thanya Begum '23", url: "" }
+            ]
         },
         {
             title: "TigerFit",
             description:
-                "Track workouts, visualize progress, and get recommendations for weights/repetitions based on your workout history. By Ian Murray '23, Adam Gamba '23, Kevin Castro '23, Darren Zheng '23.",
+                "Track workouts, visualize progress, and get recommendations for weights/repetitions based on your workout history.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerFit",
             repoLink: "https://github.com/TigerAppsOrg/TigerFit",
             screenshot: TigerFitImage,
-            alt: "Tiger Fit app screenshot"
+            alt: "Tiger Fit app screenshot",
+            contributors: [
+                { name: "Ian Murray '23", url: "" },
+                { name: "Adam Gamba '23", url: "" },
+                { name: "Kevin Castro '23", url: "" },
+                { name: "Darren Zheng '23", url: "" }
+            ]
         },
         {
             title: "TigerJobs",
             description:
-                "Leave a review and find what you need to land your next interview or job from peers. By Arnav Kumar '24 and Ambri Ma '24.",
+                "Leave a review and find what you need to land your next interview or job from peers.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerJobs",
             repoLink: "https://github.com/TigerAppsOrg/TigerJobs",
             screenshot: TigerJobsImage,
-            alt: "Tiger Jobs app screenshot"
+            alt: "Tiger Jobs app screenshot",
+            contributors: [
+                { name: "Arnav Kumar '24", url: "" },
+                { name: "Ambri Ma '24", url: "" }
+            ]
         },
         {
             title: "TigerMap",
             description:
-                "A course exploration app that allows students to discover what classes to take next. Create and share course tracks with others. By Leo Stepanewk '25, Aaliyah Sayed '25, and Bill Ao '24.",
+                "A course exploration app that allows students to discover what classes to take next. Create and share course tracks with others.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerMap",
             repoLink: "https://github.com/TigerAppsOrg/TigerMap",
             screenshot: TigerMapImage,
-            alt: "Tiger Map app screenshot"
+            alt: "Tiger Map app screenshot",
+            contributors: [
+                { name: "Leo Stepanewk '25", url: "" },
+                { name: "Aaliyah Sayed '25", url: "" },
+                { name: "Bill Ao '24", url: "" }
+            ]
         },
         {
             title: "TigerThrift",
-            description:
-                "Sell clothing or shop fellow Tigers' closets. Katie Chou '23, Katelyn Rodrigues '23, Iroha Shirai '23.",
+            description: "Sell clothing or shop fellow Tigers' closets.",
             note: "Replacement: TigerRetail",
             webLink: "https://github.com/TigerAppsOrg/TigerThrift",
             repoLink: "https://github.com/TigerAppsOrg/TigerThrift",
             screenshot: TigerThriftImage,
-            alt: "Tiger Thrift app screenshot"
+            alt: "Tiger Thrift app screenshot",
+            contributors: [
+                { name: "Katie Chou '23", url: "" },
+                { name: "Katelyn Rodrigues '23", url: "" },
+                { name: "Iroha Shirai '23", url: "" }
+            ]
         },
         {
             title: "TigerTickets",
             description:
-                "Secondary marketplace to buy/re-sell/exchange tickets. By Jenny Sheng '22, Joseph Chen '22, and Sunny Yoo '22.",
+                "Secondary marketplace to buy/re-sell/exchange tickets.",
             note: "Replacement: TigerRetail",
             webLink: "https://github.com/TigerAppsOrg/TigerTickets",
             repoLink: "https://github.com/TigerAppsOrg/TigerTickets",
             screenshot: TigerTicketsImage,
-            alt: "Tiger Tickets app screenshot"
+            alt: "Tiger Tickets app screenshot",
+            contributors: [
+                { name: "Jenny Sheng '22", url: "" },
+                { name: "Joseph Chen '22", url: "" },
+                { name: "Sunny Yoo '22", url: "" }
+            ]
         },
         {
             title: "TigerTools",
             description:
-                "Find amenities using a map of campus and provide feedback on them. By Indu Panigrahi '23, Raymond Liu '23, and Adam Rebei '23.",
+                "Find amenities using a map of campus and provide feedback on them.",
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerTools",
             repoLink: "https://github.com/TigerAppsOrg/TigerTools",
             screenshot: TigerToolsImage,
-            alt: "Tiger Tools app screenshot"
+            alt: "Tiger Tools app screenshot",
+            contributors: [
+                { name: "Indu Panigrahi '23", url: "" },
+                { name: "Raymond Liu '23", url: "" },
+                { name: "Adam Rebei '23", url: "" }
+            ]
         }
     ]
 };
