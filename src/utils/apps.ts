@@ -57,7 +57,7 @@ export const aiAssistApps: AppSectionProps = {
             contributors: [
                 { name: "Leo Stepanewk '25", url: "" },
                 { name: "Aaliyah Sayed '26", url: "" },
-                { name: "Ammaar Alam '27", url: "" },
+                { name: "Ammaar Alam '27", url: "https://ammaaralam.com" },
                 { name: "Shreyas Garimella '28", url: "" }
             ]
         }
@@ -165,7 +165,9 @@ export const games: AppSectionProps = {
             repoLink: "https://github.com/TigerAppsOrg/PawPointClicker/",
             screenshot: ClickerImage,
             alt: "Tiger Clicker app screenshot",
-            contributors: [{ name: "Kevin Liu '28", url: "" }]
+            contributors: [
+                { name: "Kevin Liu '28", url: "https://www.kevin-liu.tech/" }
+            ]
         }
     ]
 };
@@ -307,7 +309,10 @@ export const roomDrawApps: AppSectionProps = {
                     contributors: [
                         { name: "Leo Stepanewk '25", url: "" },
                         { name: "Andy Zhang '26", url: "" },
-                        { name: "Ammaar Alam '27", url: "" }
+                        {
+                            name: "Ammaar Alam '27",
+                            url: "https://ammaaralam.com"
+                        }
                     ]
                 },
                 {
