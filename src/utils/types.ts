@@ -1,3 +1,5 @@
+export type Team = "Board" | "Engineering" | "Design" | "Product" | "Marketing";
+
 export type Contributor = { name: string; url?: string };
 
 export type ContributorSection = {
