@@ -45,28 +45,17 @@ const { startMsg, personList } = Astro.props;
 const formattedList = formatPersonList(personList);
 ---
 
-<p>
-    {
-        formattedList && (
-            <span>
-                {startMsg}{" "}
-                {formattedList.map(item =>
-                    isSeparator(item) ? (
-                        <span>{item.separator}</span>
-                    ) : item.url ? (
-                        <a
-                            href={item.url}
-                            target="_blank"
-                            class="text-secondary underline"
-                            rel="noopener noreferrer">
-                            {item.name}
-                        </a>
-                    ) : (
-                        <span>{item.name}</span>
-                    )
-                )}
-                .
-            </span>
-        )
-    }
-</p>
+<!-- We need to ignore formatting otherwise there's weird spacing with commas and periods. --><!-- prettier-ignore -->
+<span>
+    {formattedList && (
+        <span>{startMsg} {formattedList.map(item =>
+            isSeparator(item) ? item.separator : item.url ? (
+                <a
+                    href={item.url}
+                    target="_blank"
+                    class="text-secondary underline"
+                    rel="noopener noreferrer">{item.name}</a>
+            ) : item.name
+        )}.</span>
+    )}
+</span>
