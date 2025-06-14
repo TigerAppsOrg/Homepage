@@ -5,7 +5,7 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
 ---
 
 <section id="about" class="py-16">
-    <div class="cont text-center space-y-16">
+    <div class="cont text-center space-y-8">
         <div class="space-y-2">
             <h3>ABOUT US</h3>
             <p class="text-lg">Meet the TigerApps team!</p>
@@ -14,45 +14,47 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
         <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
         </div>
 
-        <article>
-            <h4 class="mb-4">Current Members</h4>
-            <div
-                class="grid justify-center gap-4 md:gap-y-8 md:gap-6
-                grid-cols-3 md:grid-cols-4 lg:grid-cols-5
-                constrained">
-                {currentMembers.map(member => <MemberCard {...member} />)}
-            </div>
-        </article>
+        <div class="space-y-16">
+            <article>
+                <h4 class="mb-4">Current Members</h4>
+                <div
+                    class="grid justify-center gap-4 md:gap-y-8 md:gap-6
+                    grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+                    constrained">
+                    {currentMembers.map(member => <MemberCard {...member} />)}
+                </div>
+            </article>
 
-        <article>
-            <h4 class="mb-4">Past Members</h4>
-            <ul
-                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
-                {
-                    pastMembers.map(member => (
-                        <li class="text-sm sm:text-base">{member}</li>
-                    ))
-                }
-            </ul>
-        </article>
+            <article>
+                <h4 class="mb-4">Past Members</h4>
+                <ul
+                    class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
+                    {
+                        pastMembers.map(member => (
+                            <li class="text-sm sm:text-base">{member}</li>
+                        ))
+                    }
+                </ul>
+            </article>
 
-        <article>
-            <h4 class="mb-4">Our members have gone on to work for...</h4>
-            <ul
-                class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 constrained">
-                {
-                    companies.map(company => (
-                        <li>
-                            <Image
-                                loading="lazy"
-                                class="rounded-lg shadow-lg aspect-square object-cover"
-                                src={company[0]}
-                                alt={company[1]}
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
-        </article>
+            <article>
+                <h4 class="mb-4">Our members have gone on to work for...</h4>
+                <ul
+                    class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 constrained">
+                    {
+                        companies.map(company => (
+                            <li>
+                                <Image
+                                    loading="lazy"
+                                    class="rounded-lg shadow-lg aspect-square object-cover"
+                                    src={company[0]}
+                                    alt={company[1]}
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </article>
+        </div>
     </div>
 </section>
