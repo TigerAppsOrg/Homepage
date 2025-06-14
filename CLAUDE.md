@@ -20,39 +20,39 @@ npm run format     # Format code with Prettier
 
 ### Tech Stack
 
--   **Astro 4.16.18** - Static site generator with component-based architecture
--   **TailwindCSS** - Utility-first CSS with custom design system
--   **TypeScript** - Type safety for component props and data structures
+- **Astro 4.16.18** - Static site generator with component-based architecture
+- **TailwindCSS** - Utility-first CSS with custom design system
+- **TypeScript** - Type safety for component props and data structures
 
 ### Key Directories
 
--   `src/pages/` - Route-based pages (index, archive, resources)
--   `src/components/landing/` - Homepage-specific components with co-located data
--   `src/components/page/` - Shared page components (header, footer)
--   `src/components/*/ui/` - Reusable UI components
--   `src/assets/` - Images organized by category (apps/, members/, companies/, archive/)
+- `src/pages/` - Route-based pages (index, archive, resources)
+- `src/components/landing/` - Homepage-specific components with co-located data
+- `src/components/page/` - Shared page components (header, footer)
+- `src/components/*/ui/` - Reusable UI components
+- `src/assets/` - Images organized by category (apps/, members/, companies/, archive/)
 
 ### Data Management
 
 All content data is **co-located with components** as TypeScript objects:
 
--   Apps data: `src/components/landing/Apps.astro` (lines 34-188)
--   Members data: `src/components/landing/Members.astro` (lines 55-263)
--   Archive apps: `src/pages/archive.astro` (lines 24-165)
+- Apps data: `src/components/landing/Apps.astro` (lines 34-188)
+- Members data: `src/components/landing/Members.astro` (lines 55-263)
+- Archive apps: `src/pages/archive.astro` (lines 24-165)
 
 ### Design System
 
 Custom TailwindCSS configuration in `tailwind.config.mjs`:
 
--   Primary: `#3EE0BF` (teal green)
--   Secondary: `#2B3E50` (dark blue-gray)
--   Use `.cont` and `.constrained` utility classes for consistent layouts
+- Primary: `#3EE0BF` (teal green)
+- Secondary: `#2B3E50` (dark blue-gray)
+- Use `.cont` and `.constrained` utility classes for consistent layouts
 
 ### Asset Guidelines
 
--   Use `.webp` format for all images
--   Import images as ES modules for Astro optimization
--   Organize by category in `/src/assets/`
+- Use `.webp` format for all images
+- Import images as ES modules for Astro optimization
+- Organize by category in `/src/assets/`
 
 ## Common Tasks
 
