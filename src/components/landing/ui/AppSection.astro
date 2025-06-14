@@ -1,21 +1,11 @@
 ---
-import type { ImageMetadata } from "astro";
 import AppCard from "./AppCard.astro";
-
-interface CardProps {
-    title: string;
-    description: string;
-    note: string;
-    webLink: string;
-    repoLink: string;
-    screenshot: ImageMetadata;
-    alt: string;
-}
+import type { AppProps } from "../../../utils/types";
 
 interface Props {
     title: string;
     description: string;
-    cards: CardProps[];
+    cards: AppProps[];
 }
 
 const { title, description, cards } = Astro.props;

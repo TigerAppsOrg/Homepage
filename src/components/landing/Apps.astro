@@ -20,18 +20,9 @@ import TigerRetailImage from "../../assets/apps/tigerretail.webp";
 
 import TigerDrawImage from "../../assets/apps/tigerdraw.webp";
 import PrincetonRoomsImage from "../../assets/apps/princetonrooms.webp";
+import type { AppProps } from "../../utils/types";
 
-type App = {
-    title: string;
-    description: string;
-    note: string;
-    webLink: string;
-    repoLink: string;
-    screenshot: ImageMetadata;
-    alt: string;
-};
-
-const aiAssistApps: App[] = [
+const aiAssistApps: AppProps[] = [
     {
         title: "Tay",
         description:
@@ -44,16 +35,34 @@ const aiAssistApps: App[] = [
     }
 ];
 
-const coursePlanningApps: App[] = [
+const coursePlanningApps: AppProps[] = [
     {
         title: "TigerJunction",
         description:
-            "Plan your schedules with powerful advanced search features, customizable themes, and built-in ratings. By Joshua Lau '26, Emily Zhou '27, Keith Matanachai '26, and Myles Anderson '26.",
+            "Plan your schedules with powerful advanced search features, customizable themes, and built-in ratings.",
         note: "",
         webLink: "https://junction.tigerapps.org",
         repoLink: "https://github.com/TigerAppsOrg/tiger-junction",
         screenshot: TigerJunctionImage,
-        alt: "Tiger Junction app screenshot"
+        alt: "Tiger Junction app screenshot",
+        contributors: [
+            {
+                name: "Joshua Lau '26",
+                url: "https://motoaki.dev/"
+            },
+            {
+                name: "Emily Zhou '27",
+                url: ""
+            },
+            {
+                name: "Keith Matanachai '26",
+                url: ""
+            },
+            {
+                name: "Myles Anderson '26",
+                url: ""
+            }
+        ]
     },
     {
         title: "PrincetonCourses",
@@ -87,7 +96,7 @@ const coursePlanningApps: App[] = [
     }
 ];
 
-const games: App[] = [
+const games: AppProps[] = [
     {
         title: "TigerSpot",
         description:
@@ -110,7 +119,7 @@ const games: App[] = [
     }
 ];
 
-const campusLifeApps: App[] = [
+const campusLifeApps: AppProps[] = [
     {
         title: "TigerLift",
         description:
@@ -164,7 +173,7 @@ const campusLifeApps: App[] = [
     }
 ];
 
-const roomDrawApps: App[] = [
+const roomDrawApps: AppProps[] = [
     {
         title: "TigerDraw",
         description:
