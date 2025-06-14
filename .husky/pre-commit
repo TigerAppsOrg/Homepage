@@ -1,1 +1,7 @@
-npx prettier --write --ignore-unknown .
+#!/usr/bin/env sh
+
+files=$(git diff --cached --name-only --diff-filter=ACMR)
+if [ -n "$files" ]; then
+  npx prettier --write --ignore-unknown $files
+  git add $files
+fi
