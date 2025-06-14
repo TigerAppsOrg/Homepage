@@ -1,0 +1,61 @@
+---
+import type { Contributor } from "../../../utils/types";
+
+type FormattedItem = Contributor | { separator: string };
+
+function formatPersonList(personList: Contributor[]): FormattedItem[] | null {
+    if (!personList || personList.length === 0) return null;
+
+    if (personList.length === 1) {
+        return personList;
+    }
+
+    if (personList.length === 2) {
+        // No Oxford comma for 2 items
+        return [personList[0], { separator: " and " }, personList[1]];
+    }
+
+    // 3 or more contributors - use Oxford comma
+    const result = [];
+    personList.forEach((person, index) => {
+        if (index > 0) {
+            if (index === personList.length - 1) {
+                result.push({ separator: ", and " });
+            } else {
+                result.push({ separator: ", " });
+            }
+        }
+        result.push(person);
+    });
+
+    return result;
+}
+
+function isSeparator(item: FormattedItem): item is { separator: string } {
+    return "separator" in item;
+}
+
+interface Props {
+    startMsg: string;
+    personList: Contributor[];
+}
+
+const { startMsg, personList } = Astro.props;
+
+const formattedList = formatPersonList(personList);
+---
+
+<!-- We need to ignore formatting otherwise there's weird spacing with commas and periods. --><!-- prettier-ignore -->
+<span>
+    {formattedList && (
+        <span>{startMsg} {formattedList.map(item =>
+            isSeparator(item) ? item.separator : item.url ? (
+                <a
+                    href={item.url}
+                    target="_blank"
+                    class="text-secondary underline"
+                    rel="noopener noreferrer">{item.name}</a>
+            ) : item.name
+        )}.</span>
+    )}
+</span>

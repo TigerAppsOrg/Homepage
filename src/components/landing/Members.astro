@@ -1,302 +1,11 @@
 ---
 import Image from "astro/components/Image.astro";
 import MemberCard from "./ui/MemberCard.astro";
-
-// Companies
-import DatabricksLogo from "../../assets/companies/databricks.webp";
-import NetflixLogo from "../../assets/companies/netflix.webp";
-import MetaLogo from "../../assets/companies/meta.webp";
-import StripeLogo from "../../assets/companies/stripe.webp";
-import PineconeLogo from "../../assets/companies/pinecone.webp";
-import AWSLogo from "../../assets/companies/aws.webp";
-import AirbnbLogo from "../../assets/companies/airbnb.webp";
-import MicrosoftLogo from "../../assets/companies/microsoft.webp";
-
-// Board and
-import JoshuaHeadshot from "../../assets/members/joshua.webp";
-import BenHeadshot from "../../assets/members/ben.webp";
-import ShreyasHeadshot from "../../assets/members/shreyas.webp";
-import AndyHeadshot from "../../assets/members/andy.webp";
-
-// Senior Devs
-import HangHeadshot from "../../assets/members/hang.webp";
-import AaliyahHeadshot from "../../assets/members/aaliyah.webp";
-
-// Product Team
-import AnnaHeadshot from "../../assets/members/anna.webp";
-import AngelinaHeadshot from "../../assets/members/angelina.webp";
-import EricaHeadshot from "../../assets/members/erica.webp";
-
-// Software Developers
-import JuliaHeadshot from "../../assets/members/julia.webp";
-import AmmaarHeadshot from "../../assets/members/ammaar.webp";
-import EmilyHeadshot from "../../assets/members/emily.webp";
-import GlenHeadshot from "../../assets/members/glen.webp";
-import GraceHeadshot from "../../assets/members/grace.webp";
-import KeithHeadshot from "../../assets/members/keith.webp";
-import KevinHeadshot from "../../assets/members/kevin.webp";
-import MarvinHeadshot from "../../assets/members/marvin.webp";
-import MylesHeadshot from "../../assets/members/myles.webp";
-import OyuHeadshot from "../../assets/members/oyu.webp";
-import KevinYangHeadshot from "../../assets/members/kevinYang.webp";
-import NicholasHeadshot from "../../assets/members/nicholas.webp";
-import WinsiceHeadshot from "../../assets/members/winsice.webp";
-
-type Member = {
-    name: string;
-    title: string;
-    position: string;
-    team: string;
-    website: string;
-    github: string;
-    headshot: ImageMetadata;
-};
-
-const currentMembers: Member[] = [
-    // Board
-    {
-        name: "Joshua Lau '26",
-        title: "Chief Developer",
-        position: "Co-President",
-        team: "TigerJunction, Renkai, TigerRetail, TigerStudy",
-        website: "https://motoaki.dev",
-        github: "https://github.com/joshuamotoaki",
-        headshot: JoshuaHeadshot
-    },
-    {
-        name: "Ben Aepli '28",
-        title: "Senior Developer",
-        position: "Co-President",
-        team: "TigerRetail, Renkai",
-        website: "https://benaepli.com",
-        github: "https://github.com/benaepli",
-        headshot: BenHeadshot
-    },
-    {
-        name: "Andy Zhang '26",
-        title: "Product Manager",
-        position: "Head of Product",
-        team: "",
-        website: "",
-        github: "https://github.com/andy-h-zhang",
-        headshot: AndyHeadshot
-    },
-    {
-        name: "Shreyas Garimella '28",
-        title: "Senior Developer",
-        position: "Treasurer",
-        team: "Today",
-        website: "",
-        github: "https://github.com/sgarimel",
-        headshot: ShreyasHeadshot
-    },
-
-    // Senior Devs
-    {
-        name: "Hang Pham '26",
-        title: "Senior Developer",
-        position: "",
-        team: "",
-        website: "",
-        github: "https://github.com/thanhhang1306",
-        headshot: HangHeadshot
-    },
-    {
-        name: "Aaliyah Sayed '26",
-        title: "Senior Developer",
-        position: "",
-        team: "",
-        website: "",
-        github: "https://github.com/riiptide",
-        headshot: AaliyahHeadshot
-    },
-    {
-        name: "Ammaar Alam '27",
-        title: "Senior Developer",
-        position: "",
-        team: "Tay, TigerDraw, TigerJunction",
-        website: "https://ammaaralam.com",
-        github: "https://github.com/Ammaar-Alam",
-        headshot: AmmaarHeadshot
-    },
-    {
-        name: "Glen Nfor '27",
-        title: "Senior Developer",
-        position: "",
-        team: "TigerRetail",
-        website: "https://glennfor.tech",
-        github: "https://github.com/glennfor",
-        headshot: GlenHeadshot
-    },
-    {
-        name: "Grace Tan '28",
-        title: "Senior Developer",
-        position: "",
-        team: "Today, Renkai",
-        website: "",
-        github: "https://github.com/gracezyt",
-        headshot: GraceHeadshot
-    },
-
-    // Product
-    {
-        name: "Winsice Ng '26",
-        title: "Product Manager and Software Developer",
-        position: "",
-        team: "TigerRetail",
-        website: "",
-        github: "https://github.com/winsice-ng",
-        headshot: WinsiceHeadshot
-    },
-    {
-        name: "Anna Wang '26",
-        title: "Product Manager and Marketer",
-        position: "",
-        team: "",
-        website: "",
-        github: "",
-        headshot: AnnaHeadshot
-    },
-
-    // Designers
-    {
-        name: "Angelina Ji '27",
-        title: "Software Developer and Designer",
-        position: "",
-        team: "TigerRetail, Today",
-        website: "",
-        github: "",
-        headshot: AngelinaHeadshot
-    },
-
-    // Software Developers
-    {
-        name: "Julia Ying '26",
-        title: "Software Developer and Designer",
-        position: "",
-        team: "TigerLift",
-        website: "",
-        github: "https://github.com/juliaying26",
-        headshot: JuliaHeadshot
-    },
-    {
-        name: "Erica Lee '26",
-        title: "Software Developer and Designer",
-        position: "",
-        team: "TigerRetail",
-        website: "",
-        github: "https://github.com/ericayrlee",
-        headshot: EricaHeadshot
-    },
-    {
-        name: "Keith Matanachai '26",
-        title: "Software Developer",
-        position: "",
-        team: "TigerJunction, Renkai",
-        website: "",
-        github: "https://github.com/matan53153",
-        headshot: KeithHeadshot
-    },
-    {
-        name: "Marvin Chen '26",
-        title: "Software Developer",
-        position: "",
-        team: "TigerRetail",
-        website: "",
-        github: "https://github.com/marvin-chen",
-        headshot: MarvinHeadshot
-    },
-    {
-        name: "Myles Anderson '26",
-        title: "Software Developer",
-        position: "",
-        team: "TigerJunction, Renkai",
-        website: "",
-        github: "https://github.com/myles332",
-        headshot: MylesHeadshot
-    },
-    {
-        name: "Oyu Enkhbold '26",
-        title: "Software Developer",
-        position: "",
-        team: "Today",
-        website: "",
-        github: "https://github.com/oyu-e",
-        headshot: OyuHeadshot
-    },
-    {
-        name: "Kevin Yang '26",
-        title: "Software Developer",
-        position: "",
-        team: "TigerSnatch",
-        website: "",
-        github: "https://github.com/ky6374",
-        headshot: KevinYangHeadshot
-    },
-    {
-        name: "Nicholas Vickery '26",
-        title: "Software Developer",
-        position: "",
-        team: "TigerRetail",
-        website: "",
-        github: "https://github.com/nickvick04",
-        headshot: NicholasHeadshot
-    },
-    {
-        name: "Emily Zhou '27",
-        title: "Software Developer",
-        position: "",
-        team: "TigerJunction",
-        website: "",
-        github: "https://github.com/z-emily",
-        headshot: EmilyHeadshot
-    },
-    {
-        name: "Kevin Liu '28",
-        title: "Software Developer",
-        position: "",
-        team: "PawPointClicker",
-        website: "https://www.kevin-liu.tech/",
-        github: "https://github.com/Kevin-Liu-01",
-        headshot: KevinHeadshot
-    }
-];
-
-const pastMembers: string[] = [
-    "Shivam Kak '26",
-    "Mark Rubin '26",
-    "Leo Stepanewk '25",
-    "Youngseo Lee '25",
-    "Adam Kelch '24",
-    "Daniel Park '24",
-    "Taylor Yamashita '24",
-    "Benjamin Chan '23",
-    "Adam Gamba '23",
-    "Shannon Heh '23",
-    "Nicholas Padmanabhan '23",
-    "Charles An '22",
-    "Ayo Oguntola '23",
-    "Emre Cakir '21",
-    "Reilly Bova '20",
-    "Rushy Panchal '19",
-    "Ben Parks '17",
-    "Maxim Zaslavsky '17"
-];
-
-const companies: [ImageMetadata, string][] = [
-    [DatabricksLogo, "Databricks"],
-    [NetflixLogo, "Netflix"],
-    [MetaLogo, "Meta"],
-    [StripeLogo, "Stripe"],
-    [PineconeLogo, "Pinecone"],
-    [AWSLogo, "Amazon Web Services"],
-    [AirbnbLogo, "Airbnb"],
-    [MicrosoftLogo, "Microsoft"]
-];
+import { currentMembers, pastMembers, companies } from "../../utils/members";
 ---
 
 <section id="about" class="py-16">
-    <div class="cont text-center space-y-16">
+    <div class="cont text-center space-y-8">
         <div class="space-y-2">
             <h3>ABOUT US</h3>
             <p class="text-lg">Meet the TigerApps team!</p>
@@ -305,45 +14,47 @@ const companies: [ImageMetadata, string][] = [
         <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
         </div>
 
-        <article>
-            <h4 class="mb-4">Current Members</h4>
-            <div
-                class="grid justify-center gap-4 md:gap-y-8 md:gap-6
-                grid-cols-3 md:grid-cols-4 lg:grid-cols-5
-                constrained">
-                {currentMembers.map(member => <MemberCard {...member} />)}
-            </div>
-        </article>
+        <div class="space-y-16">
+            <article>
+                <h4 class="mb-4">Current Members</h4>
+                <div
+                    class="grid justify-center gap-4 md:gap-y-8 md:gap-6
+                    grid-cols-3 md:grid-cols-4 lg:grid-cols-5
+                    constrained">
+                    {currentMembers.map(member => <MemberCard {...member} />)}
+                </div>
+            </article>
 
-        <article>
-            <h4 class="mb-4">Past Members</h4>
-            <ul
-                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
-                {
-                    pastMembers.map(member => (
-                        <li class="text-sm sm:text-base">{member}</li>
-                    ))
-                }
-            </ul>
-        </article>
+            <article>
+                <h4 class="mb-4">Past Members</h4>
+                <ul
+                    class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
+                    {
+                        pastMembers.map(member => (
+                            <li class="text-sm sm:text-base">{member}</li>
+                        ))
+                    }
+                </ul>
+            </article>
 
-        <article>
-            <h4 class="mb-4">Our members have gone on to work for...</h4>
-            <ul
-                class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 constrained">
-                {
-                    companies.map(company => (
-                        <li>
-                            <Image
-                                loading="lazy"
-                                class="rounded-lg shadow-lg aspect-square object-cover"
-                                src={company[0]}
-                                alt={company[1]}
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
-        </article>
+            <article>
+                <h4 class="mb-4">Our members have gone on to work for...</h4>
+                <ul
+                    class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 constrained">
+                    {
+                        companies.map(company => (
+                            <li>
+                                <Image
+                                    loading="lazy"
+                                    class="rounded-lg shadow-lg aspect-square object-cover"
+                                    src={company[0]}
+                                    alt={company[1]}
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+            </article>
+        </div>
     </div>
 </section>

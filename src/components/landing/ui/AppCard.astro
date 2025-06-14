@@ -1,20 +1,20 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import GithubIcon from "../../../assets/icons/github-mark.svg";
+import type { AppProps } from "../../../utils/types";
+import PersonList from "./PersonList.astro";
 
-interface Props {
-    title: string;
-    description: string;
-    note: string;
-    webLink: string;
-    repoLink: string;
-    screenshot: ImageMetadata;
-    alt: string;
-}
-
-const { title, description, note, webLink, repoLink, screenshot, alt } =
-    Astro.props;
+const {
+    title,
+    description,
+    note,
+    webLink,
+    repoLink,
+    screenshot,
+    alt,
+    contributors,
+    additionalContributors
+} = Astro.props as AppProps;
 ---
 
 <article class="space-y-4">
@@ -51,6 +51,19 @@ const { title, description, note, webLink, repoLink, screenshot, alt } =
         <div class="italic text-sm space-y-1">
             <p>
                 {description}
+            </p>
+            <p>
+                <PersonList startMsg="By" personList={contributors} />
+                {
+                    additionalContributors &&
+                        additionalContributors.length > 0 &&
+                        additionalContributors.map(section => (
+                            <PersonList
+                                startMsg={section.startMsg}
+                                personList={section.contributors}
+                            />
+                        ))
+                }
             </p>
             {note && <p>{note}</p>}
             <p>

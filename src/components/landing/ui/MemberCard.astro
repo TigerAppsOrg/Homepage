@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 import Image from "astro/components/Image.astro";
 import GithubIcon from "../../../assets/icons/github-mark.svg";
 import WebIcon from "../../icons/WebIcon.astro";
+import type { Team } from "../../../utils/types";
 
 interface Props {
     name: string;
@@ -11,10 +12,10 @@ interface Props {
     website: string;
     github: string;
     headshot: ImageMetadata;
-    team: string;
+    teams: Team[];
 }
 
-const { name, title, position, website, github, headshot, team } = Astro.props;
+const { name, title, position, website, github, headshot, teams } = Astro.props;
 ---
 
 <div class="text-center mx-auto">
@@ -33,14 +34,6 @@ const { name, title, position, website, github, headshot, team } = Astro.props;
         <p class="text-sm sm:text-base mb-1">
             {title}
         </p>
-        <!-- {
-            team.length > 0 && (
-                <p class="text-sm sm:text-base">
-                    Team{team.split(",").length > 1 ? "s" : ""}:
-                    <span class="italic">{team}</span>
-                </p>
-            )
-        } -->
         <div class="flex items-center justify-center gap-4 mt-1">
             {
                 github && (
