@@ -249,6 +249,7 @@ export const currentMembers: Member[] = [
 ];
 
 export const pastMembers: string[] = [
+    "Emily Zhou '27",
     "Shivam Kak '26",
     "Mark Rubin '26",
     "Leo Stepanewk '25",
