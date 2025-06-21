@@ -17,7 +17,6 @@ import WinsiceHeadshot from "../assets/members/winsice.webp";
 // '27
 import AngelinaHeadshot from "../assets/members/angelina.webp";
 import AmmaarHeadshot from "../assets/members/ammaar.webp";
-import EmilyHeadshot from "../assets/members/emily.webp";
 import GlenHeadshot from "../assets/members/glen.webp";
 
 // '28
@@ -237,15 +236,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/nickvick04",
         headshot: NicholasHeadshot
-    },
-    {
-        name: "Emily Zhou '27",
-        title: "Software Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/z-emily",
-        headshot: EmilyHeadshot
     },
     {
         name: "Kevin Liu '28",
