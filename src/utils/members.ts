@@ -10,7 +10,6 @@ import KeithHeadshot from "../assets/members/keith.webp";
 import MarvinHeadshot from "../assets/members/marvin.webp";
 import MylesHeadshot from "../assets/members/myles.webp";
 import OyuHeadshot from "../assets/members/oyu.webp";
-import KevinYangHeadshot from "../assets/members/kevinYang.webp";
 import NicholasHeadshot from "../assets/members/nicholas.webp";
 import WinsiceHeadshot from "../assets/members/winsice.webp";
 
@@ -218,15 +217,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/oyu-e",
         headshot: OyuHeadshot
-    },
-    {
-        name: "Kevin Yang '26",
-        title: "Software Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/ky6374",
-        headshot: KevinYangHeadshot
     },
     {
         name: "Nicholas Vickery '26",
