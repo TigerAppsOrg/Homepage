@@ -10,14 +10,12 @@ import KeithHeadshot from "../assets/members/keith.webp";
 import MarvinHeadshot from "../assets/members/marvin.webp";
 import MylesHeadshot from "../assets/members/myles.webp";
 import OyuHeadshot from "../assets/members/oyu.webp";
-import KevinYangHeadshot from "../assets/members/kevinYang.webp";
 import NicholasHeadshot from "../assets/members/nicholas.webp";
 import WinsiceHeadshot from "../assets/members/winsice.webp";
 
 // '27
 import AngelinaHeadshot from "../assets/members/angelina.webp";
 import AmmaarHeadshot from "../assets/members/ammaar.webp";
-import EmilyHeadshot from "../assets/members/emily.webp";
 import GlenHeadshot from "../assets/members/glen.webp";
 
 // '28
@@ -221,15 +219,6 @@ export const currentMembers: Member[] = [
         headshot: OyuHeadshot
     },
     {
-        name: "Kevin Yang '26",
-        title: "Software Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/ky6374",
-        headshot: KevinYangHeadshot
-    },
-    {
         name: "Nicholas Vickery '26",
         title: "Software Developer",
         position: "",
@@ -237,15 +226,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/nickvick04",
         headshot: NicholasHeadshot
-    },
-    {
-        name: "Emily Zhou '27",
-        title: "Software Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/z-emily",
-        headshot: EmilyHeadshot
     },
     {
         name: "Kevin Liu '28",
@@ -259,6 +239,7 @@ export const currentMembers: Member[] = [
 ];
 
 export const pastMembers: string[] = [
+    "Emily Zhou '27",
     "Shivam Kak '26",
     "Mark Rubin '26",
     "Leo Stepanewk '25",
