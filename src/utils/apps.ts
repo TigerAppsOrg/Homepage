@@ -206,7 +206,7 @@ export const campusLifeApps: AppSectionProps = {
             contributors: [
                 { name: "Leo Stepanewk '25", url: "" },
                 { name: "Aaliyah Sayed '26", url: "" },
-                { name: "Oyu Enkhbold '26", url: "" },
+                { name: "Oyu Enkhbold '26", url: "https://oyu-e.github.io/" },
                 { name: "Shreyas Garimella '28", url: "" },
                 { name: "Grace Tan '28", url: "" }
             ]
@@ -222,7 +222,7 @@ export const campusLifeApps: AppSectionProps = {
             alt: "Nutri Tiger app screenshot",
             contributors: [
                 { name: "Rishabh Jain '26", url: "" },
-                { name: "Oyu Enkhbold '26", url: "" },
+                { name: "Oyu Enkhbold '26", url: "https://oyu-e.github.io/" },
                 { name: "Eric Kurkowski '26", url: "" },
                 { name: "Jewel Merriman '26", url: "" },
                 { name: "Stephanie Oh '26", url: "" }
