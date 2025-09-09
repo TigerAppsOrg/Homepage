@@ -23,6 +23,7 @@ import BenHeadshot from "../assets/members/ben.webp";
 import ShreyasHeadshot from "../assets/members/shreyas.webp";
 import GraceHeadshot from "../assets/members/grace.webp";
 import KevinHeadshot from "../assets/members/kevin.webp";
+import YubiHeadshot from "../assets/members/yubi.webp";
 
 // Companies
 import DatabricksLogo from "../assets/companies/databricks.webp";
@@ -226,6 +227,15 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/nickvick04",
         headshot: NicholasHeadshot
+    },
+    {
+        name: "Yubi Mamiya '28",
+        title: "Software Developer",
+        position: "",
+        teams: ["Engineering"],
+        website: "",
+        github: "https://github.com/yubimamiya",
+        headshot: YubiHeadshot
     },
     {
         name: "Kevin Liu '28",
