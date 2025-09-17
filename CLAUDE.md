@@ -12,9 +12,16 @@ This is the static marketing website for TigerApps, a Princeton University stude
 npm run dev        # Start development server
 npm run build      # Build for production
 npm run preview    # Preview production build
-npm run lint       # Check code formatting
-npm run format     # Format code with Prettier
+npm run lint       # Check code formatting with Prettier
+npm run format     # Format code with Prettier (auto-fix)
 ```
+
+## Code Quality
+
+### Formatting
+- Prettier configuration in `.prettierrc` with 4-space indentation
+- Pre-commit hook automatically runs `npm run format` before commits
+- Astro-specific formatting with `prettier-plugin-astro`
 
 ## Architecture
 
@@ -34,19 +41,28 @@ npm run format     # Format code with Prettier
 
 ### Data Management
 
-All content data is **co-located with components** as TypeScript objects:
+All content data is **separated into utility files** as TypeScript objects:
 
--   Apps data: `src/components/landing/Apps.astro` (lines 34-188)
--   Members data: `src/components/landing/Members.astro` (lines 55-263)
--   Archive apps: `src/pages/archive.astro` (lines 24-165)
+-   Apps data: `src/utils/apps.ts` - Contains all current app sections with imports and metadata
+-   Members data: `src/utils/members.ts` - Contains current/past members and company logos
+-   Type definitions: `src/utils/types.ts` - TypeScript interfaces for data structures
+-   Archive apps: `src/pages/archive.astro` - Archive app data co-located in the page component
 
 ### Design System
 
 Custom TailwindCSS configuration in `tailwind.config.mjs`:
 
--   Primary: `#3EE0BF` (teal green)
--   Secondary: `#2B3E50` (dark blue-gray)
+-   Primary: `#3EE0BF` (teal green) with hover variant `#4BD9B0`
+-   Secondary: `#2B3E50` (dark blue-gray) with hover variant `#34495E`
+-   On-primary/secondary text colors for accessibility
 -   Use `.cont` and `.constrained` utility classes for consistent layouts
+
+### Component Architecture
+
+- **Astro Components**: Use `.astro` extension with component scripts in frontmatter
+- **Image Optimization**: Import images as ES modules for Astro's built-in optimization
+- **TypeScript Integration**: Type-safe props and data structures throughout
+- **UI Components**: Reusable components in `ui/` subdirectories with standardized props
 
 ### Asset Guidelines
 
@@ -58,18 +74,18 @@ Custom TailwindCSS configuration in `tailwind.config.mjs`:
 
 ### Adding New Apps
 
-1. Add app data object to `Apps.astro`
-2. Add screenshot to `src/assets/apps/`
-3. Import image in component
+1. Add app data object to appropriate section in `src/utils/apps.ts`
+2. Add screenshot to `src/assets/apps/` in `.webp` format
+3. Import image at top of `apps.ts` file
 
 ### Adding Team Members
 
-1. Add member data to `Members.astro`
-2. Add headshot to `src/assets/members/`
-3. Import image in component
+1. Add member data to `currentMembers` array in `src/utils/members.ts`
+2. Add headshot to `src/assets/members/` in `.webp` format
+3. Import image at top of `members.ts` file
 
 ### Moving Apps to Archive
 
-1. Move data from `Apps.astro` to `archive.astro`
+1. Move data from `src/utils/apps.ts` to the archive array in `src/pages/archive.astro`
 2. Move screenshot from `assets/apps/` to `assets/archive/`
-3. Update import paths
+3. Update import paths in the archive page
