@@ -1,8 +1,6 @@
 // '26
 import JoshuaHeadshot from "../assets/members/joshua.webp";
 import AndyHeadshot from "../assets/members/andy.webp";
-import HangHeadshot from "../assets/members/hang.webp";
-import AaliyahHeadshot from "../assets/members/aaliyah.webp";
 import AnnaHeadshot from "../assets/members/anna.webp";
 import EricaHeadshot from "../assets/members/erica.webp";
 import JuliaHeadshot from "../assets/members/julia.webp";
@@ -10,13 +8,11 @@ import KeithHeadshot from "../assets/members/keith.webp";
 import MarvinHeadshot from "../assets/members/marvin.webp";
 import MylesHeadshot from "../assets/members/myles.webp";
 import OyuHeadshot from "../assets/members/oyu.webp";
-import NicholasHeadshot from "../assets/members/nicholas.webp";
 import WinsiceHeadshot from "../assets/members/winsice.webp";
 
 // '27
 import AngelinaHeadshot from "../assets/members/angelina.webp";
 import AmmaarHeadshot from "../assets/members/ammaar.webp";
-import GlenHeadshot from "../assets/members/glen.webp";
 
 // '28
 import BenHeadshot from "../assets/members/ben.webp";
@@ -88,24 +84,6 @@ export const currentMembers: Member[] = [
 
     // Senior Devs
     {
-        name: "Hang Pham '26",
-        title: "Senior Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/thanhhang1306",
-        headshot: HangHeadshot
-    },
-    {
-        name: "Aaliyah Sayed '26",
-        title: "Senior Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/riiptide",
-        headshot: AaliyahHeadshot
-    },
-    {
         name: "Ammaar Alam '27",
         title: "Senior Developer",
         position: "",
@@ -113,15 +91,6 @@ export const currentMembers: Member[] = [
         website: "https://ammaaralam.com",
         github: "https://github.com/Ammaar-Alam",
         headshot: AmmaarHeadshot
-    },
-    {
-        name: "Glen Nfor '27",
-        title: "Senior Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "https://glennfor.tech",
-        github: "https://github.com/glennfor",
-        headshot: GlenHeadshot
     },
     {
         name: "Grace Tan '28",
@@ -220,15 +189,6 @@ export const currentMembers: Member[] = [
         headshot: OyuHeadshot
     },
     {
-        name: "Nicholas Vickery '26",
-        title: "Software Developer",
-        position: "",
-        teams: ["Engineering"],
-        website: "",
-        github: "https://github.com/nickvick04",
-        headshot: NicholasHeadshot
-    },
-    {
         name: "Yubi Mamiya '28",
         title: "Software Developer",
         position: "",
@@ -250,6 +210,9 @@ export const currentMembers: Member[] = [
 
 export const pastMembers: string[] = [
     "Emily Zhou '27",
+    "Glen Nfor '27",
+    "Hang Pham '26",
+    "Aaliyah Sayed '26",
     "Shivam Kak '26",
     "Mark Rubin '26",
     "Leo Stepanewk '25",
