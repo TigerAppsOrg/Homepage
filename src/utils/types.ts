@@ -8,6 +8,13 @@ export type Team =
     | "Venture"
     | "TigerJunction";
 
+export type Role =
+    | "Engineering"
+    | "Design"
+    | "Product Management"
+    | "Marketing"
+    | "Board";
+
 export type Contributor = { name: string; url?: string };
 
 export type ContributorSection = {
