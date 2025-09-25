@@ -251,22 +251,6 @@ export const campusLifeApps: AppSectionProps = {
             ]
         },
         {
-            title: "TigerRetail",
-            description:
-                "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more.",
-            note: "This app is temporarily disabled. We are working on a new version. There is no expected release date at this time.",
-            webLink: "http://retail.tigerapps.org/",
-            repoLink: "https://github.com/PrincetonUSG/TigerReTail",
-            screenshot: TigerRetailImage,
-            alt: "Tiger Retail app screenshot",
-            contributors: [
-                { name: "Albert Lin '23", url: "" },
-                { name: "Katie McLaughlin '23", url: "" },
-                { name: "Sara Schwartz '23", url: "" },
-                { name: "Phoebe Lin '23", url: "" }
-            ]
-        },
-        {
             title: "TigerMenus",
             description:
                 "Easily compare menu options across all 6 dining halls on a single page! Supports mobile and desktop browsers!",
@@ -548,6 +532,22 @@ export const archiveApps: AppSectionProps = {
                 { name: "Indu Panigrahi '23", url: "" },
                 { name: "Raymond Liu '23", url: "" },
                 { name: "Adam Rebei '23", url: "" }
+            ]
+        },
+        {
+            title: "TigerRetail",
+            description:
+                "Buy, sell, and request goods; direct message users in-site, connect with transportation buddies, find campus event tickets, and more.",
+            note: ".",
+            webLink: "https://github.com/PrincetonUSG/TigerReTail/",
+            repoLink: "https://github.com/PrincetonUSG/TigerReTail",
+            screenshot: TigerRetailImage,
+            alt: "Tiger Retail app screenshot",
+            contributors: [
+                { name: "Albert Lin '23", url: "" },
+                { name: "Katie McLaughlin '23", url: "" },
+                { name: "Sara Schwartz '23", url: "" },
+                { name: "Phoebe Lin '23", url: "" }
             ]
         }
     ]
