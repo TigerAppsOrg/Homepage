@@ -11,7 +11,7 @@ import MarvinHeadshot from "../assets/members/marvin.webp";
 import MylesHeadshot from "../assets/members/myles.webp";
 import OyuHeadshot from "../assets/members/oyu.webp";
 import WinsiceHeadshot from "../assets/members/winsice.webp";
-// import ChristinaHeadshot from "../assets/members/christina.webp";
+import ChristinaHeadshot from "../assets/members/christina.webp";
 
 // '27
 import AngelinaHeadshot from "../assets/members/angelina.webp";
@@ -210,7 +210,7 @@ export const currentMembers: Member[] = [
         teams: ["Kizaki"],
         website: "https://www.christina-wu.com/",
         github: "",
-        headshot: FillerHeadshot
+        headshot: ChristinaHeadshot
     },
     {
         name: "Lauren Pak '27",

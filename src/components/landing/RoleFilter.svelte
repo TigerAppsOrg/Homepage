@@ -1,14 +1,13 @@
 <script>
-    import { scale } from "svelte/transition";
     import { currentMembers } from "../../utils/members";
     import githubIcon from "../../assets/icons/github-mark.svg";
 
     const roles = [
-        "Engineering",
-        "Design",
+        "Board",
         "Product Management",
+        "Design",
         "Marketing",
-        "Board"
+        "Engineering"
     ];
 
     let selectedRoles = $state([]);
@@ -49,12 +48,13 @@
     <article>
         <h4 class="mb-4">Current Members</h4>
         <div
-            class="grid justify-center gap-4 md:gap-y-8 md:gap-6 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 constrained">
-            {#each filteredMembers as member (member.name)}
+            class="members-grid grid justify-center gap-4 md:gap-y-8 md:gap-6 grid-cols-3 md:grid-cols-4 lg:grid-cols-5 constrained">
+            {#each currentMembers as member (member.name)}
                 <div
-                    class="text-center mx-auto"
-                    in:scale={{ duration: 300, start: 0.8 }}
-                    out:scale={{ duration: 300, start: 0.8 }}>
+                    class="text-center mx-auto member-item"
+                    class:hidden={!filteredMembers.some(
+                        m => m.name === member.name
+                    )}>
                     <img
                         class="rounded-full shadow-xl mb-1 aspect-square object-cover border border-gray-200 w-full"
                         src={member.headshot.src}
@@ -148,5 +148,9 @@
 
     .role-pill:active .pill-content {
         transform: translateY(0);
+    }
+
+    .member-item.hidden {
+        display: none;
     }
 </style>
