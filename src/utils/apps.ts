@@ -8,6 +8,7 @@ import TigerSnatchImage from "../assets/apps/tigersnatch.webp";
 import TigerPathImage from "../assets/apps/tigerpath.webp";
 
 // Games
+import TigerTypeImage from "../assets/apps/type.webp";
 import SpotImage from "../assets/apps/spot.webp";
 import ClickerImage from "../assets/apps/clicker.webp";
 
@@ -140,9 +141,24 @@ export const games: AppSectionProps = {
     description: "Have fun with these Princeton-themed games!",
     apps: [
         {
+            title: "TigerType",
+            description:
+                "Battle in typing races against friends in real-time with this Princeton-themed typing platform. Create private lobbies, join public matchmaking queues, and compete on leaderboards to show off your speed!",
+            note: "",
+            webLink: "https://type.tigerapps.org/",
+            repoLink: "https://github.com/TigerAppsOrg/tigertype",
+            screenshot: TigerTypeImage,
+            alt: "Tiger Type app screenshot",
+            contributors: [
+                { name: "Ammaar Alam '27", url: "https://ammaaralam.com" },
+                { name: "William Guan '27", url: "" },
+                { name: "Ryan Chen '27", url: "" }
+            ]
+        },
+        {
             title: "TigerSpot",
             description:
-                "Get ready for some fun with the ultimate Princeton campus geography game! In 'Daily' mode, you have one chance each day to guess where a mystery campus photo was taken on the map—score big points the closer you get! Challenge your friends in 'Versus' mode, where you'll go head-to-head in five thrilling rounds of guessing.",
+                "Get ready for some fun with the ultimate Princeton campus geography game — like GeoGuesser but for Princeton! Guess where mystery campus photos were taken on the map and score points based on accuracy. Challenge your friends head-to-head or test yourself with daily puzzles.",
             note: "",
             webLink: "https://spot.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/TigerSpot",
@@ -179,7 +195,7 @@ export const campusLifeApps: AppSectionProps = {
         {
             title: "TigerLift",
             description:
-                "Tired of shelling out money on Lyft? Don't want to spam the ListServs to find other students going to the same place? Say goodbye to NJ Transit delays and expensive Ubers. TigerLift helps Princeton students connect with each other so they can split costs on rideshares!",
+                "Tired of expensive Lyft rides and NJ Transit delays? Don't want to spam ListServs looking for travel buddies? TigerLift helps Princeton students connect and split rideshare costs effortlessly!",
             note: "",
             webLink: "https://lift.tigerapps.org/",
             repoLink: "https://github.com/TigerAppsOrg/TigerLift",
@@ -192,11 +208,10 @@ export const campusLifeApps: AppSectionProps = {
                 { name: "Aasha Jain '26", url: "" }
             ]
         },
-
         {
             title: "Today",
             description:
-                "Today is a new tab page that compiles the most crucial information you need to get through your day. It also contains study mode, a rotating background, and daily greeting. All data is live and refreshes hourly.",
+                "Today is a Chrome extension that replaces your new tab page with the most crucial daily information at Princeton. Features live data, study mode, rotating backgrounds, daily greetings, and more!",
             note: "",
             webLink:
                 "https://chromewebstore.google.com/detail/today-princeton/iejdjhiphonjpgaobmpniifeipiomgee?hl=en",
