@@ -9,6 +9,52 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
         <div class="space-y-2">
             <h3>ABOUT US</h3>
             <p class="text-lg">Meet the TigerApps team!</p>
+
+            <!-- Role Filter -->
+            <div class="pt-4">
+                <div class="flex flex-wrap justify-center gap-2 text-sm">
+                    <label class="role-pill cursor-pointer">
+                        <input
+                            type="checkbox"
+                            value="Engineering"
+                            class="role-filter sr-only"
+                        />
+                        <span class="pill-content">Engineering</span>
+                    </label>
+                    <label class="role-pill cursor-pointer">
+                        <input
+                            type="checkbox"
+                            value="Design"
+                            class="role-filter sr-only"
+                        />
+                        <span class="pill-content">Design</span>
+                    </label>
+                    <label class="role-pill cursor-pointer">
+                        <input
+                            type="checkbox"
+                            value="Product Management"
+                            class="role-filter sr-only"
+                        />
+                        <span class="pill-content">Product Management</span>
+                    </label>
+                    <label class="role-pill cursor-pointer">
+                        <input
+                            type="checkbox"
+                            value="Marketing"
+                            class="role-filter sr-only"
+                        />
+                        <span class="pill-content">Marketing</span>
+                    </label>
+                    <label class="role-pill cursor-pointer">
+                        <input
+                            type="checkbox"
+                            value="Board"
+                            class="role-filter sr-only"
+                        />
+                        <span class="pill-content">Board</span>
+                    </label>
+                </div>
+            </div>
         </div>
 
         <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
@@ -18,6 +64,7 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
             <article>
                 <h4 class="mb-4">Current Members</h4>
                 <div
+                    id="members-grid"
                     class="grid justify-center gap-4 md:gap-y-8 md:gap-6
                     grid-cols-3 md:grid-cols-4 lg:grid-cols-5
                     constrained">
@@ -58,3 +105,86 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
         </div>
     </div>
 </section>
+
+<style>
+    .role-pill {
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .pill-content {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border: 2px solid #d1d5db;
+        border-radius: 9999px;
+        color: #6b7280;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+        font-weight: 500;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .role-pill:hover .pill-content {
+        border-color: #2b3e50;
+        color: #2b3e50;
+        transform: translateY(-1px);
+    }
+
+    .role-filter:checked + .pill-content {
+        background-color: #2b3e50;
+        border-color: #2b3e50;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(43, 62, 80, 0.3);
+    }
+
+    .role-pill:active .pill-content {
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    function initRoleFilter() {
+        const checkboxes = document.querySelectorAll(".role-filter");
+        const membersGrid = document.getElementById("members-grid");
+        const memberCards = membersGrid?.querySelectorAll("[data-roles]");
+
+        if (!memberCards) return;
+
+        function filterMembers() {
+            const selectedRoles = Array.from(checkboxes)
+                .filter(cb => (cb as HTMLInputElement).checked)
+                .map(cb => (cb as HTMLInputElement).value);
+
+            memberCards.forEach(card => {
+                const memberRoles =
+                    card.getAttribute("data-roles")?.split(",") || [];
+
+                if (selectedRoles.length === 0) {
+                    // Show all members when no filters are selected
+                    (card as HTMLElement).style.display = "";
+                } else {
+                    // Show member if they have at least one of the selected roles
+                    const hasSelectedRole = selectedRoles.some(role =>
+                        memberRoles.includes(role)
+                    );
+                    (card as HTMLElement).style.display = hasSelectedRole
+                        ? ""
+                        : "none";
+                }
+            });
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", filterMembers);
+        });
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener("DOMContentLoaded", initRoleFilter);
+    // Initialize again after Astro navigation (if using client-side routing)
+    document.addEventListener("astro:page-load", initRoleFilter);
+</script>

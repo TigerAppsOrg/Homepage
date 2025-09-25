@@ -3,7 +3,7 @@ import type { ImageMetadata } from "astro";
 import Image from "astro/components/Image.astro";
 import GithubIcon from "../../../assets/icons/github-mark.svg";
 import WebIcon from "../../icons/WebIcon.astro";
-import type { Team } from "../../../utils/types";
+import type { Team, Role } from "../../../utils/types";
 
 interface Props {
     name: string;
@@ -13,12 +13,14 @@ interface Props {
     github: string;
     headshot: ImageMetadata;
     teams: Team[];
+    roles: Role[];
 }
 
-const { name, title, position, website, github, headshot, teams } = Astro.props;
+const { name, title, position, website, github, headshot, teams, roles } =
+    Astro.props;
 ---
 
-<div class="text-center mx-auto">
+<div class="text-center mx-auto" data-roles={roles.join(",")}>
     <Image
         class="rounded-full shadow-xl mb-1 aspect-square object-cover border border-gray-200"
         src={headshot}
