@@ -1,7 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
-import MemberCard from "./ui/MemberCard.astro";
-import { currentMembers, pastMembers, companies } from "../../utils/members";
+import RoleFilter from "./RoleFilter.svelte";
+import { pastMembers, companies } from "../../utils/members";
 ---
 
 <section id="about" class="py-16">
@@ -14,17 +14,9 @@ import { currentMembers, pastMembers, companies } from "../../utils/members";
         <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
         </div>
 
-        <div class="space-y-16">
-            <article>
-                <h4 class="mb-4">Current Members</h4>
-                <div
-                    class="grid justify-center gap-4 md:gap-y-8 md:gap-6
-                    grid-cols-3 md:grid-cols-4 lg:grid-cols-5
-                    constrained">
-                    {currentMembers.map(member => <MemberCard {...member} />)}
-                </div>
-            </article>
+        <RoleFilter client:load />
 
+        <div class="space-y-16">
             <article>
                 <h4 class="mb-4">Past Members</h4>
                 <ul

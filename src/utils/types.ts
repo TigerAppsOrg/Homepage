@@ -1,4 +1,19 @@
-export type Team = "Board" | "Engineering" | "Design" | "Product" | "Marketing";
+export type Team =
+    | "Nexus"
+    | "TigerPages"
+    | "TigerOps"
+    | "Orbit"
+    | "Kizaki"
+    | "Nucleus"
+    | "Venture"
+    | "TigerJunction";
+
+export type Role =
+    | "Engineering"
+    | "Design"
+    | "Product Management"
+    | "Marketing"
+    | "Board";
 
 export type Contributor = { name: string; url?: string };
 

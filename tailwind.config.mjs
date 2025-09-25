@@ -9,7 +9,8 @@ export default {
                 "on-primary": "#383838",
                 "secondary": "#2B3E50",
                 "secondary-hover": "#34495E",
-                "on-secondary": "#FFFFFF"
+                "on-secondary": "#FFFFFF",
+                "tigerapps-orange": "#F59100"
             }
         }
     },

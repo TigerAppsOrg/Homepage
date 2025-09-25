@@ -78,22 +78,22 @@ import { AstroSeo } from "@astrolib/seo";
     }
 
     .constrained {
-        @apply w-5/6 mx-auto max-w-5xl;
+        @apply w-11/12 mx-auto max-w-6xl;
     }
 
     .app-grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3rem;
         justify-content: center;
-        
+
         > article {
-            flex: 0 0 calc(50% - 1rem);
+            flex: 0 0 calc(50% - 1.5rem);
         }
-        
+
         @media screen and (min-width: 1200px) {
             > article {
-                flex: 0 0 calc(33.333% - 1.333rem);
+                flex: 0 0 calc(33.333% - 2rem);
             }
         }
     }
