@@ -18,6 +18,7 @@ import AngelinaHeadshot from "../assets/members/angelina.webp";
 import AmmaarHeadshot from "../assets/members/ammaar.webp";
 import ClaireHeadshot from "../assets/members/claire.webp";
 import LaurenHeadshot from "../assets/members/lauren.webp";
+import ErikHeadshot from "../assets/members/erik.webp";
 
 // '28
 import BenHeadshot from "../assets/members/ben.webp";
@@ -303,6 +304,16 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/angelina-ji",
         headshot: AngelinaHeadshot
+    },
+    {
+        name: "Erik Dyer '27",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        teams: ["TigerOps"],
+        website: "",
+        github: "https://github.com/erik-d123",
+        headshot: ErikHeadshot
     },
     {
         name: "Brooke Xu '28",
