@@ -386,7 +386,7 @@ export const currentMembers: Member[] = [
         headshot: TomHeadshot
     },
     {
-        name: "Angela Cai '28",
+        name: "Angela Cai '27",
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
