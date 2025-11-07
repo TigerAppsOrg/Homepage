@@ -306,6 +306,16 @@ export const currentMembers: Member[] = [
         headshot: AngelinaHeadshot
     },
     {
+        name: "Angela Cai '27",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        teams: ["TigerJunction"],
+        website: "",
+        github: "https://github.com/ang-cai",
+        headshot: AngelaHeadshot
+    },
+    {
         name: "Erik Dyer '27",
         title: "Software Developer",
         position: "",
@@ -347,7 +357,7 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Ibraheem Amin '28",
-        title: "Software Developer",
+        title: "Infrastructure & DevOps Engineer",
         position: "",
         roles: ["Engineering"],
         teams: ["TigerOps"],
@@ -384,16 +394,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/tom05919",
         headshot: TomHeadshot
-    },
-    {
-        name: "Angela Cai '27",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerJunction"],
-        website: "",
-        github: "https://github.com/ang-cai",
-        headshot: AngelaHeadshot
     },
     {
         name: "Ayush Jain '28",
