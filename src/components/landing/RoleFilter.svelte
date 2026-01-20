@@ -82,6 +82,7 @@
                             {/if}
                             {#if member.website}
                                 <a
+                                    aria-label="Personal Website"
                                     href={member.website}
                                     target="_blank"
                                     rel="noopener noreferrer"
