@@ -58,6 +58,7 @@ import PineconeLogo from "../assets/companies/pinecone.webp";
 import AWSLogo from "../assets/companies/aws.webp";
 import AirbnbLogo from "../assets/companies/airbnb.webp";
 import MicrosoftLogo from "../assets/companies/microsoft.webp";
+import KizakiLogo from "../assets/companies/kizaki.webp";
 
 import type { Role, Team } from "./types";
 
@@ -139,7 +140,7 @@ export const currentMembers: Member[] = [
         title: "Chief Developer",
         position: "Technical Mentor",
         roles: ["Board", "Engineering"],
-        teams: ["Kizaki", "Nucleus", "TigerOps", "TigerJunction"],
+        teams: ["Nucleus", "TigerOps", "TigerJunction"],
         website: "https://motoaki.dev",
         github: "https://github.com/joshuamotoaki",
         headshot: JoshuaHeadshot
@@ -181,7 +182,7 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "Tech Lead",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "",
         github: "https://github.com/vish317",
         headshot: FillerHeadshot
@@ -192,7 +193,7 @@ export const currentMembers: Member[] = [
         name: "Ben Aepli '28",
         title: "Senior Developer",
         position: "",
-        roles: ["Board", "Engineering"],
+        roles: ["Engineering"],
         teams: ["TigerPages"],
         website: "https://benaepli.com",
         github: "https://github.com/benaepli",
@@ -203,7 +204,7 @@ export const currentMembers: Member[] = [
         title: "Senior Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "",
         github: "https://github.com/gracezyt",
         headshot: GraceHeadshot
@@ -214,7 +215,7 @@ export const currentMembers: Member[] = [
         title: "Senior Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "",
         github: "https://github.com/matan53153",
         headshot: KeithHeadshot
@@ -225,7 +226,7 @@ export const currentMembers: Member[] = [
         title: "Senior Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "",
         github: "https://github.com/myles332",
         headshot: MylesHeadshot
@@ -311,7 +312,7 @@ export const currentMembers: Member[] = [
         title: "Designer",
         position: "",
         roles: ["Design"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "https://www.christina-wu.com/",
         github: "",
         headshot: ChristinaHeadshot
@@ -343,7 +344,7 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "https://oyu-e.github.io/",
         github: "https://github.com/oyu-e",
         headshot: OyuHeadshot
@@ -517,12 +518,13 @@ export const pastMembers: string[] = [
 ];
 
 export const companies: [ImageMetadata, string][] = [
-    [DatabricksLogo, "Databricks"],
-    [NetflixLogo, "Netflix"],
     [MetaLogo, "Meta"],
+    [MicrosoftLogo, "Microsoft"],
     [StripeLogo, "Stripe"],
-    [PineconeLogo, "Pinecone"],
     [AWSLogo, "Amazon Web Services"],
+    [KizakiLogo, "Kizaki"],
     [AirbnbLogo, "Airbnb"],
-    [MicrosoftLogo, "Microsoft"]
+    [PineconeLogo, "Pinecone"],
+    [DatabricksLogo, "Databricks"],
+    [NetflixLogo, "Netflix"]
 ];

@@ -3,29 +3,90 @@ import Image from "astro/components/Image.astro";
 import TigerAppsLogo from "../../assets/icons/logo.png";
 ---
 
-<section id="hero" class="bg-secondary text-on-secondary pt-32 pb-16">
-    <div class="cont text-center">
-        <div
-            class="flex flex-col items-center w-64 sm:w-72 md:w-96 mx-auto gap-8">
-            <Image src={TigerAppsLogo} alt="TigerApps logo" loading="eager" />
-            <h2 class="text-on-secondary">
-                For Students, <br /> By Students
-            </h2>
-        </div>
-        <div
-            class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
-        </div>
-        <div class="text-lg space-y-6">
-            <p>
-                We build apps and support developers on campus. Student-built,
-                student-maintained apps built over the years, designed to
-                improve your campus experience. TigerApps is fully funded by
-                Princeton's Undergraduate Student Government.
+<section id="hero" class="bg-cream pt-32 pb-24 relative overflow-hidden">
+    <!-- Organic blob decorations -->
+    <div class="blob blob-coral w-[500px] h-[500px] -top-48 -left-24"></div>
+    <div class="blob blob-sage w-[400px] h-[400px] top-20 -right-32"></div>
+    <div class="blob blob-peach w-[300px] h-[300px] bottom-0 left-1/3"></div>
+
+    <div class="cont text-center relative z-10">
+        <div class="flex flex-col items-center max-w-3xl mx-auto gap-8">
+            <!-- Logo with float animation -->
+            <div class="w-24 sm:w-28 md:w-32 animate-fade-in animate-float">
+                <Image
+                    src={TigerAppsLogo}
+                    alt="TigerApps logo"
+                    loading="eager"
+                />
+            </div>
+
+            <!-- Main headline with serif font -->
+            <h1 class="animate-fade-in-up" style="animation-delay: 100ms;">
+                For Students,<br />
+                <span class="text-coral">By Students</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p
+                class="text-lg md:text-xl text-warm-gray max-w-2xl leading-relaxed animate-fade-in-up"
+                style="animation-delay: 200ms;">
+                Student-built applications designed to enhance your Princeton
+                experience. Maintained by students, funded by USG.
             </p>
+
+            <!-- CTA section -->
             <div
-                class="border-primary bg-black/10 shadow-sm border-2 px-6 py-3 rounded-full inline-block">
-                Any feedback or questions? Contact us at it.admin@tigerapps.org
+                class="flex flex-wrap gap-4 justify-center items-center animate-fade-in-up"
+                style="animation-delay: 300ms;">
+                <button
+                    onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-coral text-white px-6 py-3 rounded-full font-medium hover:bg-coral-dark transition-all duration-200 shadow-warm hover:shadow-warm-lg">
+                    Explore Apps
+                </button>
+
+                <!-- Copyable email chip -->
+                <button
+                    id="email-chip"
+                    class="group bg-warm-white border border-peach-dark/30 px-5 py-3 rounded-full font-medium text-warm-gray hover:border-coral/50 hover:bg-peach/30 transition-all duration-200 flex items-center gap-2">
+                    <span class="text-sm">it.admin@tigerapps.org</span>
+                    <svg
+                        class="w-4 h-4 text-muted group-hover:text-coral transition-colors"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+                        ></path>
+                    </svg>
+                    <span
+                        id="copy-feedback"
+                        class="text-xs text-sage-dark opacity-0 transition-opacity duration-200">
+                        Copied!
+                    </span>
+                </button>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    const emailChip = document.getElementById("email-chip");
+    const copyFeedback = document.getElementById("copy-feedback");
+
+    emailChip?.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText("it.admin@tigerapps.org");
+            if (copyFeedback) {
+                copyFeedback.style.opacity = "1";
+                setTimeout(() => {
+                    copyFeedback.style.opacity = "0";
+                }, 2000);
+            }
+        } catch (err) {
+            console.error("Failed to copy email:", err);
+        }
+    });
+</script>

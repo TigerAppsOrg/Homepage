@@ -1,42 +1,29 @@
 ---
-import {
-    aiAssistApps,
-    coursePlanningApps,
-    games,
-    campusLifeApps,
-    roomDrawApps
-} from "../../utils/apps";
+import { allApps } from "../../utils/apps";
 import AppCard from "./ui/AppCard.astro";
-
-const apps = [
-    aiAssistApps,
-    coursePlanningApps,
-    games,
-    campusLifeApps,
-    roomDrawApps
-];
 ---
 
-<section id="apps" class="py-16">
-    <div class="cont space-y-12">
-        {
-            apps.map(appSection => (
-                <article class="text-center constrained">
-                    <h3 class="mb-2">{appSection.title}</h3>
-                    <p class="text-lg">{appSection.description}</p>
-                    <div class="border-b-4 w-32 border-secondary mt-4 mb-8 rounded-full mx-auto" />
-                    <div class="app-grid">
-                        {appSection.apps.map(card => (
-                            <AppCard {...card} />
-                        ))}
-                    </div>
-                </article>
-            ))
-        }
+<section id="apps" class="py-24 bg-cream">
+    <div class="cont">
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h2 class="mb-4">Our Apps</h2>
+            <p class="text-warm-gray text-lg">
+                Tools built by students, for students. From course planning to
+                campus life, we've got you covered.
+            </p>
+        </div>
 
-        <p class="text-lg text-center">
-            You can check out some of our older apps in the
-            <a class="text-secondary underline" href="/archive"> Archive</a>.
+        <div class="app-grid-unified constrained">
+            {allApps.map(app => <AppCard {...app} />)}
+        </div>
+
+        <p class="text-center text-muted mt-16">
+            Explore our older projects in the{" "}
+            <a
+                class="text-coral hover:text-coral-dark underline underline-offset-2 transition-colors"
+                href="/archive">
+                Archive
+            </a>
         </p>
     </div>
 </section>

@@ -1,5 +1,6 @@
 ---
-import "@fontsource-variable/rubik";
+import "@fontsource-variable/fraunces";
+import "@fontsource-variable/plus-jakarta-sans";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -52,49 +53,179 @@ import { AstroSeo } from "@astrolib/seo";
 </html>
 
 <style is:global lang="postcss">
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        font-family: 'Rubik Variable', sans-serif;
+        font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+        @apply bg-cream text-warm-gray antialiased;
+        letter-spacing: -0.01em;
     }
 
     section {
-        scroll-margin: 4rem;
+        scroll-margin: 5rem;
     }
 
+    /* Warm Organic Typography */
+    h1,
     h2,
     h3 {
-        @apply text-secondary text-4xl font-semibold uppercase;
+        font-family: "Fraunces Variable", Georgia, serif;
+        @apply text-charcoal;
+        font-variation-settings: "opsz" 72;
+    }
+
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl font-medium;
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl font-medium;
+        letter-spacing: -0.015em;
+    }
+
+    h3 {
+        @apply text-2xl md:text-3xl font-medium;
+        letter-spacing: -0.01em;
     }
 
     h4 {
-        @apply text-secondary font-semibold text-xl;
+        @apply text-charcoal font-semibold text-xl;
     }
 
     h5 {
-        @apply text-secondary font-semibold text-lg;
+        @apply text-charcoal font-medium text-lg;
     }
 
+    p {
+        @apply leading-relaxed;
+    }
+
+    /* Container utilities */
     .cont {
-        @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-12 w-full;
+        @apply max-w-6xl mx-auto px-6 md:px-8 lg:px-16 w-full;
     }
 
     .constrained {
-        @apply w-11/12 mx-auto max-w-6xl;
+        @apply w-full mx-auto max-w-5xl;
     }
 
-    .app-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
-        justify-content: center;
+    /* Unified App Grid */
+    .app-grid-unified {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+    }
 
-        > article {
-            flex: 0 0 calc(50% - 1.5rem);
+    @media (min-width: 640px) {
+        .app-grid-unified {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .app-grid-unified {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+    }
+
+    /* Featured app size */
+    .app-featured {
+        grid-column: span 1;
+    }
+
+    @media (min-width: 640px) {
+        .app-featured {
+            grid-column: span 2;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .app-featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
+
+    /* Organic blob decorations */
+    .blob {
+        position: absolute;
+        border-radius: 60% 40% 50% 70% / 50% 60% 40% 50%;
+        filter: blur(60px);
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .blob-coral {
+        background: linear-gradient(135deg, #FF8B7B 0%, #FFEEE4 100%);
+    }
+
+    .blob-sage {
+        background: linear-gradient(135deg, #9BB89B 0%, #D4E8D4 100%);
+    }
+
+    .blob-peach {
+        background: linear-gradient(135deg, #FFEEE4 0%, #FFD9C7 100%);
+    }
+
+    /* Entrance animations */
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-10px) rotate(2deg);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.6s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        opacity: 0;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
         }
 
-        @media screen and (min-width: 1200px) {
-            > article {
-                flex: 0 0 calc(33.333% - 2rem);
-            }
+        html {
+            scroll-behavior: auto;
         }
     }
 </style>

@@ -1,6 +1,6 @@
 ---
 import HeaderShell from "../HeaderShell.astro";
-import WhiteLogo from "../../assets/icons/logo_white.png";
+import Logo from "../../assets/icons/logo.png";
 import Image from "astro/components/Image.astro";
 ---
 
@@ -8,43 +8,40 @@ import Image from "astro/components/Image.astro";
     <button
         class="flex items-center gap-2"
         onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
-        <Image
-            src={WhiteLogo}
-            alt="TigerApps Logo"
-            class="h-8 w-8 object-contain"
-        />
-        <h1 class="text-2xl font-semibold">
-            <span class="text-tigerapps-orange">Tiger</span><span
-                class="text-white">Apps</span
+        <Image src={Logo} alt="TigerApps Logo" class="h-8 w-8 object-contain" />
+        <span class="text-xl font-semibold tracking-tight font-display">
+            <span class="text-coral">Tiger</span><span class="text-charcoal"
+                >Apps</span
             >
-        </h1>
+        </span>
     </button>
-    <nav class="items-center flex text-lg gap-10">
+    <nav class="items-center flex text-sm font-medium gap-8">
         <button
-            class="hidden sm:block"
+            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })">
             Apps
         </button>
         <button
-            class="hidden sm:block"
+            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('develop').scrollIntoView({ behavior: 'smooth' })">
             Develop
         </button>
         <button
-            class="hidden sm:block"
+            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
             About
         </button>
         <a
             aria-label="Instagram Link"
             href="https://www.instagram.com/princeton_tigerapps/"
-            target="_blank">
+            target="_blank"
+            class="text-warm-gray hover:text-coral transition-colors">
             <svg
                 aria-label="Instagram logo"
                 xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                fill="white"
+                width="20"
+                height="20"
+                fill="currentColor"
                 class="bi bi-instagram"
                 viewBox="0 0 16 16">
                 <path

@@ -3,7 +3,6 @@ export type Team =
     | "TigerPages"
     | "TigerOps"
     | "Orbit"
-    | "Kizaki"
     | "Nucleus"
     | "Venture"
     | "TigerJunction";
@@ -22,6 +21,13 @@ export type ContributorSection = {
     contributors: Contributor[];
 };
 
+export type AppCategory =
+    | "AI Assistant"
+    | "Course Planning"
+    | "Games"
+    | "Campus Life"
+    | "Room Draw";
+
 export interface AppProps {
     title: string;
     description: string;
@@ -32,6 +38,8 @@ export interface AppProps {
     alt: string;
     contributors?: Contributor[];
     additionalContributors?: ContributorSection[];
+    featured?: boolean;
+    category: AppCategory;
 }
 
 export interface AppSectionProps {
