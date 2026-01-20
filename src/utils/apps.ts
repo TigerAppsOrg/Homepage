@@ -54,11 +54,21 @@ export const allApps: AppProps[] = [
         repoLink: "https://github.com/TigerAppsOrg/tiger-junction",
         screenshot: TigerJunctionImage,
         alt: "Tiger Junction app screenshot",
-        contributors: [
-            { name: "Joshua Lau '26", url: "https://motoaki.dev/" },
-            { name: "Emily Zhou '27", url: "" },
-            { name: "Keith Matanachai '26", url: "" },
-            { name: "Myles Anderson '26", url: "" }
+        contributors: [{ name: "Joshua Lau '26", url: "https://motoaki.dev/" }],
+        additionalContributors: [
+            {
+                startMsg: "Updates by",
+                contributors: [
+                    { name: "Angela Cai '27", url: "" },
+                    { name: "Helen Hui '28", url: "" },
+                    { name: "Sai Nallani '29", url: "" },
+                    { name: "Sophia You '29", url: "" },
+                    { name: "Ayush Jain '28", url: "" },
+                    { name: "Emily Zhou '27", url: "" },
+                    { name: "Keith Matanachai '26", url: "" },
+                    { name: "Myles Anderson '26", url: "" }
+                ]
+            }
         ],
         featured: true,
         category: "Course Planning"
@@ -97,6 +107,15 @@ export const allApps: AppProps[] = [
             { name: "Ethan Do '26", url: "" },
             { name: "Winsice Ng '26", url: "" }
         ],
+        additionalContributors: [
+            {
+                startMsg: "Updates by",
+                contributors: [
+                    { name: "Joshua Lau '26", url: "https://motoaki.dev/" }
+                ]
+            }
+        ],
+
         featured: true,
         category: "Games"
     },

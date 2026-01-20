@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import GithubIcon from "../../../assets/icons/github-mark.svg";
 import type { AppProps } from "../../../utils/types";
 import { categoryColors } from "../../../utils/apps";
+import PersonList from "./PersonList.astro";
 
 interface Props extends AppProps {
     delay?: number;
@@ -16,6 +17,8 @@ const {
     screenshot,
     alt,
     category,
+    contributors,
+    additionalContributors,
     delay = 0
 } = Astro.props;
 
@@ -23,7 +26,7 @@ const colors = categoryColors[category] || categoryColors["Campus Life"];
 ---
 
 <article
-    class="group bg-white rounded-xl border-2 border-transparent hover:border-current shadow-pop hover:shadow-pop-hover transition-all duration-200 overflow-hidden animate-fade-in-up"
+    class="app-card group bg-white rounded-xl border-2 border-transparent hover:border-current shadow-pop hover:shadow-pop-hover transition-all duration-300 overflow-hidden animate-fade-in-up"
     style={`animation-delay: ${delay}s; --tw-text-opacity: 0.15; color: ${colors.accent}`}>
     <div class="flex gap-4 p-4">
         <!-- Thumbnail -->
@@ -42,14 +45,38 @@ const colors = categoryColors[category] || categoryColors["Campus Life"];
         <div class="flex-1 min-w-0">
             <a href={webLink} target="_blank" class="block">
                 <h4
-                    class="font-bold text-charcoal group-hover:text-pixar-blue transition-colors truncate"
+                    class="font-bold text-charcoal group-hover:text-pixar-blue transition-colors duration-200 truncate"
                     style={`--hover-color: ${colors.accent}`}>
                     {title}
                 </h4>
             </a>
-            <p class="text-sm text-gray-dark mt-1 line-clamp-2">
+
+            <!-- Short description (visible by default) -->
+            <p class="short-desc text-sm text-gray-dark mt-1 line-clamp-2">
                 {description}
             </p>
+
+            <!-- Full description + contributors (visible on hover) -->
+            <div class="full-content mt-1">
+                <p class="text-sm text-gray-dark">
+                    {description}
+                </p>
+                <div class="contributors-section mt-2 text-xs text-gray">
+                    <PersonList startMsg="By" personList={contributors} />
+                    {
+                        additionalContributors &&
+                            additionalContributors.length > 0 &&
+                            additionalContributors.map(section => (
+                                <span class="ml-1">
+                                    <PersonList
+                                        startMsg={section.startMsg}
+                                        personList={section.contributors}
+                                    />
+                                </span>
+                            ))
+                    }
+                </div>
+            </div>
 
             <!-- Actions -->
             <div class="flex items-center gap-3 mt-3">
@@ -100,5 +127,41 @@ const colors = categoryColors[category] || categoryColors["Campus Life"];
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+    }
+
+    /* Short description - visible by default */
+    .short-desc {
+        display: block;
+    }
+
+    /* Full content - hidden by default */
+    .full-content {
+        display: none;
+    }
+
+    /* Hover states - swap visibility */
+    .group:hover .short-desc {
+        display: none;
+    }
+
+    .group:hover .full-content {
+        display: block;
+        animation: fadeSlideIn 0.2s ease-out;
+    }
+
+    /* Contributors animation */
+    .group:hover .contributors-section {
+        animation: fadeSlideIn 0.25s ease-out 0.05s both;
+    }
+
+    @keyframes fadeSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
