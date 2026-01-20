@@ -1,6 +1,5 @@
 ---
-import "@fontsource-variable/fraunces";
-import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/nunito";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -58,49 +57,48 @@ import { AstroSeo } from "@astrolib/seo";
     }
 
     body {
-        font-family: "Plus Jakarta Sans Variable", system-ui, sans-serif;
-        @apply bg-cream text-warm-gray antialiased;
-        letter-spacing: -0.01em;
+        font-family: "Nunito Variable", system-ui, sans-serif;
+        @apply bg-white text-charcoal antialiased;
     }
 
     section {
         scroll-margin: 5rem;
     }
 
-    /* Warm Organic Typography */
+    /* Fun Pixar Typography */
     h1,
     h2,
-    h3 {
-        font-family: "Fraunces Variable", Georgia, serif;
-        @apply text-charcoal;
-        font-variation-settings: "opsz" 72;
+    h3,
+    h4,
+    h5 {
+        font-family: "Nunito Variable", system-ui, sans-serif;
+        @apply text-charcoal font-bold;
     }
 
     h1 {
-        @apply text-4xl md:text-5xl lg:text-6xl font-medium;
+        @apply text-4xl md:text-5xl lg:text-6xl;
         letter-spacing: -0.02em;
     }
 
     h2 {
-        @apply text-3xl md:text-4xl font-medium;
-        letter-spacing: -0.015em;
-    }
-
-    h3 {
-        @apply text-2xl md:text-3xl font-medium;
+        @apply text-3xl md:text-4xl;
         letter-spacing: -0.01em;
     }
 
+    h3 {
+        @apply text-2xl md:text-3xl;
+    }
+
     h4 {
-        @apply text-charcoal font-semibold text-xl;
+        @apply text-xl;
     }
 
     h5 {
-        @apply text-charcoal font-medium text-lg;
+        @apply text-lg font-semibold;
     }
 
     p {
-        @apply leading-relaxed;
+        @apply leading-relaxed text-gray-dark;
     }
 
     /* Container utilities */
@@ -112,75 +110,47 @@ import { AstroSeo } from "@astrolib/seo";
         @apply w-full mx-auto max-w-5xl;
     }
 
-    /* Unified App Grid */
-    .app-grid-unified {
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: 1fr;
+    /* Simple App List */
+    .app-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    @media (min-width: 640px) {
-        .app-grid-unified {
-            grid-template-columns: repeat(2, 1fr);
-        }
+    /* Playful hover effect */
+    .hover-pop {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    @media (min-width: 1024px) {
-        .app-grid-unified {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.75rem;
-        }
+    .hover-pop:hover {
+        transform: translateY(-4px);
     }
 
-    /* Featured app size */
-    .app-featured {
-        grid-column: span 1;
+    /* Rainbow underline effect */
+    .rainbow-underline {
+        position: relative;
+        display: inline-block;
     }
 
-    @media (min-width: 640px) {
-        .app-featured {
-            grid-column: span 2;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .app-featured {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-    }
-
-    /* Organic blob decorations */
-    .blob {
+    .rainbow-underline::after {
+        content: '';
         position: absolute;
-        border-radius: 60% 40% 50% 70% / 50% 60% 40% 50%;
-        filter: blur(60px);
-        opacity: 0.4;
-        pointer-events: none;
-    }
-
-    .blob-coral {
-        background: linear-gradient(135deg, #FF8B7B 0%, #FFEEE4 100%);
-    }
-
-    .blob-sage {
-        background: linear-gradient(135deg, #9BB89B 0%, #D4E8D4 100%);
-    }
-
-    .blob-peach {
-        background: linear-gradient(135deg, #FFEEE4 0%, #FFD9C7 100%);
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg,
+            #FF6B6B 0%,
+            #FFA94D 20%,
+            #FFE066 40%,
+            #51CF66 60%,
+            #339AF0 80%,
+            #9775FA 100%
+        );
     }
 
     /* Entrance animations */
-    @keyframes fade-in {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
     @keyframes fade-in-up {
         from {
             opacity: 0;
@@ -192,27 +162,36 @@ import { AstroSeo } from "@astrolib/seo";
         }
     }
 
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0) rotate(0deg);
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
         }
         50% {
-            transform: translateY(-10px) rotate(2deg);
+            transform: scale(1.02);
         }
-    }
-
-    .animate-fade-in {
-        animation: fade-in 0.6s ease-out forwards;
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     .animate-fade-in-up {
-        animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation: fade-in-up 0.5s ease-out forwards;
         opacity: 0;
     }
 
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
+    .animate-bounce-in {
+        animation: bounce-in 0.4s ease-out forwards;
+        opacity: 0;
     }
+
+    /* Stagger delays */
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {

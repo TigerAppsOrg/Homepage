@@ -79,7 +79,7 @@ export const allApps: AppProps[] = [
             { name: "Shreyas Garimella '28", url: "" }
         ],
         featured: true,
-        category: "AI Assistant"
+        category: "Campus Life"
     },
     {
         title: "TigerSpot",
@@ -296,35 +296,34 @@ export const allApps: AppProps[] = [
     }
 ];
 
-// Category color mapping for UI
+// Vibrant Pixar-style category colors
 export const categoryColors: Record<
     string,
-    { bg: string; text: string; border: string }
+    { bg: string; text: string; border: string; accent: string }
 > = {
-    "AI Assistant": {
-        bg: "bg-coral/10",
-        text: "text-coral-dark",
-        border: "border-coral/20"
-    },
     "Course Planning": {
-        bg: "bg-sage/10",
-        text: "text-sage-dark",
-        border: "border-sage/20"
+        bg: "bg-pixar-blue/10",
+        text: "text-pixar-blue",
+        border: "border-pixar-blue",
+        accent: "#339AF0"
     },
     "Games": {
-        bg: "bg-peach",
-        text: "text-coral-dark",
-        border: "border-peach-dark/20"
+        bg: "bg-pixar-orange/10",
+        text: "text-pixar-orange",
+        border: "border-pixar-orange",
+        accent: "#FFA94D"
     },
     "Campus Life": {
-        bg: "bg-warm-blue/10",
-        text: "text-warm-blue",
-        border: "border-warm-blue/20"
+        bg: "bg-pixar-green/10",
+        text: "text-pixar-green",
+        border: "border-pixar-green",
+        accent: "#51CF66"
     },
     "Room Draw": {
-        bg: "bg-lavender/20",
-        text: "text-charcoal",
-        border: "border-lavender/30"
+        bg: "bg-pixar-pink/10",
+        text: "text-pixar-pink",
+        border: "border-pixar-pink",
+        accent: "#F783AC"
     }
 };
 

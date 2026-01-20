@@ -3,144 +3,95 @@ import { Image } from "astro:assets";
 import GithubIcon from "../../../assets/icons/github-mark.svg";
 import type { AppProps } from "../../../utils/types";
 import { categoryColors } from "../../../utils/apps";
-import PersonList from "./PersonList.astro";
 
-interface Props extends AppProps {}
+interface Props extends AppProps {
+    delay?: number;
+}
 
 const {
     title,
     description,
-    note,
     webLink,
     repoLink,
     screenshot,
     alt,
-    contributors,
-    additionalContributors,
-    featured = false,
-    category
+    category,
+    delay = 0
 } = Astro.props;
 
 const colors = categoryColors[category] || categoryColors["Campus Life"];
-const isFeatured = featured;
 ---
 
 <article
-    class:list={[
-        "group relative",
-        "bg-warm-white",
-        "rounded-organic",
-        "border border-peach-dark/20",
-        "shadow-soft",
-        "hover:shadow-soft-hover",
-        "hover:border-peach-dark/40",
-        "transition-all duration-300 ease-out",
-        "overflow-hidden",
-        isFeatured && "app-featured"
-    ]}>
-    <!-- Category tag -->
-    <div
-        class:list={[
-            "absolute top-3 left-3 z-10",
-            "px-2.5 py-1 rounded-full",
-            "text-xs font-medium",
-            "backdrop-blur-sm",
-            colors.bg,
-            colors.text,
-            colors.border,
-            "border"
-        ]}>
-        {category}
-    </div>
-
-    <a href={webLink} target="_blank" class="block relative overflow-hidden">
-        <Image
-            src={screenshot}
-            {alt}
-            class:list={[
-                "w-full object-cover",
-                "transition-transform duration-500 ease-out",
-                "group-hover:scale-[1.02]",
-                isFeatured ? "aspect-[4/3]" : "aspect-video"
-            ]}
-        />
-
-        <!-- Warm gradient overlay on hover -->
-        <div
-            class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-            <span
-                class="inline-flex items-center gap-2 bg-warm-white/95 backdrop-blur-sm text-charcoal font-medium px-4 py-2 rounded-full text-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 shadow-soft">
-                <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2">
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                    ></path>
-                </svg>
-                Open App
-            </span>
-        </div>
-    </a>
-
-    <!-- Content area -->
-    <div class:list={["p-5", isFeatured && "p-6"]}>
-        <a href={webLink} target="_blank" class="block mb-2">
-            <h4
-                class:list={[
-                    "font-semibold text-charcoal",
-                    "group-hover:text-coral-dark",
-                    "transition-colors duration-200",
-                    isFeatured ? "text-xl" : "text-lg"
-                ]}>
-                {title}
-            </h4>
+    class="group bg-white rounded-xl border-2 border-transparent hover:border-current shadow-pop hover:shadow-pop-hover transition-all duration-200 overflow-hidden animate-fade-in-up"
+    style={`animation-delay: ${delay}s; --tw-text-opacity: 0.15; color: ${colors.accent}`}>
+    <div class="flex gap-4 p-4">
+        <!-- Thumbnail -->
+        <a
+            href={webLink}
+            target="_blank"
+            class="shrink-0 w-24 h-24 sm:w-32 sm:h-24 rounded-lg overflow-hidden bg-light">
+            <Image
+                src={screenshot}
+                {alt}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
         </a>
 
-        <p
-            class:list={[
-                "text-warm-gray leading-relaxed mb-3",
-                isFeatured ? "text-base" : "text-sm",
-                !isFeatured && "line-clamp-2"
-            ]}>
-            {description}
-        </p>
-
-        <!-- Contributors -->
-        <div class="text-xs text-muted">
-            <PersonList startMsg="By" personList={contributors} />
-            {
-                additionalContributors &&
-                    additionalContributors.length > 0 &&
-                    additionalContributors.map(section => (
-                        <PersonList
-                            startMsg={section.startMsg}
-                            personList={section.contributors}
-                        />
-                    ))
-            }
-        </div>
-
-        {note && <p class="text-xs text-muted mt-2 italic">{note}</p>}
-    </div>
-
-    <!-- GitHub link - appears on hover -->
-    {
-        repoLink && (
-            <a
-                href={repoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="absolute top-3 right-3 bg-warm-white/90 backdrop-blur-sm hover:bg-warm-white text-warm-gray hover:text-charcoal px-2.5 py-1.5 rounded-full text-xs font-medium inline-flex items-center gap-1.5 transition-all duration-200 opacity-0 group-hover:opacity-100 shadow-soft">
-                <Image height={12} width={12} src={GithubIcon} alt="GitHub" />
-                <span>Code</span>
+        <!-- Content -->
+        <div class="flex-1 min-w-0">
+            <a href={webLink} target="_blank" class="block">
+                <h4
+                    class="font-bold text-charcoal group-hover:text-pixar-blue transition-colors truncate"
+                    style={`--hover-color: ${colors.accent}`}>
+                    {title}
+                </h4>
             </a>
-        )
-    }
+            <p class="text-sm text-gray-dark mt-1 line-clamp-2">
+                {description}
+            </p>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 mt-3">
+                <a
+                    href={webLink}
+                    target="_blank"
+                    class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
+                    style={`background-color: ${colors.accent}20; color: ${colors.accent}`}>
+                    <svg
+                        class="w-3.5 h-3.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        ></path>
+                    </svg>
+                    Open
+                </a>
+                {
+                    repoLink && (
+                        <a
+                            href={repoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 text-xs font-medium text-gray hover:text-charcoal px-2 py-1.5 rounded-full hover:bg-light transition-colors">
+                            <Image
+                                height={14}
+                                width={14}
+                                src={GithubIcon}
+                                alt="GitHub"
+                            />
+                            Code
+                        </a>
+                    )
+                }
+            </div>
+        </div>
+    </div>
 </article>
 
 <style>

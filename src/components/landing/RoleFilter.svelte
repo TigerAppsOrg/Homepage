@@ -10,6 +10,15 @@
         "Engineering"
     ];
 
+    // Rainbow colors for role pills
+    const roleColors = {
+        "Board": "#FF6B6B",
+        "Product Management": "#FFA94D",
+        "Design": "#F783AC",
+        "Marketing": "#51CF66",
+        "Engineering": "#339AF0"
+    };
+
     let selectedRoles = $state([]);
 
     let filteredMembers = $derived(
@@ -28,7 +37,6 @@
         }
     }
 
-    // Check if member is on board
     function isBoard(member) {
         return member.roles.includes("Board");
     }
@@ -41,6 +49,7 @@
             <button
                 class="role-pill cursor-pointer"
                 class:active={selectedRoles.includes(role)}
+                style="--role-color: {roleColors[role]}"
                 onclick={() => toggleRole(role)}>
                 <span class="pill-content">{role}</span>
             </button>
@@ -72,7 +81,8 @@
                                     href={member.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="member-link">
+                                    class="member-link"
+                                    aria-label="GitHub Profile">
                                     <img
                                         height="14"
                                         width="14"
@@ -118,7 +128,7 @@
 <style>
     .role-pill {
         display: inline-block;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.15s ease-out;
         border: none;
         background: none;
         padding: 0;
@@ -127,27 +137,27 @@
     .pill-content {
         display: inline-block;
         padding: 0.5rem 1rem;
-        border: 2px solid #FFD9C7;
+        border: 2px solid #E9ECEF;
         border-radius: 9999px;
-        color: #6B6560;
-        background-color: #FFFCF9;
-        transition: all 0.2s ease-in-out;
-        font-weight: 500;
+        color: #868E96;
+        background-color: #FFFFFF;
+        transition: all 0.15s ease-out;
+        font-weight: 600;
         user-select: none;
     }
 
     .role-pill:hover .pill-content {
-        border-color: #FF8B7B;
-        color: #E86F5D;
-        transform: translateY(-1px);
+        border-color: var(--role-color);
+        color: var(--role-color);
+        transform: translateY(-2px);
     }
 
     .role-pill.active .pill-content {
-        background-color: #FF8B7B;
-        border-color: #FF8B7B;
+        background-color: var(--role-color);
+        border-color: var(--role-color);
         color: white;
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(255, 139, 123, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px color-mix(in srgb, var(--role-color) 40%, transparent);
     }
 
     .member-chip {
@@ -155,23 +165,26 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.375rem 0.75rem 0.375rem 0.375rem;
-        background: #FFFCF9;
-        border: 1px solid #FFD9C7;
+        background: #FFFFFF;
+        border: 2px solid #E9ECEF;
         border-radius: 9999px;
-        transition: all 0.2s ease;
+        transition: all 0.15s ease-out;
         position: relative;
     }
 
     .member-chip:hover {
-        background: #FFEEE4;
-        border-color: #FF8B7B;
+        border-color: #339AF0;
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 139, 123, 0.15);
+        box-shadow: 0 4px 12px rgba(51, 154, 240, 0.15);
     }
 
     .member-chip.board {
-        background: linear-gradient(135deg, #FFFCF9 0%, #FFEEE4 100%);
-        border-color: #FF8B7B;
+        border-color: #9775FA;
+        background: linear-gradient(135deg, #FFFFFF 0%, #F8F4FF 100%);
+    }
+
+    .member-chip.board:hover {
+        box-shadow: 0 4px 12px rgba(151, 117, 250, 0.2);
     }
 
     .member-chip.hidden {
@@ -183,13 +196,13 @@
         height: 32px;
         border-radius: 9999px;
         object-fit: cover;
-        border: 2px solid #FFEEE4;
+        border: 2px solid #E9ECEF;
     }
 
     .member-avatar.board-avatar {
         width: 40px;
         height: 40px;
-        border-color: #FF8B7B;
+        border-color: #9775FA;
     }
 
     .member-info {
@@ -200,8 +213,8 @@
 
     .member-name {
         font-size: 0.875rem;
-        font-weight: 500;
-        color: #2D2D2D;
+        font-weight: 600;
+        color: #212529;
         white-space: nowrap;
     }
 
@@ -210,7 +223,7 @@
         align-items: center;
         gap: 0.25rem;
         opacity: 0;
-        transition: opacity 0.2s;
+        transition: opacity 0.15s;
     }
 
     .member-chip:hover .member-links {
@@ -222,12 +235,12 @@
         align-items: center;
         justify-content: center;
         padding: 0.25rem;
-        color: #6B6560;
-        transition: color 0.2s;
+        color: #868E96;
+        transition: color 0.15s;
     }
 
     .member-link:hover {
-        color: #E86F5D;
+        color: #339AF0;
     }
 
     /* Tooltip */
@@ -236,7 +249,7 @@
         bottom: 100%;
         left: 50%;
         transform: translateX(-50%) translateY(8px);
-        background: #2D2D2D;
+        background: #212529;
         color: white;
         padding: 0.5rem 0.75rem;
         border-radius: 0.5rem;
@@ -244,7 +257,7 @@
         white-space: nowrap;
         opacity: 0;
         pointer-events: none;
-        transition: all 0.2s;
+        transition: all 0.15s;
         z-index: 20;
         display: flex;
         flex-direction: column;
@@ -258,7 +271,7 @@
         left: 50%;
         transform: translateX(-50%);
         border: 6px solid transparent;
-        border-top-color: #2D2D2D;
+        border-top-color: #212529;
     }
 
     .member-chip:hover .member-tooltip {
@@ -267,11 +280,11 @@
     }
 
     .tooltip-title {
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .tooltip-position {
-        color: #FF8B7B;
+        color: #9775FA;
         font-size: 0.625rem;
     }
 </style>

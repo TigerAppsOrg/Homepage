@@ -9,25 +9,25 @@ import Image from "astro/components/Image.astro";
         class="flex items-center gap-2"
         onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
         <Image src={Logo} alt="TigerApps Logo" class="h-8 w-8 object-contain" />
-        <span class="text-xl font-semibold tracking-tight font-display">
-            <span class="text-coral">Tiger</span><span class="text-charcoal"
-                >Apps</span
+        <span class="text-xl font-bold tracking-tight">
+            <span class="text-pixar-orange">Tiger</span><span
+                class="text-charcoal">Apps</span
             >
         </span>
     </button>
-    <nav class="items-center flex text-sm font-medium gap-8">
+    <nav class="items-center flex text-sm font-semibold gap-8">
         <button
-            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
+            class="hidden sm:block text-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })">
             Apps
         </button>
         <button
-            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
+            class="hidden sm:block text-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('develop').scrollIntoView({ behavior: 'smooth' })">
             Develop
         </button>
         <button
-            class="hidden sm:block text-warm-gray hover:text-charcoal transition-colors"
+            class="hidden sm:block text-gray hover:text-charcoal transition-colors"
             onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
             About
         </button>
@@ -35,7 +35,7 @@ import Image from "astro/components/Image.astro";
             aria-label="Instagram Link"
             href="https://www.instagram.com/princeton_tigerapps/"
             target="_blank"
-            class="text-warm-gray hover:text-coral transition-colors">
+            class="text-gray hover:text-pixar-pink transition-colors">
             <svg
                 aria-label="Instagram logo"
                 xmlns="http://www.w3.org/2000/svg"
