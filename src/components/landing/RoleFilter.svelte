@@ -72,53 +72,55 @@
                     src={member.headshot.src}
                     alt={member.name}
                     loading="lazy" />
-                <div class="member-info">
-                    <span class="member-name">{member.name}</span>
-                    {#if member.github || member.website}
-                        <div class="member-links">
-                            {#if member.github}
-                                <a
-                                    href={member.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="member-link"
-                                    aria-label="GitHub Profile">
-                                    <img
-                                        height="14"
-                                        width="14"
-                                        src={githubIcon.src}
-                                        alt="GitHub" />
-                                </a>
-                            {/if}
-                            {#if member.website}
-                                <a
-                                    aria-label="Personal Website"
-                                    href={member.website}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="member-link">
-                                    <svg
-                                        class="w-3.5 h-3.5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                                    </svg>
-                                </a>
-                            {/if}
-                        </div>
-                    {/if}
-                </div>
-                <!-- Tooltip with role on hover -->
-                <div class="member-tooltip">
-                    <span class="tooltip-title">{member.title}</span>
-                    {#if member.position}
-                        <span class="tooltip-position">{member.position}</span>
-                    {/if}
+                <div class="member-content">
+                    <div class="member-info">
+                        <span class="member-name">{member.name}</span>
+                        {#if member.github || member.website}
+                            <div class="member-links">
+                                {#if member.github}
+                                    <a
+                                        href={member.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="member-link"
+                                        aria-label="GitHub Profile">
+                                        <img
+                                            height="14"
+                                            width="14"
+                                            src={githubIcon.src}
+                                            alt="GitHub" />
+                                    </a>
+                                {/if}
+                                {#if member.website}
+                                    <a
+                                        aria-label="Personal Website"
+                                        href={member.website}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="member-link">
+                                        <svg
+                                            class="w-3.5 h-3.5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2">
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                        </svg>
+                                    </a>
+                                {/if}
+                            </div>
+                        {/if}
+                    </div>
+                    <!-- Title and position shown inline -->
+                    <div class="member-details">
+                        <span class="member-title">{member.title}</span>
+                        {#if member.position}
+                            <span class="member-position">{member.position}</span>
+                        {/if}
+                    </div>
                 </div>
             </div>
         {/each}
@@ -163,8 +165,8 @@
     .member-chip {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
-        padding: 0.375rem 0.75rem 0.375rem 0.375rem;
+        gap: 0.625rem;
+        padding: 0.5rem 0.875rem 0.5rem 0.5rem;
         background: #FFFFFF;
         border: 2px solid #E9ECEF;
         border-radius: 9999px;
@@ -192,23 +194,31 @@
     }
 
     .member-avatar {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         border-radius: 9999px;
         object-fit: cover;
         border: 2px solid #E9ECEF;
+        flex-shrink: 0;
     }
 
     .member-avatar.board-avatar {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         border-color: #9775FA;
+    }
+
+    .member-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+        min-width: 0;
     }
 
     .member-info {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.375rem;
     }
 
     .member-name {
@@ -222,7 +232,7 @@
         display: flex;
         align-items: center;
         gap: 0.25rem;
-        opacity: 0;
+        opacity: 0.5;
         transition: opacity 0.15s;
     }
 
@@ -234,7 +244,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.25rem;
+        padding: 0.125rem;
         color: #868E96;
         transition: color 0.15s;
     }
@@ -243,48 +253,22 @@
         color: #339AF0;
     }
 
-    /* Tooltip */
-    .member-tooltip {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(8px);
-        background: #212529;
-        color: white;
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.5rem;
-        font-size: 0.75rem;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.15s;
-        z-index: 20;
+    /* Title and position shown inline */
+    .member-details {
         display: flex;
-        flex-direction: column;
-        gap: 0.125rem;
+        align-items: center;
+        gap: 0.5rem;
+        line-height: 1.2;
     }
 
-    .member-tooltip::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 6px solid transparent;
-        border-top-color: #212529;
+    .member-title {
+        font-size: 0.6875rem;
+        color: #868E96;
     }
 
-    .member-chip:hover .member-tooltip {
-        opacity: 1;
-        transform: translateX(-50%) translateY(-4px);
-    }
-
-    .tooltip-title {
-        font-weight: 600;
-    }
-
-    .tooltip-position {
-        color: #9775FA;
+    .member-position {
         font-size: 0.625rem;
+        color: #9775FA;
+        font-weight: 600;
     }
 </style>
