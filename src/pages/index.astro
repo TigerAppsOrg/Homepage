@@ -7,13 +7,17 @@ import Apps from "../components/landing/Apps.astro";
 import DevelopInfo from "../components/landing/DevelopInfo.astro";
 import Members from "../components/landing/Members.astro";
 import Footer from "../components/page/Footer.astro";
+import WaveDivider from "../components/ui/WaveDivider.astro";
 ---
 
 <Layout>
     <LandingHeader />
     <Hero />
+    <WaveDivider from="white" to="light" />
     <Apps />
+    <WaveDivider from="light" to="white" flip />
     <DevelopInfo />
+    <WaveDivider from="white" to="light" />
     <Members />
     <Footer />
 </Layout>
