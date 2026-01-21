@@ -40,6 +40,18 @@
     function isBoard(member) {
         return member.roles.includes("Board");
     }
+
+    // Get hover color based on member's primary role (first role)
+    function getMemberColor(member) {
+        // Board members always get purple
+        if (member.roles.includes("Board")) {
+            return "#9775FA";
+        }
+
+        // Use the first role to determine color
+        const primaryRole = member.roles[0];
+        return roleColors[primaryRole] || "#339AF0";
+    }
 </script>
 
 <!-- Role Filter Pills -->
@@ -65,7 +77,8 @@
             <div
                 class="member-chip"
                 class:hidden={!filteredMembers.some(m => m.name === member.name)}
-                class:board={isBoard(member)}>
+                class:board={isBoard(member)}
+                style="--member-color: {getMemberColor(member)}">
                 <img
                     class="member-avatar"
                     class:board-avatar={isBoard(member)}
@@ -175,18 +188,14 @@
     }
 
     .member-chip:hover {
-        border-color: #339AF0;
+        border-color: var(--member-color);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(51, 154, 240, 0.15);
+        box-shadow: 0 4px 12px color-mix(in srgb, var(--member-color) 20%, transparent);
     }
 
     .member-chip.board {
         border-color: #9775FA;
         background: linear-gradient(135deg, #FFFFFF 0%, #F8F4FF 100%);
-    }
-
-    .member-chip.board:hover {
-        box-shadow: 0 4px 12px rgba(151, 117, 250, 0.2);
     }
 
     .member-chip.hidden {
