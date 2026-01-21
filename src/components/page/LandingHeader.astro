@@ -1,18 +1,16 @@
 ---
 import HeaderShell from "../HeaderShell.astro";
-import Logo from "../../assets/icons/logo.png";
+import Logo from "../../assets/icons/black.png";
 import Image from "astro/components/Image.astro";
 ---
 
 <HeaderShell>
     <button
-        class="flex items-center gap-2"
+        class="flex items-center gap-1"
         onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' })">
-        <Image src={Logo} alt="TigerApps Logo" class="h-8 w-8 object-contain" />
-        <span class="text-xl font-bold tracking-tight">
-            <span class="text-pixar-orange">Tiger</span><span
-                class="text-charcoal">Apps</span
-            >
+        <Image src={Logo} alt="TigerApps Logo" class="h-9 w-9 object-contain" />
+        <span class="text-xl font-bold tracking-tight text-charcoal">
+            TigerApps
         </span>
     </button>
     <nav class="items-center flex text-sm font-semibold gap-8">
