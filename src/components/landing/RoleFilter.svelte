@@ -194,18 +194,21 @@
     }
 
     .member-avatar {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
         border-radius: 9999px;
         object-fit: cover;
-        border: 2px solid #E9ECEF;
+        object-position: center top;
+        border: 2.5px solid #E9ECEF;
         flex-shrink: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .member-avatar.board-avatar {
-        width: 44px;
-        height: 44px;
+        width: 52px;
+        height: 52px;
         border-color: #9775FA;
+        box-shadow: 0 2px 8px rgba(151, 117, 250, 0.2);
     }
 
     .member-content {
