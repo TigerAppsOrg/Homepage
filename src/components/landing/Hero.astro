@@ -42,8 +42,13 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
 
     <div class="cont text-center relative z-10">
         <div class="flex flex-col items-center max-w-3xl mx-auto gap-6">
-            <!-- Logo with bounce -->
-            <div class="w-20 sm:w-24 animate-bounce-in">
+            <!-- Logo with bounce - click for fun! -->
+            <div
+                id="logo-btn"
+                class="w-20 sm:w-24 animate-bounce-in cursor-pointer select-none logo-interactive"
+                role="button"
+                tabindex="0"
+                aria-label="Click for a surprise!">
                 <Image
                     src={TigerAppsLogo}
                     alt="TigerApps logo"
@@ -224,6 +229,15 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
         animation: rainbow-shimmer 8s linear infinite;
     }
 
+    /* Logo interaction styles */
+    .logo-interactive {
+        transition: transform 0.2s ease;
+    }
+
+    .logo-interactive:hover {
+        transform: scale(1.05);
+    }
+
     /* Reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
         .blob {
@@ -234,6 +248,10 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
             animation: none;
             background: linear-gradient(90deg, #ff6b6b, #a855f7, #3b82f6);
             background-size: 100% auto;
+        }
+
+        .logo-spinning {
+            animation: none;
         }
     }
 </style>
@@ -285,6 +303,33 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
 
         animateParallax();
     }
+
+    // Logo spin + bounce interaction using Web Animations API
+    const logoBtn = document.getElementById("logo-btn");
+    let isAnimating = false;
+
+    logoBtn?.addEventListener("click", () => {
+        if (isAnimating || prefersReducedMotion) return;
+
+        isAnimating = true;
+
+        logoBtn.animate(
+            [
+                { transform: "rotate(0deg) scale(1)", offset: 0 },
+                { transform: "rotate(360deg) scale(1)", offset: 0.5 },
+                { transform: "rotate(360deg) scale(1.15)", offset: 0.65 },
+                { transform: "rotate(360deg) scale(0.9)", offset: 0.8 },
+                { transform: "rotate(360deg) scale(1.05)", offset: 0.9 },
+                { transform: "rotate(360deg) scale(1)", offset: 1 }
+            ],
+            {
+                duration: 1000,
+                easing: "ease-out"
+            }
+        ).onfinish = () => {
+            isAnimating = false;
+        };
+    });
 
     // Email copy functionality
     const emailChip = document.getElementById("email-chip");
