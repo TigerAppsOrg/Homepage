@@ -114,12 +114,12 @@
                             </div>
                         {/if}
                     </div>
-                    <!-- Title and position shown inline -->
+                    <!-- Position and title shown inline -->
                     <div class="member-details">
-                        <span class="member-title">{member.title}</span>
                         {#if member.position}
                             <span class="member-position">{member.position}</span>
                         {/if}
+                        <span class="member-title">{member.title}</span>
                     </div>
                 </div>
             </div>
