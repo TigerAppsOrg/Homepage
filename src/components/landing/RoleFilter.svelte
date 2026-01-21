@@ -194,8 +194,8 @@
     }
 
     .member-avatar {
-        width: 48px;
-        height: 48px;
+        width: 52px;
+        height: 52px;
         border-radius: 9999px;
         object-fit: cover;
         object-position: center top;
