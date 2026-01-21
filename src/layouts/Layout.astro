@@ -208,3 +208,119 @@ import { AstroSeo } from "@astrolib/seo";
         }
     }
 </style>
+
+<script>
+    // Konami Code Easter Egg: ↑↑↓↓←→←→BA
+    const konamiCode = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "KeyB",
+        "KeyA"
+    ];
+    let konamiIndex = 0;
+
+    document.addEventListener("keydown", e => {
+        if (e.code === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                activatePartyMode();
+                konamiIndex = 0;
+            }
+        } else {
+            konamiIndex = 0;
+        }
+    });
+
+    function activatePartyMode() {
+        // Create confetti container
+        const container = document.createElement("div");
+        container.style.cssText =
+            "position:fixed;inset:0;pointer-events:none;z-index:9999;";
+        document.body.appendChild(container);
+
+        const colors = [
+            "#FF6B6B",
+            "#FFA94D",
+            "#FFE066",
+            "#51CF66",
+            "#339AF0",
+            "#9775FA",
+            "#F783AC"
+        ];
+
+        // Confetti explosion
+        for (let i = 0; i < 150; i++) {
+            const confetti = document.createElement("div");
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const size = Math.random() * 10 + 5;
+            const isCircle = Math.random() > 0.5;
+
+            confetti.style.cssText = `
+                position:absolute;
+                width:${size}px;
+                height:${size}px;
+                background:${color};
+                border-radius:${isCircle ? "50%" : "2px"};
+                left:50%;
+                top:50%;
+            `;
+            container.appendChild(confetti);
+
+            const angle = (Math.random() * 360 * Math.PI) / 180;
+            const velocity = Math.random() * 500 + 200;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+
+            confetti.animate(
+                [
+                    {
+                        transform: "translate(-50%, -50%) rotate(0deg)",
+                        opacity: 1
+                    },
+                    {
+                        transform: `translate(calc(-50% + ${vx}px), calc(-50% + ${vy + 300}px)) rotate(${Math.random() * 720}deg)`,
+                        opacity: 0
+                    }
+                ],
+                {
+                    duration: 1500 + Math.random() * 1000,
+                    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                }
+            ).onfinish = () => confetti.remove();
+        }
+
+        // Rainbow flash on body
+        document.body.animate(
+            [{ filter: "hue-rotate(0deg)" }, { filter: "hue-rotate(360deg)" }],
+            {
+                duration: 1000,
+                iterations: 2
+            }
+        );
+
+        // Page wiggle
+        document.body.animate(
+            [
+                { transform: "rotate(0deg)" },
+                { transform: "rotate(1deg)" },
+                { transform: "rotate(-1deg)" },
+                { transform: "rotate(1deg)" },
+                { transform: "rotate(-1deg)" },
+                { transform: "rotate(0deg)" }
+            ],
+            {
+                duration: 500,
+                iterations: 2
+            }
+        );
+
+        // Clean up container after animations
+        setTimeout(() => container.remove(), 3000);
+    }
+</script>
