@@ -4,21 +4,40 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
 ---
 
 <section id="hero" class="bg-white pt-28 pb-20 relative overflow-hidden">
-    <!-- Playful floating shapes -->
+    <!-- Morphing blob shapes with parallax -->
     <div
-        class="absolute top-20 left-10 w-16 h-16 rounded-2xl bg-pixar-yellow/30 rotate-12 animate-float-slow">
-    </div>
-    <div
-        class="absolute top-40 right-20 w-12 h-12 rounded-full bg-pixar-blue/20 animate-float">
-    </div>
-    <div
-        class="absolute bottom-20 left-1/4 w-20 h-20 rounded-3xl bg-pixar-green/20 -rotate-6 animate-float-slow">
-    </div>
-    <div
-        class="absolute top-1/3 right-10 w-8 h-8 rounded-lg bg-pixar-pink/30 rotate-45 animate-float">
-    </div>
-    <div
-        class="absolute bottom-32 right-1/3 w-14 h-14 rounded-2xl bg-pixar-purple/20 rotate-12 animate-float-slow">
+        id="parallax-container"
+        class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+            class="blob blob-1"
+            data-depth="0.03"
+            style="top: 15%; left: 8%; --blob-size: 80px; --blob-color: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); animation-delay: 0s;">
+        </div>
+        <div
+            class="blob blob-2"
+            data-depth="0.05"
+            style="top: 35%; right: 12%; --blob-size: 60px; --blob-color: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); animation-delay: -2s;">
+        </div>
+        <div
+            class="blob blob-3"
+            data-depth="0.02"
+            style="bottom: 25%; left: 18%; --blob-size: 100px; --blob-color: linear-gradient(135deg, #FFE066 0%, #FFB347 100%); animation-delay: -4s;">
+        </div>
+        <div
+            class="blob blob-4"
+            data-depth="0.06"
+            style="top: 20%; right: 25%; --blob-size: 45px; --blob-color: linear-gradient(135deg, #A855F7 0%, #EC4899 100%); animation-delay: -1s;">
+        </div>
+        <div
+            class="blob blob-5"
+            data-depth="0.04"
+            style="bottom: 30%; right: 8%; --blob-size: 70px; --blob-color: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); animation-delay: -3s;">
+        </div>
+        <div
+            class="blob blob-6"
+            data-depth="0.08"
+            style="top: 60%; left: 5%; --blob-size: 35px; --blob-color: linear-gradient(135deg, #10B981 0%, #34D399 100%); animation-delay: -5s;">
+        </div>
     </div>
 
     <div class="cont text-center relative z-10">
@@ -32,9 +51,9 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
                 />
             </div>
 
-            <!-- Fun headline -->
+            <!-- Fun headline with rainbow shimmer on "Apps" -->
             <h1 class="animate-fade-in-up delay-1">
-                Apps for
+                <span class="rainbow-shimmer">Apps</span> for
                 <span class="relative inline-block">
                     <span class="relative z-10">Princeton</span>
                     <svg
@@ -44,7 +63,7 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
                         <path
                             d="M0,8 Q50,0 100,8 T200,8"
                             fill="none"
-                            stroke="#FFE066"
+                            stroke="#FF6B00"
                             stroke-width="6"
                             stroke-linecap="round"></path>
                     </svg>
@@ -53,9 +72,9 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
 
             <!-- Subtitle -->
             <p
-                class="text-lg md:text-xl text-gray max-w-xl leading-relaxed animate-fade-in-up delay-2">
-                Student-built tools to enhance your campus experience. Built
-                with care, funded by USG.
+                class="text-lg md:text-xl text-charcoal max-w-xl leading-relaxed animate-fade-in-up delay-2">
+                Student-built apps to enhance your campus experience. Fully
+                funded by USG.
             </p>
 
             <!-- CTA section -->
@@ -115,37 +134,159 @@ import TigerAppsLogo from "../../assets/icons/circle.png";
 </section>
 
 <style>
+    /* Morphing blob animation */
+    @keyframes morph {
+        0%,
+        100% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        25% {
+            border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+        50% {
+            border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+        }
+        75% {
+            border-radius: 60% 40% 60% 50% / 70% 30% 50% 60%;
+        }
+    }
+
     @keyframes float {
         0%,
         100% {
-            transform: translateY(0) rotate(var(--rotate, 0deg));
+            transform: translateY(0) translateX(var(--parallax-x, 0px))
+                translateY(var(--parallax-y, 0px));
         }
         50% {
-            transform: translateY(-15px) rotate(var(--rotate, 0deg));
+            transform: translateY(-20px) translateX(var(--parallax-x, 0px))
+                translateY(var(--parallax-y, 0px));
         }
     }
 
-    @keyframes float-slow {
-        0%,
+    .blob {
+        position: absolute;
+        width: var(--blob-size, 60px);
+        height: var(--blob-size, 60px);
+        background: var(--blob-color);
+        opacity: 0.6;
+        animation:
+            morph 8s ease-in-out infinite,
+            float 6s ease-in-out infinite;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+    }
+
+    .blob-1 {
+        animation-duration: 8s, 7s;
+    }
+    .blob-2 {
+        animation-duration: 10s, 5s;
+    }
+    .blob-3 {
+        animation-duration: 12s, 8s;
+    }
+    .blob-4 {
+        animation-duration: 9s, 6s;
+    }
+    .blob-5 {
+        animation-duration: 11s, 7s;
+    }
+    .blob-6 {
+        animation-duration: 7s, 5s;
+    }
+
+    /* Rainbow shimmer text */
+    @keyframes rainbow-shimmer {
+        0% {
+            background-position: 0% 50%;
+        }
         100% {
-            transform: translateY(0) rotate(var(--rotate, 12deg));
-        }
-        50% {
-            transform: translateY(-10px)
-                rotate(calc(var(--rotate, 12deg) + 3deg));
+            background-position: 200% 50%;
         }
     }
 
-    .animate-float {
-        animation: float 4s ease-in-out infinite;
+    .rainbow-shimmer {
+        background: linear-gradient(
+            90deg,
+            #ff6b6b,
+            #ff8e53,
+            #ffe066,
+            #4ecdc4,
+            #3b82f6,
+            #a855f7,
+            #ec4899,
+            #ff6b6b
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-shimmer 8s linear infinite;
     }
 
-    .animate-float-slow {
-        animation: float-slow 6s ease-in-out infinite;
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+        .blob {
+            animation: none;
+        }
+
+        .rainbow-shimmer {
+            animation: none;
+            background: linear-gradient(90deg, #ff6b6b, #a855f7, #3b82f6);
+            background-size: 100% auto;
+        }
     }
 </style>
 
 <script>
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Cursor-following parallax effect
+    if (!prefersReducedMotion) {
+        const blobs = document.querySelectorAll(".blob");
+        let mouseX = 0;
+        let mouseY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        document.addEventListener("mousemove", e => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            mouseX = (e.clientX - centerX) / centerX;
+            mouseY = (e.clientY - centerY) / centerY;
+        });
+
+        function animateParallax() {
+            // Smooth easing
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            blobs.forEach(blob => {
+                const depth = parseFloat(
+                    (blob as HTMLElement).dataset.depth || "0.05"
+                );
+                const moveX = currentX * depth * -200;
+                const moveY = currentY * depth * -200;
+                (blob as HTMLElement).style.setProperty(
+                    "--parallax-x",
+                    `${moveX}px`
+                );
+                (blob as HTMLElement).style.setProperty(
+                    "--parallax-y",
+                    `${moveY}px`
+                );
+            });
+
+            requestAnimationFrame(animateParallax);
+        }
+
+        animateParallax();
+    }
+
+    // Email copy functionality
     const emailChip = document.getElementById("email-chip");
     const copyTooltip = document.getElementById("copy-tooltip");
     const copyIcon = document.getElementById("copy-icon");
