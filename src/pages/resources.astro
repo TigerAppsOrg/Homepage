@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/page/Footer.astro";
 import HeaderShell from "../components/HeaderShell.astro";
-import Logo from "../assets/icons/logo.png";
+import Logo from "../assets/icons/black.png";
 import Image from "astro/components/Image.astro";
 ---
 
@@ -12,16 +12,14 @@ import Image from "astro/components/Image.astro";
 
 <Layout>
     <HeaderShell>
-        <a href="/" class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-1">
             <Image
                 src={Logo}
                 alt="TigerApps Logo"
-                class="h-8 w-8 object-contain"
+                class="h-9 w-9 object-contain"
             />
-            <span class="text-xl font-bold">
-                <span class="text-pixar-orange">Tiger</span><span
-                    class="text-charcoal">Apps</span
-                >
+            <span class="text-xl font-bold tracking-tight text-charcoal">
+                TigerApps
             </span>
         </a>
         <nav class="hidden sm:flex items-center text-sm font-semibold gap-8">

@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/page/Footer.astro";
 import HeaderShell from "../components/HeaderShell.astro";
-import Logo from "../assets/icons/logo.png";
+import Logo from "../assets/icons/black.png";
 import Image from "astro/components/Image.astro";
 import GithubIcon from "../assets/icons/github-mark.svg";
 
@@ -15,16 +15,14 @@ import { archiveApps } from "../utils/apps";
 
 <Layout>
     <HeaderShell>
-        <a href="/" class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-1">
             <Image
                 src={Logo}
                 alt="TigerApps Logo"
-                class="h-8 w-8 object-contain"
+                class="h-9 w-9 object-contain"
             />
-            <span class="text-xl font-bold">
-                <span class="text-pixar-orange">Tiger</span><span
-                    class="text-charcoal">Apps</span
-                >
+            <span class="text-xl font-bold tracking-tight text-charcoal">
+                TigerApps
             </span>
         </a>
         <nav class="flex items-center text-sm font-semibold gap-8">
@@ -51,19 +49,35 @@ import { archiveApps } from "../utils/apps";
         <main
             class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 pb-16 constrained">
             {
-                archiveApps.apps.map((app, index) => (
+                archiveApps.apps.map(app => (
                     <article class="group bg-white rounded-xl border-2 border-light-mid hover:border-gray/30 shadow-pop hover:shadow-pop-hover transition-all duration-200 overflow-hidden">
                         <div class="flex gap-4 p-4">
-                            <a
-                                href={app.webLink}
-                                target="_blank"
-                                class="shrink-0 w-20 h-20 rounded-lg overflow-hidden bg-light">
-                                <Image
-                                    src={app.screenshot}
-                                    alt={app.alt}
-                                    class="w-full h-full object-cover opacity-75 group-hover:opacity-100 transition-opacity"
-                                />
-                            </a>
+                            <div class="shrink-0 flex flex-col gap-2">
+                                <a
+                                    href={app.webLink}
+                                    target="_blank"
+                                    class="block w-20 h-20 rounded-lg overflow-hidden bg-light">
+                                    <Image
+                                        src={app.screenshot}
+                                        alt={app.alt}
+                                        class="w-full h-full object-cover"
+                                    />
+                                </a>
+                                <a
+                                    href={app.repoLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center gap-1 text-xs font-medium text-gray hover:text-charcoal px-2 py-1 rounded-full hover:bg-light transition-colors">
+                                    <Image
+                                        height={12}
+                                        width={12}
+                                        src={GithubIcon}
+                                        alt="GitHub"
+                                        loading="lazy"
+                                    />
+                                    Code
+                                </a>
+                            </div>
                             <div class="flex-1 min-w-0">
                                 <a
                                     href={app.webLink}
@@ -73,29 +87,14 @@ import { archiveApps } from "../utils/apps";
                                         {app.title}
                                     </h4>
                                 </a>
-                                <p class="text-xs text-gray mt-1 line-clamp-2">
+                                <p class="text-sm text-gray-dark mt-1">
                                     {app.description}
                                 </p>
                                 {app.note && (
-                                    <p class="text-xs text-pixar-orange mt-1 font-medium">
+                                    <p class="text-xs text-pixar-orange mt-2 font-medium">
                                         {app.note}
                                     </p>
                                 )}
-                                <div class="flex items-center gap-2 mt-2">
-                                    <a
-                                        href={app.repoLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="inline-flex items-center gap-1.5 text-xs font-medium text-gray hover:text-charcoal transition-colors">
-                                        <Image
-                                            height={12}
-                                            width={12}
-                                            src={GithubIcon}
-                                            alt="GitHub"
-                                        />
-                                        View Code
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </article>
@@ -105,12 +104,3 @@ import { archiveApps } from "../utils/apps";
     </div>
     <Footer />
 </Layout>
-
-<style>
-    .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-</style>

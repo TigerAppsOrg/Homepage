@@ -101,7 +101,8 @@
                                             height="14"
                                             width="14"
                                             src={githubIcon.src}
-                                            alt="GitHub" />
+                                            alt="GitHub"
+                                            loading="lazy" />
                                     </a>
                                 {/if}
                                 {#if member.website}
