@@ -4,48 +4,53 @@ import RoleFilter from "./RoleFilter.svelte";
 import { pastMembers, companies } from "../../utils/members";
 ---
 
-<section id="about" class="py-16">
-    <div class="cont text-center space-y-8">
-        <div class="space-y-2">
-            <h3>ABOUT US</h3>
-            <p class="text-lg">Meet the TigerApps team!</p>
-        </div>
-
-        <div class="border-b-4 w-32 border-secondary rounded-full mx-auto">
+<section id="about" class="pt-8 pb-20 bg-light">
+    <div class="cont space-y-12">
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+            <p
+                class="text-pixar-purple font-bold text-sm uppercase tracking-wide">
+                Our Team
+            </p>
+            <h3>
+                <span class="rainbow-underline">Meet the Team</span>
+            </h3>
         </div>
 
         <RoleFilter client:load />
 
-        <div class="space-y-16">
-            <article>
-                <h4 class="mb-4">Past Members</h4>
-                <ul
-                    class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2 constrained">
+        <div class="space-y-16 pt-8">
+            <article class="text-center">
+                <h4 class="mb-6 text-charcoal">Past Members</h4>
+                <div class="flex flex-wrap justify-center gap-2 constrained">
                     {
                         pastMembers.map(member => (
-                            <li class="text-sm sm:text-base">{member}</li>
+                            <span class="text-sm text-gray bg-white px-3 py-1.5 rounded-full border border-light-mid hover:border-pixar-purple/30 transition-colors">
+                                {member}
+                            </span>
                         ))
                     }
-                </ul>
+                </div>
             </article>
 
-            <article>
-                <h4 class="mb-4">Our members have gone on to work for...</h4>
-                <ul
-                    class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 constrained">
+            <article class="text-center">
+                <h4 class="mb-6 text-charcoal">
+                    Our members have gone on to work for...
+                </h4>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-4 constrained">
                     {
                         companies.map(company => (
-                            <li>
+                            <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden shadow-pop hover:shadow-pop-hover hover:-translate-y-1 transition-all duration-200">
                                 <Image
                                     loading="lazy"
-                                    class="rounded-lg shadow-lg aspect-square object-cover"
+                                    class="w-full h-full object-cover"
                                     src={company[0]}
                                     alt={company[1]}
                                 />
-                            </li>
+                            </div>
                         ))
                     }
-                </ul>
+                </div>
             </article>
         </div>
     </div>

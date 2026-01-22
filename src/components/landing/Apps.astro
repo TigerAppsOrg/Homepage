@@ -1,42 +1,60 @@
 ---
-import {
-    aiAssistApps,
-    coursePlanningApps,
-    games,
-    campusLifeApps,
-    roomDrawApps
-} from "../../utils/apps";
+import { allApps, categoryColors } from "../../utils/apps";
 import AppCard from "./ui/AppCard.astro";
 
-const apps = [
-    aiAssistApps,
-    coursePlanningApps,
-    games,
-    campusLifeApps,
-    roomDrawApps
-];
+// Group apps by category
+const categories = ["Course Planning", "Games", "Campus Life", "Room Draw"];
+const appsByCategory = categories
+    .map(cat => ({
+        name: cat,
+        apps: allApps.filter(app => app.category === cat),
+        color: categoryColors[cat]
+    }))
+    .filter(cat => cat.apps.length > 0);
 ---
 
-<section id="apps" class="py-16">
-    <div class="cont space-y-12">
-        {
-            apps.map(appSection => (
-                <article class="text-center constrained">
-                    <h3 class="mb-2">{appSection.title}</h3>
-                    <p class="text-lg">{appSection.description}</p>
-                    <div class="border-b-4 w-32 border-secondary mt-4 mb-8 rounded-full mx-auto" />
-                    <div class="app-grid">
-                        {appSection.apps.map(card => (
-                            <AppCard {...card} />
-                        ))}
-                    </div>
-                </article>
-            ))
-        }
+<section id="apps" class="pt-8 pb-20 bg-light">
+    <div class="cont">
+        <div class="text-center mb-12 max-w-2xl mx-auto">
+            <h2 class="mb-3">
+                <span class="rainbow-underline">Our Apps</span>
+            </h2>
+        </div>
 
-        <p class="text-lg text-center">
-            You can check out some of our older apps in the
-            <a class="text-secondary underline" href="/archive"> Archive</a>.
+        <div class="space-y-12 constrained">
+            {
+                appsByCategory.map((category, catIndex) => (
+                    <div class="category-section">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div
+                                class="w-3 h-3 rounded-full"
+                                style={`background-color: ${category.color.accent}`}
+                            />
+                            <h3 class="text-xl font-bold text-charcoal">
+                                {category.name}
+                            </h3>
+                            <div class="flex-1 h-px bg-light-mid ml-2" />
+                        </div>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            {category.apps.map((app, appIndex) => (
+                                <AppCard
+                                    {...app}
+                                    delay={catIndex * 0.1 + appIndex * 0.05}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <p class="text-center text-gray mt-12">
+            Explore our older projects in the{" "}
+            <a
+                class="text-pixar-blue hover:text-primary-dark underline underline-offset-2 transition-colors font-semibold"
+                href="/archive">
+                Archive
+            </a>
         </p>
     </div>
 </section>

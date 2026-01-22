@@ -1,5 +1,5 @@
 ---
-import "@fontsource-variable/rubik";
+import "@fontsource-variable/nunito";
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -52,49 +52,275 @@ import { AstroSeo } from "@astrolib/seo";
 </html>
 
 <style is:global lang="postcss">
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        font-family: 'Rubik Variable', sans-serif;
+        font-family: "Nunito Variable", system-ui, sans-serif;
+        @apply bg-white text-charcoal antialiased;
     }
 
     section {
-        scroll-margin: 4rem;
+        scroll-margin: 5rem;
     }
 
+    /* Fun Pixar Typography */
+    h1,
     h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Nunito Variable", system-ui, sans-serif;
+        @apply text-charcoal font-bold;
+    }
+
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl;
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl;
+        letter-spacing: -0.01em;
+    }
+
     h3 {
-        @apply text-secondary text-4xl font-semibold uppercase;
+        @apply text-2xl md:text-3xl;
     }
 
     h4 {
-        @apply text-secondary font-semibold text-xl;
+        @apply text-xl;
     }
 
     h5 {
-        @apply text-secondary font-semibold text-lg;
+        @apply text-lg font-semibold;
     }
 
+    p {
+        @apply leading-relaxed text-gray-dark;
+    }
+
+    /* Container utilities */
     .cont {
-        @apply max-w-7xl mx-auto px-4 md:px-8 lg:px-12 w-full;
+        @apply max-w-6xl mx-auto px-6 md:px-8 lg:px-16 w-full;
     }
 
     .constrained {
-        @apply w-11/12 mx-auto max-w-6xl;
+        @apply w-full mx-auto max-w-5xl;
     }
 
-    .app-grid {
+    /* Simple App List */
+    .app-list {
         display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
-        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-        > article {
-            flex: 0 0 calc(50% - 1.5rem);
+    /* Playful hover effect */
+    .hover-pop {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hover-pop:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Rainbow underline effect */
+    .rainbow-underline {
+        position: relative;
+        display: inline-block;
+    }
+
+    .rainbow-underline::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg,
+            #FF6B6B 0%,
+            #FFA94D 20%,
+            #FFE066 40%,
+            #51CF66 60%,
+            #339AF0 80%,
+            #9775FA 100%
+        );
+    }
+
+    /* Entrance animations */
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        50% {
+            transform: scale(1.02);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+        opacity: 0;
+    }
+
+    .animate-bounce-in {
+        animation: bounce-in 0.4s ease-out forwards;
+        opacity: 0;
+    }
+
+    /* Stagger delays */
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
         }
 
-        @media screen and (min-width: 1200px) {
-            > article {
-                flex: 0 0 calc(33.333% - 2rem);
-            }
+        html {
+            scroll-behavior: auto;
         }
     }
 </style>
+
+<script>
+    // Konami Code Easter Egg: ↑↑↓↓←→←→BA
+    const konamiCode = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "KeyB",
+        "KeyA"
+    ];
+    let konamiIndex = 0;
+
+    document.addEventListener("keydown", e => {
+        if (e.code === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                activatePartyMode();
+                konamiIndex = 0;
+            }
+        } else {
+            konamiIndex = 0;
+        }
+    });
+
+    function activatePartyMode() {
+        // Create confetti container
+        const container = document.createElement("div");
+        container.style.cssText =
+            "position:fixed;inset:0;pointer-events:none;z-index:9999;";
+        document.body.appendChild(container);
+
+        const colors = [
+            "#FF6B6B",
+            "#FFA94D",
+            "#FFE066",
+            "#51CF66",
+            "#339AF0",
+            "#9775FA",
+            "#F783AC"
+        ];
+
+        // Confetti explosion
+        for (let i = 0; i < 150; i++) {
+            const confetti = document.createElement("div");
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const size = Math.random() * 10 + 5;
+            const isCircle = Math.random() > 0.5;
+
+            confetti.style.cssText = `
+                position:absolute;
+                width:${size}px;
+                height:${size}px;
+                background:${color};
+                border-radius:${isCircle ? "50%" : "2px"};
+                left:50%;
+                top:50%;
+            `;
+            container.appendChild(confetti);
+
+            const angle = (Math.random() * 360 * Math.PI) / 180;
+            const velocity = Math.random() * 500 + 200;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+
+            confetti.animate(
+                [
+                    {
+                        transform: "translate(-50%, -50%) rotate(0deg)",
+                        opacity: 1
+                    },
+                    {
+                        transform: `translate(calc(-50% + ${vx}px), calc(-50% + ${vy + 300}px)) rotate(${Math.random() * 720}deg)`,
+                        opacity: 0
+                    }
+                ],
+                {
+                    duration: 1500 + Math.random() * 1000,
+                    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                }
+            ).onfinish = () => confetti.remove();
+        }
+
+        // Rainbow flash on body
+        document.body.animate(
+            [{ filter: "hue-rotate(0deg)" }, { filter: "hue-rotate(360deg)" }],
+            {
+                duration: 1000,
+                iterations: 2
+            }
+        );
+
+        // Page wiggle
+        document.body.animate(
+            [
+                { transform: "rotate(0deg)" },
+                { transform: "rotate(1deg)" },
+                { transform: "rotate(-1deg)" },
+                { transform: "rotate(1deg)" },
+                { transform: "rotate(-1deg)" },
+                { transform: "rotate(0deg)" }
+            ],
+            {
+                duration: 500,
+                iterations: 2
+            }
+        );
+
+        // Clean up container after animations
+        setTimeout(() => container.remove(), 3000);
+    }
+</script>

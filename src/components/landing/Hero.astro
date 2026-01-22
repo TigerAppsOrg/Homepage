@@ -1,31 +1,375 @@
 ---
 import Image from "astro/components/Image.astro";
-import TigerAppsLogo from "../../assets/icons/logo.png";
+import TigerAppsLogo from "../../assets/icons/circle.png";
 ---
 
-<section id="hero" class="bg-secondary text-on-secondary pt-32 pb-16">
-    <div class="cont text-center">
+<section id="hero" class="bg-white pt-28 pb-8 relative overflow-hidden">
+    <!-- Morphing blob shapes with parallax -->
+    <div
+        id="parallax-container"
+        class="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-            class="flex flex-col items-center w-64 sm:w-72 md:w-96 mx-auto gap-8">
-            <Image src={TigerAppsLogo} alt="TigerApps logo" loading="eager" />
-            <h2 class="text-on-secondary">
-                For Students, <br /> By Students
-            </h2>
+            class="blob blob-1"
+            data-depth="0.03"
+            style="top: 15%; left: 8%; --blob-size: 80px; --blob-color: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); animation-delay: 0s;">
         </div>
         <div
-            class="border-b-4 w-32 border-on-secondary rounded-full my-8 mx-auto">
+            class="blob blob-2"
+            data-depth="0.05"
+            style="top: 35%; right: 12%; --blob-size: 60px; --blob-color: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); animation-delay: -2s;">
         </div>
-        <div class="text-lg space-y-6">
-            <p>
-                We build apps and support developers on campus. Student-built,
-                student-maintained apps built over the years, designed to
-                improve your campus experience. TigerApps is fully funded by
-                Princeton's Undergraduate Student Government.
-            </p>
+        <div
+            class="blob blob-3"
+            data-depth="0.02"
+            style="bottom: 25%; left: 18%; --blob-size: 100px; --blob-color: linear-gradient(135deg, #FFE066 0%, #FFB347 100%); animation-delay: -4s;">
+        </div>
+        <div
+            class="blob blob-4"
+            data-depth="0.06"
+            style="top: 20%; right: 25%; --blob-size: 45px; --blob-color: linear-gradient(135deg, #A855F7 0%, #EC4899 100%); animation-delay: -1s;">
+        </div>
+        <div
+            class="blob blob-5"
+            data-depth="0.04"
+            style="bottom: 30%; right: 8%; --blob-size: 70px; --blob-color: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); animation-delay: -3s;">
+        </div>
+        <div
+            class="blob blob-6"
+            data-depth="0.08"
+            style="top: 60%; left: 5%; --blob-size: 35px; --blob-color: linear-gradient(135deg, #10B981 0%, #34D399 100%); animation-delay: -5s;">
+        </div>
+    </div>
+
+    <div class="cont text-center relative z-10">
+        <div class="flex flex-col items-center max-w-3xl mx-auto gap-6">
+            <!-- Logo with bounce - click for fun! -->
             <div
-                class="border-primary bg-black/10 shadow-sm border-2 px-6 py-3 rounded-full inline-block">
-                Any feedback or questions? Contact us at it.admin@tigerapps.org
+                id="logo-btn"
+                class="w-20 sm:w-24 animate-bounce-in cursor-pointer select-none logo-interactive"
+                role="button"
+                tabindex="0"
+                aria-label="Click for a surprise!">
+                <Image
+                    src={TigerAppsLogo}
+                    alt="TigerApps logo"
+                    loading="eager"
+                />
+            </div>
+
+            <!-- Fun headline with rainbow shimmer on "Apps" -->
+            <h1 class="animate-fade-in-up delay-1">
+                <span class="rainbow-shimmer">Apps</span> for
+                <span class="relative inline-block">
+                    <span class="relative z-10">Princeton</span>
+                    <svg
+                        class="absolute -bottom-2 left-0 w-full h-3"
+                        viewBox="0 0 200 12"
+                        preserveAspectRatio="none">
+                        <path
+                            d="M0,8 Q50,0 100,8 T200,8"
+                            fill="none"
+                            stroke="#FF6B00"
+                            stroke-width="6"
+                            stroke-linecap="round"></path>
+                    </svg>
+                </span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p
+                class="text-lg md:text-xl text-charcoal max-w-xl leading-relaxed animate-fade-in-up delay-2">
+                Student-built apps to enhance your campus experience. Fully
+                funded by USG.
+            </p>
+
+            <!-- CTA section -->
+            <div
+                class="flex flex-wrap gap-3 justify-center items-center animate-fade-in-up delay-3">
+                <button
+                    onclick="document.getElementById('apps').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-pixar-blue text-white px-6 py-3 rounded-full font-bold hover:bg-primary-dark transition-all duration-200 shadow-blue hover:shadow-pop-lg hover:-translate-y-0.5">
+                    Explore Apps
+                </button>
+
+                <!-- Copyable email chip -->
+                <div class="relative">
+                    <button
+                        id="email-chip"
+                        class="group bg-light border-2 border-light-mid px-5 py-2.5 rounded-full font-medium text-gray hover:border-pixar-purple/50 hover:bg-pixar-purple/5 transition-all duration-200 flex items-center gap-2">
+                        <span class="text-sm">it.admin@tigerapps.org</span>
+                        <svg
+                            id="copy-icon"
+                            class="w-4 h-4 text-gray group-hover:text-pixar-purple transition-all duration-200"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+                            ></path>
+                        </svg>
+                        <svg
+                            id="check-icon"
+                            class="w-4 h-4 text-pixar-green absolute right-5 opacity-0 scale-0 transition-all duration-200"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M4.5 12.75l6 6 9-13.5"></path>
+                        </svg>
+                    </button>
+                    <!-- Tooltip -->
+                    <span
+                        id="copy-tooltip"
+                        class="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-gray-dark text-white text-xs font-semibold rounded-lg opacity-0 scale-90 transition-all duration-200 pointer-events-none whitespace-nowrap">
+                        Copied!
+                        <span
+                            class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-dark"
+                        ></span>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* Morphing blob animation */
+    @keyframes morph {
+        0%,
+        100% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        25% {
+            border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+        50% {
+            border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+        }
+        75% {
+            border-radius: 60% 40% 60% 50% / 70% 30% 50% 60%;
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0) translateX(var(--parallax-x, 0px))
+                translateY(var(--parallax-y, 0px));
+        }
+        50% {
+            transform: translateY(-20px) translateX(var(--parallax-x, 0px))
+                translateY(var(--parallax-y, 0px));
+        }
+    }
+
+    .blob {
+        position: absolute;
+        width: var(--blob-size, 60px);
+        height: var(--blob-size, 60px);
+        background: var(--blob-color);
+        opacity: 0.6;
+        animation:
+            morph 8s ease-in-out infinite,
+            float 6s ease-in-out infinite;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+    }
+
+    .blob-1 {
+        animation-duration: 8s, 7s;
+    }
+    .blob-2 {
+        animation-duration: 10s, 5s;
+    }
+    .blob-3 {
+        animation-duration: 12s, 8s;
+    }
+    .blob-4 {
+        animation-duration: 9s, 6s;
+    }
+    .blob-5 {
+        animation-duration: 11s, 7s;
+    }
+    .blob-6 {
+        animation-duration: 7s, 5s;
+    }
+
+    /* Rainbow shimmer text */
+    @keyframes rainbow-shimmer {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 200% 50%;
+        }
+    }
+
+    .rainbow-shimmer {
+        background: linear-gradient(
+            90deg,
+            #ff6b6b,
+            #ff8e53,
+            #ffe066,
+            #4ecdc4,
+            #3b82f6,
+            #a855f7,
+            #ec4899,
+            #ff6b6b
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-shimmer 8s linear infinite;
+    }
+
+    /* Logo interaction styles */
+    .logo-interactive {
+        transition: transform 0.2s ease;
+    }
+
+    .logo-interactive:hover {
+        transform: scale(1.05);
+    }
+
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+        .blob {
+            animation: none;
+        }
+
+        .rainbow-shimmer {
+            animation: none;
+            background: linear-gradient(90deg, #ff6b6b, #a855f7, #3b82f6);
+            background-size: 100% auto;
+        }
+
+        .logo-spinning {
+            animation: none;
+        }
+    }
+</style>
+
+<script>
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Cursor-following parallax effect
+    if (!prefersReducedMotion) {
+        const blobs = document.querySelectorAll(".blob");
+        let mouseX = 0;
+        let mouseY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        document.addEventListener("mousemove", e => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            mouseX = (e.clientX - centerX) / centerX;
+            mouseY = (e.clientY - centerY) / centerY;
+        });
+
+        function animateParallax() {
+            // Smooth easing
+            currentX += (mouseX - currentX) * 0.1;
+            currentY += (mouseY - currentY) * 0.1;
+
+            blobs.forEach(blob => {
+                const depth = parseFloat(
+                    (blob as HTMLElement).dataset.depth || "0.05"
+                );
+                const moveX = currentX * depth * -200;
+                const moveY = currentY * depth * -200;
+                (blob as HTMLElement).style.setProperty(
+                    "--parallax-x",
+                    `${moveX}px`
+                );
+                (blob as HTMLElement).style.setProperty(
+                    "--parallax-y",
+                    `${moveY}px`
+                );
+            });
+
+            requestAnimationFrame(animateParallax);
+        }
+
+        animateParallax();
+    }
+
+    // Logo spin + bounce interaction using Web Animations API
+    const logoBtn = document.getElementById("logo-btn");
+    let isAnimating = false;
+
+    logoBtn?.addEventListener("click", () => {
+        if (isAnimating || prefersReducedMotion) return;
+
+        isAnimating = true;
+
+        logoBtn.animate(
+            [
+                { transform: "rotate(0deg) scale(1)", offset: 0 },
+                { transform: "rotate(360deg) scale(1)", offset: 0.5 },
+                { transform: "rotate(360deg) scale(1.15)", offset: 0.65 },
+                { transform: "rotate(360deg) scale(0.9)", offset: 0.8 },
+                { transform: "rotate(360deg) scale(1.05)", offset: 0.9 },
+                { transform: "rotate(360deg) scale(1)", offset: 1 }
+            ],
+            {
+                duration: 1000,
+                easing: "ease-out"
+            }
+        ).onfinish = () => {
+            isAnimating = false;
+        };
+    });
+
+    // Email copy functionality
+    const emailChip = document.getElementById("email-chip");
+    const copyTooltip = document.getElementById("copy-tooltip");
+    const copyIcon = document.getElementById("copy-icon");
+    const checkIcon = document.getElementById("check-icon");
+
+    emailChip?.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText("it.admin@tigerapps.org");
+
+            // Show tooltip
+            if (copyTooltip) {
+                copyTooltip.style.opacity = "1";
+                copyTooltip.style.transform = "translateX(-50%) scale(1)";
+            }
+
+            // Swap icons
+            if (copyIcon && checkIcon) {
+                copyIcon.style.opacity = "0";
+                copyIcon.style.transform = "scale(0)";
+                checkIcon.style.opacity = "1";
+                checkIcon.style.transform = "scale(1)";
+            }
+
+            // Reset after delay
+            setTimeout(() => {
+                if (copyTooltip) {
+                    copyTooltip.style.opacity = "0";
+                    copyTooltip.style.transform = "translateX(-50%) scale(0.9)";
+                }
+                if (copyIcon && checkIcon) {
+                    copyIcon.style.opacity = "1";
+                    copyIcon.style.transform = "scale(1)";
+                    checkIcon.style.opacity = "0";
+                    checkIcon.style.transform = "scale(0)";
+                }
+            }, 1500);
+        } catch (err) {
+            console.error("Failed to copy email:", err);
+        }
+    });
+</script>

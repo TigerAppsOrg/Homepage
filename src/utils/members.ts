@@ -58,6 +58,7 @@ import PineconeLogo from "../assets/companies/pinecone.webp";
 import AWSLogo from "../assets/companies/aws.webp";
 import AirbnbLogo from "../assets/companies/airbnb.webp";
 import MicrosoftLogo from "../assets/companies/microsoft.webp";
+import KizakiLogo from "../assets/companies/kizaki.webp";
 
 import type { Role, Team } from "./types";
 
@@ -75,24 +76,34 @@ type Member = {
 export const currentMembers: Member[] = [
     // Board
     {
-        name: "Joshua Lau '26",
-        title: "Chief Developer",
+        name: "Angelina Ji '27",
+        title: "Software Developer & Designer",
         position: "Co-President",
-        roles: ["Board", "Engineering"],
-        teams: ["Kizaki", "Nucleus", "TigerOps", "TigerJunction"],
-        website: "https://motoaki.dev",
-        github: "https://github.com/joshuamotoaki",
-        headshot: JoshuaHeadshot
+        roles: ["Board", "Engineering", "Design"],
+        teams: ["Nucleus"],
+        website: "",
+        github: "https://github.com/angelina-ji",
+        headshot: AngelinaHeadshot
     },
     {
-        name: "Ben Aepli '28",
-        title: "Senior Developer",
+        name: "Ibraheem Amin '28",
+        title: "Infrastructure & DevOps Engineer",
         position: "Co-President",
         roles: ["Board", "Engineering"],
-        teams: ["TigerPages"],
-        website: "https://benaepli.com",
-        github: "https://github.com/benaepli",
-        headshot: BenHeadshot
+        teams: ["TigerOps"],
+        website: "https://ibraheemamin.dev/",
+        github: "https://github.com/DIodide",
+        headshot: IbraheemHeadshot
+    },
+    {
+        name: "Sophia You '29",
+        title: "Designer & Software Developer",
+        position: "Vice President",
+        roles: ["Board", "Design", "Engineering"],
+        teams: ["TigerJunction"],
+        website: "",
+        github: "https://github.com/sophia-you",
+        headshot: SophiaHeadshot
     },
     {
         name: "Andy Zhang '26",
@@ -105,6 +116,16 @@ export const currentMembers: Member[] = [
         headshot: AndyHeadshot
     },
     {
+        name: "Ammaar Alam '27",
+        title: "Senior Developer",
+        position: "Lead DevOps Engineer",
+        roles: ["Board", "Engineering"],
+        teams: ["TigerOps"],
+        website: "https://ammaaralam.com",
+        github: "https://github.com/Ammaar-Alam",
+        headshot: AmmaarHeadshot
+    },
+    {
         name: "Shreyas Garimella '28",
         title: "Senior Developer",
         position: "Treasurer",
@@ -114,41 +135,114 @@ export const currentMembers: Member[] = [
         github: "https://github.com/sgarimel",
         headshot: ShreyasHeadshot
     },
+    {
+        name: "Joshua Lau '26",
+        title: "Chief Developer",
+        position: "Technical Mentor",
+        roles: ["Board", "Engineering"],
+        teams: ["Nucleus", "TigerOps", "TigerJunction"],
+        website: "https://motoaki.dev",
+        github: "https://github.com/joshuamotoaki",
+        headshot: JoshuaHeadshot
+    },
+
+    {
+        name: "Angela Cai '27",
+        title: "Software Developer",
+        position: "Junction Tech Lead",
+        roles: ["Engineering"],
+        teams: ["TigerJunction"],
+        website: "",
+        github: "https://github.com/ang-cai",
+        headshot: AngelaHeadshot
+    },
+    {
+        name: "Helen Hui '28",
+        title: "Product Manager",
+        position: "Junction Product Lead",
+        roles: ["Product Management"],
+        teams: ["TigerJunction"],
+        website: "",
+        github: "https://github.com/ilovehhhyn",
+        headshot: HelenHeadshot
+    },
+
+    {
+        name: "Oliver Cho '29",
+        title: "Software Developer",
+        position: "Tech Lead",
+        roles: ["Engineering"],
+        teams: ["TigerOps"],
+        website: "https://olivercho.me",
+        github: "https://github.com/olivcho",
+        headshot: OliverHeadshot
+    },
+    {
+        name: "Vishrut Thoutam '29",
+        title: "Software Developer",
+        position: "Tech Lead",
+        roles: ["Engineering"],
+        teams: [],
+        website: "",
+        github: "https://github.com/vish317",
+        headshot: FillerHeadshot
+    },
 
     // Senior Devs
     {
-        name: "Ammaar Alam '27",
+        name: "Ben Aepli '28",
         title: "Senior Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerOps"],
-        website: "https://ammaaralam.com",
-        github: "https://github.com/Ammaar-Alam",
-        headshot: AmmaarHeadshot
+        teams: ["TigerPages"],
+        website: "https://benaepli.com",
+        github: "https://github.com/benaepli",
+        headshot: BenHeadshot
     },
     {
         name: "Grace Tan '28",
         title: "Senior Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "",
         github: "https://github.com/gracezyt",
         headshot: GraceHeadshot
     },
 
-    // Product
     {
-        name: "Winsice Ng '26",
-        title: "Product Manager and Software Developer",
+        name: "Keith Matanachai '26",
+        title: "Senior Developer",
         position: "",
-        roles: ["Product Management", "Engineering"],
-        teams: ["Nucleus"],
+        roles: ["Engineering"],
+        teams: [],
         website: "",
-        github: "https://github.com/winsice-ng",
-        headshot: WinsiceHeadshot
+        github: "https://github.com/matan53153",
+        headshot: KeithHeadshot
     },
 
+    {
+        name: "Myles Anderson '26",
+        title: "Senior Developer",
+        position: "",
+        roles: ["Engineering"],
+        teams: [],
+        website: "",
+        github: "https://github.com/myles332",
+        headshot: MylesHeadshot
+    },
+
+    // Product
+    {
+        name: "Gauri Kshettry '29",
+        title: "Product Manager",
+        position: "",
+        roles: ["Product Management"],
+        teams: ["Orbit"],
+        website: "",
+        github: "https://github.com/gk7494",
+        headshot: GauriHeadshot
+    },
     {
         name: "Claire Wang '27",
         title: "Product Manager",
@@ -160,32 +254,22 @@ export const currentMembers: Member[] = [
         headshot: ClaireHeadshot
     },
     {
-        name: "Helen Hui '28",
-        title: "Product Manager",
+        name: "Winsice Ng '26",
+        title: "Product Manager & Software Developer",
         position: "",
-        roles: ["Product Management"],
-        teams: ["TigerJunction"],
+        roles: ["Product Management", "Engineering"],
+        teams: ["Nucleus"],
         website: "",
-        github: "https://github.com/ilovehhhyn",
-        headshot: HelenHeadshot
-    },
-    {
-        name: "Gauri Kshettry '29",
-        title: "Product Manager",
-        position: "",
-        roles: ["Product Management"],
-        teams: ["Orbit"],
-        website: "",
-        github: "https://github.com/gk7494",
-        headshot: GauriHeadshot
+        github: "https://github.com/winsice-ng",
+        headshot: WinsiceHeadshot
     },
 
     // Marketing
     {
         name: "Anna Wang '26",
-        title: "Product Manager and Marketer",
+        title: "Marketer & Product Manager",
         position: "",
-        roles: ["Product Management", "Marketing"],
+        roles: ["Marketing", "Product Management"],
         teams: ["Orbit"],
         website: "",
         github: "",
@@ -204,14 +288,14 @@ export const currentMembers: Member[] = [
 
     // Designers
     {
-        name: "Christina Wu '26",
+        name: "Lucy Park '28",
         title: "Designer",
         position: "",
         roles: ["Design"],
-        teams: ["Kizaki"],
-        website: "https://www.christina-wu.com/",
+        teams: ["Orbit"],
+        website: "",
         github: "",
-        headshot: ChristinaHeadshot
+        headshot: LucyHeadshot
     },
     {
         name: "Lauren Pak '27",
@@ -224,46 +308,26 @@ export const currentMembers: Member[] = [
         headshot: LaurenHeadshot
     },
     {
-        name: "Lucy Park '28",
+        name: "Christina Wu '26",
         title: "Designer",
         position: "",
         roles: ["Design"],
-        teams: ["Orbit"],
-        website: "",
+        teams: [],
+        website: "https://www.christina-wu.com/",
         github: "",
-        headshot: LucyHeadshot
+        headshot: ChristinaHeadshot
     },
 
     // Software Developers
     {
-        name: "Julia Ying '26",
-        title: "Software Developer and Designer",
-        position: "",
-        roles: ["Engineering", "Design"],
-        teams: ["Venture"],
-        website: "",
-        github: "https://github.com/juliaying26",
-        headshot: JuliaHeadshot
-    },
-    {
         name: "Erica Lee '26",
-        title: "Software Developer and Designer",
+        title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
         teams: ["TigerOps"],
         website: "",
         github: "https://github.com/ericayrlee",
         headshot: EricaHeadshot
-    },
-    {
-        name: "Keith Matanachai '26",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Kizaki"],
-        website: "",
-        github: "https://github.com/matan53153",
-        headshot: KeithHeadshot
     },
     {
         name: "Marvin Chen '26",
@@ -276,44 +340,14 @@ export const currentMembers: Member[] = [
         headshot: MarvinHeadshot
     },
     {
-        name: "Myles Anderson '26",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Kizaki"],
-        website: "",
-        github: "https://github.com/myles332",
-        headshot: MylesHeadshot
-    },
-    {
         name: "Oyu Enkhbold '26",
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Kizaki"],
+        teams: [],
         website: "https://oyu-e.github.io/",
         github: "https://github.com/oyu-e",
         headshot: OyuHeadshot
-    },
-    {
-        name: "Angelina Ji '27",
-        title: "Software Developer and Designer",
-        position: "",
-        roles: ["Engineering", "Design"],
-        teams: ["Nucleus"],
-        website: "",
-        github: "https://github.com/angelina-ji",
-        headshot: AngelinaHeadshot
-    },
-    {
-        name: "Angela Cai '27",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerJunction"],
-        website: "",
-        github: "https://github.com/ang-cai",
-        headshot: AngelaHeadshot
     },
     {
         name: "Erik Dyer '27",
@@ -327,7 +361,7 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Brooke Xu '28",
-        title: "Software Developer and Product Manager",
+        title: "Software Developer & Product Manager",
         position: "",
         roles: ["Engineering", "Product Management"],
         teams: ["Nexus"],
@@ -337,7 +371,7 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Niyathi Kukkapalli '28",
-        title: "Software Developer and Designer",
+        title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
         teams: ["Nexus"],
@@ -347,23 +381,13 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Katie Lee '28",
-        title: "Software Developer and Designer",
+        title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
         teams: ["TigerPages"],
         website: "",
         github: "https://github.com/katiejihyo",
         headshot: KatieHeadshot
-    },
-    {
-        name: "Ibraheem Amin '28",
-        title: "Infrastructure & DevOps Engineer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerOps"],
-        website: "https://ibraheemamin.dev/",
-        github: "https://github.com/DIodide",
-        headshot: IbraheemHeadshot
     },
     {
         name: "Yubi Mamiya '28",
@@ -374,16 +398,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/yubimamiya",
         headshot: YubiHeadshot
-    },
-    {
-        name: "Kevin Liu '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Venture"],
-        website: "https://www.kevin-liu.tech/",
-        github: "https://github.com/Kevin-Liu-01",
-        headshot: KevinHeadshot
     },
     {
         name: "Tom Wang '28",
@@ -404,17 +418,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/ayush80",
         headshot: AyushHeadshot
-    },
-
-    {
-        name: "Sophia You '29",
-        title: "Designer and Software Developer",
-        position: "",
-        roles: ["Design", "Engineering"],
-        teams: ["TigerJunction"],
-        website: "",
-        github: "https://github.com/sophia-you",
-        headshot: SophiaHeadshot
     },
 
     {
@@ -448,36 +451,6 @@ export const currentMembers: Member[] = [
         headshot: RohitHeadshot
     },
     {
-        name: "Oliver Cho '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerOps"],
-        website: "https://olivercho.me",
-        github: "https://github.com/olivcho",
-        headshot: OliverHeadshot
-    },
-    {
-        name: "Joseph Tso '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Nexus", "TigerJunction"],
-        website: "",
-        github: "https://github.com/jt914",
-        headshot: JosephHeadshot
-    },
-    {
-        name: "Vishrut Thoutam '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Kizaki"],
-        website: "",
-        github: "https://github.com/vish317",
-        headshot: FillerHeadshot
-    },
-    {
         name: "Sai Nallani '29",
         title: "Software Developer",
         position: "",
@@ -496,6 +469,26 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/ttiffanykkim",
         headshot: TiffanyHeadshot
+    },
+    {
+        name: "Kevin Liu '28",
+        title: "Game Developer",
+        position: "",
+        roles: ["Engineering"],
+        teams: ["Venture"],
+        website: "https://www.kevin-liu.tech/",
+        github: "https://github.com/Kevin-Liu-01",
+        headshot: KevinHeadshot
+    },
+    {
+        name: "Julia Ying '26",
+        title: "Design Consultant",
+        position: "",
+        roles: ["Design"],
+        teams: ["Venture"],
+        website: "",
+        github: "https://github.com/juliaying26",
+        headshot: JuliaHeadshot
     }
 ];
 
@@ -525,12 +518,13 @@ export const pastMembers: string[] = [
 ];
 
 export const companies: [ImageMetadata, string][] = [
-    [DatabricksLogo, "Databricks"],
-    [NetflixLogo, "Netflix"],
     [MetaLogo, "Meta"],
+    [MicrosoftLogo, "Microsoft"],
     [StripeLogo, "Stripe"],
-    [PineconeLogo, "Pinecone"],
     [AWSLogo, "Amazon Web Services"],
+    [KizakiLogo, "Kizaki"],
     [AirbnbLogo, "Airbnb"],
-    [MicrosoftLogo, "Microsoft"]
+    [PineconeLogo, "Pinecone"],
+    [DatabricksLogo, "Databricks"],
+    [NetflixLogo, "Netflix"]
 ];

@@ -1,0 +1,31 @@
+---
+interface Props {
+    from: "white" | "light";
+    to: "white" | "light";
+    flip?: boolean;
+}
+
+const { from, to, flip = false } = Astro.props;
+
+const colors = {
+    white: "#FFFFFF",
+    light: "#F8F9FA"
+};
+
+const topColor = colors[from];
+const bottomColor = colors[to];
+---
+
+<div
+    class="wave-divider w-full h-16 md:h-24 -mb-px relative"
+    style={`background: ${topColor};`}>
+    <svg
+        class="absolute bottom-0 w-full h-full"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        style={flip ? "transform: scaleX(-1);" : ""}>
+        <path
+            d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,75 1440,50 L1440,100 L0,100 Z"
+            fill={bottomColor}></path>
+    </svg>
+</div>

@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/page/Footer.astro";
-import AppCard from "../components/landing/ui/AppCard.astro";
 import HeaderShell from "../components/HeaderShell.astro";
-import WhiteLogo from "../assets/icons/logo_white.png";
+import Logo from "../assets/icons/black.png";
 import Image from "astro/components/Image.astro";
+import GithubIcon from "../assets/icons/github-mark.svg";
 
 import { archiveApps } from "../utils/apps";
 ---
@@ -15,33 +15,91 @@ import { archiveApps } from "../utils/apps";
 
 <Layout>
     <HeaderShell>
-        <a href="/" class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-1">
             <Image
-                src={WhiteLogo}
+                src={Logo}
                 alt="TigerApps Logo"
-                class="h-8 w-8 object-contain"
+                class="h-9 w-9 object-contain"
             />
-            <h1 class="text-2xl font-semibold">
-                <span class="text-tigerapps-orange">Tiger</span><span
-                    class="text-white">Apps</span
-                >
-            </h1>
+            <span class="text-xl font-bold tracking-tight text-charcoal">
+                TigerApps
+            </span>
         </a>
-        <nav class="flex items-center text-lg gap-12">
-            <a href="/"> Home</a>
-            <a href="/archive"> Archive </a>
-            <a href="/resources"> Resources</a>
+        <nav class="flex items-center text-sm font-semibold gap-8">
+            <a href="/" class="text-gray hover:text-charcoal transition-colors"
+                >Home</a
+            >
+            <a href="/archive" class="text-charcoal">Archive</a>
+            <a
+                href="/resources"
+                class="text-gray hover:text-charcoal transition-colors"
+                >Resources</a
+            >
         </nav>
     </HeaderShell>
-    <div class="cont text-center">
-        <div class="space-y-2 pt-32">
-            <h3>Archive</h3>
-            <p class="text-xl">Apps that we are no longer maintaining.</p>
+    <div class="cont">
+        <div class="text-center pt-28 pb-8">
+            <h2 class="mb-3">
+                <span class="rainbow-underline">Archive</span>
+            </h2>
+            <p class="text-gray text-lg">
+                Apps that we are no longer maintaining.
+            </p>
         </div>
-        <div class="border-b-4 w-32 border-secondary rounded-full my-8 mx-auto">
-        </div>
-        <main class="app-grid pb-16">
-            {archiveApps.apps.map(card => <AppCard {...card} />)}
+        <main
+            class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 pb-16 constrained">
+            {
+                archiveApps.apps.map(app => (
+                    <article class="group bg-white rounded-xl border-2 border-light-mid hover:border-gray/30 shadow-pop hover:shadow-pop-hover transition-all duration-200 overflow-hidden">
+                        <div class="flex gap-4 p-4">
+                            <div class="shrink-0 flex flex-col gap-2">
+                                <a
+                                    href={app.webLink}
+                                    target="_blank"
+                                    class="block w-20 h-20 rounded-lg overflow-hidden bg-light">
+                                    <Image
+                                        src={app.screenshot}
+                                        alt={app.alt}
+                                        class="w-full h-full object-cover"
+                                    />
+                                </a>
+                                <a
+                                    href={app.repoLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center gap-1 text-xs font-medium text-gray hover:text-charcoal px-2 py-1 rounded-full hover:bg-light transition-colors">
+                                    <Image
+                                        height={12}
+                                        width={12}
+                                        src={GithubIcon}
+                                        alt="GitHub"
+                                        loading="lazy"
+                                    />
+                                    Code
+                                </a>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <a
+                                    href={app.webLink}
+                                    target="_blank"
+                                    class="block">
+                                    <h4 class="font-bold text-charcoal group-hover:text-gray-dark transition-colors truncate text-base">
+                                        {app.title}
+                                    </h4>
+                                </a>
+                                <p class="text-sm text-gray-dark mt-1">
+                                    {app.description}
+                                </p>
+                                {app.note && (
+                                    <p class="text-xs text-pixar-orange mt-2 font-medium">
+                                        {app.note}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    </article>
+                ))
+            }
         </main>
     </div>
     <Footer />

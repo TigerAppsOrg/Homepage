@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # local Claude config
 .claude/
+.playwright-mcp/

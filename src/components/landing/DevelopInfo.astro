@@ -5,96 +5,126 @@ import Apply2 from "../../assets/icons/apply-crit2.svg";
 import Apply3 from "../../assets/icons/apply-crit3.svg";
 ---
 
-<section id="develop" class="py-16 bg-primary text-on-primary">
-    <div class="cont text-center">
-        <div class="space-y-2">
-            <h3>DEVELOP</h3>
-            <p class="text-lg">Interested in creating the next TigerApp?</p>
-        </div>
-        <div class="border-b-4 w-32 border-secondary rounded-full my-4 mx-auto">
-        </div>
-        <div class="space-y-2 text-base">
-            <p>
-                TigerApps is a student-run organization that hosts and promotes
-                student-developed applications for the Princeton community. We
-                handle all costs, maintenance, and marketing.
+<section id="develop" class="pt-8 pb-20 bg-white relative overflow-hidden">
+    <!-- Playful background shapes -->
+    <div
+        class="absolute top-10 right-10 w-20 h-20 rounded-full bg-pixar-orange/10 animate-float-slow">
+    </div>
+    <div
+        class="absolute bottom-20 left-10 w-16 h-16 rounded-2xl bg-pixar-green/10 rotate-12">
+    </div>
+
+    <div class="cont text-center relative z-10">
+        <div class="space-y-3 max-w-2xl mx-auto">
+            <p
+                class="text-pixar-orange font-bold text-sm uppercase tracking-wide">
+                Build with Us
             </p>
-            <p>To be considered for TigerApps, your app must:</p>
+            <h3>
+                <span class="rainbow-underline">Create the Next TigerApp</span>
+            </h3>
+            <p class="text-gray text-lg leading-relaxed">
+                TigerApps hosts and promotes student-developed applications for
+                the Princeton community. We handle all costs, maintenance, and
+                marketing.
+            </p>
         </div>
 
-        <div class="md:grid md:grid-cols-3 gap-4 my-8">
-            <div class="apply-step">
-                <Image
-                    src={Apply1}
-                    alt="1st Decorational icon for applying to TigerApps"
-                    class="apply-img"
-                />
-                <p>
+        <div class="grid md:grid-cols-3 gap-6 my-12 max-w-4xl mx-auto">
+            <div class="apply-step group">
+                <div
+                    class="apply-icon-wrapper bg-pixar-green/10 group-hover:bg-pixar-green/20">
+                    <Image
+                        src={Apply1}
+                        alt="Campus impact icon"
+                        class="apply-img"
+                    />
+                </div>
+                <p class="text-gray-dark text-sm leading-relaxed">
                     Support student life on campus or benefit a local non-profit
-                    organization
                 </p>
             </div>
-            <div class="apply-step">
-                <Image
-                    src={Apply2}
-                    alt="2nd Decorational icon for applying to TigerApps"
-                    class="apply-img"
-                />
-                <p>Be fully functional with no major bugs</p>
+            <div class="apply-step group">
+                <div
+                    class="apply-icon-wrapper bg-pixar-blue/10 group-hover:bg-pixar-blue/20">
+                    <Image src={Apply2} alt="Quality icon" class="apply-img" />
+                </div>
+                <p class="text-gray-dark text-sm leading-relaxed">
+                    Be fully functional with no major bugs
+                </p>
             </div>
-            <div class="apply-step">
-                <Image
-                    src={Apply3}
-                    alt="3rd Decorational icon for applying to TigerApps"
-                    class="apply-img"
-                />
-                <p>
-                    Use modern, well-supported programming languages and
-                    frameworks
+            <div class="apply-step group">
+                <div
+                    class="apply-icon-wrapper bg-pixar-purple/10 group-hover:bg-pixar-purple/20">
+                    <Image
+                        src={Apply3}
+                        alt="Modern tech icon"
+                        class="apply-img"
+                    />
+                </div>
+                <p class="text-gray-dark text-sm leading-relaxed">
+                    Use modern, well-supported programming languages
                 </p>
             </div>
         </div>
 
-        <div class="space-y-4">
-            <div>
-                <p>
-                    Unsure where to start? Check out some Princeton data sources
-                    to start building your app.
-                </p>
-                <a class="link-button" href="/resources"> View Data Sources </a>
-            </div>
-            <div>
-                <p>
-                    Once your app is ready to launch, apply to become a
-                    TigerApp.
-                </p>
-                <a
-                    class="link-button"
-                    href="https://tally.so/r/np14jP"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Submit an App</a
-                >
-            </div>
-            <p>
-                Questions? Contact us at
-                <span> it.admin@tigerapps.org </span>
-            </p>
+        <div class="flex flex-wrap justify-center gap-3 mt-8">
+            <a class="link-button-secondary" href="/resources">
+                View Data Sources
+            </a>
+            <a
+                class="link-button-primary"
+                href="https://tally.so/r/np14jP"
+                target="_blank"
+                rel="noopener noreferrer">
+                Submit an App
+            </a>
         </div>
+
+        <p class="text-muted text-sm mt-8">
+            Questions? Contact us at{" "}
+            <a
+                href="mailto:it.admin@tigerapps.org"
+                class="text-pixar-blue hover:text-primary-dark transition-colors">
+                it.admin@tigerapps.org
+            </a>
+        </p>
     </div>
 </section>
 
 <style lang="postcss">
-    .link-button {
-        @apply bg-secondary text-on-secondary rounded-lg mt-1 inline-block
-        duration-150 ease-in-out py-2 px-12;
+    .apply-step {
+        @apply flex flex-col items-center gap-4 p-6 bg-light rounded-xl transition-all duration-200;
     }
 
-    .link-button:hover {
-        @apply bg-secondary-hover;
+    .apply-step:hover {
+        @apply -translate-y-1 shadow-pop;
+    }
+
+    .apply-icon-wrapper {
+        @apply w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl transition-colors duration-200;
     }
 
     .apply-img {
-        @apply w-36 h-36 md:w-48 md:h-48 mx-auto;
+        @apply w-12 h-12 md:w-14 md:h-14;
+    }
+
+    .link-button-primary {
+        @apply bg-pixar-orange text-white rounded-full px-6 py-3 font-bold
+        hover:bg-pixar-orange/90 transition-all duration-200 shadow-orange hover:-translate-y-0.5;
+    }
+
+    .link-button-secondary {
+        @apply bg-white text-charcoal border-2 border-light-mid rounded-full px-6 py-3 font-semibold
+        hover:border-pixar-orange/50 hover:bg-pixar-orange/5 transition-all duration-200;
+    }
+
+    @keyframes float-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .animate-float-slow {
+        animation: float-slow 6s ease-in-out infinite;
     }
 </style>
