@@ -23,7 +23,7 @@
         "@fontsource-variable/nunito": "^5.2.7",
         "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
         "@fontsource-variable/rubik": "^5.1.0",
-        "astro": "^5.14.0",
+        "astro": "^5.16.4",
         "svelte": "^5.39.6",
         "tailwindcss": "^3.4.10",
         "typescript": "^5.9.2"
