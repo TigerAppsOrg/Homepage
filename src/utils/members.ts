@@ -309,7 +309,7 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Christina Wu '26",
-        title: "Designer",
+        title: "Senior Designer",
         position: "",
         roles: ["Design"],
         teams: [],
