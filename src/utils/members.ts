@@ -67,7 +67,6 @@ type Member = {
     title: string;
     position: string;
     roles: Role[];
-    teams: Team[];
     website: string;
     github: string;
     headshot: ImageMetadata;
@@ -80,7 +79,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer & Designer",
         position: "Co-President",
         roles: ["Board", "Engineering", "Design"],
-        teams: ["Nucleus"],
         website: "",
         github: "https://github.com/angelina-ji",
         headshot: AngelinaHeadshot
@@ -90,7 +88,6 @@ export const currentMembers: Member[] = [
         title: "Infrastructure & DevOps Engineer",
         position: "Co-President",
         roles: ["Board", "Engineering"],
-        teams: ["TigerOps"],
         website: "https://ibraheemamin.dev/",
         github: "https://github.com/DIodide",
         headshot: IbraheemHeadshot
@@ -100,7 +97,6 @@ export const currentMembers: Member[] = [
         title: "Designer & Software Developer",
         position: "Vice President",
         roles: ["Board", "Design", "Engineering"],
-        teams: ["TigerJunction"],
         website: "",
         github: "https://github.com/sophia-you",
         headshot: SophiaHeadshot
@@ -110,7 +106,6 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "Head of Product",
         roles: ["Board", "Product Management"],
-        teams: ["Orbit"],
         website: "",
         github: "https://github.com/andy-h-zhang",
         headshot: AndyHeadshot
@@ -120,7 +115,6 @@ export const currentMembers: Member[] = [
         title: "Senior Developer",
         position: "Lead DevOps Engineer",
         roles: ["Board", "Engineering"],
-        teams: ["TigerOps"],
         website: "https://ammaaralam.com",
         github: "https://github.com/Ammaar-Alam",
         headshot: AmmaarHeadshot
@@ -130,7 +124,6 @@ export const currentMembers: Member[] = [
         title: "Senior Developer",
         position: "Treasurer",
         roles: ["Board", "Engineering"],
-        teams: ["Nexus"],
         website: "",
         github: "https://github.com/sgarimel",
         headshot: ShreyasHeadshot
@@ -140,7 +133,6 @@ export const currentMembers: Member[] = [
         title: "Chief Developer",
         position: "Technical Mentor",
         roles: ["Board", "Engineering"],
-        teams: ["Nucleus", "TigerOps", "TigerJunction"],
         website: "https://motoaki.dev",
         github: "https://github.com/joshuamotoaki",
         headshot: JoshuaHeadshot
@@ -151,7 +143,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "Junction Tech Lead",
         roles: ["Engineering"],
-        teams: ["TigerJunction"],
         website: "",
         github: "https://github.com/ang-cai",
         headshot: AngelaHeadshot
@@ -161,7 +152,6 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "Junction Product Lead",
         roles: ["Product Management"],
-        teams: ["TigerJunction"],
         website: "",
         github: "https://github.com/ilovehhhyn",
         headshot: HelenHeadshot
@@ -172,7 +162,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "Tech Lead",
         roles: ["Engineering"],
-        teams: ["TigerOps"],
         website: "https://olivercho.me",
         github: "https://github.com/olivcho",
         headshot: OliverHeadshot
@@ -182,64 +171,9 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "Tech Lead",
         roles: ["Engineering"],
-        teams: [],
         website: "",
         github: "https://github.com/vish317",
         headshot: FillerHeadshot
-    },
-
-    // Senior Devs
-    {
-        name: "Ben Aepli '28",
-        title: "Senior Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerPages"],
-        website: "https://benaepli.com",
-        github: "https://github.com/benaepli",
-        headshot: BenHeadshot
-    },
-    {
-        name: "Grace Tan '28",
-        title: "Senior Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: [],
-        website: "",
-        github: "https://github.com/gracezyt",
-        headshot: GraceHeadshot
-    },
-
-    {
-        name: "Keith Matanachai '26",
-        title: "Senior Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: [],
-        website: "",
-        github: "https://github.com/matan53153",
-        headshot: KeithHeadshot
-    },
-
-    {
-        name: "Myles Anderson '26",
-        title: "Senior Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: [],
-        website: "",
-        github: "https://github.com/myles332",
-        headshot: MylesHeadshot
-    },
-    {
-        name: "Oyu Enkhbold '26",
-        title: "Senior Engineer",
-        position: "",
-        roles: ["Engineering"],
-        teams: [],
-        website: "https://oyu-e.github.io/",
-        github: "https://github.com/oyu-e",
-        headshot: OyuHeadshot
     },
 
     // Product
@@ -248,7 +182,6 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "",
         roles: ["Product Management"],
-        teams: ["Orbit"],
         website: "",
         github: "https://github.com/gk7494",
         headshot: GauriHeadshot
@@ -258,17 +191,15 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "",
         roles: ["Product Management"],
-        teams: ["Orbit"],
         website: "",
         github: "",
         headshot: ClaireHeadshot
     },
     {
         name: "Winsice Ng '26",
-        title: "Product Manager & Software Developer",
+        title: "Product Manager & Marketer",
         position: "",
-        roles: ["Product Management", "Engineering"],
-        teams: ["Nucleus"],
+        roles: ["Product Management", "Marketing"],
         website: "",
         github: "https://github.com/winsice-ng",
         headshot: WinsiceHeadshot
@@ -280,7 +211,6 @@ export const currentMembers: Member[] = [
         title: "Marketer & Product Manager",
         position: "",
         roles: ["Marketing", "Product Management"],
-        teams: ["Orbit"],
         website: "",
         github: "",
         headshot: AnnaHeadshot
@@ -290,7 +220,6 @@ export const currentMembers: Member[] = [
         title: "Marketer",
         position: "",
         roles: ["Marketing"],
-        teams: ["Orbit"],
         website: "",
         github: "",
         headshot: AngelinaHHeadshot
@@ -298,11 +227,19 @@ export const currentMembers: Member[] = [
 
     // Designers
     {
+        name: "Christina Wu '26",
+        title: "Senior Designer",
+        position: "",
+        roles: ["Design"],
+        website: "https://www.christina-wu.com/",
+        github: "",
+        headshot: ChristinaHeadshot
+    },
+    {
         name: "Lucy Park '28",
         title: "Designer",
         position: "",
         roles: ["Design"],
-        teams: ["Orbit"],
         website: "",
         github: "",
         headshot: LucyHeadshot
@@ -312,20 +249,58 @@ export const currentMembers: Member[] = [
         title: "Designer",
         position: "",
         roles: ["Design"],
-        teams: ["Orbit"],
         website: "",
         github: "",
         headshot: LaurenHeadshot
     },
+
+    // Senior Devs
     {
-        name: "Christina Wu '26",
-        title: "Senior Designer",
+        name: "Ben Aepli '28",
+        title: "Senior Developer",
         position: "",
-        roles: ["Design"],
-        teams: [],
-        website: "https://www.christina-wu.com/",
-        github: "",
-        headshot: ChristinaHeadshot
+        roles: ["Engineering"],
+        website: "https://benaepli.com",
+        github: "https://github.com/benaepli",
+        headshot: BenHeadshot
+    },
+    {
+        name: "Grace Tan '28",
+        title: "Senior Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/gracezyt",
+        headshot: GraceHeadshot
+    },
+
+    {
+        name: "Keith Matanachai '26",
+        title: "Senior Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/matan53153",
+        headshot: KeithHeadshot
+    },
+
+    {
+        name: "Myles Anderson '26",
+        title: "Senior Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/myles332",
+        headshot: MylesHeadshot
+    },
+    {
+        name: "Oyu Enkhbold '26",
+        title: "Senior Engineer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://oyu-e.github.io/",
+        github: "https://github.com/oyu-e",
+        headshot: OyuHeadshot
     },
 
     // Software Developers
@@ -334,7 +309,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
-        teams: ["TigerOps"],
         website: "",
         github: "https://github.com/ericayrlee",
         headshot: EricaHeadshot
@@ -344,27 +318,15 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerOps"],
         website: "",
         github: "https://github.com/marvin-chen",
         headshot: MarvinHeadshot
-    },
-    {
-        name: "Erik Dyer '27",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerOps"],
-        website: "",
-        github: "https://github.com/erik-d123",
-        headshot: ErikHeadshot
     },
     {
         name: "Brooke Xu '28",
         title: "Software Developer & Product Manager",
         position: "",
         roles: ["Engineering", "Product Management"],
-        teams: ["Nexus"],
         website: "",
         github: "https://github.com/brookex923",
         headshot: BrookeHeadshot
@@ -374,7 +336,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
-        teams: ["Nexus"],
         website: "https://niyathikukkapalli.com",
         github: "https://github.com/niyathikukkapalli",
         headshot: NiyathiHeadshot
@@ -384,7 +345,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer & Designer",
         position: "",
         roles: ["Engineering", "Design"],
-        teams: ["TigerPages"],
         website: "",
         github: "https://github.com/katiejihyo",
         headshot: KatieHeadshot
@@ -394,38 +354,24 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Nucleus"],
         website: "",
         github: "https://github.com/yubimamiya",
         headshot: YubiHeadshot
-    },
-    {
-        name: "Tom Wang '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["Nexus"],
-        website: "",
-        github: "https://github.com/tom05919",
-        headshot: TomHeadshot
     },
     {
         name: "Ayush Jain '28",
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerJunction"],
         website: "",
         github: "https://github.com/ayush80",
         headshot: AyushHeadshot
     },
-
     {
         name: "Gwanpil Son '29",
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerPages"],
         website: "",
         github: "https://github.com/gwanpilson",
         headshot: GwanpilHeadshot
@@ -435,7 +381,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerPages"],
         website: "https://www.aayushmitra.com",
         github: "https://github.com/aayush-mitra",
         headshot: AayushHeadshot
@@ -445,7 +390,6 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerPages"],
         website: "",
         github: "https://github.com/raheekatuhee",
         headshot: RohitHeadshot
@@ -455,27 +399,17 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["TigerJunction"],
         website: "https://sai-nallani.github.io",
         github: "https://github.com/sai-nallani",
         headshot: SaiHeadshot
     },
-    {
-        name: "Tiffany Kim '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: ["TigerJunction"],
-        website: "",
-        github: "https://github.com/ttiffanykkim",
-        headshot: TiffanyHeadshot
-    },
+
+    // Miscellaneous
     {
         name: "Kevin Liu '28",
         title: "Game Developer",
         position: "",
         roles: ["Engineering"],
-        teams: ["Venture"],
         website: "https://www.kevin-liu.tech/",
         github: "https://github.com/Kevin-Liu-01",
         headshot: KevinHeadshot
@@ -485,7 +419,6 @@ export const currentMembers: Member[] = [
         title: "Design Consultant",
         position: "",
         roles: ["Design"],
-        teams: ["Venture"],
         website: "",
         github: "https://github.com/juliaying26",
         headshot: JuliaHeadshot
