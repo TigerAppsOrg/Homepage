@@ -231,6 +231,16 @@ export const currentMembers: Member[] = [
         github: "https://github.com/myles332",
         headshot: MylesHeadshot
     },
+    {
+        name: "Oyu Enkhbold '26",
+        title: "Senior Engineer",
+        position: "",
+        roles: ["Engineering"],
+        teams: [],
+        website: "https://oyu-e.github.io/",
+        github: "https://github.com/oyu-e",
+        headshot: OyuHeadshot
+    },
 
     // Product
     {
@@ -338,16 +348,6 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/marvin-chen",
         headshot: MarvinHeadshot
-    },
-    {
-        name: "Oyu Enkhbold '26",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        teams: [],
-        website: "https://oyu-e.github.io/",
-        github: "https://github.com/oyu-e",
-        headshot: OyuHeadshot
     },
     {
         name: "Erik Dyer '27",
