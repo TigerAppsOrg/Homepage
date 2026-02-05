@@ -193,7 +193,7 @@ export const allApps: AppProps[] = [
         description:
             "Cookie Clicker for Princeton! Earn 'paw points' by clicking the prox!",
         note: "",
-        webLink: "https://clicker.tigerapps.org/",
+        webLink: "https://pawpointclicker.vercel.app/",
         repoLink: "https://github.com/TigerAppsOrg/PawPointClicker/",
         screenshot: ClickerImage,
         alt: "Tiger Clicker app screenshot",
