@@ -1,66 +1,72 @@
 import FillerHeadshot from "../assets/members/filler.webp";
 
 // '26
-import JoshuaHeadshot from "../assets/members/joshua.webp";
 import AndyHeadshot from "../assets/members/andy.webp";
 import AnnaHeadshot from "../assets/members/anna.webp";
+import ChristinaHeadshot from "../assets/members/christina.webp";
 import EricaHeadshot from "../assets/members/erica.webp";
+import JoshuaHeadshot from "../assets/members/joshua.webp";
 import JuliaHeadshot from "../assets/members/julia.webp";
 import KeithHeadshot from "../assets/members/keith.webp";
 import MarvinHeadshot from "../assets/members/marvin.webp";
 import MylesHeadshot from "../assets/members/myles.webp";
 import OyuHeadshot from "../assets/members/oyu.webp";
 import WinsiceHeadshot from "../assets/members/winsice.webp";
-import ChristinaHeadshot from "../assets/members/christina.webp";
 
 // '27
-import AngelinaHeadshot from "../assets/members/angelina.webp";
 import AmmaarHeadshot from "../assets/members/ammaar.webp";
+import AngelinaHeadshot from "../assets/members/angelina.webp";
 import ClaireHeadshot from "../assets/members/claire.webp";
-import LaurenHeadshot from "../assets/members/lauren.webp";
-import ErikHeadshot from "../assets/members/erik.webp";
 
 // '28
-import BenHeadshot from "../assets/members/ben.webp";
-import ShreyasHeadshot from "../assets/members/shreyas.webp";
-import GraceHeadshot from "../assets/members/grace.webp";
-import KevinHeadshot from "../assets/members/kevin.webp";
-import YubiHeadshot from "../assets/members/yubi.webp";
-import BrookeHeadshot from "../assets/members/brooke.webp";
-import NiyathiHeadshot from "../assets/members/niyathi.webp";
-import KatieHeadshot from "../assets/members/katie.webp";
-import IbraheemHeadshot from "../assets/members/ibraheem.webp";
-import TomHeadshot from "../assets/members/tom.webp";
-import LucyHeadshot from "../assets/members/lucy.webp";
-import HelenHeadshot from "../assets/members/helen.webp";
 import AngelaHeadshot from "../assets/members/angela.webp";
 import AyushHeadshot from "../assets/members/ayush.webp";
+import BenHeadshot from "../assets/members/ben.webp";
+import BrittneyHeadshot from "../assets/members/brittney.webp";
+import BrookeHeadshot from "../assets/members/brooke.webp";
+import ElianaHeadshot from "../assets/members/eliana.webp";
+import EmilyHeadshot from "../assets/members/emily.webp";
+import GraceHeadshot from "../assets/members/grace.webp";
+import HelenHeadshot from "../assets/members/helen.webp";
+import IbraheemHeadshot from "../assets/members/ibraheem.webp";
+import KatieHeadshot from "../assets/members/katie.webp";
+import KevinHeadshot from "../assets/members/kevin.webp";
+import LucyHeadshot from "../assets/members/lucy.webp";
+import NiyathiHeadshot from "../assets/members/niyathi.webp";
+import ShreyasHeadshot from "../assets/members/shreyas.webp";
+import YubiHeadshot from "../assets/members/yubi.webp";
 
 // '29
-import GauriHeadshot from "../assets/members/gauri.webp";
-import AngelinaHHeadshot from "../assets/members/angelinah.webp";
-import GwanpilHeadshot from "../assets/members/gwanpil.webp";
 import AayushHeadshot from "../assets/members/aayush.webp";
-import RohitHeadshot from "../assets/members/rohit.webp";
+import AikhanHeadshot from "../assets/members/aikhan.webp";
+import AlbertHeadshot from "../assets/members/albert.webp";
+import AngelinaHHeadshot from "../assets/members/angelinah.webp";
+import AnnaSongHeadshot from "../assets/members/anna_song.webp";
+import EmilioHeadshot from "../assets/members/emilio.webp";
+import GauriHeadshot from "../assets/members/gauri.webp";
+import GwanpilHeadshot from "../assets/members/gwanpil.webp";
+import JiyaHeadshot from "../assets/members/jiya.webp";
 import OliverHeadshot from "../assets/members/oliver.webp";
-import JosephHeadshot from "../assets/members/joseph.webp";
-// import VishruthHeadshot from "../assets/members/vishruth.webp";
+import PrishaaHeadshot from "../assets/members/prishaa.webp";
+import RohanHeadshot from "../assets/members/rohan.webp";
+import RohitHeadshot from "../assets/members/rohit.webp";
 import SaiHeadshot from "../assets/members/sai.webp";
 import SophiaHeadshot from "../assets/members/sophia.webp";
-import TiffanyHeadshot from "../assets/members/tiffany.webp";
+import WilliamLiuHeadshot from "../assets/members/william_liu.webp";
+import WilliamZhaoHeadshot from "../assets/members/william_zhao.webp";
 
 // Companies
-import DatabricksLogo from "../assets/companies/databricks.webp";
-import NetflixLogo from "../assets/companies/netflix.webp";
-import MetaLogo from "../assets/companies/meta.webp";
-import StripeLogo from "../assets/companies/stripe.webp";
-import PineconeLogo from "../assets/companies/pinecone.webp";
-import AWSLogo from "../assets/companies/aws.webp";
 import AirbnbLogo from "../assets/companies/airbnb.webp";
-import MicrosoftLogo from "../assets/companies/microsoft.webp";
+import AWSLogo from "../assets/companies/aws.webp";
+import DatabricksLogo from "../assets/companies/databricks.webp";
 import KizakiLogo from "../assets/companies/kizaki.webp";
+import MetaLogo from "../assets/companies/meta.webp";
+import MicrosoftLogo from "../assets/companies/microsoft.webp";
+import NetflixLogo from "../assets/companies/netflix.webp";
+import PineconeLogo from "../assets/companies/pinecone.webp";
+import StripeLogo from "../assets/companies/stripe.webp";
 
-import type { Role, Team } from "./types";
+import type { Role } from "./types";
 
 type Member = {
     name: string;
@@ -121,7 +127,7 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Shreyas Garimella '28",
-        title: "Senior Developer",
+        title: "Lead AI Engineer",
         position: "Treasurer",
         roles: ["Board", "Engineering"],
         website: "",
@@ -245,13 +251,40 @@ export const currentMembers: Member[] = [
         headshot: LucyHeadshot
     },
     {
-        name: "Lauren Pak '27",
+        name: "Eliana Du '28",
         title: "Designer",
         position: "",
         roles: ["Design"],
         website: "",
         github: "",
-        headshot: LaurenHeadshot
+        headshot: ElianaHeadshot
+    },
+    {
+        name: "Anna Song '29",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "",
+        github: "",
+        headshot: AnnaSongHeadshot
+    },
+    {
+        name: "Prishaa Kapasi '29",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "",
+        github: "",
+        headshot: PrishaaHeadshot
+    },
+    {
+        name: "Albert Rho '29",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "",
+        github: "",
+        headshot: AlbertHeadshot
     },
 
     // Senior Devs
@@ -301,6 +334,26 @@ export const currentMembers: Member[] = [
         website: "https://oyu-e.github.io/",
         github: "https://github.com/oyu-e",
         headshot: OyuHeadshot
+    },
+
+    // AI Engineers
+    {
+        name: "Aikhan Jumashukurov '29",
+        title: "AI Engineer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://www.aikhanjumashukurov.com/",
+        github: "https://github.com/aikhanj",
+        headshot: AikhanHeadshot
+    },
+    {
+        name: "Mustafa Tajammul '29",
+        title: "AI Engineer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: FillerHeadshot
     },
 
     // Software Developers
@@ -367,6 +420,26 @@ export const currentMembers: Member[] = [
         github: "https://github.com/ayush80",
         headshot: AyushHeadshot
     },
+
+    {
+        name: "Brittney Barnwell '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/brittastic27",
+        headshot: BrittneyHeadshot
+    },
+    {
+        name: "Emily Zou '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: EmilyHeadshot
+    },
+
     {
         name: "Gwanpil Son '29",
         title: "Software Developer",
@@ -404,6 +477,61 @@ export const currentMembers: Member[] = [
         headshot: SaiHeadshot
     },
 
+    {
+        name: "William Zhao '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/william-w-zhao",
+        headshot: WilliamZhaoHeadshot
+    },
+    {
+        name: "William Liu '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/thewilliamliu",
+        headshot: WilliamLiuHeadshot
+    },
+    {
+        name: "Emilio Medina Castellanos '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/Meda1217",
+        headshot: EmilioHeadshot
+    },
+    {
+        name: "Jiya Shetty '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: JiyaHeadshot
+    },
+    {
+        name: "Rohan Matta '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/rohanmatta11",
+        headshot: RohanHeadshot
+    },
+    {
+        name: "Rocco Zhang '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: FillerHeadshot
+    },
+
     // Miscellaneous
     {
         name: "Kevin Liu '28",
@@ -426,6 +554,7 @@ export const currentMembers: Member[] = [
 ];
 
 export const pastMembers: string[] = [
+    "Lauren Pak '27",
     "Emily Zhou '27",
     "Glen Nfor '27",
     "Hang Pham '26",
