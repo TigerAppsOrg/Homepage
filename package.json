@@ -15,7 +15,7 @@
         "prepare": "husky"
     },
     "dependencies": {
-        "@astrojs/svelte": "^7.2.0",
+        "@astrojs/svelte": "^7.2.5",
         "@astrojs/tailwind": "^6.0.2",
         "@astrolib/seo": "^1.0.0-beta.8",
         "@fontsource-variable/fraunces": "^5.2.9",
@@ -23,7 +23,7 @@
         "@fontsource-variable/nunito": "^5.2.7",
         "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
         "@fontsource-variable/rubik": "^5.1.0",
-        "astro": "^5.14.0",
+        "astro": "^5.17.1",
         "svelte": "^5.39.6",
         "tailwindcss": "^3.4.10",
         "typescript": "^5.9.2"

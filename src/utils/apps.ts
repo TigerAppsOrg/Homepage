@@ -2,25 +2,25 @@
 import TayImage from "../assets/apps/tay.webp";
 
 // Course Planning Apps
-import TigerJunctionImage from "../assets/apps/tigerjunction.webp";
 import PrincetonCoursesImage from "../assets/apps/princetoncourses.webp";
-import TigerSnatchImage from "../assets/apps/tigersnatch.webp";
+import TigerJunctionImage from "../assets/apps/tigerjunction.webp";
 import TigerPathImage from "../assets/apps/tigerpath.webp";
+import TigerSnatchImage from "../assets/apps/tigersnatch.webp";
 
 // Games
-import TigerTypeImage from "../assets/apps/type.webp";
-import SpotImage from "../assets/apps/spot.webp";
 import ClickerImage from "../assets/apps/clicker.webp";
+import SpotImage from "../assets/apps/spot.webp";
+import TigerTypeImage from "../assets/apps/type.webp";
 
 // Campus Life Apps
 import TigerLiftImage from "../assets/apps/lift.webp";
-import TodayImage from "../assets/apps/today.webp";
 import NutriTigerImage from "../assets/apps/nutritiger.webp";
+import TodayImage from "../assets/apps/today.webp";
 import TigerMenusImage from "../assets/archive/tigermenus.webp";
 
 // Room Draw Apps
-import TigerDrawImage from "../assets/apps/tigerdraw.webp";
 import PrincetonRoomsImage from "../assets/apps/princetonrooms.webp";
+import TigerDrawImage from "../assets/apps/tigerdraw.webp";
 
 // Archive Apps
 import Food4UImage from "../assets/archive/food4u.webp";
@@ -34,11 +34,11 @@ import SpaceTigerImage from "../assets/archive/spacetiger.webp";
 import TigerFitImage from "../assets/archive/tigerfit.webp";
 import TigerJobsImage from "../assets/archive/tigerjobs.webp";
 import TigerMapImage from "../assets/archive/tigermap.webp";
+import TigerRetailImage from "../assets/archive/tigerretail.webp";
+import TigerStudyImage from "../assets/archive/tigerstudy.webp";
 import TigerThriftImage from "../assets/archive/tigerthrift.webp";
 import TigerTicketsImage from "../assets/archive/tigertickets.webp";
 import TigerToolsImage from "../assets/archive/tigertools.webp";
-import TigerRetailImage from "../assets/archive/tigerretail.webp";
-import TigerStudyImage from "../assets/archive/tigerstudy.webp";
 
 import type { AppProps } from "./types";
 
@@ -346,7 +346,7 @@ export const categoryColors: Record<
     }
 };
 
-export const archiveApps: AppSectionProps = {
+export const archiveApps = {
     title: "Archive",
     description: "Past TigerApps that are no longer supported.",
     apps: [

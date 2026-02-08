@@ -1,12 +1,3 @@
-export type Team =
-    | "Nexus"
-    | "TigerPages"
-    | "TigerOps"
-    | "Orbit"
-    | "Nucleus"
-    | "Venture"
-    | "TigerJunction";
-
 export type Role =
     | "Engineering"
     | "Design"
