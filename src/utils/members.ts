@@ -54,6 +54,7 @@ import SaiHeadshot from "../assets/members/sai.webp";
 import SophiaHeadshot from "../assets/members/sophia.webp";
 import WilliamLiuHeadshot from "../assets/members/william_liu.webp";
 import WilliamZhaoHeadshot from "../assets/members/william_zhao.webp";
+import PatrickHeadshot from "../assets/members/patrick.webp";
 
 // Companies
 import AirbnbLogo from "../assets/companies/airbnb.webp";
@@ -530,6 +531,15 @@ export const currentMembers: Member[] = [
         website: "",
         github: "",
         headshot: FillerHeadshot
+    },
+    {
+        name: "Patrick Fu '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: PatrickHeadshot
     },
 
     // Miscellaneous
