@@ -538,7 +538,7 @@ export const currentMembers: Member[] = [
         position: "",
         roles: ["Engineering"],
         website: "",
-        github: "",
+        github: "https://github.com/trickfu",
         headshot: PatrickHeadshot
     },
 
