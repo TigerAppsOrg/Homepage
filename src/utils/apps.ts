@@ -159,7 +159,7 @@ export const allApps: AppProps[] = [
         description:
             "Plan out your four-year course schedule and track major/degree requirements.",
         note: "",
-        webLink: "https://www.tigerpath.io/",
+        webLink: "https://path.tigerapps.org/",
         repoLink: "https://github.com/PrincetonUSG/TigerPath",
         screenshot: TigerPathImage,
         alt: "Tiger Path app screenshot",
