@@ -169,6 +169,20 @@ export const allApps: AppProps[] = [
             { name: "Daniel Leung '20", url: "" },
             { name: "Adeniji Ogunlana '19", url: "" }
         ],
+        additionalContributors: [
+            {
+                startMsg: "Updates by",
+                contributors: [
+                    { name: "Angelina Ji '27", url: "" },
+                    { name: "Niyathi Kukkapalli '28", url: "" },
+                    { name: "Brittney Barnwell '28", url: "" },
+                    { name: "Jiya Shetty '29", url: "" },
+                    { name: "Rohan Matta '29", url: "" },
+                    { name: "Anna Song '29", url: "" },
+                    { name: "Eliana Du '28", url: "" }
+                ]
+            }
+        ],
         category: "Course Planning"
     },
     // Games
