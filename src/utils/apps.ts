@@ -15,6 +15,7 @@ import TigerTypeImage from "../assets/apps/type.webp";
 // Campus Life Apps
 import TigerLiftImage from "../assets/apps/lift.webp";
 import NutriTigerImage from "../assets/apps/nutritiger.webp";
+import TigerMapImage from "../assets/apps/tigermap.webp";
 import TodayImage from "../assets/apps/today.webp";
 import TigerMenusImage from "../assets/archive/tigermenus.webp";
 
@@ -33,7 +34,7 @@ import RoomsImage from "../assets/archive/rooms.webp";
 import SpaceTigerImage from "../assets/archive/spacetiger.webp";
 import TigerFitImage from "../assets/archive/tigerfit.webp";
 import TigerJobsImage from "../assets/archive/tigerjobs.webp";
-import TigerMapImage from "../assets/archive/tigermap.webp";
+import TigerMapArchiveImage from "../assets/archive/tigermap.webp";
 import TigerRetailImage from "../assets/archive/tigerretail.webp";
 import TigerStudyImage from "../assets/archive/tigerstudy.webp";
 import TigerThriftImage from "../assets/archive/tigerthrift.webp";
@@ -287,6 +288,18 @@ export const allApps: AppProps[] = [
         ],
         category: "Campus Life"
     },
+    {
+        title: "TigerMap",
+        description:
+            "Explore campus with an interactive map featuring dining hall menus, eating clubs, restaurants, and a live free food feed!",
+        note: "",
+        webLink: "https://map.tigerapps.org/",
+        repoLink: "https://github.com/DIodide/TigerMap",
+        screenshot: TigerMapImage,
+        alt: "Tiger Map app screenshot",
+        contributors: [{ name: "Ibraheem Amin '28", url: "" }],
+        category: "Campus Life"
+    },
     // Room Draw
     {
         title: "TigerDraw",
@@ -519,7 +532,7 @@ export const archiveApps = {
             note: "",
             webLink: "https://github.com/TigerAppsOrg/TigerMap",
             repoLink: "https://github.com/TigerAppsOrg/TigerMap",
-            screenshot: TigerMapImage,
+            screenshot: TigerMapArchiveImage,
             alt: "Tiger Map app screenshot",
             contributors: [
                 { name: "Leo Stepanewk '25", url: "" },
