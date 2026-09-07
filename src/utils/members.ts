@@ -94,8 +94,8 @@ export const currentMembers: Member[] = [
     },
     {
         name: "Ammaar Alam '27",
-        title: "Senior Developer",
-        position: "Lead DevOps Engineer",
+        title: "Software & Infrastructure Engineer",
+        position: "Lead Software Engineer",
         roles: ["Board", "Engineering"],
         website: "https://ammaaralam.com",
         github: "https://github.com/Ammaar-Alam",
