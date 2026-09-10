@@ -9,6 +9,7 @@ import ClaireHeadshot from "../assets/members/claire.webp";
 import AyushHeadshot from "../assets/members/ayush.webp";
 import BrittneyHeadshot from "../assets/members/brittney.webp";
 import BrookeHeadshot from "../assets/members/brooke.webp";
+import EmilyHeadshot from "../assets/members/emily.webp";
 import GraceHeadshot from "../assets/members/grace.webp";
 import HelenHeadshot from "../assets/members/helen.webp";
 import IbraheemHeadshot from "../assets/members/ibraheem.webp";
@@ -165,6 +166,15 @@ export const currentMembers: Member[] = [
         website: "",
         github: "",
         headshot: AnnaSongHeadshot
+    },
+    {
+        name: "Emily Zou '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/ezou6",
+        headshot: EmilyHeadshot
     },
 
     // Princeton Intelligence
@@ -349,7 +359,6 @@ export const pastMembers: string[] = [
     "Erica Lee '26",
     "Marvin Chen '26",
     "Katie Lee '28",
-    "Emily Zou '28",
     "Aayush Mitra '29",
     "Rohit Katuri '29",
     "Sai Nallani '29",
