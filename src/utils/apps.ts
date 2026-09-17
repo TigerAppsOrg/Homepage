@@ -278,7 +278,7 @@ export const allApps: AppProps[] = [
             "Compare menu options across all 6 dining halls on a single page!",
         note: "",
         webLink: "https://menus.tigerapps.org/",
-        repoLink: "https://github.com/axu2/tiger-menus",
+        repoLink: "https://github.com/TigerAppsOrg/tiger-menus",
         screenshot: TigerMenusImage,
         alt: "Tiger Menus app screenshot",
         contributors: [
