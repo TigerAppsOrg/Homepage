@@ -80,7 +80,7 @@ export const allApps: AppProps[] = [
             "Your AI assistant that knows all academic, eating club, and event information in real time. Integrated with Princeton Courses.",
         note: "",
         webLink: "https://tay.tigerapps.org/",
-        repoLink: "https://github.com/leo-step/Today",
+        repoLink: "https://github.com/TigerAppsOrg/Today",
         screenshot: TayImage,
         alt: "Tay chatbot screenshot",
         contributors: [
@@ -242,7 +242,7 @@ export const allApps: AppProps[] = [
         note: "",
         webLink:
             "https://chromewebstore.google.com/detail/today-princeton/iejdjhiphonjpgaobmpniifeipiomgee?hl=en",
-        repoLink: "https://github.com/leo-step/Today",
+        repoLink: "https://github.com/TigerAppsOrg/Today",
         screenshot: TodayImage,
         alt: "Today extension screenshot",
         contributors: [
@@ -294,7 +294,7 @@ export const allApps: AppProps[] = [
             "Explore campus with an interactive map featuring dining hall menus, eating clubs, restaurants, and a live free food feed!",
         note: "",
         webLink: "https://map.tigerapps.org/",
-        repoLink: "https://github.com/DIodide/TigerMap",
+        repoLink: "https://github.com/TigerAppsOrg/TigerMap",
         screenshot: TigerMapImage,
         alt: "Tiger Map app screenshot",
         contributors: [{ name: "Ibraheem Amin '28", url: "" }],
@@ -530,8 +530,8 @@ export const archiveApps = {
             description:
                 "A course exploration app that allows students to discover what classes to take next. Create and share course tracks with others.",
             note: "",
-            webLink: "https://github.com/TigerAppsOrg/TigerMap",
-            repoLink: "https://github.com/TigerAppsOrg/TigerMap",
+            webLink: "https://github.com/TigerAppsOrg/TigerMap-legacy",
+            repoLink: "https://github.com/TigerAppsOrg/TigerMap-legacy",
             screenshot: TigerMapArchiveImage,
             alt: "Tiger Map app screenshot",
             contributors: [
