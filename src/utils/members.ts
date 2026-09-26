@@ -130,7 +130,7 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "PM Lead",
         roles: ["Product Management"],
-        website: "",
+        website: "https://prishaakapasi.com/",
         github: "",
         headshot: PrishaaHeadshot
     },
@@ -223,7 +223,7 @@ export const currentMembers: Member[] = [
         position: "",
         roles: ["Engineering"],
         website: "",
-        github: "",
+        github: "https://github.com/mtajammul07",
         headshot: FillerHeadshot
     },
     {
@@ -240,7 +240,7 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        website: "",
+        website: "https://www.wlmliu.com/",
         github: "https://github.com/thewilliamliu",
         headshot: WilliamLiuHeadshot
     },
@@ -297,8 +297,8 @@ export const currentMembers: Member[] = [
         title: "Designer",
         position: "",
         roles: ["Design"],
-        website: "",
-        github: "",
+        website: "https://seowonlucypark.com/index.html",
+        github: "https://github.com/seowonlucypark",
         headshot: LucyHeadshot
     },
 
