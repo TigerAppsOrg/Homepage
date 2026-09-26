@@ -244,6 +244,7 @@
         padding: 0.625rem 1rem;
         border: none;
         border-radius: 9999px;
+        color: #212529;
         color: color-mix(in srgb, var(--role-color) 35%, #212529);
         background: none;
         font-size: 0.875rem;
@@ -260,6 +261,7 @@
         height: 100%;
         overflow: visible;
         pointer-events: none;
+        fill: #E9ECEF;
         fill: color-mix(in srgb, var(--role-color) 18%, #F8F9FA);
         transition: fill 200ms ease-out;
     }
@@ -269,6 +271,7 @@
     }
 
     .role-pill:is(.active, :hover, :focus-visible) .role-surface {
+        fill: var(--role-color);
         fill: color-mix(in srgb, var(--role-color) 70%, #F8F9FA);
     }
 
