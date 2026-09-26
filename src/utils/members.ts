@@ -32,6 +32,27 @@ import WilliamLiuHeadshot from "../assets/members/william_liu.webp";
 import WilliamZhaoHeadshot from "../assets/members/william_zhao.webp";
 import PatrickHeadshot from "../assets/members/patrick.webp";
 
+// Fall 2026 new members
+import AmelOsmanHeadshot from "../assets/members/amel-osman.webp";
+import AndrewNiHeadshot from "../assets/members/andrew-ni.webp";
+import AnutsetsenErdenebayarHeadshot from "../assets/members/anutsetsen-erdenebayar.webp";
+import AriannaSunHeadshot from "../assets/members/arianna-sun.webp";
+import ArshParekhHeadshot from "../assets/members/arsh-parekh.webp";
+import CollinBolerHeadshot from "../assets/members/collin-boler.webp";
+import EllenBuHeadshot from "../assets/members/ellen-bu.webp";
+import EmilyMeiHeadshot from "../assets/members/emily-mei.webp";
+import EthanMaoHeadshot from "../assets/members/ethan-mao.webp";
+import GavinMcloughlinHeadshot from "../assets/members/gavin-mcloughlin.webp";
+import HenryLiHeadshot from "../assets/members/henry-li.webp";
+import JessicaChenHeadshot from "../assets/members/jessica-chen.webp";
+import JohnWuHeadshot from "../assets/members/john-wu.webp";
+import LaahiniAddagatlaHeadshot from "../assets/members/laahini-addagatla.webp";
+import OwenTamHeadshot from "../assets/members/owen-tam.webp";
+import RyanDalalHeadshot from "../assets/members/ryan-dalal.webp";
+import SiddharthGuptaHeadshot from "../assets/members/siddharth-gupta.webp";
+import SophiaStolteHeadshot from "../assets/members/sophia-stolte.webp";
+import StanZhelokhovtsevHeadshot from "../assets/members/stan-zhelokhovtsev.webp";
+
 // Companies
 import AirbnbLogo from "../assets/companies/airbnb.webp";
 import AWSLogo from "../assets/companies/aws.webp";
@@ -123,7 +144,7 @@ export const currentMembers: Member[] = [
         headshot: YubiHeadshot
     },
     {
-        name: "Raj Patel",
+        name: "Raj Patel '29",
         title: "Software Developer",
         position: "Tech Lead",
         roles: ["Engineering"],
@@ -339,6 +360,197 @@ export const currentMembers: Member[] = [
         website: "",
         github: "https://github.com/trickfu",
         headshot: PatrickHeadshot
+    },
+
+    // Fall 2026 new members
+    {
+        name: "Anutsetsen Erdenebayar '30",
+        title: "Marketer",
+        position: "",
+        roles: ["Marketing"],
+        website: "",
+        github: "",
+        headshot: AnutsetsenErdenebayarHeadshot
+    },
+    {
+        name: "Ellen Bu '30",
+        title: "Outreach Director",
+        position: "",
+        roles: ["Outreach"],
+        website: "",
+        github: "",
+        headshot: EllenBuHeadshot
+    },
+    {
+        name: "Gavin McLoughlin '28",
+        title: "Marketer",
+        position: "",
+        roles: ["Marketing"],
+        website: "",
+        github: "",
+        headshot: GavinMcloughlinHeadshot
+    },
+    {
+        name: "Sophia Stolte '29",
+        title: "Outreach Director",
+        position: "",
+        roles: ["Outreach"],
+        website: "",
+        github: "",
+        headshot: SophiaStolteHeadshot
+    },
+    {
+        name: "John Wu '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/jon3350",
+        headshot: JohnWuHeadshot
+    },
+    {
+        name: "Siddharth Gupta '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/Windshield-Viper",
+        headshot: SiddharthGuptaHeadshot
+    },
+    {
+        name: "Stan Zhelokhovtsev '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/ProBluebbes",
+        headshot: StanZhelokhovtsevHeadshot
+    },
+    {
+        name: "Arsh Parekh '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://arshparekh.com",
+        github: "https://github.com/arshsparekh",
+        headshot: ArshParekhHeadshot
+    },
+    {
+        name: "Brij Kapadia '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: FillerHeadshot
+    },
+    {
+        name: "Ryan Dalal '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/ryanadalal",
+        headshot: RyanDalalHeadshot
+    },
+    {
+        name: "Jessica Chen '30",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "https://stxrrymuffin.github.io/personal-website",
+        github: "https://github.com/stxrrymuffin",
+        headshot: JessicaChenHeadshot
+    },
+    {
+        name: "Ethan Mao '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/ethanm9720",
+        headshot: EthanMaoHeadshot
+    },
+    {
+        name: "Laahini Addagatla '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/Laahini",
+        headshot: LaahiniAddagatlaHeadshot
+    },
+    {
+        name: "Andrew Ni '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/andrewkni",
+        headshot: AndrewNiHeadshot
+    },
+    {
+        name: "Owen Tam '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://owentam.dev/",
+        github: "https://github.com/Owen-Tam",
+        headshot: OwenTamHeadshot
+    },
+    {
+        name: "Shreeya KC '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: FillerHeadshot
+    },
+    {
+        name: "Amel Osman '28",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "",
+        headshot: AmelOsmanHeadshot
+    },
+    {
+        name: "Emily Mei '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/emily-lgtmx",
+        headshot: EmilyMeiHeadshot
+    },
+    {
+        name: "Henry Li '27",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "https://henryli.me/",
+        github: "https://github.com/hhenryli",
+        headshot: HenryLiHeadshot
+    },
+    {
+        name: "Arianna Sun '30",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "https://arianna-portfolio.vercel.app/",
+        github: "https://github.com/AriannaSun",
+        headshot: AriannaSunHeadshot
+    },
+    {
+        name: "Collin Boler '27",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://collinboler.com/",
+        github: "https://github.com/collinboler",
+        headshot: CollinBolerHeadshot
     }
 ];
 

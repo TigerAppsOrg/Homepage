@@ -3,6 +3,7 @@ export type Role =
     | "Design"
     | "Product Management"
     | "Marketing"
+    | "Outreach"
     | "Board";
 
 export type Contributor = { name: string; url?: string };

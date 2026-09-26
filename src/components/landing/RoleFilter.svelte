@@ -7,6 +7,7 @@
         "Product Management",
         "Design",
         "Marketing",
+        "Outreach",
         "Engineering"
     ];
 
@@ -16,6 +17,7 @@
         "Product Management": "#FFA94D",
         "Design": "#F783AC",
         "Marketing": "#51CF66",
+        "Outreach": "#20C997",
         "Engineering": "#339AF0"
     };
 
@@ -177,6 +179,7 @@
     }
 
     .member-chip {
+        max-width: 100%;
         display: inline-flex;
         align-items: center;
         gap: 0.625rem;
@@ -238,7 +241,8 @@
         font-size: 0.875rem;
         font-weight: 600;
         color: #212529;
-        white-space: nowrap;
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     .member-links {
