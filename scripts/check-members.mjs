@@ -36,7 +36,7 @@ const roster = readFileSync(
     new URL("../src/utils/members.ts", import.meta.url),
     "utf8"
 );
-const expected = [...roster.matchAll(/name: "([^"]+)"/g)].map(
+const expected = [...roster.matchAll(/^\s*name: "([^"]+)"/gm)].map(
     ([, name]) => name
 );
 assert.ok(
