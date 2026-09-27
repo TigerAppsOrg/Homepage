@@ -3,7 +3,7 @@ export function createLiquid(width, height) {
     const straight = width - height;
     const arc = Math.PI * radius;
     const perimeter = straight * 2 + arc * 2;
-    const count = Math.max(48, Math.ceil(perimeter / 4));
+    const count = Math.max(32, Math.ceil(perimeter / 6));
     const points = Array.from({ length: count }, (_, index) => {
         let distance = (perimeter * index) / count;
         if (distance < straight)
@@ -33,7 +33,7 @@ export function createLiquid(width, height) {
         width,
         height,
         points,
-        speed: Math.min(0.8, 9 / (perimeter / count) ** 2),
+        speed: Math.min(0.8, 16 / (perimeter / count) ** 2),
         current: new Float32Array(count),
         previous: new Float32Array(count)
     };
@@ -56,12 +56,12 @@ export function disturbLiquid(surface, x, y, strength) {
             (nearest + offset + surface.points.length) % surface.points.length;
         const impulse = strength * Math.exp((-offset * offset) / 6);
         surface.current[index] = Math.max(
-            -4,
-            Math.min(4, surface.current[index] + impulse)
+            -3,
+            Math.min(3, surface.current[index] + impulse)
         );
         surface.previous[index] = Math.max(
-            -4,
-            Math.min(4, surface.previous[index] + impulse)
+            -3,
+            Math.min(3, surface.previous[index] + impulse)
         );
     }
 }
@@ -75,19 +75,31 @@ export function stepLiquid(surface) {
             current[(index + count - 1) % count] +
             current[(index + 1) % count] -
             2 * current[index];
+        // damp velocity so waves travel instead of springing toward the center
         previous[index] =
-            (2 * current[index] - previous[index] + speed * neighbors) * 0.975;
+            current[index] +
+            (current[index] - previous[index]) * 0.9 +
+            speed * neighbors;
         sum += previous[index];
     }
     // preserve the silhouette's area instead of inflating the whole button
     for (let index = 0; index < count; index++) previous[index] -= sum / count;
     surface.previous = current;
     surface.current = previous;
+    const active = previous.some(
+        (value, index) =>
+            Math.abs(value) > 0.015 || Math.abs(value - current[index]) > 0.015
+    );
+    if (!active) {
+        current.fill(0);
+        previous.fill(0);
+    }
+    return active;
 }
 
 export function liquidOutline(surface) {
     const points = surface.points.map((point, index) => {
-        const offset = Math.max(-4, Math.min(4, surface.current[index]));
+        const offset = Math.max(-3, Math.min(3, surface.current[index]));
         return {
             x: point.x + point.nx * offset,
             y: point.y + point.ny * offset
@@ -116,56 +128,59 @@ export function liquidFilters(node) {
         path: button.querySelector("path"),
         surface: null,
         lastRipple: -Infinity,
-        nextIdle: 0
+        active: false
     }));
     let visible = false,
         frame = 0,
         lastTime = 0,
-        elapsed = 0;
+        elapsed = 0,
+        idleTimer;
 
     function animate(time) {
         elapsed += Math.min(time - lastTime, 34);
         lastTime = time;
-        let changed = false;
-        while (elapsed >= 1000 / 60) {
+        const steps = Math.floor(elapsed / (1000 / 60));
+        elapsed -= steps * (1000 / 60);
+        if (steps)
             for (const item of items) {
-                if (!item.surface) continue;
-                if (time > item.nextIdle) {
-                    const selected =
-                        item.button.getAttribute("aria-pressed") === "true";
-                    disturbLiquid(
-                        item.surface,
-                        0.5 + Math.sin(time / 2400) * 0.3,
-                        0,
-                        selected ? 0.85 : 0.3
-                    );
-                    item.nextIdle = time + 2400;
-                }
-                stepLiquid(item.surface);
+                if (!item.surface || !item.active) continue;
+                for (let step = 0; step < steps && item.active; step++)
+                    item.active = stepLiquid(item.surface);
+                item.path.setAttribute("d", liquidOutline(item.surface));
             }
-            elapsed -= 1000 / 60;
-            changed = true;
-        }
-        if (changed)
-            for (const item of items) {
-                if (item.surface)
-                    item.path.setAttribute("d", liquidOutline(item.surface));
-            }
+        frame = items.some(item => item.active)
+            ? requestAnimationFrame(animate)
+            : 0;
+    }
+
+    function wake() {
+        if (frame || !visible || reduced.matches || document.hidden) return;
+        lastTime = performance.now();
+        elapsed = 0;
         frame = requestAnimationFrame(animate);
     }
 
     function sync() {
         cancelAnimationFrame(frame);
-        lastTime = performance.now();
-        elapsed = 0;
-        items.forEach((item, index) => {
-            item.nextIdle = lastTime + 1000 + index * 350;
-        });
+        frame = 0;
+        clearInterval(idleTimer);
         if (visible && !reduced.matches && !document.hidden) {
-            frame = requestAnimationFrame(animate);
+            if (items.some(item => item.active)) wake();
+            idleTimer = setInterval(() => {
+                const item = items.find(
+                    item =>
+                        item.surface &&
+                        item.button.getAttribute("aria-pressed") === "true"
+                );
+                if (!item || item.active) return;
+                disturbLiquid(item.surface, 0.65, 0, 0.35);
+                item.active = true;
+                wake();
+            }, 6000);
         } else {
             for (const item of items) {
                 if (!item.surface) continue;
+                item.active = false;
                 item.surface.current.fill(0);
                 item.surface.previous.fill(0);
                 item.path.setAttribute("d", liquidOutline(item.surface));
@@ -188,7 +203,8 @@ export function liquidFilters(node) {
     for (const item of items) {
         resize.observe(item.button);
         const disturb = event => {
-            if (reduced.matches || !item.surface) return;
+            if (reduced.matches || document.hidden || !visible || !item.surface)
+                return;
             const keyboard = event.type === "keydown";
             if (
                 keyboard &&
@@ -199,15 +215,17 @@ export function liquidFilters(node) {
             const entering = event.type === "pointerenter";
             if ((moving || entering) && event.pointerType !== "mouse") return;
             const time = performance.now();
-            if (moving && time - item.lastRipple < 90) return;
+            if (moving && time - item.lastRipple < 120) return;
             item.lastRipple = time;
             const rect = item.button.getBoundingClientRect();
             disturbLiquid(
                 item.surface,
                 keyboard ? 0.5 : (event.clientX - rect.left) / rect.width,
                 keyboard ? 0.5 : (event.clientY - rect.top) / rect.height,
-                moving ? 2.6 : entering ? 3.4 : -4
+                moving ? 0.85 : entering ? 1.65 : -2.6
             );
+            item.active = true;
+            wake();
         };
         for (const event of [
             "pointerenter",
@@ -232,6 +250,7 @@ export function liquidFilters(node) {
             observer.disconnect();
             resize.disconnect();
             cancelAnimationFrame(frame);
+            clearInterval(idleTimer);
         }
     };
 }

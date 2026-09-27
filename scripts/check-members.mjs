@@ -18,7 +18,7 @@ assert.deepEqual(
 for (const [index, name] of [
     "Ammaar Alam",
     "Niyathi Kukkapalli",
-    "Emily Zou"
+    "Aikhan Jumashukurov"
 ].entries()) {
     assert.ok(
         groups[index][2].includes(name),
@@ -153,7 +153,7 @@ const { createLiquid, disturbLiquid, stepLiquid, liquidOutline } = await import(
 for (const width of [64, 160, 340]) {
     const surface = createLiquid(width, 44);
     const rest = liquidOutline(surface);
-    disturbLiquid(surface, 0.3, 0, 3.4);
+    disturbLiquid(surface, 0.3, 0, 2.6);
     const initialArea = surface.current.filter(
         value => Math.abs(value) > 0.01
     ).length;
@@ -174,14 +174,14 @@ for (const width of [64, 160, 340]) {
         "ripples do not inflate the whole button"
     );
     assert.ok(
-        Math.max(...surface.current.map(Math.abs)) > 0.8,
+        Math.max(...surface.current.map(Math.abs)) > 0.45,
         "shape motion stays noticeable"
     );
     const coordinates = liquidOutline(surface)
         .match(/-?\d+\.\d+/g)
         .map(Number);
     coordinates.forEach((value, index) =>
-        assert.ok(value >= -4 && value <= (index % 2 ? 44 : width) + 4)
+        assert.ok(value >= -3 && value <= (index % 2 ? 44 : width) + 3)
     );
     for (let frame = 0; frame < 600; frame++) stepLiquid(surface);
     assert.ok(
@@ -195,6 +195,21 @@ assert.ok(!component.includes("--members-transition-top"));
 assert.ok(!component.includes("clip-path:"));
 assert.ok(!component.includes("<canvas"));
 const { default: sharp } = await import("sharp");
+const portraits = [
+    ...new Set(
+        [...html.matchAll(/class="member-avatar[^\"]*" src="([^\"]+)"/g)].map(
+            ([, src]) => src
+        )
+    )
+];
+assert.ok(portraits.length > 0);
+for (const src of portraits) {
+    const { width, height } = await sharp(
+        readFileSync(new URL(`../dist${src}`, import.meta.url))
+    ).metadata();
+    assert.equal(width, 160);
+    assert.equal(height, 160);
+}
 const initial = html.match(
     /<svg[^>]+class="role-surface[^"]*"[^>]*>([\s\S]*?)<\/svg>/
 )[1];
@@ -213,4 +228,114 @@ assert.equal(
 );
 console.log(
     "Verified dynamic outlines, propagation, bounded motion, settling, and initial capsule"
+);
+
+let time = 0,
+    sequence = 0,
+    writes = 0,
+    intersect,
+    visibilityChange;
+const frames = new Map(),
+    timers = new Map();
+const motion = { matches: false, addEventListener() {} };
+const page = {
+    hidden: false,
+    addEventListener: (_, callback) => {
+        visibilityChange = callback;
+    }
+};
+const buttons = [64, 96, 228, 102, 118, 112, 136].map((width, index) => ({
+    clientWidth: width,
+    clientHeight: 44,
+    listeners: {},
+    querySelector: selector =>
+        selector === "path"
+            ? {
+                  setAttribute() {
+                      writes++;
+                  }
+              }
+            : { style: {} },
+    getAttribute: () => String(index === 0),
+    getBoundingClientRect: () => ({ left: 0, top: 0, width, height: 44 }),
+    addEventListener(type, callback) {
+        this.listeners[type] = callback;
+    }
+}));
+const liquidSource = readFileSync(
+    new URL("../src/components/landing/liquidFilters.js", import.meta.url),
+    "utf8"
+);
+const action = runInNewContext(
+    liquidSource.replaceAll("export function", "function") + "\nliquidFilters",
+    {
+        AbortController,
+        window: { matchMedia: () => motion },
+        document: page,
+        performance: { now: () => time },
+        requestAnimationFrame: callback => {
+            frames.set(++sequence, callback);
+            return sequence;
+        },
+        cancelAnimationFrame: id => frames.delete(id),
+        setInterval: callback => {
+            timers.set(++sequence, callback);
+            return sequence;
+        },
+        clearInterval: id => timers.delete(id),
+        ResizeObserver: class {
+            constructor(callback) {
+                this.callback = callback;
+            }
+            observe() {
+                this.callback();
+            }
+            disconnect() {}
+        },
+        IntersectionObserver: class {
+            constructor(callback) {
+                intersect = callback;
+            }
+            observe() {}
+            disconnect() {}
+        }
+    }
+);
+const liquid = action({ querySelectorAll: () => buttons });
+intersect([{ isIntersecting: true }]);
+assert.equal(frames.size, 0, "resting filters do not run a frame loop");
+writes = 0;
+buttons[1].listeners.pointerdown({
+    type: "pointerdown",
+    clientX: 32,
+    clientY: 0
+});
+for (let frame = 0; frame < 300; frame++) {
+    time += 1000 / 60;
+    const callbacks = [...frames.values()];
+    frames.clear();
+    callbacks.forEach(callback => callback(time));
+}
+assert.equal(frames.size, 0, "the frame loop stops after ripples settle");
+assert.ok(writes > 0 && writes < 180, "only the disturbed outline redraws");
+const interactionWrites = writes;
+timers.values().next().value();
+assert.equal(frames.size, 1, "an idle ripple wakes the shared frame loop");
+page.hidden = true;
+visibilityChange();
+assert.equal(frames.size, 0);
+assert.equal(timers.size, 0, "background tabs have no idle timer");
+page.hidden = false;
+motion.matches = true;
+visibilityChange();
+buttons[0].listeners.pointerdown({
+    type: "pointerdown",
+    clientX: 32,
+    clientY: 0
+});
+assert.equal(frames.size, 0, "reduced motion skips interaction ripples");
+assert.equal(timers.size, 0);
+liquid.destroy();
+console.log(
+    `Verified liquid scheduling and reduced motion: ${interactionWrites} outline writes per click`
 );
