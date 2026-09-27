@@ -6,10 +6,8 @@ import AngelinaHeadshot from "../assets/members/angelina.webp";
 import ClaireHeadshot from "../assets/members/claire.webp";
 
 // '28
-import AyushHeadshot from "../assets/members/ayush.webp";
 import BrittneyHeadshot from "../assets/members/brittney.webp";
 import BrookeHeadshot from "../assets/members/brooke.webp";
-import EmilyHeadshot from "../assets/members/emily.webp";
 import GraceHeadshot from "../assets/members/grace.webp";
 import HelenHeadshot from "../assets/members/helen.webp";
 import IbraheemHeadshot from "../assets/members/ibraheem.webp";
@@ -24,33 +22,33 @@ import AlbertHeadshot from "../assets/members/albert.webp";
 import AngelinaHHeadshot from "../assets/members/angelinah.webp";
 import AnnaSongHeadshot from "../assets/members/anna_song.webp";
 import GwanpilHeadshot from "../assets/members/gwanpil.webp";
-import JiyaHeadshot from "../assets/members/jiya.webp";
+// import JiyaHeadshot from "../assets/members/jiya.webp";
 import PrishaaHeadshot from "../assets/members/prishaa.webp";
 import RohanHeadshot from "../assets/members/rohan.webp";
 import SophiaHeadshot from "../assets/members/sophia.webp";
 import WilliamLiuHeadshot from "../assets/members/william_liu.webp";
 import WilliamZhaoHeadshot from "../assets/members/william_zhao.webp";
-import PatrickHeadshot from "../assets/members/patrick.webp";
+// import PatrickHeadshot from "../assets/members/patrick.webp";
 
 // Fall 2026 new members
-import AmelOsmanHeadshot from "../assets/members/amel-osman.webp";
+// import AmelOsmanHeadshot from "../assets/members/amel-osman.webp";
 import AndrewNiHeadshot from "../assets/members/andrew-ni.webp";
 import AnutsetsenErdenebayarHeadshot from "../assets/members/anutsetsen-erdenebayar.webp";
 import AriannaSunHeadshot from "../assets/members/arianna-sun.webp";
-import ArshParekhHeadshot from "../assets/members/arsh-parekh.webp";
-import CollinBolerHeadshot from "../assets/members/collin-boler.webp";
+// import ArshParekhHeadshot from "../assets/members/arsh-parekh.webp";
+// import CollinBolerHeadshot from "../assets/members/collin-boler.webp";
 import EllenBuHeadshot from "../assets/members/ellen-bu.webp";
-import EmilyMeiHeadshot from "../assets/members/emily-mei.webp";
-import EthanMaoHeadshot from "../assets/members/ethan-mao.webp";
-import GavinMcloughlinHeadshot from "../assets/members/gavin-mcloughlin.webp";
-import HenryLiHeadshot from "../assets/members/henry-li.webp";
-import JessicaChenHeadshot from "../assets/members/jessica-chen.webp";
+// import EmilyMeiHeadshot from "../assets/members/emily-mei.webp";
+// import EthanMaoHeadshot from "../assets/members/ethan-mao.webp";
+// import GavinMcloughlinHeadshot from "../assets/members/gavin-mcloughlin.webp";
+// import HenryLiHeadshot from "../assets/members/henry-li.webp";
+// import JessicaChenHeadshot from "../assets/members/jessica-chen.webp";
 import JohnWuHeadshot from "../assets/members/john-wu.webp";
-import LaahiniAddagatlaHeadshot from "../assets/members/laahini-addagatla.webp";
+// import LaahiniAddagatlaHeadshot from "../assets/members/laahini-addagatla.webp";
 import OwenTamHeadshot from "../assets/members/owen-tam.webp";
-import RyanDalalHeadshot from "../assets/members/ryan-dalal.webp";
+// import RyanDalalHeadshot from "../assets/members/ryan-dalal.webp";
 import SiddharthGuptaHeadshot from "../assets/members/siddharth-gupta.webp";
-import SophiaStolteHeadshot from "../assets/members/sophia-stolte.webp";
+// import SophiaStolteHeadshot from "../assets/members/sophia-stolte.webp";
 import StanZhelokhovtsevHeadshot from "../assets/members/stan-zhelokhovtsev.webp";
 
 // Companies
@@ -130,8 +128,8 @@ export const currentMembers: Member[] = [
         title: "Product Manager",
         position: "PM Lead",
         roles: ["Product Management"],
-        website: "",
-        github: "",
+        website: "https://prishaakapasi.com/",
+        github: "https://github.com/prishaakapasi",
         headshot: PrishaaHeadshot
     },
     {
@@ -143,21 +141,21 @@ export const currentMembers: Member[] = [
         github: "https://github.com/yubimamiya",
         headshot: YubiHeadshot
     },
-    {
-        name: "Raj Patel '29",
-        title: "Software Developer",
-        position: "Tech Lead",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: FillerHeadshot
-    },
+    // {
+    //     name: "Raj Patel '29",
+    //     title: "Software Developer",
+    //     position: "Tech Lead",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "",
+    //     headshot: FillerHeadshot
+    // },
     {
         name: "Helen Hui '28",
         title: "Product Manager",
         position: "Team Lead",
         roles: ["Product Management"],
-        website: "",
+        website: "https://ilovehhhyn.github.io/helenhui/",
         github: "https://github.com/ilovehhhyn",
         headshot: HelenHeadshot
     },
@@ -188,15 +186,6 @@ export const currentMembers: Member[] = [
         github: "",
         headshot: AnnaSongHeadshot
     },
-    {
-        name: "Emily Zou '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/ezou6",
-        headshot: EmilyHeadshot
-    },
 
     // Princeton Intelligence
     {
@@ -223,7 +212,7 @@ export const currentMembers: Member[] = [
         position: "",
         roles: ["Engineering"],
         website: "",
-        github: "",
+        github: "https://github.com/mtajammul07",
         headshot: FillerHeadshot
     },
     {
@@ -240,7 +229,7 @@ export const currentMembers: Member[] = [
         title: "Software Developer",
         position: "",
         roles: ["Engineering"],
-        website: "",
+        website: "https://www.wlmliu.com/",
         github: "https://github.com/thewilliamliu",
         headshot: WilliamLiuHeadshot
     },
@@ -255,15 +244,15 @@ export const currentMembers: Member[] = [
         github: "",
         headshot: ClaireHeadshot
     },
-    {
-        name: "Rocco Zhang '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: FillerHeadshot
-    },
+    // {
+    //     name: "Rocco Zhang '29",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "",
+    //     headshot: FillerHeadshot
+    // },
     {
         name: "Rohan Matta '29",
         title: "Software Developer",
@@ -297,8 +286,8 @@ export const currentMembers: Member[] = [
         title: "Designer",
         position: "",
         roles: ["Design"],
-        website: "",
-        github: "",
+        website: "https://seowonlucypark.com/index.html",
+        github: "https://github.com/seowonlpark",
         headshot: LucyHeadshot
     },
 
@@ -314,24 +303,15 @@ export const currentMembers: Member[] = [
     },
 
     // TigerOps
-    {
-        name: "Ayush Jain '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/ayush80",
-        headshot: AyushHeadshot
-    },
-    {
-        name: "Vishrut Thoutam '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/vish317",
-        headshot: FillerHeadshot
-    },
+    // {
+    //     name: "Vishrut Thoutam '29",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "https://github.com/vish317",
+    //     headshot: FillerHeadshot
+    // },
     {
         name: "William Zhao '29",
         title: "Software Developer",
@@ -343,24 +323,24 @@ export const currentMembers: Member[] = [
     },
 
     // TigerRetail
-    {
-        name: "Jiya Shetty '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: JiyaHeadshot
-    },
-    {
-        name: "Patrick Fu '29",
-        title: "Software Developer & Designer",
-        position: "",
-        roles: ["Engineering", "Design"],
-        website: "",
-        github: "https://github.com/trickfu",
-        headshot: PatrickHeadshot
-    },
+    // {
+    //     name: "Jiya Shetty '29",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "",
+    //     headshot: JiyaHeadshot
+    // },
+    // {
+    //     name: "Patrick Fu '29",
+    //     title: "Software Developer & Designer",
+    //     position: "",
+    //     roles: ["Engineering", "Design"],
+    //     website: "",
+    //     github: "https://github.com/trickfu",
+    //     headshot: PatrickHeadshot
+    // },
 
     // Fall 2026 new members
     {
@@ -381,24 +361,24 @@ export const currentMembers: Member[] = [
         github: "",
         headshot: EllenBuHeadshot
     },
-    {
-        name: "Gavin McLoughlin '28",
-        title: "Marketer",
-        position: "",
-        roles: ["Marketing"],
-        website: "",
-        github: "",
-        headshot: GavinMcloughlinHeadshot
-    },
-    {
-        name: "Sophia Stolte '29",
-        title: "Outreach Director",
-        position: "",
-        roles: ["Outreach"],
-        website: "",
-        github: "",
-        headshot: SophiaStolteHeadshot
-    },
+    // {
+    //     name: "Gavin McLoughlin '28",
+    //     title: "Marketer",
+    //     position: "",
+    //     roles: ["Marketing"],
+    //     website: "",
+    //     github: "",
+    //     headshot: GavinMcloughlinHeadshot
+    // },
+    // {
+    //     name: "Sophia Stolte '29",
+    //     title: "Outreach Director",
+    //     position: "",
+    //     roles: ["Outreach"],
+    //     website: "",
+    //     github: "",
+    //     headshot: SophiaStolteHeadshot
+    // },
     {
         name: "John Wu '28",
         title: "Software Developer",
@@ -426,60 +406,51 @@ export const currentMembers: Member[] = [
         github: "https://github.com/ProBluebbes",
         headshot: StanZhelokhovtsevHeadshot
     },
-    {
-        name: "Arsh Parekh '30",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "https://arshparekh.com",
-        github: "https://github.com/arshsparekh",
-        headshot: ArshParekhHeadshot
-    },
-    {
-        name: "Brij Kapadia '30",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: FillerHeadshot
-    },
-    {
-        name: "Ryan Dalal '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/ryanadalal",
-        headshot: RyanDalalHeadshot
-    },
-    {
-        name: "Jessica Chen '30",
-        title: "Designer",
-        position: "",
-        roles: ["Design"],
-        website: "https://stxrrymuffin.github.io/personal-website",
-        github: "https://github.com/stxrrymuffin",
-        headshot: JessicaChenHeadshot
-    },
-    {
-        name: "Ethan Mao '30",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/ethanm9720",
-        headshot: EthanMaoHeadshot
-    },
-    {
-        name: "Laahini Addagatla '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/Laahini",
-        headshot: LaahiniAddagatlaHeadshot
-    },
+    // {
+    //     name: "Arsh Parekh '30",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "https://arshparekh.com",
+    //     github: "https://github.com/arshsparekh",
+    //     headshot: ArshParekhHeadshot
+    // },
+    // {
+    //     name: "Ryan Dalal '29",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "https://github.com/ryanadalal",
+    //     headshot: RyanDalalHeadshot
+    // },
+    // {
+    //     name: "Jessica Chen '30",
+    //     title: "Designer",
+    //     position: "",
+    //     roles: ["Design"],
+    //     website: "https://stxrrymuffin.github.io/personal-website",
+    //     github: "https://github.com/stxrrymuffin",
+    //     headshot: JessicaChenHeadshot
+    // },
+    // {
+    //     name: "Ethan Mao '30",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "https://github.com/ethanm9720",
+    //     headshot: EthanMaoHeadshot
+    // },
+    // {
+    //     name: "Laahini Addagatla '28",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "https://github.com/Laahini",
+    //     headshot: LaahiniAddagatlaHeadshot
+    // },
     {
         name: "Andrew Ni '29",
         title: "Software Developer",
@@ -498,42 +469,51 @@ export const currentMembers: Member[] = [
         github: "https://github.com/Owen-Tam",
         headshot: OwenTamHeadshot
     },
-    {
-        name: "Shreeya KC '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: FillerHeadshot
-    },
-    {
-        name: "Amel Osman '28",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "",
-        headshot: AmelOsmanHeadshot
-    },
-    {
-        name: "Emily Mei '30",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/emily-lgtmx",
-        headshot: EmilyMeiHeadshot
-    },
-    {
-        name: "Henry Li '27",
-        title: "Designer",
-        position: "",
-        roles: ["Design"],
-        website: "https://henryli.me/",
-        github: "https://github.com/hhenryli",
-        headshot: HenryLiHeadshot
-    },
+    // {
+    //     name: "Shreeya KC '29",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "",
+    //     headshot: FillerHeadshot
+    // },
+    // {
+    //     name: "Amel Osman '28",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "",
+    //     headshot: AmelOsmanHeadshot
+    // },
+    // {
+    //     name: "Emily Mei '30",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "",
+    //     github: "https://github.com/emily-lgtmx",
+    //     headshot: EmilyMeiHeadshot
+    // },
+    // {
+    //     name: "Henry Li '27",
+    //     title: "Designer",
+    //     position: "",
+    //     roles: ["Design"],
+    //     website: "https://henryli.me/",
+    //     github: "https://github.com/hhenryli",
+    //     headshot: HenryLiHeadshot
+    // },
+    // {
+    //     name: "Collin Boler '27",
+    //     title: "Software Developer",
+    //     position: "",
+    //     roles: ["Engineering"],
+    //     website: "https://collinboler.com/",
+    //     github: "https://github.com/collinboler",
+    //     headshot: CollinBolerHeadshot
+    // },
     {
         name: "Arianna Sun '30",
         title: "Designer",
@@ -542,15 +522,6 @@ export const currentMembers: Member[] = [
         website: "https://arianna-portfolio.vercel.app/",
         github: "https://github.com/AriannaSun",
         headshot: AriannaSunHeadshot
-    },
-    {
-        name: "Collin Boler '27",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "https://collinboler.com/",
-        github: "https://github.com/collinboler",
-        headshot: CollinBolerHeadshot
     }
 ];
 

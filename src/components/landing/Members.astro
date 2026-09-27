@@ -1,7 +1,22 @@
 ---
 import Image from "astro/components/Image.astro";
+import { getImage } from "astro:assets";
 import RoleFilter from "./RoleFilter.svelte";
-import { pastMembers, companies } from "../../utils/members";
+import { currentMembers, pastMembers, companies } from "../../utils/members";
+
+const members = await Promise.all(
+    currentMembers.map(async member => {
+        const portrait = await getImage({
+            src: member.headshot,
+            width: 160,
+            height: 160,
+            fit: "cover",
+            position: "top",
+            format: "webp"
+        });
+        return { ...member, headshot: { src: portrait.src } };
+    })
+);
 ---
 
 <section id="about" class="pt-8 pb-20 bg-light">
@@ -16,9 +31,11 @@ import { pastMembers, companies } from "../../utils/members";
             </h3>
         </div>
 
-        <RoleFilter client:load />
+        <RoleFilter client:load currentMembers={members} />
 
-        <div class="space-y-16 pt-8">
+        <div
+            class="space-y-16 pt-8"
+            style="view-transition-name: roster-alumni">
             <article class="text-center">
                 <h4 class="mb-6 text-charcoal">Past Members</h4>
                 <div class="flex flex-wrap justify-center gap-2 constrained">
