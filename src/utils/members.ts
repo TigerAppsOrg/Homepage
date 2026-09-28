@@ -46,7 +46,7 @@ import GavinMcloughlinHeadshot from "../assets/members/gavin-mcloughlin.webp";
 import JohnWuHeadshot from "../assets/members/john-wu.webp";
 import LaahiniAddagatlaHeadshot from "../assets/members/laahini-addagatla.webp";
 import OwenTamHeadshot from "../assets/members/owen-tam.webp";
-// import RyanDalalHeadshot from "../assets/members/ryan-dalal.webp";
+import RyanDalalHeadshot from "../assets/members/ryan-dalal.webp";
 import SiddharthGuptaHeadshot from "../assets/members/siddharth-gupta.webp";
 import SophiaStolteHeadshot from "../assets/members/sophia-stolte.webp";
 import StanZhelokhovtsevHeadshot from "../assets/members/stan-zhelokhovtsev.webp";
@@ -415,15 +415,15 @@ export const currentMembers: Member[] = [
     //     github: "https://github.com/arshsparekh",
     //     headshot: ArshParekhHeadshot
     // },
-    // {
-    //     name: "Ryan Dalal '29",
-    //     title: "Software Developer",
-    //     position: "",
-    //     roles: ["Engineering"],
-    //     website: "",
-    //     github: "https://github.com/ryanadalal",
-    //     headshot: RyanDalalHeadshot
-    // },
+    {
+        name: "Ryan Dalal '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/ryanadalal",
+        headshot: RyanDalalHeadshot
+    },
     // {
     //     name: "Jessica Chen '30",
     //     title: "Designer",
@@ -484,7 +484,7 @@ export const currentMembers: Member[] = [
         position: "",
         roles: ["Engineering"],
         website: "",
-        github: "",
+        github: "https://github.com/amel-osman",
         headshot: AmelOsmanHeadshot
     },
     {
