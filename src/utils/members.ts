@@ -59,6 +59,9 @@ import KizakiLogo from "../assets/companies/kizaki.webp";
 import MetaLogo from "../assets/companies/meta.webp";
 import MicrosoftLogo from "../assets/companies/microsoft.webp";
 import NetflixLogo from "../assets/companies/netflix.webp";
+import NVIDIALogo from "../assets/companies/nvidia.webp";
+import ModalLogo from "../assets/companies/modal.webp";
+import Point72Logo from "../assets/companies/point72.webp";
 import PineconeLogo from "../assets/companies/pinecone.webp";
 import StripeLogo from "../assets/companies/stripe.webp";
 
@@ -582,5 +585,8 @@ export const companies: [ImageMetadata, string][] = [
     [AirbnbLogo, "Airbnb"],
     [PineconeLogo, "Pinecone"],
     [DatabricksLogo, "Databricks"],
-    [NetflixLogo, "Netflix"]
+    [NetflixLogo, "Netflix"],
+    [NVIDIALogo, "NVIDIA"],
+    [ModalLogo, "Modal"],
+    [Point72Logo, "Point72"]
 ];
