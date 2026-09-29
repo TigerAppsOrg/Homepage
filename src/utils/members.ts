@@ -41,7 +41,7 @@ import EllenBuHeadshot from "../assets/members/ellen-bu.webp";
 import EmilyMeiHeadshot from "../assets/members/emily-mei.webp";
 import EthanMaoHeadshot from "../assets/members/ethan-mao.webp";
 import GavinMcloughlinHeadshot from "../assets/members/gavin-mcloughlin.webp";
-// import HenryLiHeadshot from "../assets/members/henry-li.webp";
+import HenryLiHeadshot from "../assets/members/henry-li.webp";
 // import JessicaChenHeadshot from "../assets/members/jessica-chen.webp";
 import JohnWuHeadshot from "../assets/members/john-wu.webp";
 import LaahiniAddagatlaHeadshot from "../assets/members/laahini-addagatla.webp";
@@ -247,15 +247,15 @@ export const currentMembers: Member[] = [
         github: "",
         headshot: ClaireHeadshot
     },
-    // {
-    //     name: "Rocco Zhang '29",
-    //     title: "Software Developer",
-    //     position: "",
-    //     roles: ["Engineering"],
-    //     website: "",
-    //     github: "",
-    //     headshot: FillerHeadshot
-    // },
+    {
+        name: "Rocco Zhang '29",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "",
+        github: "https://github.com/rocco-zhang",
+        headshot: FillerHeadshot
+    },
     {
         name: "Rohan Matta '29",
         title: "Software Developer",
@@ -305,16 +305,6 @@ export const currentMembers: Member[] = [
         headshot: AlbertHeadshot
     },
 
-    // TigerOps
-    // {
-    //     name: "Vishrut Thoutam '29",
-    //     title: "Software Developer",
-    //     position: "",
-    //     roles: ["Engineering"],
-    //     website: "",
-    //     github: "https://github.com/vish317",
-    //     headshot: FillerHeadshot
-    // },
     {
         name: "William Zhao '29",
         title: "Software Developer",
@@ -499,15 +489,15 @@ export const currentMembers: Member[] = [
         github: "https://github.com/emily-lgtmx",
         headshot: EmilyMeiHeadshot
     },
-    // {
-    //     name: "Henry Li '27",
-    //     title: "Designer",
-    //     position: "",
-    //     roles: ["Design"],
-    //     website: "https://henryli.me/",
-    //     github: "https://github.com/hhenryli",
-    //     headshot: HenryLiHeadshot
-    // },
+    {
+        name: "Henry Li '27",
+        title: "Designer",
+        position: "",
+        roles: ["Design"],
+        website: "https://henryli.me/",
+        github: "https://github.com/hhenryli",
+        headshot: HenryLiHeadshot
+    },
     {
         name: "Collin Boler '27",
         title: "Software Developer",
