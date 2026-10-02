@@ -35,7 +35,7 @@ import AmelOsmanHeadshot from "../assets/members/amel-osman.webp";
 import AndrewNiHeadshot from "../assets/members/andrew-ni.webp";
 import AnutsetsenErdenebayarHeadshot from "../assets/members/anutsetsen-erdenebayar.webp";
 import AriannaSunHeadshot from "../assets/members/arianna-sun.webp";
-// import ArshParekhHeadshot from "../assets/members/arsh-parekh.webp";
+import ArshParekhHeadshot from "../assets/members/arsh-parekh.webp";
 import CollinBolerHeadshot from "../assets/members/collin-boler.webp";
 import EllenBuHeadshot from "../assets/members/ellen-bu.webp";
 import EmilyMeiHeadshot from "../assets/members/emily-mei.webp";
@@ -399,15 +399,15 @@ export const currentMembers: Member[] = [
         github: "https://github.com/ProBluebbes",
         headshot: StanZhelokhovtsevHeadshot
     },
-    // {
-    //     name: "Arsh Parekh '30",
-    //     title: "Software Developer",
-    //     position: "",
-    //     roles: ["Engineering"],
-    //     website: "https://arshparekh.com",
-    //     github: "https://github.com/arshsparekh",
-    //     headshot: ArshParekhHeadshot
-    // },
+    {
+        name: "Arsh Parekh '30",
+        title: "Software Developer",
+        position: "",
+        roles: ["Engineering"],
+        website: "https://arshparekh.com",
+        github: "https://github.com/arshsparekh",
+        headshot: ArshParekhHeadshot
+    },
     {
         name: "Ryan Dalal '29",
         title: "Software Developer",
