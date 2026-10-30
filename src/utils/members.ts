@@ -26,7 +26,6 @@ import PrishaaHeadshot from "../assets/members/prishaa.webp";
 import RohanHeadshot from "../assets/members/rohan.webp";
 import SophiaHeadshot from "../assets/members/sophia.webp";
 import WilliamLiuHeadshot from "../assets/members/william_liu.webp";
-import WilliamZhaoHeadshot from "../assets/members/william_zhao.webp";
 import PatrickHeadshot from "../assets/members/patrick.webp";
 
 // Fall 2026 new members
@@ -291,17 +290,6 @@ export const currentMembers: Member[] = [
         website: "https://seowonlucypark.com/index.html",
         github: "https://github.com/seowonlpark",
         headshot: LucyHeadshot
-    },
-
-    // TigerLift
-    {
-        name: "William Zhao '29",
-        title: "Software Developer",
-        position: "",
-        roles: ["Engineering"],
-        website: "",
-        github: "https://github.com/william-w-zhao",
-        headshot: WilliamZhaoHeadshot
     },
 
     // TigerRetail
