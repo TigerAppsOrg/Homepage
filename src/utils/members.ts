@@ -18,7 +18,6 @@ import YubiHeadshot from "../assets/members/yubi.webp";
 
 // '29
 import AikhanHeadshot from "../assets/members/aikhan.webp";
-import AlbertHeadshot from "../assets/members/albert.webp";
 import AngelinaHHeadshot from "../assets/members/angelinah.webp";
 import AnnaSongHeadshot from "../assets/members/anna_song.webp";
 import GwanpilHeadshot from "../assets/members/gwanpil.webp";
@@ -295,16 +294,6 @@ export const currentMembers: Member[] = [
     },
 
     // TigerLift
-    {
-        name: "Albert Rho '29",
-        title: "Designer",
-        position: "",
-        roles: ["Design"],
-        website: "",
-        github: "",
-        headshot: AlbertHeadshot
-    },
-
     {
         name: "William Zhao '29",
         title: "Software Developer",
